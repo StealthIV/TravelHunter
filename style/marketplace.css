@@ -1,0 +1,357 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/121.jpg);
+  
+  
+}
+
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 50;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+
+.profile {
+  display: flex;
+  margin-left: 900px;
+  align-items: center;
+}
+
+.profile span {
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+}
+
+.profile .dropdown {
+  position: relative;
+}
+
+.profile img.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.profile:hover .dropdown-content {
+  display: block;
+}
+
+.language{
+    margin-left: 15px;
+    height: 25px;
+    background-color: #a5f6ffd0;
+    border-radius: 5px;
+}
+.main{
+    
+    height: 100%;
+    width: 100%;
+    background: #4070f400;
+    margin-top: 70px;
+    
+}
+ .row h1{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+ }
+
+.container {
+  max-width: 1100px;
+}
+.card-body .buy{
+   background-color: #68ffcd;
+    width: 130px;
+    border-radius: 10px;
+    margin-left: 40px;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-color: #4070f4;
+    border-width: 1px;
+    text-decoration: none;
+}
+
+#filter-buttons button {
+  border-radius: 3px;
+  background: #fff;
+  border-color: transparent;
+}
+
+#filter-buttons button:hover {
+  background: #ddd;
+}
+
+#filter-buttons button.active {
+  color: #fff;
+  background: #6c757d;
+}
+
+#filterable-cards .card {
+  width: 15rem;
+  border: 2px solid transparent;
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+    .main{
+        display:inherit;
+        position: relative;
+    }
+   
+  #filterable-cards {
+    justify-content: center;
+  }
+
+  #filterable-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.sec2{
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    margin-top: 100px;
+   
+    
+}
+.sec2 h1{
+    color: white;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+
+}
+
+.container2 .main-video{
+    background: #19191947;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+.container2 .main-video video{
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.container2 .main-video .title{
+    color: #ffffff;
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.container2 .video-list{
+    background: #0000006b;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+
+}
+
+
+.container2 .video-list::-webkit-scrollbar{
+    width: 7px;
+
+}
+
+
+
+.container2 .video-list .vid video{
+    width: 100px;
+    border-radius: 5px;
+
+}
+.container2 .video-list .vid{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    cursor: pointer;
+
+}
+
+.container2 .video-list .vid:hover{
+    background: #eee;
+
+}
+.container2 .video-list .vid.active{
+
+    background: #10d895;
+}
+
+.container2 .video-list .vid.active .title{
+
+    color: #fff;
+}
+
+.container2 .video-list .vid .title{
+    color: #333;
+    font-size: 17px;
+
+}
+@media(max-width:991px){
+    .container2{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+       
+    
+    }
+
+    
+   
+}
+@media(max-width:768px){
+    .container2{
+        grid-template-columns: 1fr;
+       
+    }
+}
+
+
+
+

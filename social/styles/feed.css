@@ -1,0 +1,276 @@
+/* General reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container Styles */
+.containers {
+  width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Post Styles */
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+  
+}
+
+/* Profile Styles */
+#profile {
+  margin-left: auto; /* Align profile to the right side */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Align items vertically */
+}
+
+#profile_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#profile h3 {
+  font-size: 16px; /* Reduce font size for the username */
+  margin-bottom: 30px; /* Add some space between profile picture and username */
+  margin-left: 10px; /* Add some space between profile picture and username */
+}
+
+
+.post-content img {
+  width: 500px;
+  height: 500px;
+  display: block; /* Ensure the image is a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Limit image width to container width */
+}
+
+
+.post-actions button {
+  margin-right: 5px; /* Reduce margin between action buttons */
+  font-size: 14px; /* Reduce font size of action buttons */
+}
+
+.post-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 1px solid gray;
+}
+
+.post-form h2 {
+  margin-bottom: 10px;
+}
+
+.post-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-form input[type="file"],
+.post-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  resize: none; /* Disable resizing of textarea */
+}
+
+.post-form textarea {
+  margin-left: 50px;
+}
+
+.post-form button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.post-actions button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-actions button:hover {
+  background-color: #0056b3;
+}
+
+#user {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+#timestamp {
+  position: absolute;
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+/* Add this CSS to your feed.css or within a <style> tag in your HTML */
+.like-button.liked {
+  background-color: red; /* Change the color when the button is liked */
+  font-weight: bold;
+}
+
+/* Styling for comment section */
+.comments-container {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comment {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.comment-profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-text {
+  margin-left: 40px; /* To accommodate profile image width */
+}
+
+.comment-toggle-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.comment-form {
+  margin-top: 10px;
+}
+
+.comment-form-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment-textarea {
+  flex: 1; /* Take up remaining space */
+  height: 60px; /* Adjust height as needed */
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none; /* Prevent textarea from being resizable */
+  margin-right: 10px;
+}
+
+.comment-submit-btn {
+  height: 60px; /* Match textarea height */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 14px;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-submit-btn:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+.btn-close{
+  position: absolute;
+  margin-left: 50%;
+  margin-bottom: 20px;
+
+}
+
+
+.profile {
+  display: flex;
+  margin-left: 900px;
+  align-items: center;
+}
+
+.profile span {
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+}
+
+.profile .dropdown {
+  position: relative;
+}
+
+.profile img.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.profile:hover .dropdown-content {
+  display: block;
+}
+
+

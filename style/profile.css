@@ -1,0 +1,251 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 50;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+
+.main {
+  color: #000000;
+  height: 100vh;
+  width: 100%;
+  background: #4070f400;
+  margin-top: 70px;
+}
+
+.language {
+  margin-left: 100px;
+  height: 25px;
+  background-color: #a5f6ffd0;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.profile-picture-box,
+.account-details-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin: 0 auto 50px auto; /* Center horizontally and add margin at the bottom */
+  margin-top: 80px;
+}
+
+.profile-picture-box h2,
+.account-details-box h2 {
+  color: #333;
+}
+
+.profile-picture {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-form {
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.upload {
+  margin-top: 10px;
+}
+
+.upload label {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.account-details-box form {
+  margin-top: 20px;
+}
+
+label,
+input,
+button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-button a {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+.profile {
+  display: flex;
+  margin-left: 900px;
+  align-items: center;
+}
+
+.profile span {
+  color: rgb(0, 0, 0);
+  margin-right: 10px;
+}
+
+.profile .dropdown {
+  position: relative;
+}
+
+.profile img.user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.profile:hover .dropdown-content {
+  display: block;
+}
+
+

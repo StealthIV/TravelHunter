@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Integration</title>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        /* Optional: Make the body fill the whole screen */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Include the Google Maps API library -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of the center of the map
+            var center = {lat: -34.397, lng: 150.644};
+            // The map, centered at the specified location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: center
+            });
+            // The marker, positioned at the center of the map
+            var marker = new google.maps.Marker({
+                position: center,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>
