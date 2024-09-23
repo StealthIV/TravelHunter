@@ -15,12 +15,14 @@ try {
   $pdoResult->execute(['UserName' => $UserName]);
   $user = $pdoResult->fetch();
   $profile_image = $user['image']; // Assuming this is the URL to the profile image
+  $full_name = $user['FullName'];
 
 } catch (PDOException $error) {
   echo $error->getMessage() . '';
   exit;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

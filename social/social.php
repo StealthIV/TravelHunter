@@ -36,7 +36,7 @@ if (isset($_SESSION['UserName'])) {
           ORDER BY 
               RAND()";
 
-    $stmt = $pdoConnect ->prepare($sql);
+    $stmt = $pdoConnect->prepare($sql);
     $stmt->execute();
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -57,7 +57,7 @@ $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
 if ($post_id > 0) {
   try {
     // Check if the user already liked the post
-    $stmt = $pdoConnect ->prepare("SELECT * FROM likes WHERE post_id = :post_id AND user_id = :user_id");
+    $stmt = $pdoConnect->prepare("SELECT * FROM likes WHERE post_id = :post_id AND user_id = :user_id");
     $stmt->bindParam(':post_id', $post_id, PDO::PARAM_INT);
     $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
     $stmt->execute();
@@ -65,13 +65,13 @@ if ($post_id > 0) {
 
     if ($like) {
       // If liked, remove the like
-      $stmt = $pdoConnect ->prepare("DELETE FROM likes WHERE like_id = :like_id");
+      $stmt = $pdoConnect->prepare("DELETE FROM likes WHERE like_id = :like_id");
       $stmt->bindParam(':like_id', $like['like_id'], PDO::PARAM_INT);
       $stmt->execute();
       echo json_encode(['status' => 'success', 'action' => 'unlike']);
     } else {
       // If not liked, add a new like
-      $stmt = $pdoConnect ->prepare("INSERT INTO likes (post_id, user_id) VALUES (:post_id, :user_id)");
+      $stmt = $pdoConnect->prepare("INSERT INTO likes (post_id, user_id) VALUES (:post_id, :user_id)");
       $stmt->bindParam(':post_id', $post_id, PDO::PARAM_INT);
       $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
       $stmt->execute();
@@ -83,11 +83,16 @@ if ($post_id > 0) {
 }
 
 // Function to calculate and format time difference
+// Function to calculate and format time difference, with 5-hour adjustment
 function getTimeElapsed($datetime)
 {
   $current_time = new DateTime();  // Current time
   $created_time = new DateTime($datetime);  // Time the post was created
-  $interval = $current_time->diff($created_time);  // Difference between current time and created time
+
+  // Adjust the created time by subtracting 5 hours
+  $created_time->modify('-6 hours');
+
+  $interval = $current_time->diff($created_time);  // Difference between current time and adjusted created time
 
   if ($interval->y >= 1) {
     return $interval->format('%y year' . ($interval->y > 1 ? 's' : '') . ' ago');
@@ -103,6 +108,7 @@ function getTimeElapsed($datetime)
     return 'just now';  // If less than a minute ago
   }
 }
+
 ?>
 
 
@@ -117,15 +123,15 @@ function getTimeElapsed($datetime)
   <!-- CSS -->
   <link rel="stylesheet" href="../style/itenerary.css">
   <link rel="stylesheet" href="styles/feed.css">
-  
+
 
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
-  
-<?php require_once 'nav.php'?>
+
+  <?php require_once 'nav.php' ?>
 
   <section class="overlay"></section>
 
@@ -175,7 +181,7 @@ function getTimeElapsed($datetime)
               <div class="post-actions">
                 <?php
                 // Check if the user has already liked the post
-                $stmt = $pdoConnect ->prepare("SELECT COUNT(*) FROM likes WHERE post_id = :post_id AND user_id = :user_id");
+                $stmt = $pdoConnect->prepare("SELECT COUNT(*) FROM likes WHERE post_id = :post_id AND user_id = :user_id");
                 $stmt->bindParam(':post_id', $post['post_id'], PDO::PARAM_INT);
                 $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
                 $stmt->execute();
@@ -198,7 +204,7 @@ function getTimeElapsed($datetime)
                 <div class="comments-container" style="display: none;">
                   <?php
                   // Fetch comments for the current post, including user info and profile image
-                  $stmt = $pdoConnect ->prepare("
+                  $stmt = $pdoConnect->prepare("
     SELECT comments.*, user.FullName, user.image 
     FROM comments 
     JOIN user ON comments.user_id = user.id 
@@ -364,7 +370,6 @@ function getTimeElapsed($datetime)
 
   <script src="../js/home.js"></script>
   <script src="../js/language.js"></script>
-  <script src="../js/itenerary.js"></script>
 </body>
 
 </html>
