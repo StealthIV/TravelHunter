@@ -1,73 +1,116 @@
-const slidePage = document.querySelector(".form-outer");
-const nextBtnFirst = document.querySelector(".firstNext");
-const prevBtnSec = document.querySelector(".prev-1");
-const nextBtnSec = document.querySelector(".next-1");
-const prevBtnThird = document.querySelector(".prev-2");
-const nextBtnThird = document.querySelector(".next-2");
-const prevBtnFourth = document.querySelector(".prev-3");
-const submitBtn = document.querySelector(".submit");
-const progressText = document.querySelectorAll(".step p");
-const progressCheck = document.querySelectorAll(".step .check");
-const bullet = document.querySelectorAll(".step .bullet");
-let current = 1;
+let currentPage = 0;
 
-nextBtnFirst.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-25%";
-    updateProgress();
-});
+function validateStep1() {
+   let isValid = true;
 
-nextBtnSec.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-50%";
-    updateProgress();
-});
+   // Full Name validation
+   const name = document.getElementById('name').value;
+   if (name.trim() === "") {
+      document.getElementById('name-error').style.display = 'block';
+      isValid = false;
+   } else {
+      document.getElementById('name-error').style.display = 'none';
+   }
 
-nextBtnThird.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-75%";
-    updateProgress();
-});
+   // Email validation
+   const email = document.getElementById('email').value;
+   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+   if (!email.match(emailPattern)) {
+      document.getElementById('email-error').style.display = 'block';
+      isValid = false;
+   } else {
+      document.getElementById('email-error').style.display = 'none';
+   }
 
-submitBtn.addEventListener("click", function() {
-    updateProgress();
-    setTimeout(function() {
-        alert("Your Form Successfully Signed up");
-        location.reload();
-    }, 800);
-});
+   // Phone number validation (example for 10 digits)
+   const phone = document.getElementById('phone').value;
+   const phonePattern = /^[0-9]{10,12}$/;
+   if (!phone.match(phonePattern)) {
+      document.getElementById('phone-error').style.display = 'block';
+      isValid = false;
+   } else {
+      document.getElementById('phone-error').style.display = 'none';
+   }
 
-prevBtnSec.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "0%";
-    current -= 1;
-    updateProgress(-1);
-});
-
-prevBtnThird.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-25%";
-    current -= 1;
-    updateProgress(-1);
-});
-
-prevBtnFourth.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-50%";
-    current -= 1;
-    updateProgress(-1);
-});
-
-// Function to update progress
-function updateProgress(direction = 1) {
-    if (direction === 1) {
-        bullet[current - 1].classList.add("active");
-        progressCheck[current - 1].classList.add("active");
-        progressText[current - 1].classList.add("active");
-        current += 1;
-    } else {
-        bullet[current - 2].classList.remove("active");
-        progressCheck[current - 2].classList.remove("active");
-        progressText[current - 2].classList.remove("active");
-    }
+   if (isValid) {
+      nextPage();
+   }
 }
+
+function validateStep2() {
+   let isValid = true;
+   const packageSelect = document.getElementById('package');
+   const checkinDate = document.getElementById('checkin').value;
+   const guests = document.getElementById('guests').value;
+   const days = document.getElementById('days').value;
+
+   // Validate package selection
+   if (packageSelect.value === "") {
+      alert("Package selection is required.");
+      isValid = false;
+   }
+
+   // Validate check-in date
+   if (checkinDate === "") {
+      alert("Check-in date is required.");
+      isValid = false;
+   }
+
+   // Validate number of guests
+   if (guests <= 0) {
+      alert("Number of guests must be greater than zero.");
+      isValid = false;
+   }
+
+   // Validate number of days
+   if (days <= 0) {
+      alert("Number of days must be greater than zero.");
+      isValid = false;
+   }
+
+   if (isValid) {
+      nextPage();
+   }
+}
+
+function validateStep3() {
+   let isValid = true;
+   const paymentSelect = document.getElementById('payment');
+   const amount = document.getElementById('amount').value;
+   const reference = document.getElementById('Reference').value;
+
+   // Validate payment method selection
+   if (paymentSelect.value === "") {
+      alert("Payment method is required.");
+      isValid = false;
+   }
+
+   // Validate down payment amount
+   if (amount <= 0) {
+      alert("Down payment must be greater than zero.");
+      isValid = false;
+   }
+
+   // Validate reference number
+   if (reference.trim() === "") {
+      alert("Reference number is required.");
+      isValid = false;
+   }
+
+   if (isValid) {
+      nextPage();
+   }
+}
+
+function nextPage() {
+   const pages = document.querySelectorAll('.page');
+   pages[currentPage].style.display = 'none';
+   currentPage++;
+   pages[currentPage].style.display = 'block';
+}
+
+// Initial state
+const pages = document.querySelectorAll('.page');
+pages.forEach((page, index) => {
+   page.style.display = index === currentPage ? 'block' : 'none';
+});
