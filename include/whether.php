@@ -374,6 +374,7 @@ try {
   <script src="js/swiper-bundle.min.js"></script>
   <script src="../js/product.js"></script>
   <script src="../js/explore2.js" defer></script>
+  <script src="../js/whether.js" defer></script>
   <script type="text/javascript" src="../js/fin.js"></script>
 </body>
 
