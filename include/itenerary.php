@@ -15,11 +15,12 @@ $itineraryItems = [];
 $UserName = $_SESSION["UserName"];
 
 try {
-  // Fetch the user's id from the session using their UserName
-  $pdoQuery = "SELECT id FROM user WHERE UserName = :UserName";
+  $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
   $pdoResult = $pdoConnect->prepare($pdoQuery);
   $pdoResult->execute(['UserName' => $UserName]);
   $user = $pdoResult->fetch();
+  $profile_image = $user['image']; // Assuming this is the URL to the profile image
+  $full_name = $user['FullName'];
 
   if ($user) {
     $userId = $user['id']; // Get the user ID
