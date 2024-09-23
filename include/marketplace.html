@@ -1,3 +1,26 @@
+<?php
+session_start();
+if (!isset($_SESSION["UserName"])) {
+  header("location: index.php");
+  exit();
+}
+
+require_once '../connect/dbcon.php';
+
+$UserName = $_SESSION["UserName"];
+
+try {
+  $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
+  $pdoResult = $pdoConnect->prepare($pdoQuery);
+  $pdoResult->execute(['UserName' => $UserName]);
+  $user = $pdoResult->fetch();
+  $profile_image = $user['image']; // Assuming this is the URL to the profile image
+
+} catch (PDOException $error) {
+  echo $error->getMessage() . '';
+  exit;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,18 +49,28 @@
        
       </div>
 
-      <select class="language" id="language-select" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-        <option value="fr">French</option>
-        <option value="de">German</option>
-        <option value="zh">Chinese</option>
-        <option value="jp">Japanese</option>
-        <option value="ru">Russian</option>
-        <option value="it">Italian</option>
-        <option value="pt">Portuguese</option>
-        <option value="ar">Arabic</option>
-    </select>
+      <div class="profile">
+            <span id="name-span"><?php echo htmlspecialchars($UserName); ?></span>
+            <div class="dropdown">
+                <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
+                <div class="dropdown-content">
+                    <a href="profile.php">Profile</a>
+                    <select class="language" id="language-select" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+                <option value="jp">Japanese</option>
+                <option value="ru">Russian</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                <option value="ar">Arabic</option>
+            </select>
+                    <a href="logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
 
 </div>
 <div class="sidebar">
@@ -148,228 +181,652 @@
     <section class="overlay"></section>
 
     <Section class="main">
-        <div class="container">
+   
 
-           
-            <!-- Images Filter Buttons Section -->
-            <div class="row mt-5" id="filter-buttons">
-                <h1>Marketplace</h1>
-              <div class="col-12">
-                <button class="btn mb-2 me-1 active" data-filter="all">Show all</button>
-                <button class="btn mb-2 mx-1" data-filter="aklan">Aklan</button>
-                <button class="btn mb-2 mx-1" data-filter="batanes">Batanes</button>
-                <button class="btn mb-2 mx-1" data-filter="batangas">Batangas</button>
-                <button class="btn mb-2 mx-1" data-filter="pampanga">Pampanga</button>
-                <button class="btn mb-2 mx-1" data-filter="palawan">Palawan</button>
-              </div>
-            </div>
+<main>
+<div class="text">
+
+</div>
+<header>
+<h1 data-lang-en="Top Hottest Products in Pampanga" data-lang-es="Los productos más populares en Pampanga" data-lang-fr="Les produits les plus populaires à Pampanga"
+            data-lang-de="Die heißesten Produkte in Pampanga" data-lang-zh=" 邦板牙最热门的产品" data-lang-jp=" パンパンガで最も人気のある商品"
+            data-lang-ru="Самые популярные товары в Пампанге" data-lang-it=" I prodotti più popolari a Pampanga"
+            data-lang-pt="Os produtos mais populares em Pampanga" data-lang-ar="المنتجات الأكثر شعبية في بامبانغا">Top Hottest Products in Pampanga</h1>
+<p>
+<span class="span1" >&#139;</span>
+<span class="span1" >&#155;</span>
+  
+</p>
+</header>
+<section class="section6">
+<div class="product">
+  <picture>
+  <img src="../places/boracay/dried mangoes.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Dried Mangoes</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Kapeng-Barako.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Barako Coffee</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Handicrafts.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Handicrafts</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/keychains.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Keychains</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Buko Pie.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Buko Pie</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Beachwear.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Beachwear</b><br>
+     
+    </p>
+    <samp>₱600.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Seafood.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Seafoods</b><br>
+     
+    </p>
+    <samp>₱1000.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Ref Magnet.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Ref Magnet</b><br>
+    
+    </p>
+    <samp>₱200.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/sunny.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Product Nine</b><br>
+      <small>New arrival</small>
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Piaya.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Piaya</b><br>
       
-            <!-- Filterable Images / Cards Section -->
-            <div class="row px-2 mt-4 gap-3" id="filterable-cards">
-              <div class="card p-0" data-name="aklan">
-                <img src="../products/Aklan (1).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Bariw Mats</h6>
-                  <p class="card-text">Libertad, Aklan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="aklan">
-                <img src="../products/Aklan (2).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Abaca Bags</h6>
-                  <p class="card-text">Ibajay, Aklan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="aklan">
-                <img src="../products/Aklan (3).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Native Hats</h6>
-                  <p class="card-text">Madalag, Aklan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="aklan">
-                <img src="../products/Aklan (4).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Raffia Merchandise</h6>
-                  <p class="card-text">Banga, Aklan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="aklan">
-                <img src="../products/Aklan.png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Pina Cloth</h6>
-                  <p class="card-text">Kalibo, Aklan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batanes">
-                <img src="../products/Batanes (1).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Ivatan Minitures</h6>
-                  <p class="card-text">Basco, Batanes, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batanes">
-                <img src="../products/Batanes (2).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Ivatan Basket</h6>
-                  <p class="card-text">Makatao, Batanes, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batanes">
-                <img src="../products/Batanes (3).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Handwoven Blankets</h6>
-                  <p class="card-text">Ivana, Batanes, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batanes">
-                <img src="../products/Batanes (4).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Tatus Shell Crafts</h6>
-                  <p class="card-text">Itbayat, Batanes, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batanes">
-                <img src="../products/Batanes.png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Vakul</h6>
-                  <p class="card-text">Sabtang, Batanes, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batangas">
-                <img src="../products/Batangas  (1).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Hand-Embroided Barong</h6>
-                  <p class="card-text">Taal, Batangas, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batangas">
-                <img src="../products/Batangas  (2).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Handcrafted Jewerly</h6>
-                  <p class="card-text">Lipa, Batangas, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batangas">
-                <img src="../products/Batangas  (3).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Clay Pots</h6>
-                  <p class="card-text">San Juan, Batangas, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batangas">
-                <img src="../products/Batangas  (4).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Wood Carvings</h6>
-                  <p class="card-text">Paete, Batangas, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="batangas">
-                <img src="../products/Batangas .png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Balisong(Butterfly Knife)</h6>
-                  <p class="card-text">Taal, Batangas, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="palawan">
-                <img src="../products/Palawan (1).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Cashew</h6>
-                  <p class="card-text">Roxas, Palawan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="palawan">
-                <img src="../products/Palawan (2).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Handwoven Bags</h6>
-                  <p class="card-text">El Nido, Palawan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="palawan">
-                <img src="../products/Palawan (3).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Rattan Furniture</h6>
-                  <p class="card-text">Puerto Princesa, Palawan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="palawan">
-                <img src="../products/Palawan (4).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Mother of Pearl Accesories</h6>
-                  <p class="card-text">Coron, Palawan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="palawan">
-                <img src="../products/Palawan.png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Palawan Pearl</h6>
-                  <p class="card-text">Puerto Princesa, Palawan, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="pampanga">
-                <img src="../products/Pampanga (1).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Giant Lanterns</h6>
-                  <p class="card-text">San Fernando, Pampanga, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="pampanga">
-                <img src="../products/Pampanga (2).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Santo Statues</h6>
-                  <p class="card-text">Betis, Pampanga, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="pampanga">
-                <img src="../products/Pampanga (3).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Wooden Furnitures</h6>
-                  <p class="card-text">Betis, Pampanga, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="pampanga">
-                <img src="../products/Pampanga (4).png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Betis Crafts</h6>
-                  <p class="card-text">Betis, Pampanga, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
-              <div class="card p-0" data-name="pampanga">
-                <img src="../products/Pampanga.png" alt="img">
-                <div class="card-body">
-                  <h6 class="card-title">Parol(Christmas Lanterns)</h6>
-                  <p class="card-text">San Fernando, Pampanga, Philippines.</p>
-                  <button class="buy" >Buy Now!!</button>
-                </div>
-              </div>
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/T’nalak Cloth.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>T’nalak Cloth  </b><br>
+      
+    </p>
+    <samp>₱700.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Banana Chips.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Banana Chips</b><br>
+    
+    </p>
+    <samp>₱150.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+</section>
+</main>
 
-              
-            </div>
-          </div>
+
+
+<main>
+<div class="text">
+
+</div>
+<header>
+<h1 data-lang-en="Top Hottest Products" data-lang-es="Los Productos Más Populares" data-lang-fr="Produits Les Plus Tendance"
+            data-lang-de="Die Beliebtesten Produkte" data-lang-zh="最热门的产品" data-lang-jp="最も人気のある製品 "
+            data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
+            data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة ">Top Hottest Products</h1>
+<p>
+<span class="span2" >&#139;</span>
+<span class="span2" >&#155;</span>
+  
+</p>
+</header>
+<section class="section6">
+<div class="product">
+  <picture>
+  <img src="../places/boracay/dried mangoes.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Dried Mangoes</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Kapeng-Barako.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Barako Coffee</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Handicrafts.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Handicrafts</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/keychains.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Keychains</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Buko Pie.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Buko Pie</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Beachwear.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Beachwear</b><br>
+     
+    </p>
+    <samp>₱600.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Seafood.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Seafoods</b><br>
+     
+    </p>
+    <samp>₱1000.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Ref Magnet.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Ref Magnet</b><br>
+    
+    </p>
+    <samp>₱200.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/sunny.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Product Nine</b><br>
+      <small>New arrival</small>
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Piaya.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Piaya</b><br>
+      
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/T’nalak Cloth.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>T’nalak Cloth  </b><br>
+      
+    </p>
+    <samp>₱700.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Banana Chips.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Banana Chips</b><br>
+    
+    </p>
+    <samp>₱150.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+</section>
+</main>
+
+
+
+
+<main>
+<div class="text">
+
+</div>
+<header>
+<h1 data-lang-en="Top Hottest Products" data-lang-es="Los Productos Más Populares" data-lang-fr="Produits Les Plus Tendance"
+            data-lang-de="Die Beliebtesten Produkte" data-lang-zh="最热门的产品" data-lang-jp="最も人気のある製品 "
+            data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
+            data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة ">Top Hottest Products</h1>
+<p>
+<span class="span3" >&#139;</span>
+<span class="span3" >&#155;</span>
+  
+</p>
+</header>
+<section class="section6">
+<div class="product">
+  <picture>
+  <img src="../places/boracay/dried mangoes.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Dried Mangoes</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Kapeng-Barako.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Barako Coffee</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Handicrafts.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Handicrafts</b><br>
+     
+    </p>
+    <samp>₱500.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/keychains.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Keychains</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Buko Pie.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Buko Pie</b><br>
+     
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Beachwear.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Beachwear</b><br>
+     
+    </p>
+    <samp>₱600.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Seafood.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Seafoods</b><br>
+     
+    </p>
+    <samp>₱1000.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Ref Magnet.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Ref Magnet</b><br>
+    
+    </p>
+    <samp>₱200.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/sunny.jpg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Product Nine</b><br>
+      <small>New arrival</small>
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Piaya.png">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Piaya</b><br>
+      
+    </p>
+    <samp>₱300.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/T’nalak Cloth.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>T’nalak Cloth  </b><br>
+      
+    </p>
+    <samp>₱700.00</samp>
+  </div>
+  <div class="button7">
+   
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+<div class="product">
+  <picture>
+  <img src="../places/boracay/Banana Chips.jpeg">
+  </picture>
+  <div class="detail">
+    <p>
+      <b>Banana Chips</b><br>
+    
+    </p>
+    <samp>₱150.00</samp>
+  </div>
+  <div class="button7">
+    
+    <a class="a1" href="#">Buy Now!!</a>
+  </div>
+</div>
+</section>
+</main>
+
+
+
+
+
+
+
         </section>
     
     <script src="../js/home.js"></script>
@@ -377,7 +834,7 @@
     <script src="../js/language.js"></script>
     <script src="../js/explore.js" defer></script>
     <script src="../js/script.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
+    <script src="../js/fin.js"></script>
     <script src="../js/product.js"></script>
     <script src="../js/market1.js"></script>
   </body>
