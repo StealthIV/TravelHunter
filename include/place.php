@@ -15,6 +15,7 @@ try {
   $pdoResult->execute(['UserName' => $UserName]);
   $user = $pdoResult->fetch();
   $profile_image = $user['image']; // Assuming this is the URL to the profile image
+  $full_name = $user['FullName'];
 
 } catch (PDOException $error) {
   echo $error->getMessage() . '';
@@ -55,7 +56,7 @@ try {
                 </form>
             </div>
             <div class="profile">
-            <span id="name-span"><?php echo htmlspecialchars($UserName); ?></span>
+            <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
             <div class="dropdown">
                 <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
                 <div class="dropdown-content">
