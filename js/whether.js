@@ -7,7 +7,7 @@ const weatherCardsDiv = document.querySelector(".weather-cards");
 const API_KEY = "6d37923ed6888e98a1742275898ae3ed"; // API key for OpenWeatherMap API
 
 const createWeatherCard = (cityName, weatherItem, index) => {
-    if(index === 0) { // HTML for the main weather card
+    if (index === 0) { // HTML for the main weather card
         return `<div class="details">
                     <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
                     <h6>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h6>
@@ -32,7 +32,12 @@ const createWeatherCard = (cityName, weatherItem, index) => {
 const getWeatherDetails = (cityName, latitude, longitude) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
 
-    fetch(WEATHER_API_URL).then(response => response.json()).then(data => {
+    fetch(WEATHER_API_URL).then(response => {
+        if (!response.ok) {
+            throw new Error("Weather data not found.");
+        }
+        return response.json();
+    }).then(data => {
         // Filter the forecasts to get only one forecast per day
         const uniqueForecastDays = [];
         const fiveDaysForecast = data.list.filter(forecast => {
@@ -55,9 +60,9 @@ const getWeatherDetails = (cityName, latitude, longitude) => {
             } else {
                 weatherCardsDiv.insertAdjacentHTML("beforeend", html);
             }
-        });        
-    }).catch(() => {
-        alert("An error occurred while fetching the weather forecast!");
+        });
+    }).catch(error => {
+        alert(error.message);
     });
 }
 
@@ -68,7 +73,10 @@ const getCityCoordinates = () => {
     
     // Get entered city coordinates (latitude, longitude, and name) from the API response
     fetch(API_URL).then(response => response.json()).then(data => {
-        if (!data.length) return alert(`No coordinates found for ${cityName}`);
+        if (!data.length) {
+            alert(`No coordinates found for ${cityName}`);
+            return;
+        }
         const { lat, lon, name } = data[0];
         getWeatherDetails(name, lat, lon);
     }).catch(() => {
@@ -100,4 +108,4 @@ const getUserCoordinates = () => {
 
 locationButton.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
-cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());    
+cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());

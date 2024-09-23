@@ -8,7 +8,6 @@ if (!isset($_SESSION["UserName"])) {
 }
 
 require_once '../connect/dbcon.php';
-require_once '../connect/dbcon1.php';
 
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];

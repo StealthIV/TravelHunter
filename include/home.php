@@ -136,7 +136,7 @@ try {
               </a>
             </li>
             <li class="list">
-              <a href="../include/itenerary.html" class="nav-link">
+              <a href="../include/itenerary.php" class="nav-link">
                 <i class="bx bx-note icon"></i>
                 <span class="link" data-lang-en="My Itinerary" data-lang-es="Mi itinerario"
                   data-lang-fr="Mon itinéraire" data-lang-de="Meine Reiseroute" data-lang-zh="我的行程"
