@@ -184,172 +184,179 @@ nav.open ~ .overlay {
     font-weight: bolder;
  }
 
-.container {
-  max-width: 1100px;
-}
-.card-body .buy{
-   background-color: #68ffcd;
-    width: 130px;
-    border-radius: 10px;
-    margin-left: 40px;
-    font-weight: bolder;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-color: #4070f4;
-    border-width: 1px;
-    text-decoration: none;
+
+ .sp{
+  margin-left: 10px;
 }
 
-#filter-buttons button {
-  border-radius: 3px;
-  background: #fff;
-  border-color: transparent;
+.text{
+font-weight: bolder;
 }
 
-#filter-buttons button:hover {
-  background: #ddd;
+ main{
+  width: 100%;
+  height: 700px;
+  background-color: #ffffff;
+  /*background: red;*/
+  position: relative;
+  padding: 5px 0;
+  
+}
+ main .text{
+  padding: 10px;
+  text-align: center;
+  /*font-size: 30px;*/
+  color: #554;
+}
+ main .text h1{
+  font-size: 50px;
+  
+}
+.detail .pack small{
+  font-size: 15px;
+}
+.pack{
+  margin-top: 100px;
+}
+ main .text p{
+  width: 60%;
+  padding: 5px;
+  margin: auto;
+  line-height: 30px;
 }
 
-#filter-buttons button.active {
-  color: #fff;
-  background: #6c757d;
+ main header h1{
+  color: black;
+  font-size: 30px;
 }
-
-#filterable-cards .card {
-  width: 15rem;
-  border: 2px solid transparent;
+ main header{
+  width: 98%;
+  font-family: 'Times New Roman';
+  font-weight: bolder;
+  height: 60px;
+  margin: 0 auto;
+  /*background: gray;*/
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
 }
-
-#filterable-cards .card.hide {
+ main header p span{
+  font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+}
+ main header p span:hover{
+  background: #222;
+    color: white;
+}
+.section6{
+  width: 98%;
+  height: 600px;
+  /*background: red;*/
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.section6::-webkit-scrollbar{
   display: none;
 }
+.section6 .product{
+  min-width: 24%;
+  height: 90%;
+  background: whitesmoke;
+  margin:  0 20px  0 0;
+  border-radius: 20px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
 
-@media (max-width: 600px) {
-    .main{
-        display:inherit;
-        position: relative;
-    }
-   
-  #filterable-cards {
-    justify-content: center;
-  }
-
-  #filterable-cards .card {
-    width: calc(100% / 2 - 10px);
-  }
 }
 
-.sec2{
-    width: 100%;
-    height: 100vh;
+ main picture{
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+  /*background: green;*/
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+ main picture img{
+  width: 100%;
+}
+.detail,
+ main .button7{
+  width: 90%;
+  /*background: red;*/
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 20px;
+  color: #444;
+}
+ main small{color: #555;}
+ main .a1{
+  text-decoration: none;
+  padding: 6px 14px;
+  width: 120px;
+    font-size: 15px;
+    margin: 5px 0 0 20px;
+    
     display: inline-block;
-    margin-top: 100px;
+    background: #6773ff;
+    color: rgb(0, 0, 0);
+}
+ main p.star{
+  margin: 5px auto;
+    width: 65%;
+    font-size: 25px;
+    color: #808080;
+}
+@media (max-width: 768px) {
+  .text h1{
+    font-size: 35px;
+  }
+  .main6 .text p{
+    width: 90%;
+  }
+  header h1{
+    font-size: 25px;
+  }
+  header p span{
+    font-size: 30px;
+  }
+  .section6 .product {
+    min-width: 49%;
+    margin:  0 10px  0 0;
+  }
+  .detail, .button{
+    font-size: 16px;
+  }
+  a{
+    padding: 6px 10px;
+  }
+
+  .container main{
+   position: relative;
+   display: contents;
+  }
+  .container main .carousel{
    
-    
-}
-.sec2 h1{
-    color: white;
-    margin-left: 100px;
-    margin-bottom: 30px;
-    font-weight: bolder;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.container2{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    align-items: flex-start;
-    padding: 5px 5%;
-
-}
-
-.container2 .main-video{
-    background: #19191947;
-    border-radius: 5px;
-    padding: 10px;
-
-}
-
-.container2 .main-video video{
-    width: 100%;
-    border-radius: 5px;
-
-}
-
-.container2 .main-video .title{
-    color: #ffffff;
-    font-size: 23px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.container2 .video-list{
-    background: #0000006b;
-    border-radius: 5px;
-    height: 520px;
-    overflow-y: scroll;
-
-}
-
-
-.container2 .video-list::-webkit-scrollbar{
-    width: 7px;
-
-}
-
-
-
-.container2 .video-list .vid video{
-    width: 100px;
-    border-radius: 5px;
-
-}
-.container2 .video-list .vid{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 1);
-    cursor: pointer;
-
-}
-
-.container2 .video-list .vid:hover{
-    background: #eee;
-
-}
-.container2 .video-list .vid.active{
-
-    background: #10d895;
-}
-
-.container2 .video-list .vid.active .title{
-
-    color: #fff;
-}
-
-.container2 .video-list .vid .title{
-    color: #333;
-    font-size: 17px;
-
-}
-@media(max-width:991px){
-    .container2{
-        grid-template-columns: 1.5fr 1fr;
-        padding: 10px;
-       
-    
-    }
-
-    
-   
-}
-@media(max-width:768px){
-    .container2{
-        grid-template-columns: 1fr;
-       
-    }
+    margin-top: 300px;
+   }
 }
 
 
