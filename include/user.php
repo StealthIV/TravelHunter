@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // After inserting the booking into the database
             $stmt = $pdoConnect->prepare("
-INSERT INTO bookings (name, email, phone, days, checkin, package, guests, amount, payment, Reference)
-VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference)
-");
+            INSERT INTO bookings (name, email, phone, days, checkin, package, guests, amount, payment, Reference, status)
+            VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference, :status)
+            ");
             $stmt->execute([
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
@@ -45,7 +45,8 @@ VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :amount, :pay
                 'guests' => $_POST['guests'],
                 'amount' => $_POST['amount'],
                 'payment' => $_POST['payment'],
-                'Reference' => $_POST['Reference']
+                'Reference' => $_POST['Reference'],
+                'status' => 'pending' // Set status to pending upon creation
             ]);
 
             // Get the last inserted ID

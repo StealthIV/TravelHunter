@@ -26,6 +26,26 @@ try {
     echo $error->getMessage();
     exit;
 }
+
+// Pagination settings
+$limit = 10; // Number of records per page
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$offset = ($page - 1) * $limit;
+
+// Get total number of bookings
+$totalBookingsQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalBooking FROM bookings");
+$totalBookingsQuery->execute();
+$totalBookingResult = $totalBookingsQuery->fetch(PDO::FETCH_ASSOC);
+$totalBookings = $totalBookingResult['totalBooking'];
+$totalPages = ceil($totalBookings / $limit);
+
+// Fetch bookings for the current page
+$pdoQuery = 'SELECT * FROM bookings LIMIT :limit OFFSET :offset';
+$pdoResult = $pdoConnect->prepare($pdoQuery);
+$pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);
+$pdoResult->bindParam(':offset', $offset, PDO::PARAM_INT);
+$pdoResult->execute();
+$bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -35,7 +55,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/manage.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
@@ -48,9 +68,8 @@ try {
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <h3>A<span>dmin</span></h3>
+            <h3>M<span>angement</span></h3>
         </div>
-
 
 
         <div class="side-menu">
@@ -62,7 +81,7 @@ try {
                     </a>
                 </li>
                 <li>
-                    <a href="../include/boracayad.php?id=<?php echo $_SESSION['id'] ?>">
+                    <a href="../include/boracayad.php">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Annoucement</small>
@@ -70,7 +89,7 @@ try {
                 </li>
 
                 <li>
-                    <a href="edit.php?id=<?php echo $_SESSION['id'] ?>">
+                    <a href="manage_edit.php">
                         <span class="las la-user-alt"></span>
                         <small>Personal Info</small>
                     </a>
@@ -134,11 +153,8 @@ try {
 
 
                     <div class="page-content">
-
-
                         <div class="records table-responsive">
                             <div class="record-header">
-
                                 <div class="browse">
                                     <input type="search" placeholder="Search" class="record-search">
                                 </div>
@@ -146,54 +162,67 @@ try {
                             <table id="info-table" width="100%">
                                 <thead>
                                     <tr>
-                                        <th style='width: 10%;'>ID</th>
-                                        <th style='width: 20%;'>Name</th>
-                                        <th style='width: 20%;'>Email</th>
-                                        <th style='width: 20%;'>Phone</th>
-                                        <th style='width: 20%;'>Number of Days</th>
-                                        <th style='width: 20%;'> Booking Date</th>
-                                        <th style='width: 20%;'>Package</th>
-                                        <th style='width: 20%;'>Number of Guests</th>
-                                        <th style='width: 20%;'>Total Amount</th>
-                                        <th style='width: 20%;'>Payment Method</th>
-                                        <th style='width: 20%;'>Reference</th>
-                                        <th style='width: 20%;'>action</th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Number of Days</th>
+                                        <th>Booking Date</th>
+                                        <th>Package</th>
+                                        <th>Number of Guests</th>
+                                        <th>Total Amount</th>
+                                        <th>Payment Method</th>
+                                        <th>Reference</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
-                                    <?php
-                                    $pdoQuery = 'SELECT * FROM bookings';
-                                    $pdoResult = $pdoConnect->prepare($pdoQuery);
-                                    $pdoResult->execute();
-                                    while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
-                                        extract($row);
-                                        echo "<tr>";
-                                        echo "<td style='width: 10%;'>$id</td>";
-                                        echo "<td style='width: 15%;'>$name</td>";
-                                        echo "<td style='width: 15%;'>$email</td>";
-                                        echo "<td style='width: 15%;'>$phone</td>";
-                                        echo "<td style='width: 15%;'>$days</td>";
-                                        echo "<td style='width: 15%;'>$checkin</td>";
-                                        echo "<td style='width: 15%;'>$package</td>";
-                                        echo "<td style='width: 15%;'>$guests</td>";
-                                        echo "<td style='width: 15%;'>$amount</td>";
-                                        echo "<td style='width: 15%;'>$payment</td>";
-                                        echo "<td style='width: 15%;'>$Reference</td>";
+                                    <?php foreach ($bookings as $row): ?>
+                                        <tr>
+                                            <td><?php echo $row['id']; ?></td>
+                                            <td><?php echo $row['name']; ?></td>
+                                            <td><?php echo $row['email']; ?></td>
+                                            <td><?php echo $row['phone']; ?></td>
+                                            <td><?php echo $row['days']; ?></td>
+                                            <td><?php echo $row['checkin']; ?></td>
+                                            <td><?php echo $row['package']; ?></td>
+                                            <td><?php echo $row['guests']; ?></td>
+                                            <td><?php echo $row['amount']; ?></td>
+                                            <td><?php echo $row['payment']; ?></td>
+                                            <td><?php echo $row['Reference']; ?></td>
+                                            <td><?php echo $row['status']; ?></td>
+                                            <td style='width: 15%;'>
+                                                <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
+                                                    class="btn btn-confirm">Confirm</a>
+                                                <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
+                                                    class="btn btn-delete"><i class='bx bx-trash'></i></a>
+                                            </td>
 
-                                        echo "<td style='width: 15%;'> 
-            <a href='boracaydelete.php?id=$id'><i class='bx bx-trash'></i></a></td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
-
                             </table>
+                            <!-- Pagination Controls -->
+                            <div class="pagination">
+                                <?php if ($page > 1): ?>
+                                    <a href="?page=<?php echo $page - 1; ?>">&laquo; Previous</a>
+                                <?php endif; ?>
+
+                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                    <a href="?page=<?php echo $i; ?>" class="<?php echo $i === $page ? 'active' : ''; ?>">
+                                        <?php echo $i; ?>
+                                    </a>
+                                <?php endfor; ?>
+
+                                <?php if ($page < $totalPages): ?>
+                                    <a href="?page=<?php echo $page + 1; ?>">Next &raquo;</a>
+                                <?php endif; ?>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
+            </div>
         </main>
 
         <div class="page-content">
@@ -250,6 +279,7 @@ try {
                             $pdoResult->execute();
                             while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
                                 extract($row);
+                            
                                 echo "<tr>";
                                 echo "<td style='width: 10%;'>$id</td>";
                                 echo "<td style='width: 15%;'>$name</td>";
@@ -258,13 +288,17 @@ try {
                                 echo "<td style='width: 15%;'>$address</td>";
                                 echo "<td style='width: 15%;'>$Product</td>";
                                 echo "<td style='width: 15%;'>$amount</td>";
-                                echo "<td style='width: 15%;'>$payment</td>";
+                                echo "<td style='width: 15%;'>" . (isset($payment) ? $payment : 'N/A') . "</td>"; // Handle undefined variable
                                 echo "<td style='width: 15%;'>$reference</td>";
 
-                                echo "<td style='width: 15%;'> 
-            <a href='boracaydelete.php?id=$id'><i class='bx bx-trash'></i></a></td>";
+                                echo "<td style='width: 15%;'>";
+                                echo "<a href='update_status.php?id=$id&status=confirmed' class='btn btn-confirm'>Confirm</a>";
+                                echo "<a href='boracaydelete.php?id=$id' class='btn btn-delete'><i class='bx bx-trash'></i></a>";
+                                echo "</td>";
+
                                 echo "</tr>";
                             }
+
                             ?>
                         </tbody>
 

@@ -111,7 +111,9 @@ if (isset($_SESSION['id'])) {
                      <span id="name-error" style="color:red; display:none;">Full Name is required</span>
                   </div>
                   <div class="field">
-                     <div class="label">Email Address</div><input type="email" id="email" name="email" required>
+                     <div class="label">Email Address</div>
+                     <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>"
+                        readonly required>
                      <span id="email-error" style="color:red; display:none;">Valid email is required</span>
                   </div>
                   <div class="field">
@@ -123,7 +125,7 @@ if (isset($_SESSION['id'])) {
                   </div>
                </div>
 
-               <div class="page">
+               <div class="page">   
                   <div class="title">Booking Info:</div>
                   <div class="field">
                      <div class="label">Choose Package</div>
@@ -145,8 +147,11 @@ if (isset($_SESSION['id'])) {
                   <div class="field">
                      <div class="label">Number of Days</div><input type="number" id="days" name="days" required>
                   </div>
-                  <div class="field btns"><button class="prev-1 prev">Previous</button><button class="next-1 next"
-                        type="button" onclick="validateStep2()">Next</button></div>
+                  <div class="field btns">
+    <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
+    <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
+</div>
+
                </div>
 
                <div class="page">
@@ -168,8 +173,11 @@ if (isset($_SESSION['id'])) {
                      <div class="label">Reference Number</div><input type="text" id="Reference" name="Reference"
                         required>
                   </div>
-                  <div class="field btns"><button class="prev-2 prev">Previous</button><button class="next-2 next"
-                        type="button" onclick="validateStep3()">Next</button></div>
+                  <div class="field btns">
+                     <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
+                     <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
+                  </div>
+
                </div>
 
                <div class="page">
@@ -184,9 +192,154 @@ if (isset($_SESSION['id'])) {
 
       <script src="../js/home.js"></script>
       <script src="../js/language.js"></script>
-      <script src="../js/socmed.js"></script>
       <script>
-       
+         let currentPage = 0;
+
+         function validateStep1() {
+            let isValid = true;
+
+            // Full Name validation
+            const name = document.getElementById('name').value;
+            if (name.trim() === "") {
+               document.getElementById('name-error').style.display = 'block';
+               isValid = false;
+            } else {
+               document.getElementById('name-error').style.display = 'none';
+            }
+
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+               document.getElementById('email-error').style.display = 'block';
+               isValid = false;
+            } else {
+               document.getElementById('email-error').style.display = 'none';
+            }
+
+            // Phone number validation
+            const phone = document.getElementById('phone').value;
+            const phonePattern = /^[0-9]{10,12}$/;
+            if (!phone.match(phonePattern)) {
+               document.getElementById('phone-error').style.display = 'block';
+               isValid = false;
+            } else {
+               document.getElementById('phone-error').style.display = 'none';
+            }
+
+            if (isValid) {
+               nextPage();
+            }
+         }
+
+         function validateStep2() {
+            let isValid = true;
+            const packageSelect = document.getElementById('package');
+            const checkinDate = document.getElementById('checkin').value;
+            const guests = document.getElementById('guests').value;
+            const days = document.getElementById('days').value;
+
+            if (packageSelect.value === "") {
+               alert("Package selection is required.");
+               isValid = false;
+            }
+
+            if (checkinDate === "") {
+               alert("Check-in date is required.");
+               isValid = false;
+            }
+
+            if (guests <= 0) {
+               alert("Number of guests must be greater than zero.");
+               isValid = false;
+            }
+
+            if (days <= 0) {
+               alert("Number of days must be greater than zero.");
+               isValid = false;
+            }
+
+            if (isValid) {
+               nextPage();
+            }
+         }
+
+         function validateStep3() {
+            let isValid = true;
+            const paymentSelect = document.getElementById('payment');
+            const amount = document.getElementById('amount').value;
+            const reference = document.getElementById('Reference').value;
+
+            if (paymentSelect.value === "") {
+               alert("Payment method is required.");
+               isValid = false;
+            }
+
+            if (amount <= 0) {
+               alert("Down payment must be greater than zero.");
+               isValid = false;
+            }
+
+            if (reference.trim() === "") {
+               alert("Reference number is required.");
+               isValid = false;
+            }
+
+            if (isValid) {
+               nextPage();
+            }
+         }
+
+         function nextPage() {
+            const pages = document.querySelectorAll('.page');
+            const steps = document.querySelectorAll('.progress-bar .step');
+
+            // Hide the current page
+            pages[currentPage].style.display = 'none';
+
+            // Update the step classes
+            steps[currentPage].classList.remove('active');
+            steps[currentPage].querySelector('.bullet').classList.remove('active');
+            steps[currentPage].querySelector('.check').classList.add('active');
+
+            currentPage++;
+
+            // Ensure we do not exceed the number of pages
+            if (currentPage < pages.length) {
+               pages[currentPage].style.display = 'block';
+               steps[currentPage].classList.add('active');
+               steps[currentPage].querySelector('.bullet').classList.add('active');
+               steps[currentPage].querySelector('p').classList.add('active');
+            }
+         }
+
+         function prevPage() {
+            const pages = document.querySelectorAll('.page');
+            const steps = document.querySelectorAll('.progress-bar .step');
+
+            // Hide the current page
+            pages[currentPage].style.display = 'none';
+
+            // Update the step classes
+            steps[currentPage].classList.remove('active');
+            steps[currentPage].querySelector('.bullet').classList.remove('active');
+            steps[currentPage].querySelector('.check').classList.remove('active');
+
+            currentPage--;
+
+            // Show the previous page
+            pages[currentPage].style.display = 'block';
+            steps[currentPage].classList.add('active');
+            steps[currentPage].querySelector('.bullet').classList.add('active');
+            steps[currentPage].querySelector('p').classList.add('active');
+         }
+
+         // Initial state
+         const pages = document.querySelectorAll('.page');
+         pages.forEach((page, index) => {
+            page.style.display = index === currentPage ? 'block' : 'none';
+         });
+
       </script>
    </section>
 </body>
