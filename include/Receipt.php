@@ -19,7 +19,6 @@ if (!$booking) {
   die("Booking not found!");
 }
 
-
 $UserName = $_SESSION["UserName"];
 
 // Fetching user profile image from the database
@@ -29,8 +28,10 @@ try {
   $pdoResult->execute(['UserName' => $UserName]);
   $user = $pdoResult->fetch();
   $profile_image = $user['image']; // Assuming this is the URL to the profile image
+  $full_name = $user['FullName'];
+
 } catch (PDOException $error) {
-  echo $error->getMessage();
+  echo $error->getMessage() . '';
   exit;
 }
 
@@ -121,8 +122,8 @@ try {
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -152,7 +153,7 @@ try {
         <p>Failed to send email. Please contact support. Error: <?= htmlspecialchars($mailError) ?></p>
       <?php endif; ?>
 
-    </div>  
+    </div>
   </section>
 
   <script src="../js/home.js"></script>
