@@ -49,7 +49,7 @@ try {
       $successMessage = "Itinerary saved successfully!";
     }
 
-    // Fetch all itinerary items for the current user
+    // Fetch all itinerary items for the current user only by matching user id
     $itineraryQuery = "SELECT * FROM itinerary WHERE id = :id";
     $itineraryResult = $pdoConnect->prepare($itineraryQuery);
     $itineraryResult->execute([':id' => $userId]);
@@ -63,6 +63,7 @@ try {
   $errorMessage = "Error: " . $error->getMessage();
 }
 ?>
+
 
 
 
@@ -207,6 +208,7 @@ try {
   <section class="overlay"></section>
 
   <Section class="main">
+
 
     <div class="container">
       <h1>My Travel Itinerary</h1>
