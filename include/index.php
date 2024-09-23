@@ -202,7 +202,8 @@ if (isset($_POST["login"])) {
             <div class="title">El Nido</div>
             <div class="type">Palawan</div>
             <div class="description">
-
+            Your Gateway to Untouched Beauty
+                 
             </div>
 
           </div>
@@ -215,7 +216,7 @@ if (isset($_POST["login"])) {
             <div class="title">Boracay</div>
             <div class="type">Aklan</div>
             <div class="description">
-
+            Dive into Crystal Clear Waters
             </div>
 
           </div>
@@ -228,6 +229,7 @@ if (isset($_POST["login"])) {
             <div class="title">Silanguin Cove</div>
             <div class="type">Zambales</div>
             <div class="description">
+            Find Peace in the Pristine Shores of Silanguin Cove
 
             </div>
 
@@ -240,6 +242,7 @@ if (isset($_POST["login"])) {
             <div class="title">Mt. Pinatubo</div>
             <div class="type">Pampanga</div>
             <div class="description">
+            Experience the Thrill of Mt. Pinatubo’s Epic Trail
 
             </div>
 
@@ -253,6 +256,7 @@ if (isset($_POST["login"])) {
             <div class="title">Taal Volcano</div>
             <div class="type">Batangas</div>
             <div class="description">
+            Witness the Awe of Taal Volcano
 
             </div>
 
@@ -266,7 +270,7 @@ if (isset($_POST["login"])) {
             <div class="title">White Peak</div>
             <div class="type">Bataan</div>
             <div class="description">
-
+            Conquer the Summit at White Peak
             </div>
 
           </div>
@@ -279,6 +283,7 @@ if (isset($_POST["login"])) {
             <div class="title">Kawasan Falls</div>
             <div class="type">Cebu</div>
             <div class="description">
+            Chase the Cascades at Kawasan Falls
 
             </div>
 
