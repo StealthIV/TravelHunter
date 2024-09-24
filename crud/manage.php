@@ -81,6 +81,13 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </li>
                 <li>
+                    <a href="../include/req.php">
+                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+
+                        <small>Request</small>
+                    </a>
+                </li>
+                <li>
                     <a href="../include/boracayad.php">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
@@ -279,7 +286,7 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                             $pdoResult->execute();
                             while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
                                 extract($row);
-                            
+
                                 echo "<tr>";
                                 echo "<td style='width: 10%;'>$id</td>";
                                 echo "<td style='width: 15%;'>$name</td>";
