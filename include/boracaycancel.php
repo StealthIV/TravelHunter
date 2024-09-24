@@ -7,56 +7,70 @@ if (!isset($_SESSION["UserName"])) {
 
 require_once '../connect/dbcon.php';
 
+// Fetch user info
 $UserName = $_SESSION["UserName"];
+$bookingSaved = false; // flag to check if booking was saved
 
 try {
+    // Get the logged-in user details
     $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute(['UserName' => $UserName]);
     $user = $pdoResult->fetch();
-    $profile_image = $user['image']; // Assuming this is the URL to the profile image
-
+    $full_name = $user['FullName'];
+    $profile_image = $user['image'];
 } catch (PDOException $error) {
-    echo $error->getMessage() . '';
-    exit;
-}
-
-?>
-
-<?php
-// Check if the user is logged in
-if (isset($_SESSION['id'])) {
-    $user_id = $_SESSION['id'];
-
-    try {
-        // Fetch the user's details from the database using user_id
-        $stmt = $pdoConnect->prepare("SELECT UserName, FullName, PassWord, image FROM user WHERE id = :user_id");
-        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-        $stmt->execute();
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($user) {
-            // Extract user details
-            $email = $user['UserName'];
-            $full_name = $user['FullName'];
-            $password = $user['PassWord'];
-            $profile_image = !empty($user['image']) ? $user['image'] : 'img/default_profile.jpg'; // Fallback to default image
-        } else {
-            // Handle the case where user details are not found
-            echo "User details not found.";
-            exit();
-        }
-    } catch (PDOException $e) {
-        // Handle database connection error or query failure
-        echo "Error: " . $e->getMessage();
-        exit();
-    }
-} else {
-    // Redirect to the login page if the user is not logged in
-    header("Location: login.php");
+    echo $error->getMessage();
     exit();
 }
+
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $enteredPassword = $_POST['password'];
+
+    // Verify the password
+    if (password_verify($enteredPassword, $user['PassWord'])) { // Assuming the stored password is hashed
+        // Password is correct, proceed with the rest of the process
+        $bookingId = $_POST['Booking_Id'];
+
+        // Check if Booking ID exists and handle further actions
+        try {
+            $stmt = $pdoConnect->prepare("SELECT * FROM bookings WHERE id = :bookingId");
+            $stmt->bindParam(':bookingId', $bookingId, PDO::PARAM_INT);
+            $stmt->execute();
+            $booking = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($booking) {
+                // Booking exists, proceed with saving the request
+                $stmt = $pdoConnect->prepare("INSERT INTO requests (user_id, request, reason) VALUES (:user_id, :request, :reason)");
+                $stmt->execute([
+                    'user_id' => $user['id'],
+                    'request' => $_POST['Request'],
+                    'reason' => $_POST['Reason']
+                ]);
+
+                // Set success message and redirect or stay on the page
+                $_SESSION['message'] = "Request saved successfully!";
+                $bookingSaved = true; // set flag to true
+            } else {
+                // Booking ID does not exist
+                $_SESSION['error'] = "Booking ID does not exist.";
+            }
+        } catch (PDOException $error) {
+            echo $error->getMessage();
+            exit();
+        }
+    } else {
+        // Incorrect password
+        $_SESSION['error'] = "Incorrect password. Please try again.";
+    }
+}
+
+
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,8 +87,21 @@ if (isset($_SESSION['id'])) {
 </head>
 
 <body>
-    <?php require_once "nav.php"; ?>
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="notification-container notification-error" style="display:block;">
+            <button class="notification-close" onclick="this.parentElement.style.display='none';">&times;</button>
+            <strong>Error:</strong> <?php echo $_SESSION['error']; ?>
+        </div>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
 
+    <?php if (isset($_SESSION['message'])): ?>
+        <div class="notification-container notification-success" style="display:block;">
+            <button class="notification-close" onclick="this.parentElement.style.display='none';">&times;</button>
+            <strong>Success:</strong> <?php echo $_SESSION['message']; ?>
+        </div>
+        <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
     <section class="overlay"></section>
 
     <section class="main">
@@ -174,21 +201,27 @@ if (isset($_SESSION['id'])) {
                     <div class="page">
                         <div class="title">Login Details:</div>
                         <div class="field">
-                            <div class="label">Username</div>
-                            <input type="text" name="username">
-                        </div>
-                        <div class="field">
                             <div class="label">Password</div>
-                            <input type="password" name="password">
+                            <input type="password" name="password" required>
                         </div>
                         <div class="field btns">
                             <button class="prev-3 prev">Previous</button>
                             <button class="submit" type="submit">Submit</button>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
+        <script>
+            window.onload = function () {
+                setTimeout(function () {
+                    const notifications = document.querySelectorAll('.notification-container');
+                    notifications.forEach(notification => {
+                        notification.style.display = 'none';
+                    });
+                }, 5000);
+            };
+        </script>
+
         <script>
             let currentPage = 0;
 
@@ -265,12 +298,6 @@ if (isset($_SESSION['id'])) {
 
             function validateStep4() {
                 let isValid = true;
-                const username = document.querySelector('input[name="username"]').value.trim();
-                if (username === "") {
-                    alert("Username is required.");
-                    isValid = false;
-                }
-
                 const password = document.querySelector('input[name="password"]').value;
                 if (password === "") {
                     alert("Password is required.");
@@ -278,9 +305,11 @@ if (isset($_SESSION['id'])) {
                 }
 
                 if (isValid) {
+                    // Submit the form only after validation
                     document.getElementById('bookingForm').submit();
                 }
             }
+
 
             function nextPage() {
                 const pages = document.querySelectorAll('.page');
