@@ -48,7 +48,7 @@ if (isset($_SESSION['UserName'])) {
   }
 } else {
   // Redirect to the login page if the user is not logged in
-  header("Location: login.php");
+  header("Location: ../include/login.php");
   exit();
 }
 

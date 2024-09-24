@@ -73,7 +73,7 @@ if (isset($_POST["login"])) {
         // Redirect based on role
         if ($_SESSION["UserRole"] == "admin") {
           header("Location: ../crud/admin.php");
-        } elseif ($_SESSION["UserRole"] == "manage") {
+        } elseif ($_SESSION["UserRole"] == "manager") {
           header("Location: ../crud/manage.php");
         } else {
           header("Location: home.php");

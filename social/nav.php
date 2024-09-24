@@ -27,7 +27,7 @@
             <a href="profile.php">Profile</a>
 
             <a href="../include/boracaycancel.php"> <i class="bx bx-book icon"></i> Cancel Booking</a>
-            <a href="logout.php">Logout</a>
+            <a href="../include/logout.php">Logout</a>
           </div>
         </div>
       </div>
