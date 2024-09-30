@@ -17,6 +17,7 @@ try {
     $pdoResult->execute(['UserName' => $UserName]);
     $user = $pdoResult->fetch();
     $userId = $user['history_id']; // Assuming 'id' is the column name for the user ID
+    $full_name =$user['fullname'];
     $profile_image = $user['image']; // Assuming this is the URL to the profile image
 
 } catch (PDOException $error) {
@@ -112,4 +113,3 @@ try {
 </body>
 
 </html>
-ff
