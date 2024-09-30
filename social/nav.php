@@ -30,6 +30,39 @@
             <a href="../include/logout.php">Logout</a>
           </div>
         </div>
+        <div>
+        <span class="notification-icon" onclick="toggleNotifications()">
+            <i class="fas fa-bell"></i>
+            <?php if (!empty($notifications)): ?>
+                <span class="notification-badge"><?php echo count($notifications); ?></span>
+            <?php endif; ?>
+        </span>
+    </div>
+
+    <div class="notification-container" id="notificationContainer">
+        <h2>New Booking Requests</h2>
+        <?php if (empty($notifications)): ?>
+            <p>No new bookings at the moment.</p>
+        <?php else: ?>
+            <ul>
+                <?php foreach ($notifications as $notification): ?>
+                    <li>
+                        <strong>Booking ID:</strong> <?php echo htmlspecialchars($notification['id']); ?><br>
+                        <strong>Name:</strong> <?php echo htmlspecialchars($notification['name']); ?><br>
+                        <strong>Date:</strong> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
+                        <strong>Status:</strong> <?php echo htmlspecialchars($notification['status']); ?><br>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+    </div>
+
+    <script>
+        function toggleNotifications() {
+            var container = document.getElementById('notificationContainer');
+            container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
+        }
+    </script>
       </div>
 
 
