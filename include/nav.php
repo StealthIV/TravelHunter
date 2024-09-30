@@ -1,3 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<style>
+  .notification-icon {
+    font-size: 24px;
+    margin-left: 50px;
+    color: #007bff;
+    cursor: pointer;
+    position: relative;
+    /* To position the notification badge */
+  }
+
+  .notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
+  .notification-container {
+    display: none;
+    /* Hide notifications by default */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 10px auto;
+  }
+</style>
+
 <nav>
   <div class="logo">
     <i class="bx bx-menu menu-icon"></i>
@@ -5,7 +41,6 @@
       data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
       data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
       data-lang-ar="صياد السفر">TravelHunter</span>
-
     <select class="language" id="language-select" onchange="changeLanguage()">
       <option value="en">English</option>
       <option value="es">Spanish</option>
@@ -18,81 +53,50 @@
       <option value="pt">Portuguese</option>
       <option value="ar">Arabic</option>
     </select>
-
-<<<<<<< Updated upstream
-      <div>
-        <span class="notification-icon" onclick="toggleNotifications()">
-            <i class="fas fa-bell"></i>
-            <?php if (!empty($notifications)): ?>
-                <span class="notification-badge"><?php echo count($notifications); ?></span>
-            <?php endif; ?>
-        </span>
+    <div>
+      <span class="notification-icon" onclick="toggleNotifications()">
+        <i class="fas fa-bell"></i>
+        <?php if (!empty($notifications)): ?>
+          <span class="notification-badge"><?php echo count($notifications); ?></span>
+        <?php endif; ?>
+      </span>
     </div>
 
     <div class="notification-container" id="notificationContainer">
-        <h2>New Booking Requests</h2>
-        <?php if (empty($notifications)): ?>
-            <p>No new bookings at the moment.</p>
-        <?php else: ?>
-            <ul>
-                <?php foreach ($notifications as $notification): ?>
-                    <li>
-                        <strong>Booking ID:</strong> <?php echo htmlspecialchars($notification['id']); ?><br>
-                        <strong>Name:</strong> <?php echo htmlspecialchars($notification['name']); ?><br>
-                        <strong>Date:</strong> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
-                        <strong>Status:</strong> <?php echo htmlspecialchars($notification['status']); ?><br>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
+      <h2>New Booking Requests</h2>
+      <?php if (empty($notifications)): ?>
+        <p>No new bookings at the moment.</p>
+      <?php else: ?>
+        <ul>
+          <?php foreach ($notifications as $notification): ?>
+            <li>
+              <strong>Booking ID:</strong> <?php echo htmlspecialchars($notification['id']); ?><br>
+              <strong>Name:</strong> <?php echo htmlspecialchars($notification['name']); ?><br>
+              <strong>Date:</strong> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
+              <strong>Status:</strong> <?php echo htmlspecialchars($notification['status']); ?><br>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif; ?>
     </div>
 
     <script>
-        function toggleNotifications() {
-            var container = document.getElementById('notificationContainer');
-            container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
-        }
+      function toggleNotifications() {
+        var container = document.getElementById('notificationContainer');
+        container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
+      }
     </script>
 
 
 
-
-      <div class="profile">
-
-        <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
-        <div class="dropdown">
-          <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
-          <div class="dropdown-content">
-            <a href="profile.php">Profile</a>
-
-            <a href="../include/boracaycancel.php"> <i class="bx bx-book icon"></i> Cancel Booking</a>
-            <a href="logout.php">Logout</a>
-          </div>
-        </div>
-=======
-    <div class="notification-icon">
-      <div class="icon" onclick="toggleDropdown()">
-        🔔
-        <span class="badge">3</span>
-      </div>
-      <div class="dropdown" id="dropdown">
-        <div class="notification-item">Notification 1</div>
-        <div class="notification-item">Notification 2</div>
-        <div class="notification-item">Notification 3</div>
->>>>>>> Stashed changes
-      </div>
-    </div>
-
-
     <div class="profile">
-
-      <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
+      <span id="name-span"><?php echo htmlspecialchars($UserName); ?></span>
       <div class="dropdown">
         <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
         <div class="dropdown-content">
           <a href="profile.php">Profile</a>
 
-          <a href="../include/boracaycancel.php"> <i class="bx bx-book icon"></i> Cancel Booking</a>
+
           <a href="logout.php">Logout</a>
         </div>
       </div>
@@ -162,7 +166,7 @@
             </a>
           </li>
           <li class="list">
-            <a href="../include/itenerary.php" class="nav-link">
+            <a href="../include/itenerary.html" class="nav-link">
               <i class="bx bx-note icon"></i>
               <span class="link" data-lang-en="My Itinerary" data-lang-es="Mi itinerario" data-lang-fr="Mon itinéraire"
                 data-lang-de="Meine Reiseroute" data-lang-zh="我的行程" data-lang-jp="私の旅程 (Watashi no Ritei)"
