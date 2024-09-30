@@ -18,6 +18,22 @@
         <option value="pt">Portuguese</option>
         <option value="ar">Arabic</option>
       </select>
+
+      <div class="notification-icon">
+    <div class="icon" onclick="toggleDropdown()">
+        🔔
+        <span class="badge">3</span>
+    </div>
+    <div class="dropdown" id="dropdown">
+        <div class="notification-item">Notification 1</div>
+        <div class="notification-item">Notification 2</div>
+        <div class="notification-item">Notification 3</div>
+    </div>
+</div>
+
+
+
+
       <div class="profile">
 
         <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
