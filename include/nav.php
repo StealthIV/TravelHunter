@@ -19,17 +19,39 @@
         <option value="ar">Arabic</option>
       </select>
 
-      <div class="notification-icon">
-    <div class="icon" onclick="toggleDropdown()">
-        🔔
-        <span class="badge">3</span>
+      <div>
+        <span class="notification-icon" onclick="toggleNotifications()">
+            <i class="fas fa-bell"></i>
+            <?php if (!empty($notifications)): ?>
+                <span class="notification-badge"><?php echo count($notifications); ?></span>
+            <?php endif; ?>
+        </span>
     </div>
-    <div class="dropdown" id="dropdown">
-        <div class="notification-item">Notification 1</div>
-        <div class="notification-item">Notification 2</div>
-        <div class="notification-item">Notification 3</div>
+
+    <div class="notification-container" id="notificationContainer">
+        <h2>New Booking Requests</h2>
+        <?php if (empty($notifications)): ?>
+            <p>No new bookings at the moment.</p>
+        <?php else: ?>
+            <ul>
+                <?php foreach ($notifications as $notification): ?>
+                    <li>
+                        <strong>Booking ID:</strong> <?php echo htmlspecialchars($notification['id']); ?><br>
+                        <strong>Name:</strong> <?php echo htmlspecialchars($notification['name']); ?><br>
+                        <strong>Date:</strong> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
+                        <strong>Status:</strong> <?php echo htmlspecialchars($notification['status']); ?><br>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
     </div>
-</div>
+
+    <script>
+        function toggleNotifications() {
+            var container = document.getElementById('notificationContainer');
+            container.style.display = (container.style.display === 'none' || container.style.display === '') ? 'block' : 'none';
+        }
+    </script>
 
 
 
