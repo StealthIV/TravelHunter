@@ -251,6 +251,7 @@ if (isset($_SESSION['id'])) {
       
  
       <div class="img">
+        <h1 class="exp6">Discover the wonders of Boracay — where adventure meets paradise!</h1>
         <main>
 
           <div id="carousel" class="carousel">
