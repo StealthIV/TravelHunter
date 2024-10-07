@@ -8,12 +8,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build and Push
     steps:
-      - name: git-checkout
+      - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Install all dependencies
+      - name: Set working directory
+        run: cd path/to/your/project
+      - name: Install dependencies
         run: npm install
 
       - name: Build
