@@ -1,40 +1,29 @@
-name: Deploy to Hostinger
+name: Generate a build and push to another branch
 
-# Trigger the workflow on push to the main branch
 on:
   push:
     branches:
-      - main
+      - main # The branch name your are commit the new changes
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    name: Build and Push
     steps:
-    # Step 1: Checkout the code from your repository
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: git-checkout
+        uses: actions/checkout@v3
 
-    # Step 2: Set up PHP environment
-    - name: Set up PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '7.4'  # Adjust the version if needed
-        extensions: mbstring, intl, json, xml, dom
+      - name: Install all dependencies
+        run: npm install
 
-    # Step 3: Install Composer dependencies
-    - name: Install Composer dependencies
-      run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
+      - name: Build
+        run: npm run build # The build command of your project
 
-    # Step 4: Deploy via SSH to Hostinger
-    - name: Deploy to Hostinger via SSH
-      uses: appleboy/ssh-action@v0.1.6
-      with:
-        host: ${{ secrets.HOSTINGER_IP }}   # Your Hostinger server IP
-        username: ${{ secrets.HOSTINGER_USERNAME }}   # Your Hostinger SSH username
-        password: ${{ secrets.HOSTINGER_PASSWORD }}   # Your Hostinger SSH password
-        script: |
-          cd /home/your-username/public_html   # Change to your project's root folder
-          git pull origin main
-          composer install --no-interaction --prefer-dist --optimize-autoloader
-          echo "Deployed to Hostinger!"
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build # The branch name where you want to push the assets
+          FOLDER: build # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Build: ({sha}) {msg}" # The commit message
