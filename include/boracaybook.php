@@ -125,24 +125,31 @@ if (isset($_SESSION['id'])) {
                   </div>
                </div>
 
+
+
                <div class="page">   
                   <div class="title">Booking Info:</div>
                   <div class="field">
                      <div class="label">Choose Package</div>
-                     <select id="package" name="package" required>
-                        <option hidden>Choose Package</option>
-                        <option value="Platinum">Platinum</option>
-                        <option value="Gold">Gold</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Bronze">Bronze</option>
-                     </select>
+            
+                     <select id="package" name="package">
+                <option value="">-- Select a Package --</option>
+                <option value="1000">Basic Package - &#8369;1000</option>
+                <option value="1500">Standard Package - &#8369;1500</option>
+                <option value="2000">Premium Package - &#8369;2000</option>
+            </select>
                   </div>
+
+               
+
+
                   <div class="field">
                      <div class="label">Booking Date</div><input type="date" id="checkin" name="checkin" required>
                   </div>
                   <div class="field">
-                     <div class="label">Number of Guests</div><input type="number" id="guests" name="guests" min="1"
-                        max="50" required>
+                     <div class="label"  for="quantity">Number of Guests</div> 
+                       <input type="number" id="guests" name="guests" value="1" min="1" required>
+
                   </div>
                   <div class="field">
                      <div class="label">Number of Days</div><input type="number" id="days" name="days" required>
@@ -156,6 +163,7 @@ if (isset($_SESSION['id'])) {
 
                <div class="page">
                   <div class="title">Payment:</div>
+                  <h1>Gcash account: 09663174570</h1>
                   <div class="field">
                      <div class="label">Mode of Payment</div>
                      <select id="payment" name="payment" required>
@@ -165,10 +173,20 @@ if (isset($_SESSION['id'])) {
                         <option>Paypal</option>
                      </select>
                   </div>
+
+                
+
+               
+
                   <div class="field">
-                     <div class="label">Down Payment</div><input type="number" id="amount" name="amount" step="0.01"
-                        required>
+                     <div class="label" for="downpayment">Downpayment Amount (30%):</div>
+                     <input type="text" id="amount" name="amount"  value="&#8369;0" readonly>
                   </div>
+                  <div class="field">
+                     <div class="label" for="balance">Balance Amount:</div>
+                     <input type="text" id="balance" name="balance" value="&#8369;0" readonly>
+                  </div>
+                  
                   <div class="field">
                      <div class="label">Reference Number</div><input type="text" id="Reference" name="Reference"
                         required>
@@ -190,6 +208,7 @@ if (isset($_SESSION['id'])) {
          </div>
       </div>
 
+      <script src="../js/payselect.js"></script>
       <script src="../js/home.js"></script>
       <script src="../js/language.js"></script>
       <script>

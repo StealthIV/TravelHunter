@@ -229,14 +229,14 @@ button {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: change 10s infinite ease-in-out;
+    animation: change 20s infinite ease-in-out;
     
 }
 
 @keyframes change{
   0%
   {
-      background-image: url(../Places/boracay/1.jpg);
+      background-image: url(../img/coronpalawan.jpg);
   }
   20%
   {
@@ -318,6 +318,11 @@ button {
         display:inherit;
         position: relative;
     }
+
+    #carousel img {
+      width: 300px;
+    }
+    
    
   #filterable-cards {
     justify-content: center;
@@ -327,6 +332,7 @@ button {
     width: calc(100% / 2 - 10px);
   }
 }
+
 
 .sec2{
     width: 100%;
@@ -668,8 +674,7 @@ button {
       font-size: 1.25rem;
       padding: 12px 42px;
     }
-
-    
+   
   }
   
   .button-82-pushable:hover {
@@ -733,7 +738,7 @@ button {
 
   .package main header h1{
     color: black;
-    font-size: 30px;
+    font-size: 25px;
   }
   .package main header{
     width: 98%;
