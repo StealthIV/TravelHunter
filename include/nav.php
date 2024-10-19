@@ -6,7 +6,6 @@ $query = "SELECT name, created_at, status FROM notifications"; // Fetch only nec
 $stmt = $pdoConnect->prepare($query);
 $stmt->execute();
 $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <style>
@@ -41,9 +40,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     left: 405px;
     top: 10px;
     max-height: 300px;
-    /* Limit the height of the container */
     overflow-y: auto;
-    /* Add a vertical scrollbar */
   }
 
   .notification-list {
@@ -77,7 +74,6 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 </style>
 
-
 <nav>
   <div class="logo">
     <i class="bx bx-menu menu-icon"></i>
@@ -106,28 +102,29 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <span class="notification-badge"><?php echo count($notifications); ?></span>
         <?php endif; ?>
       </span>
-
     </div>
 
     <div class="notification-container" id="notificationContainer">
-    <h3>Notifications</h3>
-    <?php if (empty($notifications)): ?>
+      <h3>Notifications</h3>
+      <?php if (empty($notifications)): ?>
         <p>No new notifications at the moment.</p>
-    <?php else: ?>
+      <?php else: ?>
         <ul class="notification-list">
-            <!-- Loop through notifications and display them -->
-            <?php foreach ($notifications as $notification): ?>
-                <li class="notification-item">
-                    <div class="notification-title"><?php echo htmlspecialchars($notification['name']); ?></div>
-                    <div class="notification-text">
-                        <span>Date:</span> <?php echo htmlspecialchars($notification['created_at']); ?>
-                    </div>
-                </li>
-            <?php endforeach; ?>
+          <!-- Loop through notifications and display them -->
+          <?php foreach ($notifications as $notification): ?>
+            <li class="notification-item">
+              <div class="notification-title"><?php echo htmlspecialchars($notification['name']); ?></div>
+              <div class="notification-text">
+                <span>Date:</span> <?php echo htmlspecialchars($notification['created_at']); ?><br>
+                <?php if (!empty($notification['status'])): ?>
+                  <span>Status:</span> <?php echo htmlspecialchars($notification['status']); ?>
+                <?php endif; ?>
+              </div>
+            </li>
+          <?php endforeach; ?>
         </ul>
-    <?php endif; ?>
-</div>
-
+      <?php endif; ?>
+    </div>
 
     <script>
       function toggleNotifications() {
@@ -145,9 +142,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
         // Update aria-expanded attribute
         document.querySelector('.notification-icon').setAttribute('aria-expanded', !isExpanded);
       }
-
     </script>
-
 
 
 
