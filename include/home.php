@@ -145,7 +145,7 @@ try {
               <b data-lang-en="Summer Place(Palakol)" data-lang-es="Lugar de Verano (Palakol)" data-lang-fr="Endroit Estival (Palakol)"
                 data-lang-de="Sommerort (Palakol)" data-lang-zh="夏日之地 " data-lang-jp="夏の場所"
                 data-lang-ru="Летнее Место (Палакол)" data-lang-it="Luogo Estivo (Palakol)"
-                data-lang-pt="Lugar de Verão (Palakol)" data-lang-ar="مكان الصيف ">Summer Place(Palakol) </b><br>
+                data-lang-pt="Lugar de Verão (Palakol)" data-lang-ar="مكان الصيف "><i class="bx bx-water icon"></i>Summer Place(Palakol) </b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="San Jose Floridablanca, Pampanga" data-lang-es="Lugar de Verano (Palakol)" data-lang-fr="Endroit Estival (Palakol)"
@@ -165,7 +165,7 @@ try {
               <b data-lang-en="Nabuclod Mountain View" data-lang-es="Vista de la Montaña Nabuclod" data-lang-fr="Vue sur la Montagne Nabuclod"
                 data-lang-de="Nabuclod-Bergblick" data-lang-zh="那布克洛德山景  " data-lang-jp=" ナブクロッドの山の眺め "
                 data-lang-ru="Вид на Гору Набуклод" data-lang-it="Vista sulla Montagna Nabuclod"
-                data-lang-pt="Vista da Montanha Nabuclod" data-lang-ar="إطلالة جبل نابوكلود ">Nabuclod Mountain View</b><br>
+                data-lang-pt="Vista da Montanha Nabuclod" data-lang-ar="إطلالة جبل نابوكلود "><i class="bx bx-chevrons-up icon"></i>Nabuclod Mountain View</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
@@ -188,7 +188,7 @@ try {
               <b data-lang-en="Tungab Lagoon" data-lang-es="Laguna Tungab" data-lang-fr="Lagon Tungab"
                 data-lang-de="Tungab-Lagune" data-lang-zh=" 通加布泻湖 " data-lang-jp=" トゥンガブ潟湖  "
                 data-lang-ru="Лагуна Тунгаб" data-lang-it="Laguna di Tungab"
-                data-lang-pt="Lagoa Tungab" data-lang-ar="بحيرة تونجاب"> Tungab Lagoon</b><br>
+                data-lang-pt="Lagoa Tungab" data-lang-ar="بحيرة تونجاب"> <i class="bx bx-water icon"></i>Tungab Lagoon</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
@@ -212,7 +212,7 @@ try {
               <b data-lang-en="Sumuclab Lagoon" data-lang-es="Laguna Sumuclab" data-lang-fr="Lagon Sumuclab"
                 data-lang-de="Sumuclab-Lagune" data-lang-zh=" 通加布泻湖 " data-lang-jp=" トゥンガブ潟湖  "
                 data-lang-ru="Лагуна Тунгаб" data-lang-it="Laguna di Sumuclab"
-                data-lang-pt="Lagoa Sumuclab" data-lang-ar="بحيرة تونجاب">Sumuclab Lagoon</b><br>
+                data-lang-pt="Lagoa Sumuclab" data-lang-ar="بحيرة تونجاب"><i class="bx bx-water icon"></i>Sumuclab Lagoon</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
@@ -236,7 +236,7 @@ try {
               <b data-lang-en="Puning Hot Spring" data-lang-es="Aguas Termales de Puning" data-lang-fr="Source Thermale de Puning"
                 data-lang-de="Puning-Heißquelle" data-lang-zh=" 埔宁温泉 " data-lang-jp=" プニング温泉  "
                 data-lang-ru="Горячий Источник Пуньин " data-lang-it="Sorgente Termale di Puning"
-                data-lang-pt="Fonte Termal de Puning" data-lang-ar=" الينابيع الساخنة في بونينغ ">Puning Hot Spring</b><br>
+                data-lang-pt="Fonte Termal de Puning" data-lang-ar=" الينابيع الساخنة في بونينغ "><i class="bx bx-water icon"></i>Puning Hot Spring</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Sapang Bato, Angeles City,Pampanga" data-lang-es="Sapang Bato, Ciudad de Angeles, Pampanga" data-lang-fr="Sapang Bato, Ville d'Angeles, Pampanga "
@@ -259,7 +259,7 @@ try {
               <b data-lang-en="Mount Pinatubo" data-lang-es="Monte Pinatubo" data-lang-fr="Mont Pinatubo"
                 data-lang-de=" Berg Pinatubo" data-lang-zh=" 皮纳图博山 " data-lang-jp=" ピナトゥボ山  "
                 data-lang-ru="Гора Пинатубо " data-lang-it="Monte Pinatubo"
-                data-lang-pt="Monte Pinatubo" data-lang-ar="جبل بيناتوبو ">Mount Pinatubo</b><br>
+                data-lang-pt="Monte Pinatubo" data-lang-ar="جبل بيناتوبو "><i class="bx bx-chevrons-up icon"></i>Mount Pinatubo</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Station 3, Front Beach Malay" data-lang-es="Estación 3, Playa Frontal Malay" data-lang-fr="Station 3, Plage Frontale Malay"
@@ -283,7 +283,7 @@ try {
               <b data-lang-en="Miyamit Falls" data-lang-es="Cataratas Miyamit" data-lang-fr="Chutes Miyamit"
                 data-lang-de=" Miyamit Wasserfälle" data-lang-zh=" 米亚米特瀑布 " data-lang-jp=" ミヤミットの滝  "
                 data-lang-ru="Водопады Миямит" data-lang-it="Cascate Miyamit"
-                data-lang-pt="Cachoeiras Miyamit" data-lang-ar="شلالات مياميت">Miyamit Falls</b><br>
+                data-lang-pt="Cachoeiras Miyamit" data-lang-ar="شلالات مياميت"><i class="bx bx-water icon"></i>Miyamit Falls</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Baranggay Sapang Uwak, Porac,Pampanga" data-lang-es="Baranggay Sapang Uwak, Porac,Pampanga" data-lang-fr="Baranggay Sapang Uwak, Porac,Pampanga"
@@ -306,7 +306,7 @@ try {
               <b data-lang-en="Mount Arayat National Park" data-lang-es="Parque Nacional del Monte Arayat" data-lang-fr="Parc National du Mont Arayat"
                 data-lang-de=" Nationalpark Mount Arayat" data-lang-zh="阿拉亚山国家公园 " data-lang-jp=" アラヤット山国立公園  "
                 data-lang-ru="Национальный парк Маунт Араят" data-lang-it="Parco Nazionale del Monte Arayat"
-                data-lang-pt="Parque Nacional do Monte Arayat" data-lang-ar="منتزه جبل أرايات الوطني">Mount Arayat National Park</b><br>
+                data-lang-pt="Parque Nacional do Monte Arayat" data-lang-ar="منتزه جبل أرايات الوطني"><i class="bx bx-chevrons-up icon"></i>Mount Arayat National Park</b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Arayat, Pampanga" data-lang-es="Arayat, Pampanga" data-lang-fr="Arayat, Pampanga"
@@ -327,7 +327,7 @@ try {
               <b data-lang-en="Ilog Kamalig" data-lang-es="río granero" data-lang-fr="rivière grange"
                 data-lang-de=" Fluss Scheune" data-lang-zh=" 河谷仓  " data-lang-jp="  川倉庫  "
                 data-lang-ru="река амбар" data-lang-it="fiume granaio"
-                data-lang-pt="rio celeiro" data-lang-ar="نهر المخزن ">Ilog Kamalig </b><br>
+                data-lang-pt="rio celeiro" data-lang-ar="نهر المخزن "><i class="bx bx-water icon"></i>Ilog Kamalig </b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Pio, Porac, Pampanga" data-lang-es=" Pio, Porac, Provincia de Pampanga" data-lang-fr="Pio, Porac, Province de Pampanga"
@@ -348,7 +348,7 @@ try {
               <b data-lang-en="Ana an Falls " data-lang-es="Ana an Cascadas" data-lang-fr="Ana an Chutes"
                 data-lang-de=" Ana an Wasserfälle" data-lang-zh=" 阿娜安瀑布  " data-lang-jp="  アナ アン 滝"
                 data-lang-ru="Ана ан Водопады " data-lang-it="Ana an Cascate"
-                data-lang-pt="Ana an Cachoeiras" data-lang-ar="آنا آن شلالات ">Ana an Falls </b><br>
+                data-lang-pt="Ana an Cachoeiras" data-lang-ar="آنا آن شلالات "><i class="bx bx-water icon"></i>Ana an Falls </b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Inararo,Porac, Pampanga " data-lang-es=" Inararo, Porac, Provincia de Pampanga" data-lang-fr="Inararo, Porac, Province de Pampanga"
@@ -366,7 +366,7 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b>Dara Water Falls </b><br>
+              <b><i class="bx bx-water icon"></i>Dara Water Falls </b><br>
               <i class="bx bx-map icon" style="color: red;"></i>
               <small> Jalung, Porac, Pampanga</small>
             </p>
@@ -380,7 +380,7 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b>Big Falls</b><br>
+              <b><i class="bx bx-water icon"></i>Big Falls</b><br>
               <i class="bx bx-map icon" style="color: red;"></i>
               <small>Pidpid, Porac, Pampanga</small>
             </p>
@@ -925,7 +925,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -945,7 +945,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -967,7 +967,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -988,7 +988,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
         <div class="product">
@@ -1013,7 +1013,7 @@ try {
             <samp>₱600.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1039,7 +1039,7 @@ try {
             <samp>₱1000.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1065,7 +1065,7 @@ try {
             <samp>₱200.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1091,7 +1091,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
