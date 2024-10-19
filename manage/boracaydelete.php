@@ -16,7 +16,6 @@
 
     <?php
     require_once "../connect/dbcon.php";
-    require_once "../connect/dbcon1.php";
     session_start();
 
     if (isset($_GET['id'])) {
@@ -38,7 +37,7 @@
             $pdoResult = $pdoConnect->prepare($pdoQuery);
             $pdoResult->execute();
 
-            header("Location: ../crud/boracayadmin.php?id=" . $_SESSION["id"]);
+            header("Location: boracayadmin.php?id=");
             exit();
 
         } else {

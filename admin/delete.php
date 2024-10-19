@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['userId'])) {
 
         if ($pdoResult->rowCount() > 0) {
             // Redirect to manage.php after successful deletion
-            header("Location: ../crud/admin .php");
+            header("Location:admin.php");
             exit();
         } else {
             echo "Failed to delete user.";

@@ -4,7 +4,7 @@ require_once '../connect/dbcon.php'; // Adjust the path to your DB connection fi
 
 // Check if user is logged in (optional)
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: admin.php");
+    header("location: manage.php");
     exit();
 }
 
@@ -88,13 +88,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </a>
                 </li>
                 <li>
-                    <a href="../crud/req.php" class="active">
+                    <a href="req.php" class="active">
                         <span><i class="fa-solid fa-file-waveform"></i></span><br>
                         <small>Request</small>
                     </a>
                 </li>
                 <li>
-                    <a href="../include/boracayad.php">
+                    <a href="boracayad.php">
                         <span><i class="fa-solid fa-file-waveform"></i></span><br>
                         <small>Announcement</small>
                     </a>
@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </label>
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="../include/logout.php"><i
+                        <span><a href="logout.php"><i
                                     class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>

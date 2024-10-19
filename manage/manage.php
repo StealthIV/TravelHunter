@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: admin.php");
+    header("location: manage.php");
     exit();
 }
 
@@ -81,14 +81,14 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </li>
                 <li>
-                    <a href="../crud/req.php">
+                    <a href="req.php">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Request</small>
                     </a>
                 </li>
                 <li>
-                    <a href="../include/boracayad.php">
+                    <a href="#">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Annoucement</small>
@@ -116,7 +116,7 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="../include/logout.php"><i
+                        <span><a href="logout.php"><i
                                     class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>
