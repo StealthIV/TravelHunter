@@ -429,7 +429,7 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="White Beach"
+              <b  data-lang-en="White Beach"
                 data-lang-es="Playa Blanca"
                 data-lang-fr="Plage Blanche"
                 data-lang-de="Weißer Strand"
@@ -438,7 +438,7 @@ try {
                 data-lang-ru="Белый Пляж"
                 data-lang-it="Spiaggia Bianca"
                 data-lang-pt="Praia Branca"
-                data-lang-ar="شاطئ أبيض">
+                data-lang-ar="شاطئ أبيض"><i class="bx bx-water icon"></i>
                 White Beach
               </b><br>
 
@@ -465,7 +465,8 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b>Puka Shell Beach</b><br>
+              <b><i class="bx bx-water icon"></i>Puka Shell Beach</b><br>
+              
               <i class="bx bx-map icon" style="color: red;"></i>
               <small> Malay, Aklan</small>
             </p>
@@ -488,7 +489,7 @@ try {
                 data-lang-ru="Пляж Пука"
                 data-lang-it="Spiaggia Puka"
                 data-lang-pt="Praia de Conchas Puka"
-                data-lang-ar="شاطئ بوكه">
+                data-lang-ar="شاطئ بوكه"><i class="bx bx-water icon"></i>
                 Puka Shell Beach
               </b><br>
 
@@ -524,7 +525,7 @@ try {
                 data-lang-ru="Точка Ариэль"
                 data-lang-it="Punto di Ariel"
                 data-lang-pt="Ponto de Ariel"
-                data-lang-ar="نقطة أرييل">
+                data-lang-ar="نقطة أرييل"><i class="bx bx-water icon"></i>
                 Ariel's Point
               </b><br>
 
@@ -559,7 +560,7 @@ try {
                 data-lang-ru="Пляж Динивид"
                 data-lang-it="Spiaggia di Diniwid"
                 data-lang-pt="Praia Diniwid"
-                data-lang-ar="شاطئ دينيود">
+                data-lang-ar="شاطئ دينيود"><i class="bx bx-water icon"></i>
                 Diniwid Beach
               </b><br>
 
@@ -595,7 +596,7 @@ try {
                 data-lang-ru="Скала Уилли"
                 data-lang-it="Roccia di Willy"
                 data-lang-pt="Pedra do Willy"
-                data-lang-ar="صخرة ويلي">
+                data-lang-ar="صخرة ويلي"><i class="bx bx-water icon"></i>
                 Willy's Rock
               </b><br>
 
@@ -631,7 +632,7 @@ try {
                 data-lang-ru="Пляж Илиг Илигн"
                 data-lang-it="Spiaggia di Ilig Iligan"
                 data-lang-pt="Praia Ilig Iligan"
-                data-lang-ar="شاطئ إيلغ إيلغن">
+                data-lang-ar="شاطئ إيلغ إيلغن"><i class="bx bx-water icon"></i>
                 Ilig Iligan Beach
               </b><br>
 
@@ -667,7 +668,7 @@ try {
                 data-lang-ru="Гора Лухо"
                 data-lang-it="Monte Luho"
                 data-lang-pt="Monte Luho"
-                data-lang-ar="جبل لوه">
+                data-lang-ar="جبل لوه"><i class="bx bx-water icon"></i>
                 Mount Luho
               </b><br>
 
@@ -703,7 +704,7 @@ try {
                 data-lang-ru="Пляж Булобог"
                 data-lang-it="Spiaggia di Bulabog"
                 data-lang-pt="Praia de Bulabog"
-                data-lang-ar="شاطئ بولابوغ">
+                data-lang-ar="شاطئ بولابوغ"><i class="bx bx-water icon"></i>
                 Bulabog Beach
               </b><br>
 
@@ -739,7 +740,7 @@ try {
                 data-lang-ru="Остров Кристал Ков"
                 data-lang-it="Isola Crystal Cove"
                 data-lang-pt="Ilha Crystal Cove"
-                data-lang-ar="جزيرة كريستال كوف">
+                data-lang-ar="جزيرة كريستال كوف"><i class="bx bx-water icon"></i>
                 Crystal Cove Island
               </b><br>
 
@@ -775,7 +776,7 @@ try {
                 data-lang-ru="Остров Крокодил"
                 data-lang-it="Isola Crocodile"
                 data-lang-pt="Ilha Crocodile"
-                data-lang-ar="جزيرة تمساح">
+                data-lang-ar="جزيرة تمساح"><i class="bx bx-water icon"></i>
                 Crocodile Island
               </b><br>
 
@@ -811,7 +812,7 @@ try {
                 data-lang-ru="Пляж Балингхай"
                 data-lang-it="Spiaggia di Balinghai"
                 data-lang-pt="Praia de Balinghai"
-                data-lang-ar="شاطئ بالينغهاي">
+                data-lang-ar="شاطئ بالينغهاي"><i class="bx bx-water icon"></i>
                 Balinghai Beach
               </b><br>
 
@@ -847,7 +848,7 @@ try {
                 data-lang-ru="Пляж Тамбисан"
                 data-lang-it="Spiaggia di Tambisaan"
                 data-lang-pt="Praia de Tambisaan"
-                data-lang-ar="شاطئ تامبيسان">
+                data-lang-ar="شاطئ تامبيسان"><i class="bx bx-water icon"></i>
                 Tambisaan Beach
               </b><br>
 
