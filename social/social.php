@@ -189,9 +189,8 @@ function getTimeElapsed($datetime)
                 ?>
                 <button class="like-button <?php echo $isLiked ? 'liked' : ''; ?>"
                   data-post-id="<?php echo htmlspecialchars($post['post_id']); ?>">
-                  <i class="<?php echo $isLiked ? 'fas' : 'far'; ?> fa-thumbs-up"></i>
-                  <?php echo $isLiked ? 'Unlike' : 'Like'; ?> (<span
-                    class="like-count"><?php echo htmlspecialchars($post['like_count']); ?></span>)
+                  <i class="<?php echo $isLiked ? 'fas' : 'far'; ?> fa-heart"></i>
+                  <span class="like-count"><?php echo htmlspecialchars($post['like_count']); ?></span>
                 </button>
 
                 <!-- Comment toggle button and comment count -->
@@ -282,13 +281,11 @@ function getTimeElapsed($datetime)
                       this.classList.add('liked');
                       icon.classList.remove('far');
                       icon.classList.add('fas');
-                      this.innerHTML = '<i class="fas fa-thumbs-up"></i> Unlike (<span class="like-count">' + likeCountElement.textContent + '</span>)';
                     } else if (data.action === 'unlike') {
                       likeCountElement.textContent = parseInt(likeCountElement.textContent) - 1;
                       this.classList.remove('liked');
                       icon.classList.remove('fas');
                       icon.classList.add('far');
-                      this.innerHTML = '<i class="far fa-thumbs-up"></i> Like (<span class="like-count">' + likeCountElement.textContent + '</span>)';
                     }
                   } else {
                     alert(data.message);
@@ -298,6 +295,7 @@ function getTimeElapsed($datetime)
             });
           });
         });
+
       </script>
 
       <script>
