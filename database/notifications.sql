@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2024 at 03:56 PM
+-- Generation Time: Oct 19, 2024 at 04:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,7 +31,7 @@ CREATE TABLE `notifications` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `booking_date` date NOT NULL,
-  `status` enum('pending','confirmed','cancelled') DEFAULT 'pending',
+  `status` varchar(99) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `like_id` int(11) DEFAULT NULL,
   `post_id` int(11) DEFAULT NULL,
@@ -56,7 +56,7 @@ INSERT INTO `notifications` (`id`, `name`, `booking_date`, `status`, `created_at
 (11, 'John Doe', '2024-10-19', 'confirmed', '2024-10-19 03:21:47', 2, NULL, 0),
 (21, 'Jane Smith', '2024-10-20', 'pending', '2024-10-19 03:21:47', 2, NULL, 0),
 (31, 'Michael Johnson', '2024-10-21', '', '2024-10-19 03:21:47', 2, NULL, 0),
-(32, 'cferdinand500@gmail.com liked your post', '0000-00-00', 'pending', '2024-10-19 13:51:58', NULL, 58, NULL);
+(32, 'cferdinand500@gmail.com liked your post', '0000-00-00', '', '2024-10-19 13:51:58', NULL, 58, NULL);
 
 --
 -- Indexes for dumped tables
