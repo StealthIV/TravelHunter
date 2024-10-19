@@ -123,14 +123,7 @@
                 data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Home</span>
             </a>
           </li>
-          <li class="list">
-            <a href="../include/categories.php" class="nav-link">
-              <i class="bx bx-menu icon"></i>
-              <span class="link" data-lang-en="Categories" data-lang-es="Categorías" data-lang-fr="d'accueil"
-                data-lang-de="Kategorien" data-lang-zh="分类" data-lang-jp="カテゴリ (Kategori)" data-lang-ru=" Категории"
-                data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Categories</span>
-            </a>
-          </li>
+         
           <li class="list">
             <a href="../include/place.php" class="nav-link">
               <i class="bx bx-map icon"></i>
@@ -141,7 +134,7 @@
           </li>
           <li class="list">
             <a href="../include/marketplace.php" class="nav-link">
-              <i class="bx bx-gift icon"></i>
+              <i class="bx bx-cart icon"></i>
               <span class="link" data-lang-en="Marketplace" data-lang-es="Mercado" data-lang-fr="Marché"
                 data-lang-de="Marktplatz" data-lang-zh=" 市场" data-lang-jp="マーケットプレイス " data-lang-ru="Торговая площадка"
                 data-lang-it="Mercato" data-lang-pt="Mercado" data-lang-ar="السوق">Marketplace</span>
@@ -159,10 +152,10 @@
           <li class="list">
             <a href="../include/whether.php" class="nav-link">
               <i class="bx bx-cloud icon"></i>
-              <span class="link" data-lang-en="Whether Forecast" data-lang-es=" Pronóstico del tiempo"
+              <span class="link" data-lang-en="Weather Forecast" data-lang-es=" Pronóstico del tiempo"
                 data-lang-fr="Prévisions météorologiques" data-lang-de="Wettervorhersage" data-lang-zh="天气预报"
                 data-lang-jp="天気予報 (Tenki Yohō)" data-lang-ru="Прогноз погоды" data-lang-it="Previsioni del tempo"
-                data-lang-pt="Previsão do Tempo" data-lang-ar="توقعات الطقس">Whether Forecast</span>
+                data-lang-pt="Previsão do Tempo" data-lang-ar="توقعات الطقس">Weather Forecast</span>
             </a>
           </li>
           <li class="list">
@@ -172,6 +165,14 @@
                 data-lang-de="Meine Reiseroute" data-lang-zh="我的行程" data-lang-jp="私の旅程 (Watashi no Ritei)"
                 data-lang-ru="Мой маршрут" data-lang-it="Il mio itinerario" data-lang-pt="Meu Itinerário"
                 data-lang-ar="مسار رحلتي">My Itinerary</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="../include/categories.php" class="nav-link">
+              <i class="bx bx-menu icon"></i>
+              <span class="link" data-lang-en="Categories" data-lang-es="Categorías" data-lang-fr="d'accueil"
+                data-lang-de="Kategorien" data-lang-zh="分类" data-lang-jp="カテゴリ (Kategori)" data-lang-ru=" Категории"
+                data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Booking History</span>
             </a>
           </li>
         </ul>

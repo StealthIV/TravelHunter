@@ -10,10 +10,104 @@
 body {
   width: 100%;
   height: auto;
-  background: #4070f4;
+  background: #000000;
+  color: white;
  
   
 }
+.maps {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.maps h5 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.fremas {
+  position: relative;
+  padding-bottom: 56.25%; /* Maintain aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fremas iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Location Section Styles */
+.loc {
+  margin: -20px auto 30px auto; /* Negative top margin */
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+
+.loc h6 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.loc i {
+  display: block;
+  margin: 15px 0;
+  font-style: normal;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.loc .icon {
+  margin-right: 10px;
+}
+
+.loc .text {
+  font-weight: bold;
+  color: #333;
+}
+
+.bx {
+  font-size: 1.4em;
+  color: #007bff; /* Icon color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .maps, .loc {
+      max-width: 100%;
+      padding: 15px;
+  }
+
+  .fremas {
+      padding-bottom: 65%;
+  }
+
+  .loc h6 {
+      font-size: 1.2em;
+  }
+
+  .loc i {
+      font-size: 1em;
+  }
+}
+
 
 
 
@@ -25,7 +119,7 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #000000;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
@@ -35,13 +129,13 @@ nav .logo {
   margin: 0 24px;
 }
 .logo .menu-icon {
-  color: #333;
+  color: #fffefe;
   font-size: 24px;
   margin-right: 14px;
   cursor: pointer;
 }
 .logo .logo-name {
-  color: #333;
+  color: #fffdfd;
   font-size: 22px;
   font-weight: 500;
 }
@@ -52,7 +146,7 @@ nav .sidebar {
   height: 100%;
   width: 260px;
   padding: 20px 0;
-  background-color: #fff;
+  background-color: #000000;
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
@@ -83,11 +177,11 @@ nav.open .sidebar {
 .nav-link .icon {
   margin-right: 14px;
   font-size: 20px;
-  color: #707070;
+  color: #ffffff;
 }
 .nav-link .link {
   font-size: 16px;
-  color: #707070;
+  color: #ffffff;
   font-weight: 50;
 }
 .lists .nav-link:hover .icon,
@@ -125,7 +219,7 @@ nav.open ~ .overlay {
 }
 
 .profile span {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-right: 10px;
 }
 
@@ -170,23 +264,55 @@ nav.open ~ .overlay {
 
 .main{
     
-    height: auto;
-    width: 100%;
-    background-image: url(../Places/boracay/b1.jpg);
-    background-size: cover;
-    margin-top: 70px;
-    position: absolute;
-   
-   
-   
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+position: relative;
+  background-image: url(../img/bgg2.png);
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 20s infinite ease-in-out;
+  
 }
+
+@keyframes change{
+0%
+{
+    background-image: url(../img/coronpalawan.jpg);
+}
+20%
+{
+    background-image: url(../img/bgg2.png);
+}
+40%
+{
+    background-image: url(../img/bgg4.jpg);
+}
+60%
+{
+    background-image: url(../img/bgg7.jpeg);
+}
+80%
+{
+    background-image: url(../img/bgg8.jpeg);
+}
+100%
+{
+    background-image: url(../img/bgg9.jpeg);
+}
+}
+
+
+
 
 
 .pano{
   height: 100vh;
   width: 100%;
-  background-image: url(../Places/boracay/5.jpg);
-  background-size: auto;
+
   position: absolute;
 }
 
@@ -339,11 +465,11 @@ left: 0;
 
 
 .img{
-  background-image: url(../Places/boracay/b1.jpg);
+  background-color: #000000;
   height: auto;
   width: 100%;
   position: absolute;
-  margin-top: 700px;
+  margin-top: 0px;
   left: 0;
 
 }
@@ -369,17 +495,21 @@ left: 0;
     padding: 4px;
   }
 
+  .main{
+    height: 140vh;
+  }
+
 
   .image-container{
     width: 450px;
   }
 
   .img{
-    margin-top: 50px;
+   
     font-size: 10px;
   }
   .img h1{
-    
+    margin-bottom: 40px;
     font-size: 15px;
   }
 
@@ -434,14 +564,185 @@ left: 0;
   margin-top:1350px;
  
 }
-.package{
-  margin-top: 2000px;
-}
 
 
 
 }
 
+.sec2{
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  background-color: #000;
+  margin-top: 0;
+ 
+  
+}
+.sec2 h1{
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sec2 p{
+margin-left: 100px;
+}
+.sec2 .container2{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+
+}
+
+.sec2 .container2 .main-video{
+  background: #19191947;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+.sec2 .container2 .main-video video{
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.sec2 .container2 .main-video .title{
+  color: #ffffff;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.sec2 .container2 .video-list{
+  background: #0000006b;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+
+}
+
+
+.sec2 .container2 .video-list::-webkit-scrollbar{
+  width: 7px;
+
+}
+
+
+
+
+.sec2 .container2 .video-list .vid video{
+  width: 100px;
+  border-radius: 5px;
+
+}
+.sec2 .container2 .video-list .vid{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  cursor: pointer;
+
+}
+
+.sec2 .container2 .video-list .vid:hover{
+  background: #eee;
+
+}
+.sec2 .container2 .video-list .vid.active{
+
+  background: #10d895;
+}
+
+.sec2 .container2 .video-list .vid.active .title{
+
+  color: #fff;
+}
+
+.sec2 .container2 .video-list .vid .title{
+  color: #333;
+  font-size: 17px;
+
+}
+@media(max-width:991px){
+  .sec2 .container2{
+      grid-template-columns: 1.5fr 1fr;
+      padding: 10px;
+     
+  
+  }
+
+  
+ 
+}
+@media(max-width:768px){
+  .sec2 .container2{
+      grid-template-columns: 1fr;
+     
+  }
+}
+
+
+
+
+.sec2 .vidsec{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.sec2 .vidsec video{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   object-fit: cover;
+}
+
+.sec2 .vidsec .navigation{
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec2 .vidsec .navigation li{
+  list-style: none;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 4px;
+  background: #fff;
+  padding: 3px 3px 0;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.sec2 .vidsec .navigation li img:hover{
+  opacity: 1;
+}
+.sec2 .vidsec .navigation li img{
+  width: 120px;
+  transition: 0.5s;
+
+}
+
+.sec2 .vidsec .navigation li img:hover{
+  width: 200px;
+  
+}
 
 
 
@@ -493,7 +794,7 @@ input, textarea {
 
 .package{
   width: 100%;
-  margin-top: 1200px;
+  margin-top: 450px;
   position: absolute;
   left: 0;
 
@@ -512,9 +813,10 @@ input, textarea {
   margin-bottom: 30px;
 }
 .package p{
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 14px;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 .package h3{
@@ -547,7 +849,7 @@ input, textarea {
 }
 .package #filterable-cards .card {
   width: 300px;
-  background-image: url(../img/bbg.jpg);
+  background: black;
   border-radius: 20px;
   border: 4px solid #00fffb;
 }
@@ -812,10 +1114,17 @@ h3{
 font-weight: bolder;
 }
 
+.p2{
+  margin-left: 50px;
+  color: white;
+
+
+}
+
 .package main{
   width: 100%;
   height: 700px;
-  background: url(../Places/boracay/5.jpg);
+  background: black;
   /*background: red;*/
   position: relative;
 
@@ -826,7 +1135,7 @@ font-weight: bolder;
   padding: 10px;
   text-align: center;
   /*font-size: 30px;*/
-  color: #554;
+  color: rgb(255, 255, 255);
 }
 .package main .text h1{
   font-size: 50px;
@@ -857,7 +1166,7 @@ main header p span{
   font-size: 40px;
     margin: 0 5px;
     cursor: pointer;
-    color: #555;
+    color: #ffffff;
      width: 30px;
     height: 30px;
     display: inline-block;
@@ -866,7 +1175,7 @@ main header p span{
     border-radius: 3px;
 }
 main header p span:hover{
-  background: #222;
+  background: #000000;
     color: white;
 }
 .section6{
@@ -884,7 +1193,7 @@ main header p span:hover{
 .section6 .product{
   min-width: 24%;
   height: 90%;
-  background: whitesmoke;
+  background: rgb(33, 32, 32);
   margin:  0 20px  0 0;
   border-radius: 20px;
   position: relative;
@@ -938,9 +1247,9 @@ main .button7{
   align-items: center;
   height: 50px;
   font-size: 20px;
-  color: #444;
+  color: #ffffff;
 }
-main small{color: #555;}
+main small{color: #ffffff;}
  main .a1{
   text-decoration: none;
   padding: 6px 14px;
@@ -955,15 +1264,19 @@ main p.star{
   margin: 5px auto;
     width: 65%;
     font-size: 25px;
-    color: #808080;
+    color: #ffffff;
 }
 @media (max-width: 768px) {
   
   .package{
-    margin-top: 650px;
+    margin-top: 400px;
   }
   .text h1{
     font-size: 35px;
+  }
+  .detail p{
+    margin-top: 30px;
+     font-size: 11px;
   }
   .main6 .text p{
     width: 90%;
@@ -985,69 +1298,6 @@ main p.star{
     padding: 6px 10px;
   }
 
-  .maps{
-    position: relative;
-    margin-top: 100px;
-    left: 0;
-  }
-  .frame{
-    position: absolute;
-  }
-
-  .loc{
-    position: absolute;
-    margin-top: 1000px;
-  }
 }
 
-.mapa{
-
-  position: relative;
-  height: 100vh;
-  padding: 20px;
-  left: 0;
-  margin-left: 0;
-  width: 100%;
-  
-}
-
-
-.maps{
-  background-color: rgba(255, 255, 255, 0);
-  height: auto;
-  width: 100%;
-  
-}
-
-.frame{
-  background-color: rgb(0, 123, 255);
-  position: relative;
-  width: 608px;
-  height: 450px;
-  margin-left:100px ;
-  margin-top: 40px;
-  border: 3px solid #00fffb;
-  margin-bottom: 50px;
- 
-  
-}
-
-.maps h5{
-  color: rgb(0, 0, 0);
-  font-size: 40px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: bolder;
-  margin-top: 50px;
-  margin-left: 100px;
-}
-
-.loc{
-  width: 500px;
-  position: absolute;
-  margin-left: 960px;
-  background-color: rgb(255, 255, 255);
-  height: 400px;
-  margin-top: 40px;
-  padding: 20px;
-}
 

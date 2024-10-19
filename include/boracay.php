@@ -248,8 +248,8 @@ if (isset($_SESSION['id'])) {
         </div>
       </div>
       </div>
-      
- 
+      </section>
+     
       <div class="img">
         <h1 class="exp6">Discover the wonders of Boracay — where adventure meets paradise!</h1>
         <main>
@@ -299,6 +299,11 @@ if (isset($_SESSION['id'])) {
           
           </main>
           </div>
+
+
+
+          
+        
           
           <section class="package">
 
@@ -311,7 +316,7 @@ if (isset($_SESSION['id'])) {
     data-lang-fr="Forfait Tour à Boracay" data-lang-de="Boracay Tour Paket" 
     data-lang-zh="长滩岛旅游套餐" data-lang-jp="ボラカイツアーパッケージ" 
     data-lang-ru="Турпакет на Борacay" data-lang-it="Pacchetto Tour Boracay" 
-    data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="باقة جولة بوراكاي">
+    data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="باقة جولة بوراكاي"><i class="bx bx-package icon" style="color: red;"></i>
     Boracay Tour Package
 </h1>
                 <p>
@@ -320,6 +325,8 @@ if (isset($_SESSION['id'])) {
                   
                 </p>
               </header>
+
+              <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
               <section class="section6">
     <div class="product">
         <picture>
@@ -936,15 +943,9 @@ if (isset($_SESSION['id'])) {
 
 
 
-
-
-
-
-
-
             <main>
             <header>
-    <h1 data-lang-en="Boracay Tour Package" 
+    <h1 data-lang-en="Boracay Water Activities" 
         data-lang-es="Paquete de Tour en Boracay" 
         data-lang-fr="Forfait Tour à Boracay" 
         data-lang-de="Boracay Tour-Paket" 
@@ -953,13 +954,13 @@ if (isset($_SESSION['id'])) {
         data-lang-ru="Турпакет на Борокай" 
         data-lang-it="Pacchetto Tour di Boracay" 
         data-lang-pt="Pacote de Tour em Boracay" 
-        data-lang-ar="حزمة جولة بوراكاي">Boracay Tour Package</h1>
+        data-lang-ar="حزمة جولة بوراكاي"><i class="bx bx-run icon" style="color: red;"></i>Boracay Water Activities</h1>
     <p>
         <span class="span3">&#139;</span>
         <span class="span3">&#155;</span>
     </p>
 </header>
-
+<p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
 <section class="section6">
     <div class="product">
         <picture>
@@ -977,6 +978,18 @@ if (isset($_SESSION['id'])) {
                    data-lang-it="Zipline Boracay" 
                    data-lang-pt="Tirolina Boracay" 
                    data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+
+                   <i class="bx bx-map icon" style="color: red;"></i>
+                   <small data-lang-en="Station 3 Beach front, Boracay Island 5608" 
+                       data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608" 
+                       data-lang-fr="Front de mer Station 3, Île Boracay 5608" 
+                       data-lang-de="Strandstation 3, Boracay-Insel 5608" 
+                       data-lang-zh="博拉acay岛站3海滩前5608" 
+                       data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" 
+                       data-lang-ru="Береговая линия станции 3, остров Борокай 5608" 
+                       data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608" 
+                       data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608" 
+                       data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island 5608</small>
             </p>
         </div>
         <div class="button7">
@@ -986,6 +999,7 @@ if (isset($_SESSION['id'])) {
                 <strong>&star;</strong>
                 <strong>&star;</strong>
                 <strong>&star;</strong>
+                
             </p>
         </div>
     </div>
@@ -1005,6 +1019,8 @@ if (isset($_SESSION['id'])) {
                    data-lang-it="Kite Surf a Bulabog Beach" 
                    data-lang-pt="Kite Surf na Praia de Bulabog" 
                    data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
+
+                   <i class="bx bx-map icon" style="color: red;"></i>
                 <small data-lang-en="Station 3 Beach front, Boracay Island 5608" 
                        data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608" 
                        data-lang-fr="Front de mer Station 3, Île Boracay 5608" 
@@ -1043,6 +1059,8 @@ if (isset($_SESSION['id'])) {
                    data-lang-it="Fai un giro sul Zorb" 
                    data-lang-pt="Andar no Zorb" 
                    data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
+
+                   <i class="bx bx-map icon" style="color: red;"></i>
                 <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan" 
                        data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan" 
                        data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan" 
@@ -1081,6 +1099,8 @@ if (isset($_SESSION['id'])) {
                    data-lang-it="Fai Island Hopping" 
                    data-lang-pt="Ir de Ilha em Ilha" 
                    data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
+
+                   <i class="bx bx-map icon" style="color: red;"></i>
                 <small data-lang-en="Station 1, Boracay" 
                        data-lang-es="Estación 1, Boracay" 
                        data-lang-fr="Station 1, Boracay" 
@@ -1119,6 +1139,8 @@ if (isset($_SESSION['id'])) {
                    data-lang-it="Parasailing" 
                    data-lang-pt="Parasailing" 
                    data-lang-ar="الباراسيلينغ">Parasail</b><br>
+
+                   <i class="bx bx-map icon" style="color: red;"></i>
                 <small data-lang-en="704 Sitio Pinaongon White House Beach Resort, Malay, Aklan Province 5608" 
                        data-lang-es="704 Sitio Pinaongon White House Beach Resort, Malay, Provincia de Aklan 5608" 
                        data-lang-fr="704 Sitio Pinaongon White House Beach Resort, Malay, Province d'Aklan 5608" 
@@ -1157,6 +1179,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Boracay Pub Crawl" 
                data-lang-pt="Boracay Pub Crawl" 
                data-lang-ar="جولة الحانات في بوراكاي">Boracay Pub Crawl</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Station 3, Front Beach Malay" 
                    data-lang-es="Estación 3, Playa Frontal Malay" 
                    data-lang-fr="Station 3, Plage Avant Malay" 
@@ -1195,6 +1219,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Grotte dei Pipistrelli" 
                data-lang-pt="Cavernas de Morcegos" 
                data-lang-ar="كهوف الخفافيش">Bat Caves</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Main Road, Barangay Balabag (near BPI D'mall)" 
                    data-lang-es="Carretera Principal, Barangay Balabag (cerca de BPI D'mall)" 
                    data-lang-fr="Route Principale, Barangay Balabag (près de BPI D'mall)" 
@@ -1233,6 +1259,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Fare Shopping" 
                data-lang-pt="Fazer Compras" 
                data-lang-ar="قم بالتسوق">Do Some Shopping</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="D'Mall Boracay, Station 2" 
                    data-lang-es="D'Mall Boracay, Estación 2" 
                    data-lang-fr="D'Mall Boracay, Station 2" 
@@ -1271,6 +1299,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Impara a Freedive" 
                data-lang-pt="Aprender a Freedive" 
                data-lang-ar="تعلم الغوص الحر">Learn to Freedive</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Station 3 Beachfront" 
                    data-lang-es="Frente a la playa de la estación 3" 
                    data-lang-fr="Front de mer Station 3" 
@@ -1309,6 +1339,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Fare Subacquea" 
                data-lang-pt="Ir mergulhar" 
                data-lang-ar="اذهب للغوص">Go Scuba Diving</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Brgy. Balabag, Station 1" 
                    data-lang-es="Brgy. Balabag, Estación 1" 
                    data-lang-fr="Brgy. Balabag, Station 1" 
@@ -1347,6 +1379,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Accademia di Nuoto Sirena Filippina" 
                data-lang-pt="Academia de Natação Sereia Filipina" 
                data-lang-ar="أكاديمية السباحة حورية البحر الفلبينية">Philippine Mermaid Swimming Academy</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Dmall Boracay, Station 2 (next to Epic)" 
                    data-lang-es="Dmall Boracay, Estación 2 (junto a Epic)" 
                    data-lang-fr="Dmall Boracay, Station 2 (à côté d'Epic)" 
@@ -1385,6 +1419,8 @@ if (isset($_SESSION['id'])) {
                data-lang-it="Tour della Natura dell'Isola" 
                data-lang-pt="Tour da Natureza da Ilha" 
                data-lang-ar="جولة في الطبيعة في الجزيرة">Island Nature Tour</b><br>
+
+               <i class="bx bx-map icon" style="color: red;"></i>
             <small data-lang-en="Bolabog & Angol, Malay, Philippines" 
                    data-lang-es="Bolabog y Angol, Malay, Filipinas" 
                    data-lang-fr="Bolabog & Angol, Malay, Philippines" 
@@ -1412,6 +1448,11 @@ if (isset($_SESSION['id'])) {
 </main>
 
 
+
+
+
+
+
         <main>
         <header>
         <h1 data-lang-en="Top Hottest Restaurants"
@@ -1423,13 +1464,14 @@ if (isset($_SESSION['id'])) {
     data-lang-ru="Самые Популярные Рестораны"
     data-lang-it="I Ristoranti Più Popolari"
     data-lang-pt="Os Restaurantes Mais Populares"
-    data-lang-ar="أشهر المطاعم">Top Hottest Restaurants</h1>
+    data-lang-ar="أشهر المطاعم"><i class="bx bx-home icon" style="color: red;"></i>Top Hottest Restaurants</h1>
 
   <p>
     <span class="span2">&#139;</span>
     <span class="span2">&#155;</span>
   </p>
 </header>
+<p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
 <section class="section6">
   <!-- Nalka Seafood Restaurant -->
   <div class="product">
@@ -1871,13 +1913,15 @@ if (isset($_SESSION['id'])) {
         <main>
           
           <header>
-            <h1>Top Hottest Accomodations</h1>
+            <h1><i class="bx bx-home icon" style="color: red;"></i>Top Hottest Accomodations</h1>
             <p>
             <span class="span4" >&#139;</span>
             <span class="span4" >&#155;</span>
               
             </p>
           </header>
+
+          <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
           <section class="section6">
             <div class="product">
               <picture>
@@ -2449,7 +2493,90 @@ if (isset($_SESSION['id'])) {
 </div>
 
 </section>
+<section class="sec2">
+        <h1>Explore Now!!!</h1>
+        <p>Discover the Paradise: Explore the Philippines with us!!</p>
+        <div class="container2">
+          <div class="main-video">
+            <div class="Video">
+              <video class="secvid" src="../Places/Pampanga/barundon.mp4" controls unmuted autoplay></video>
+              <h3 class="title"><i class="bx bx-map icon" style="color: red;"></i>Barundon(Camias, Porac, Pampanga)</h3>
+              
+            </div>
+           
+          </div>
 
+          <div class="video-list">
+            <div class="vid">
+              <video src="../Places/Pampanga/barundon.mp4" muted></video>
+              <h3 class="title">Bamboo Park</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../Places/Pampanga/caposes island.mp4" muted></video>
+              <h3 class="title">Summer Place Palakol</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/Montalban Trilogy Version 2 _ Mt. Susong Dalaga _ Mt. Parawagan _ Mt. Lagyo(720P_HD).mp4"
+                muted></video>
+              <h3 class="title">Susung Dalaga</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/Nabuclod Mountain View in Floridablanca_ Pampanga(720P_HD).mp4" muted></video>
+              <h3 class="title">Nabuclod</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../yes we are/Forest Lake Florida blanca park.mp4" muted></video>
+              <h3 class="title">Forest Lake Floridablanca Pampanga</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/Facebook 692100841679786(720p).mp4" muted></video>
+              <h3 class="title">Sumuclab Lagoon</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/lv_0_20231205084131.mp4" muted></video>
+              <h3 class="title">Dara Falls</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/lv_0_20231205084601.mp4" muted></video>
+              <h3 class="title">Barundon View Deck</h3>
+            </div>
+
+            <div class="vid">
+              <video src="../vids/lv_0_20231205085158.mp4" muted></video>
+              <h3 class="title">Ilog Kamalig</h3>
+            </div>
+          </div>
+
+
+          <script>
+            // Your JavaScript code goes here
+            let listVideo = document.querySelectorAll('.video-list .vid');
+            let mainVideo = document.querySelector('.main-video video');
+            let title = document.querySelector('.main-video .title');
+
+            listVideo.forEach(video => {
+              video.onclick = () => {
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if (video.classList.contains('active')) {
+                  let src = video.children[0].getAttribute('src');
+                  mainVideo.src = src;
+                  let text = video.children[1].innerHTML;
+                  title.innerHTML = text;
+
+                };
+
+              };
+            });
+          </script>
+      </Section>
 
 <section class="mapa">
       
@@ -2474,6 +2601,7 @@ if (isset($_SESSION['id'])) {
       </section>
       </section>
     </Section>
+
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
     <script src="../js/panolens.min.js"></script>
