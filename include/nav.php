@@ -136,14 +136,19 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Hide the badge when notifications are displayed
         if (!isExpanded) {
-          badge.style.display = 'none';
+          badge.style.display = 'none'; // Hide the badge
+
+          // AJAX call to mark notifications as read
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "mark_notifications_read.php", true);
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhr.send(); // You can send any additional data if necessary
         }
 
         // Update aria-expanded attribute
         document.querySelector('.notification-icon').setAttribute('aria-expanded', !isExpanded);
       }
     </script>
-
 
 
 
