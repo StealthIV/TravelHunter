@@ -3,7 +3,7 @@ session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION["UserName"])) {
-    header("location: ../crud/boracayadmin.php");
+    header("location: boracayadmin.php");
     exit();
 }
 

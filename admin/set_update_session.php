@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modify"])) {
         <input type="submit" name="modify" value="Update">
     </form>
     <br>
-    <a href="../crud/admin.php">Back to Management</a>
+    <a href="admin.php">Back to Dashboard</a>
 </body>
 
 </html>

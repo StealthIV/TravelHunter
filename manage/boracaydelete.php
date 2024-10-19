@@ -37,7 +37,7 @@
             $pdoResult = $pdoConnect->prepare($pdoQuery);
             $pdoResult->execute();
 
-            header("Location: ../crud/boracayadmin.php?id=" . $_SESSION["id"]);
+            header("Location: boracayadmin.php?id=");
             exit();
 
         } else {
