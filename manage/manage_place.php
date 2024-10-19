@@ -4,7 +4,7 @@ require_once '../connect/dbcon.php'; // Adjust the path to your DB connection fi
 
 // Check if user is logged in (optional)
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: admin.php");
+    header("location: manage.php");
     exit();
 }
 
