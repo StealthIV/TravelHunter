@@ -61,7 +61,6 @@ try {
         data-lang-ar="اكتشف الجنة: استكشف الفلبين معنا !!">
         Discover the Paradise: Explore the Philippines with us!!
       </p>
-
       <main>
 
         <div id="carousel" class="carousel">
@@ -118,16 +117,9 @@ try {
               class="button-82-edge"></span><span class="button-82-front text"><span>&#155;</span></span></button>
         </div>
 
-
       </main>
-
-
   </section>
-
-
-
   <section class="package">
-
     <main>
       <header>
         <h1 data-lang-en="Top Tourist Destination in Pampanga" data-lang-es="Principal Destino Turístico en Pampanga" data-lang-fr="Meilleure Destination Touristique à Pampanga"
@@ -140,8 +132,6 @@ try {
           <span class="span1">&#155;</span>
 
         </p>
-
-        
       </header>
       <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
       <section class="section6">

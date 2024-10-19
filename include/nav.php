@@ -1,5 +1,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+<?php
+// Fetch new notifications from the 'notifications' table
+$query = "SELECT name, booking_date, status FROM notifications"; // Fetch only necessary columns
+$stmt = $pdoConnect->prepare($query);
+$stmt->execute();
+$notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 
 <style>
   .notification-icon {
@@ -8,7 +16,6 @@
     color: #007bff;
     cursor: pointer;
     position: relative;
-    /* To position the notification badge */
   }
 
   .notification-badge {
@@ -24,15 +31,50 @@
 
   .notification-container {
     display: none;
-    /* Hide notifications by default */
     background-color: #fff;
+    color: black;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 10px auto;
+    padding: 15px;
+    max-width: 300px;
+    position: absolute;
+    left: 405px;
+    top: 10px;
+    max-height: 300px; /* Limit the height of the container */
+    overflow-y: auto;  /* Add a vertical scrollbar */
+  }
+
+  .notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .notification-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+
+  .notification-title {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .notification-text {
+    color: #555;
+    font-size: 14px;
+  }
+
+  .notification-text span {
+    font-weight: bold;
   }
 </style>
+
 
 <nav>
   <div class="logo">
@@ -53,6 +95,7 @@
       <option value="pt">Portuguese</option>
       <option value="ar">Arabic</option>
     </select>
+
     <div>
       <span class="notification-icon" onclick="toggleNotifications()">
         <i class="fas fa-bell"></i>
@@ -63,17 +106,19 @@
     </div>
 
     <div class="notification-container" id="notificationContainer">
-      <h2>New Booking Requests</h2>
+      <h3>New Booking Requests</h3>
       <?php if (empty($notifications)): ?>
         <p>No new bookings at the moment.</p>
       <?php else: ?>
-        <ul>
+        <ul class="notification-list">
+          <!-- Loop through notifications and display them -->
           <?php foreach ($notifications as $notification): ?>
-            <li>
-              <strong>Booking ID:</strong> <?php echo htmlspecialchars($notification['id']); ?><br>
-              <strong>Name:</strong> <?php echo htmlspecialchars($notification['name']); ?><br>
-              <strong>Date:</strong> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
-              <strong>Status:</strong> <?php echo htmlspecialchars($notification['status']); ?><br>
+            <li class="notification-item">
+              <div class="notification-title"><?php echo htmlspecialchars($notification['name']); ?></div>
+              <div class="notification-text">
+                <span>Date:</span> <?php echo htmlspecialchars($notification['booking_date']); ?><br>
+                <span>Status:</span> <?php echo htmlspecialchars($notification['status']); ?>
+              </div>
             </li>
           <?php endforeach; ?>
         </ul>
@@ -123,7 +168,7 @@
                 data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Home</span>
             </a>
           </li>
-         
+
           <li class="list">
             <a href="../include/place.php" class="nav-link">
               <i class="bx bx-map icon"></i>
