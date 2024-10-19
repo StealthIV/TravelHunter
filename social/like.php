@@ -39,8 +39,20 @@ try {
         $stmt->bindParam(':post_id', $post_id, PDO::PARAM_INT);
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
+
+        // Add a notification for the like
+        $notification_name = $_SESSION['UserName'] . ' liked your post';
+        $notification_status = 'pending'; // Adjust as necessary
+
+        $stmt = $pdoConnect->prepare("INSERT INTO notifications (name, status, post_id, created_at) VALUES (:name, :status, :post_id, NOW())");
+        $stmt->bindParam(':name', $notification_name, PDO::PARAM_STR);
+        $stmt->bindParam(':status', $notification_status, PDO::PARAM_STR);
+        $stmt->bindParam(':post_id', $post_id, PDO::PARAM_INT);
+        $stmt->execute();
+
         echo json_encode(['status' => 'success', 'action' => 'like']);
     }
+
 } catch (PDOException $e) {
     echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
 }
