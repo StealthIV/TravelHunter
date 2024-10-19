@@ -81,7 +81,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
       data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
       data-lang-ar="صياد السفر">TravelHunter</span>
-    <select class="language" id="language-select" onchange="changeLanguage()">
+    <select class="language" id="language-select"  onchange="changeLanguage()">
       <option value="en">English</option>
       <option value="es">Spanish</option>
       <option value="fr">French</option>

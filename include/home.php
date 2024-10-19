@@ -899,7 +899,7 @@ try {
               <b data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
                 data-lang-de="Muschel-Schlüsselanhänger" data-lang-zh="贝壳钥匙链" data-lang-jp="シェルキーホルダー"
                 data-lang-ru="Брелоки с ракушками" data-lang-it="Portachiavi con Conchiglie"
-                data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف">Shell Keychains</b><br>
+                data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف"><i class="bx bx-shopping-bag icon"></i>Shell Keychains</b><br>
             </p>
             <samp>₱500.00</samp>
           </div>
@@ -919,7 +919,7 @@ try {
               <b data-lang-en="Beaded Bracelets" data-lang-es="Pulseras de Cuentas" data-lang-fr="Bracelets en Perles"
                 data-lang-de="Perlenarmbänder" data-lang-zh="珠饰手链" data-lang-jp="ビーズブレスレット"
                 data-lang-ru="Браслеты с Бусинами" data-lang-it="Braccialetti di Perline"
-                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز">Beaded Bracelets</b><br>
+                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز"><i class="bx bx-shopping-bag icon"></i>Beaded Bracelets</b><br>
             </p>
             <samp>₱300.00</samp>
           </div>
@@ -939,7 +939,7 @@ try {
               <b data-lang-en="Handwoven Bag" data-lang-es="Bolsa Tejida" data-lang-fr="Sac Tissé"
                 data-lang-de="Handgewebte Tasche" data-lang-zh="手工编织包" data-lang-jp="手織りバッグ"
                 data-lang-ru="Ручная плетеная сумка" data-lang-it="Borsa Intrecciata"
-                data-lang-pt="Bolsa Feita à Mão" data-lang-ar="حقيبة منسوجة">Handwoven Bag</b><br>
+                data-lang-pt="Bolsa Feita à Mão" data-lang-ar="حقيبة منسوجة"><i class="bx bx-shopping-bag icon"></i>Handwoven Bag</b><br>
             </p>
             <samp>₱500.00</samp>
           </div>
@@ -961,7 +961,7 @@ try {
               <b data-lang-en="White Beach Sarong" data-lang-es="Sarong de Playa Blanco" data-lang-fr="Paréo de Plage Blanc"
                 data-lang-de="Weißer Strand-Sarong" data-lang-zh="白色沙滩纱笼" data-lang-jp="ホワイトビーチサロン"
                 data-lang-ru="Белый Пляжный Парео" data-lang-it="Sarong da Spiaggia Bianco"
-                data-lang-pt="Sarong de Praia Branco" data-lang-ar="سارونج شاطئ أبيض">White Beach Sarong</b><br>
+                data-lang-pt="Sarong de Praia Branco" data-lang-ar="سارونج شاطئ أبيض"><i class="bx bx-shopping-bag icon"></i>White Beach Sarong</b><br>
             </p>
             <samp>₱300.00</samp>
           </div>
@@ -982,7 +982,7 @@ try {
                 data-lang-fr="Figurine en Bois de Bambou" data-lang-de="Bambuskunst-Holzfigur"
                 data-lang-zh="竹制工艺木雕" data-lang-jp="竹工芸木製フィギュア"
                 data-lang-ru="Бамбуковая Деревянная Фигура" data-lang-it="Figura di Legno in Bambù"
-                data-lang-pt="Figura de Madeira de Bambu" data-lang-ar="تمثال خشبي من الخيزران">Bamboo Craft Wooden Figure</b><br>
+                data-lang-pt="Figura de Madeira de Bambu" data-lang-ar="تمثال خشبي من الخيزران"><i class="bx bx-shopping-bag icon"></i>Bamboo Craft Wooden Figure</b><br>
             </p>
             <samp>₱300.00</samp>
           </div>
@@ -1007,7 +1007,7 @@ try {
                 data-lang-ru="Футболка Острова Борокай"
                 data-lang-it="T-shirt Isola di Boracay"
                 data-lang-pt="Camiseta da Ilha de Boracay"
-                data-lang-ar="تي شيرت جزيرة بوراكاي">
+                data-lang-ar="تي شيرت جزيرة بوراكاي"><i class="bx bx-shopping-bag icon"></i>
                 Boracay Island Tee
               </b><br>
             </p>
@@ -1033,7 +1033,7 @@ try {
                 data-lang-ru="Настенное искусство кораллового рифа"
                 data-lang-it="Arte Murale della Barriera Corallina"
                 data-lang-pt="Arte de Parede de Recifes de Coral"
-                data-lang-ar="فن الحائط للشعاب المرجانية">
+                data-lang-ar="فن الحائط للشعاب المرجانية"><i class="bx bx-shopping-bag icon"></i>
                 Coral Reef Wall Art
               </b><br>
             </p>
@@ -1059,7 +1059,7 @@ try {
                 data-lang-ru="Филиппинская соломенная шляпа"
                 data-lang-it="Cappello di Paglia Pinoy"
                 data-lang-pt="Chapéu de Palha Pinoy"
-                data-lang-ar="قبعة القش الفلبينية">
+                data-lang-ar="قبعة القش الفلبينية"><i class="bx bx-shopping-bag icon"></i>
                 Pinoy Straw Hat
               </b><br>
             </p>
@@ -1085,7 +1085,7 @@ try {
                 data-lang-ru="Пляжное Полотенце"
                 data-lang-it="Asciugamano da Spiaggia"
                 data-lang-pt="Toalha de Praia"
-                data-lang-ar="منشفة الشاطئ">
+                data-lang-ar="منشفة الشاطئ"><i class="bx bx-shopping-bag icon"></i>
                 Beach Towel
               </b><br>
             </p>
@@ -1111,7 +1111,7 @@ try {
                 data-lang-ru="Холодильный Магнит"
                 data-lang-it="Magnete da Frigo"
                 data-lang-pt="Imã de Geladeira"
-                data-lang-ar="مغناطيس الثلاجة">
+                data-lang-ar="مغناطيس الثلاجة"><i class="bx bx-shopping-bag icon"></i>
                 Fridge Magnet
               </b><br>
             </p>
@@ -1137,7 +1137,7 @@ try {
                 data-lang-ru="Кокосовое Мыло"
                 data-lang-it="Sapone di Cocco"
                 data-lang-pt="Sabão de Coco"
-                data-lang-ar="صابون جوز الهند">
+                data-lang-ar="صابون جوز الهند"><i class="bx bx-shopping-bag icon"></i>
                 Coconut Soap
               </b><br>
             </p>
@@ -1163,7 +1163,7 @@ try {
                 data-lang-ru="Sundet Art Fit"
                 data-lang-it="Sundet Art Fit"
                 data-lang-pt="Sundet Art Fit"
-                data-lang-ar="Sundet Art Fit">
+                data-lang-ar="Sundet Art Fit"><i class="bx bx-shopping-bag icon"></i>
                 Sundet Art Fit
               </b><br>
             </p>

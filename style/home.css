@@ -437,6 +437,11 @@ button {
     font-size: 17px;
 
 }
+
+.button7 i{
+  margin-right: 5px;
+}
+
 @media(max-width:991px){
     .container2{
         grid-template-columns: 1.5fr 1fr;
@@ -865,13 +870,24 @@ button {
   .package main .a1{
     text-decoration: none;
     padding: 6px 14px;
-    width: 120px;
+    width: 150px;
       font-size: 15px;
       margin: 5px 0 0 20px;
       display: inline-block;
+      text-align: center;
+      margin-left: 80px;
       background: #6773ff;
       color: rgb(255, 255, 255);
   }
+
+  .detail b i{
+    margin-right: 5px;
+  }
+
+  .detail b {
+    font-size: 17px;
+  }
+
   .package main p.star{
     margin: 5px auto;
       width: 65%;
