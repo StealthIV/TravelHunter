@@ -16,7 +16,6 @@
 
     <?php
     require_once "../connect/dbcon.php";
-    require_once "../connect/dbcon1.php";
     session_start();
 
     if (isset($_GET['id'])) {

@@ -104,7 +104,7 @@ try {
 
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="../include/logout.php"><i
+                        <span><a href="logout.php"><i
                                     class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>
