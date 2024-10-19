@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2024 at 03:29 PM
+-- Generation Time: Oct 19, 2024 at 03:56 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,7 +55,8 @@ INSERT INTO `notifications` (`id`, `name`, `booking_date`, `status`, `created_at
 (10, 'Isabella Walker', '2024-10-28', 'confirmed', '2024-10-19 03:21:47', 2, NULL, 0),
 (11, 'John Doe', '2024-10-19', 'confirmed', '2024-10-19 03:21:47', 2, NULL, 0),
 (21, 'Jane Smith', '2024-10-20', 'pending', '2024-10-19 03:21:47', 2, NULL, 0),
-(31, 'Michael Johnson', '2024-10-21', '', '2024-10-19 03:21:47', 2, NULL, 0);
+(31, 'Michael Johnson', '2024-10-21', '', '2024-10-19 03:21:47', 2, NULL, 0),
+(32, 'cferdinand500@gmail.com liked your post', '0000-00-00', 'pending', '2024-10-19 13:51:58', NULL, 58, NULL);
 
 --
 -- Indexes for dumped tables
@@ -75,7 +76,7 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
