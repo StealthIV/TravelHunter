@@ -186,7 +186,7 @@ try {
         </div>
 
         <section class="section3">
-            <h1 style="color: white; font-size: 30px;">Tourist Spots</h1>
+            <h1 style="color: white; font-size: 30px; margin-left: 50px;">Tourist Spots</h1>
             <div class="container1">
                 <?php foreach ($places as $place): ?>
                     <div class="card">

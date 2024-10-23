@@ -75,26 +75,27 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </style>
 
 <nav>
-  <div class="logo">
-    <i class="bx bx-menu menu-icon"></i>
-    <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
-      data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
-      data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
-      data-lang-ar="صياد السفر">TravelHunter</span>
-    <select class="language" id="language-select"  onchange="changeLanguage()">
-      <option value="en">English</option>
-      <option value="es">Spanish</option>
-      <option value="fr">French</option>
-      <option value="de">German</option>
-      <option value="zh">Chinese</option>
-      <option value="jp">Japanese</option>
-      <option value="ru">Russian</option>
-      <option value="it">Italian</option>
-      <option value="pt">Portuguese</option>
-      <option value="ar">Arabic</option>
-    </select>
+<div class="logo">
+  <i class="bx bx-menu menu-icon"></i>
+  <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
+        data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
+        data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
+        data-lang-ar="صياد السفر">TravelHunter</span>
+  
+  <select class="language" id="language-select" onchange="changeLanguage()">
+    <option value="en">🇺🇸 English</option>
+    <option value="es">🇪🇸 Spanish</option>
+    <option value="fr">🇫🇷 French</option>
+    <option value="de">🇩🇪 German</option>
+    <option value="zh">🇨🇳 Chinese</option>
+    <option value="jp">🇯🇵 Japanese</option>
+    <option value="ru">🇷🇺 Russian</option>
+    <option value="it">🇮🇹 Italian</option>
+    <option value="pt">🇵🇹 Portuguese</option>
+    <option value="ar">🇸🇦 Arabic</option>
+  </select>
+</div>
 
-    <div>
       <span class="notification-icon" onclick="toggleNotifications()" aria-expanded="false"
         aria-controls="notificationContainer">
         <i class="fas fa-bell"></i>
@@ -191,6 +192,18 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </a>
           </li>
 
+
+          <div class="bottom-content">
+        <ul class="lists">
+          <li class="list">
+            <a href="../include/chat.php" class="nav-link">
+              <i class="bx bx-home-alt icon"></i>
+              <span class="link" data-lang-en="Home" data-lang-es=" Inicio" data-lang-fr="d'accueil"
+                data-lang-de=" Startseite" data-lang-zh="首页" data-lang-jp="ホーム (Hōmu)ー" data-lang-ru="Главная"
+                data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Messages</span>
+            </a>
+          </li>
+
           <li class="list">
             <a href="../include/place.php" class="nav-link">
               <i class="bx bx-map icon"></i>
@@ -226,7 +239,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </a>
           </li>
           <li class="list">
-            <a href="../include/itenerary.html" class="nav-link">
+            <a href="../include/itenerary.php" class="nav-link">
               <i class="bx bx-note icon"></i>
               <span class="link" data-lang-en="My Itinerary" data-lang-es="Mi itinerario" data-lang-fr="Mon itinéraire"
                 data-lang-de="Meine Reiseroute" data-lang-zh="我的行程" data-lang-jp="私の旅程 (Watashi no Ritei)"
@@ -242,6 +255,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Booking History</span>
             </a>
           </li>
+          
         </ul>
 
 
