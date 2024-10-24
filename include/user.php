@@ -24,16 +24,20 @@ try {
     exit();
 }
 
-// If the request method is POST, process form submissions
+// If the request method is POST, process the form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Check if it's a booking submission
-    if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['days'], $_POST['checkin'], $_POST['package'], $_POST['guests'], $_POST['amount'], $_POST['payment'], $_POST['Reference'])) {
-        // Booking Submission
+    // Check if all required fields are set
+    if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['days'], $_POST['checkin'], $_POST['package'], $_POST['guests'], $_POST['downpayment'], $_POST['balance'], $_POST['payment'], $_POST['Reference'])) {
+        
+        // Sanitize and format the downpayment and balance values
+        $downpayment = floatval(str_replace(['₱', ','], '', $_POST['downpayment'])); // Remove currency symbols and commas
+        $balance = floatval(str_replace(['₱', ','], '', $_POST['balance']));
+
+        // Insert the data into the database
         try {
-            // After inserting the booking into the database
             $stmt = $pdoConnect->prepare("
-            INSERT INTO bookings (name, email, phone, days, checkin, package, guests, amount, payment, Reference, status)
-            VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference, :status)
+                INSERT INTO bookings (name, email, phone, days, checkin, package, guests, downpayment, balance, payment, Reference, status)
+                VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :downpayment, :balance, :payment, :Reference, :status)
             ");
             $stmt->execute([
                 'name' => $_POST['name'],
@@ -43,25 +47,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'checkin' => $_POST['checkin'],
                 'package' => $_POST['package'],
                 'guests' => $_POST['guests'],
-                'amount' => $_POST['amount'],
+                'downpayment' => $downpayment,
+                'balance' => $balance,
                 'payment' => $_POST['payment'],
                 'Reference' => $_POST['Reference'],
-                'status' => 'pending' // Set status to pending upon creation
+                'status' => 'pending' // Default status
             ]);
 
-            // Get the last inserted ID
+            // Get the last inserted booking ID
             $booking_id = $pdoConnect->lastInsertId();
 
-            // Store it in the session
+            // Store it in the session for later use (e.g., generating receipts)
             $_SESSION['booking_id'] = $booking_id;
 
-            // Redirect to the receipt page or wherever necessary
+            // Redirect to the receipt page
             header("Location: receipt.php");
             exit();
 
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
+    } else {
+        echo "Please fill in all required fields.";
+        exit();
     }
 }
 ?>
