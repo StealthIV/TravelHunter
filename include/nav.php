@@ -41,7 +41,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     padding: 15px;
     max-width: 300px;
     position: absolute;
-    left: 405px;
+    left: 435px;
     top: 10px;
     max-height: 300px;
     overflow-y: auto;
@@ -154,7 +154,6 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       document.querySelector('.notification-icon').setAttribute('aria-expanded', !isExpanded);
     }
   </script>
-
 
 
 
