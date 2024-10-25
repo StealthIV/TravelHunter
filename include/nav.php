@@ -166,14 +166,10 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
       <div class="dropdown-content">
         <a href="profile.php">Profile</a>
-
-
         <a href="logout.php">Logout</a>
       </div>
     </div>
   </div>
-
-
 
   <div class="sidebar">
     <div class="logo">
@@ -195,75 +191,71 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </a>
         </li>
 
+        <li class="list">
+          <a href="../include/chat.php" class="nav-link">
+            <i class="bx bx-home-alt icon"></i>
+            <span class="link" data-lang-en="Home" data-lang-es=" Inicio" data-lang-fr="d'accueil"
+              data-lang-de=" Startseite" data-lang-zh="首页" data-lang-jp="ホーム (Hōmu)ー" data-lang-ru="Главная"
+              data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Messages</span>
+          </a>
+        </li>
 
-        <div class="bottom-content">
-          <ul class="lists">
-            <li class="list">
-              <a href="../include/chat.php" class="nav-link">
-                <i class="bx bx-home-alt icon"></i>
-                <span class="link" data-lang-en="Home" data-lang-es=" Inicio" data-lang-fr="d'accueil"
-                  data-lang-de=" Startseite" data-lang-zh="首页" data-lang-jp="ホーム (Hōmu)ー" data-lang-ru="Главная"
-                  data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Messages</span>
-              </a>
-            </li>
+        <li class="list">
+          <a href="../include/place.php" class="nav-link">
+            <i class="bx bx-map icon"></i>
+            <span class="link" data-lang-en="Place" data-lang-es=" Lugar" data-lang-fr="Lieu" data-lang-de="Ort"
+              data-lang-zh="地点" data-lang-jp="場所 (Basho)" data-lang-ru=" Место" data-lang-it="Luogo"
+              data-lang-pt="Local" data-lang-ar="الفئات">Place</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="../include/marketplace.php" class="nav-link">
+            <i class="bx bx-cart icon"></i>
+            <span class="link" data-lang-en="Marketplace" data-lang-es="Mercado" data-lang-fr="Marché"
+              data-lang-de="Marktplatz" data-lang-zh=" 市场" data-lang-jp="マーケットプレイス " data-lang-ru="Торговая площадка"
+              data-lang-it="Mercato" data-lang-pt="Mercado" data-lang-ar="السوق">Marketplace</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="../social/social.php" class="nav-link">
+            <i class="bx bx-camera icon"></i>
+            <span class="link" data-lang-en="Social Media" data-lang-es=" Redes sociales" data-lang-fr="Médias sociaux"
+              data-lang-de="Soziale Medien" data-lang-zh="社交媒体" data-lang-jp="ソーシャルメディア" data-lang-ru="Социальные сети"
+              data-lang-it="Social Media" data-lang-pt="Mídias Sociais" data-lang-ar="وسائل التواصل الاجتماعي">Social
+              Media</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="../include/whether.php" class="nav-link">
+            <i class="bx bx-cloud icon"></i>
+            <span class="link" data-lang-en="Weather Forecast" data-lang-es=" Pronóstico del tiempo"
+              data-lang-fr="Prévisions météorologiques" data-lang-de="Wettervorhersage" data-lang-zh="天气预报"
+              data-lang-jp="天気予報 (Tenki Yohō)" data-lang-ru="Прогноз погоды" data-lang-it="Previsioni del tempo"
+              data-lang-pt="Previsão do Tempo" data-lang-ar="توقعات الطقس">Weather Forecast</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="../include/itenerary.php" class="nav-link">
+            <i class="bx bx-note icon"></i>
+            <span class="link" data-lang-en="My Itinerary" data-lang-es="Mi itinerario" data-lang-fr="Mon itinéraire"
+              data-lang-de="Meine Reiseroute" data-lang-zh="我的行程" data-lang-jp="私の旅程 (Watashi no Ritei)"
+              data-lang-ru="Мой маршрут" data-lang-it="Il mio itinerario" data-lang-pt="Meu Itinerário"
+              data-lang-ar="مسار رحلتي">My Itinerary</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="../include/categories.php" class="nav-link">
+            <i class="bx bx-menu icon"></i>
+            <span class="link" data-lang-en="Categories" data-lang-es="Categorías" data-lang-fr="d'accueil"
+              data-lang-de="Kategorien" data-lang-zh="分类" data-lang-jp="カテゴリ (Kategori)" data-lang-ru=" Категории"
+              data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Booking History</span>
+          </a>
+        </li>
 
-            <li class="list">
-              <a href="../include/place.php" class="nav-link">
-                <i class="bx bx-map icon"></i>
-                <span class="link" data-lang-en="Place" data-lang-es=" Lugar" data-lang-fr="Lieu" data-lang-de="Ort"
-                  data-lang-zh="地点" data-lang-jp="場所 (Basho)" data-lang-ru=" Место" data-lang-it="Luogo"
-                  data-lang-pt="Local" data-lang-ar="الفئات">Place</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="../include/marketplace.php" class="nav-link">
-                <i class="bx bx-cart icon"></i>
-                <span class="link" data-lang-en="Marketplace" data-lang-es="Mercado" data-lang-fr="Marché"
-                  data-lang-de="Marktplatz" data-lang-zh=" 市场" data-lang-jp="マーケットプレイス "
-                  data-lang-ru="Торговая площадка" data-lang-it="Mercato" data-lang-pt="Mercado"
-                  data-lang-ar="السوق">Marketplace</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="../social/social.php" class="nav-link">
-                <i class="bx bx-camera icon"></i>
-                <span class="link" data-lang-en="Social Media" data-lang-es=" Redes sociales"
-                  data-lang-fr="Médias sociaux" data-lang-de="Soziale Medien" data-lang-zh="社交媒体"
-                  data-lang-jp="ソーシャルメディア" data-lang-ru="Социальные сети" data-lang-it="Social Media"
-                  data-lang-pt="Mídias Sociais" data-lang-ar="وسائل التواصل الاجتماعي">Social Media</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="../include/whether.php" class="nav-link">
-                <i class="bx bx-cloud icon"></i>
-                <span class="link" data-lang-en="Weather Forecast" data-lang-es=" Pronóstico del tiempo"
-                  data-lang-fr="Prévisions météorologiques" data-lang-de="Wettervorhersage" data-lang-zh="天气预报"
-                  data-lang-jp="天気予報 (Tenki Yohō)" data-lang-ru="Прогноз погоды" data-lang-it="Previsioni del tempo"
-                  data-lang-pt="Previsão do Tempo" data-lang-ar="توقعات الطقس">Weather Forecast</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="../include/itenerary.php" class="nav-link">
-                <i class="bx bx-note icon"></i>
-                <span class="link" data-lang-en="My Itinerary" data-lang-es="Mi itinerario"
-                  data-lang-fr="Mon itinéraire" data-lang-de="Meine Reiseroute" data-lang-zh="我的行程"
-                  data-lang-jp="私の旅程 (Watashi no Ritei)" data-lang-ru="Мой маршрут" data-lang-it="Il mio itinerario"
-                  data-lang-pt="Meu Itinerário" data-lang-ar="مسار رحلتي">My Itinerary</span>
-              </a>
-            </li>
-            <li class="list">
-              <a href="../include/categories.php" class="nav-link">
-                <i class="bx bx-menu icon"></i>
-                <span class="link" data-lang-en="Categories" data-lang-es="Categorías" data-lang-fr="d'accueil"
-                  data-lang-de="Kategorien" data-lang-zh="分类" data-lang-jp="カテゴリ (Kategori)" data-lang-ru=" Категории"
-                  data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Booking History</span>
-              </a>
-            </li>
-
-          </ul>
+      </ul>
 
 
-        </div>
     </div>
+  </div>
   </div>
 </nav>
