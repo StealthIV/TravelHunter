@@ -1,7 +1,7 @@
-
-const span4 = document.getElementsByid('span5');
-const span5 = document.getElementsByid('span6');
-
+const span = document.getElementsByClassName('span1');
+const span1 = document.getElementsByClassName('span2');
+const span2 = document.getElementsByClassName('span3');
+const span3 = document.getElementsByClassName('span4');
 	let product = document.getElementsByClassName('product')
 	let product_page = Math.ceil(product.length/4);
 	let l = 0;
@@ -34,14 +34,17 @@ const span5 = document.getElementsByid('span6');
 			}
 		}
 	}
-	
-	span4[1].onclick = ()=>{right_mover();}
-	span4[0].onclick = ()=>{left_mover();}
+	span[1].onclick = ()=>{right_mover();}
+	span[0].onclick = ()=>{left_mover();}
 
-	span5[1].onclick = ()=>{right_mover();}
-	span5[0].onclick = ()=>{left_mover();}
+	span1[1].onclick = ()=>{right_mover();}
+	span1[0].onclick = ()=>{left_mover();}
 
+	span2[1].onclick = ()=>{right_mover();}
+	span2[0].onclick = ()=>{left_mover();}
 
+	span3[1].onclick = ()=>{right_mover();}
+	span3[0].onclick = ()=>{left_mover();}
 
 
 	

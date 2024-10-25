@@ -86,7 +86,7 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="../include/boracaymarket.php">Buy Now!!</a>
+            <a class="a1" href="../include/boracaymarket.php"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -112,7 +112,7 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -164,7 +164,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -190,7 +190,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -216,7 +216,7 @@ try {
             <samp>₱600.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -242,7 +242,7 @@ try {
             <samp>₱1000.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -268,7 +268,7 @@ try {
             <samp>₱200.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -294,7 +294,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -320,7 +320,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -346,7 +346,7 @@ try {
             <samp>₱700.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -372,7 +372,7 @@ try {
             <samp>₱150.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
       </section>
@@ -412,7 +412,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -425,14 +425,14 @@ try {
               <b data-lang-en="Beaded Bracelets" data-lang-es="Pulseras de Cuentas" data-lang-fr="Bracelets en Perles"
                 data-lang-de="Perlenarmbänder" data-lang-zh="珠饰手链" data-lang-jp="ビーズブレスレット"
                 data-lang-ru="Браслеты с Бусинами" data-lang-it="Braccialetti di Perline"
-                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز">Beaded Bracelets</b><br>
+                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز"><i class="bx bx-cart icon"></i>Beaded Bracelets</b><br>
             </p>
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -452,7 +452,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -474,7 +474,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -495,7 +495,7 @@ try {
           <div class="button7">
             <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!">Buy Now!!</a>
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
         <div class="product">
@@ -520,7 +520,7 @@ try {
             <samp>₱600.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -546,7 +546,7 @@ try {
             <samp>₱1000.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -572,7 +572,7 @@ try {
             <samp>₱200.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -598,7 +598,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -624,7 +624,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -650,7 +650,7 @@ try {
             <samp>₱700.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -676,7 +676,7 @@ try {
             <samp>₱150.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -722,7 +722,7 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -748,7 +748,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -774,7 +774,7 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -800,7 +800,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -826,7 +826,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -852,7 +852,7 @@ try {
             <samp>₱600.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -878,7 +878,7 @@ try {
             <samp>₱1000.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -904,7 +904,7 @@ try {
             <samp>₱200.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -930,7 +930,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -956,7 +956,7 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -982,7 +982,7 @@ try {
             <samp>₱700.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1008,7 +1008,7 @@ try {
             <samp>₱150.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
       </section>
@@ -1021,7 +1021,7 @@ try {
   <script src="../js/language.js"></script>
   <script src="../js/explore.js" defer></script>
   <script src="../js/script.js"></script>
-  <script src="../js/fin.js"></script>
+  <script src="../js/fin2.js"></script>
   <script src="../js/product.js"></script>
   <script src="../js/market1.js"></script>
 </body>

@@ -305,9 +305,10 @@ main .a1 {
   text-decoration: none;
   padding: 6px 14px;
   width: 120px;
+  text-align: center;
   font-size: 15px;
   margin: 5px 0 0 20px;
-
+  margin-left: 100px;
   display: inline-block;
   background: #6773ff;
   color: rgb(0, 0, 0);

@@ -2202,8 +2202,8 @@ if (isset($_SESSION['id'])) {
             data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
             data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة ">Top Hottest Products in Boracay</h1>
 <p>
-<span class="span" >&#139;</span>
-<span class="span" >&#155;</span>
+<span class="span4" >&#139;</span>
+<span class="span4" >&#155;</span>
   
 </p>
 </header>

@@ -424,23 +424,7 @@ try {
         </div>
       </section>
     </main>
-    <script>
-  // Select all clickable images
-  const images = document.querySelectorAll('.clickable-image');
-
-  images.forEach(image => {
-    image.addEventListener('click', () => {
-      // Request full-screen mode for the clicked image
-      if (image.requestFullscreen) {
-        image.requestFullscreen();
-      } else if (image.webkitRequestFullscreen) { /* Safari */
-        image.webkitRequestFullscreen();
-      } else if (image.msRequestFullscreen) { /* IE11 */
-        image.msRequestFullscreen();
-      }
-    });
-  });
-</script>
+   
 
     <main>
 
