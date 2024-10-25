@@ -92,7 +92,8 @@ try {
         <p><strong>Booking Date:</strong> {$booking['checkin']}</p>
         <p><strong>Package:</strong> {$booking['package']}</p>
         <p><strong>Number of Guests:</strong> {$booking['guests']}</p>
-        <p><strong>Total Amount:</strong> {$booking['amount']}</p>
+        <p><strong>Downpayment:</strong> {$booking['downpayment']}</p>
+         <p><strong>Balance:</strong> {$booking['balance']}</p>
         <p><strong>Payment Method:</strong> {$booking['payment']}</p>
         <p><strong>Reference Number:</strong> {$booking['Reference']}</p>
     ";
@@ -116,7 +117,7 @@ try {
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travel Hunter</title>
+  <title>Booking Receipt</title>
   <!-- CSS -->
   <link rel="stylesheet" href="../style/receipt.css" />
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
@@ -145,7 +146,8 @@ try {
         <p><strong>Booking Date:</strong> <?= htmlspecialchars($booking['checkin']) ?></p>
         <p><strong>Package:</strong> <?= htmlspecialchars($booking['package']) ?></p>
         <p><strong>Number of Guests:</strong> <?= htmlspecialchars($booking['guests']) ?></p>
-        <p><strong>Total Amount:</strong> <?= htmlspecialchars($booking['amount']) ?></p>
+        <p><strong>Downpayment:</strong> <?= htmlspecialchars($booking['downpayment']) ?></p>
+        <p><strong>Balance:</strong> <?= htmlspecialchars($booking['balance']) ?></p>
         <p><strong>Payment Method:</strong> <?= htmlspecialchars($booking['payment']) ?></p>
         <p><strong>Reference Number:</strong> <?= htmlspecialchars($booking['Reference']) ?></p>
         <button onclick="window.print()">Print Receipt</button>

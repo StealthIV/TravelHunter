@@ -117,7 +117,7 @@ if (isset($_SESSION['id'])) {
                      <span id="email-error" style="color:red; display:none;">Valid email is required</span>
                   </div>
                   <div class="field">
-                     <div class="label">Phone Number</div><input type="text" id="phone" name="phone" required>
+                     <div class="label">Phone Number</div><input type="number" id="phone" name="phone" required>
                      <span id="phone-error" style="color:red; display:none;">Valid phone number is required</span>
                   </div>
                   <div class="field">
@@ -183,13 +183,14 @@ if (isset($_SESSION['id'])) {
                
 
                   <div class="field">
-                     <div class="label" for="downpayment">Downpayment Amount (30%):</div>
-                     <input type="text" id="downpayment" name="downpayment"  value="&#8369;0" readonly>
-                  </div>
-                  <div class="field">
-                     <div class="label" for="balance">Balance Amount:</div>
-                     <input type="text" id="balance" name="balance" value="&#8369;0" readonly>
-                  </div>
+                <div class="label" for="downpayment">Downpayment Amount (30%):</div>
+                <input type="text" id="downpayment" name="downpayment" value="₱0" readonly>
+             </div>
+          <div class="field">
+          <div class="label" for="balance">Balance Amount:</div>
+          <input type="text" id="balance" name="balance" value="₱0" readonly>
+          </div>
+
                   
                   <div class="field">
                      <div class="label">Reference Number</div>

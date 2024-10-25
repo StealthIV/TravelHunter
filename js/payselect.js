@@ -1,3 +1,5 @@
+
+
 // Elements
 const packageSelect = document.getElementById('package');
 const quantityInput = document.getElementById('guests');
@@ -6,7 +8,12 @@ const balanceInput = document.getElementById('balance');
 
 // Function to calculate and update the downpayment and balance
 function updateAmounts() {
-    const packageAmount = parseFloat(packageSelect.value) || 0;
+    // Extract the numeric value from the selected package (e.g., "Shell Keychains - ₱500" -> 500)
+    const packageText = packageSelect.value;
+    const packageAmountMatch = packageText.match(/₱(\d+)/);
+    const packageAmount = packageAmountMatch ? parseFloat(packageAmountMatch[1]) : 0;
+
+    // Get the quantity from the input field, default to 1 if not set
     const quantity = parseInt(quantityInput.value) || 1;
 
     // Calculate total amount for the selected quantity
@@ -14,11 +21,11 @@ function updateAmounts() {
 
     // Calculate downpayment (30% of the total amount)
     const downpayment = totalAmount * 0.30;
-    downpaymentInput.value = "₱" + downpayment.toFixed(2);
+    downpaymentInput.value = "₱" + downpayment.toFixed(2); // Format as currency
 
     // Calculate balance (remaining 70% of the total amount)
     const balance = totalAmount - downpayment;
-    balanceInput.value = "₱" + balance.toFixed(2);
+    balanceInput.value = "₱" + balance.toFixed(2); // Format as currency
 }
 
 // Event listeners to trigger the update when package or quantity changes

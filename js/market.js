@@ -8,7 +8,8 @@ const balanceInput = document.getElementById('balance');
 function updateAmounts() {
     // Extract the numeric value from the selected package (e.g., "Shell Keychains - ₱500" -> 500)
     const packageText = packageSelect.value;
-    const packageAmount = parseFloat(packageText.match(/₱(\d+)/)[1]) || 0; // Extracts the numeric value
+    const packageAmountMatch = packageText.match(/₱(\d+)/);
+    const packageAmount = packageAmountMatch ? parseFloat(packageAmountMatch[1]) : 0;
 
     // Get the quantity from the input field, default to 1 if not set
     const quantity = parseInt(quantityInput.value) || 1;

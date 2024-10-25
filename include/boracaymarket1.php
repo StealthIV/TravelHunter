@@ -24,21 +24,28 @@ try {
     exit();
 }
 
+// If the request method is POST, process the form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Check if all fields including 'item' are set
+    // Check if all required fields are set
     if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['address'], $_POST['checkin'], $_POST['item'], $_POST['quantity'], $_POST['downpayment'], $_POST['balance'], $_POST['payment'], $_POST['Reference'])) {
-
+        
         // Ensure that the user selected an item
         if (empty($_POST['item'])) {
             echo "Please choose an item.";
             exit();
         }
 
-        // Insert into the database
+        // Sanitize and format the downpayment and balance values
+        $item = $_POST['item'];
+        $quantity = intval($_POST['quantity']);
+        $downpayment = floatval(str_replace(['₱', ','], '', $_POST['downpayment'])); // Remove currency symbols and commas
+        $balance = floatval(str_replace(['₱', ','], '', $_POST['balance']));
+
+        // Insert the data into the database
         try {
             $stmt = $pdoConnect->prepare("
-            INSERT INTO market (name, email, phone, address, checkin, item, quantity, downpayment, balance, payment, Reference, status)
-            VALUES (:name, :email, :phone, :address, :checkin, :item, :quantity, :downpayment, :balance, :payment, :Reference, :status)
+                INSERT INTO market (name, email, phone, address, checkin, item, quantity, downpayment, balance, payment, Reference, status)
+                VALUES (:name, :email, :phone, :address, :checkin, :item, :quantity, :downpayment, :balance, :payment, :Reference, :status)
             ");
             $stmt->execute([
                 'name' => $_POST['name'],
@@ -46,22 +53,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'phone' => $_POST['phone'],
                 'address' => $_POST['address'],
                 'checkin' => $_POST['checkin'],
-                'item' => $_POST['item'], // This is the chosen item from the select dropdown
-                'quantity' => $_POST['quantity'],
-                'downpayment' => $_POST['downpayment'],
-                'balance' => $_POST['balance'],
+                'item' => $item,
+                'quantity' => $quantity,
+                'downpayment' => $downpayment,
+                'balance' => $balance,
                 'payment' => $_POST['payment'],
                 'Reference' => $_POST['Reference'],
-                'status' => 'pending'
+                'status' => 'pending' // Default status
             ]);
 
-            // Get the last inserted ID
+            // Get the last inserted order ID
             $order_id = $pdoConnect->lastInsertId();
 
-            // Store it in the session
+            // Store it in the session for later use (e.g., generating receipts)
             $_SESSION['order_id'] = $order_id;
 
-            // Redirect to the receipt page or wherever necessary
+            // Redirect to the receipt page
             header("Location: receiptmarket.php");
             exit();
 
