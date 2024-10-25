@@ -1,87 +1,173 @@
-const chatbotToggler = document.querySelector(".chatbot-toggler");
-const closeBtn = document.querySelector(".close-btn");
-const chatbox = document.querySelector(".chatbox");
-const chatInput = document.querySelector(".chat-input textarea");
-const sendChatBtn = document.querySelector(".chat-input span");
+var data = {
+    chatinit: {
+        title: ["Hello <span class='emoji'> &#128075;</span>", "I am your Philippines Travel Guide", "How can I assist you?"],
+        options: ["Beaches <span class='emoji'> &#127958;</span>", "Mountains <span class='emoji'> &#127956;</span>", "Waterfalls <span class='emoji'> &#128167;</span>", "Islands <span class='emoji'> &#127965;</span>", "Caves <span class='emoji'> &#128200;</span>"] // Added "Caves" option
+    },
+    beaches: {
+        title: ["Here are some famous beaches in the Philippines:"],
+        options: ['Boracay', 'El Nido', 'Siargao', 'Pagudpud', 'Dumaluan Beach'], // Added Dumaluan Beach
+        url: {
+            more: "https://www.tourism.gov.ph/",
+            link: ["../include/boracay.php", "#", "#", "#", "#"]
+        }
+    },
+    mountains: {
+        title: ["Here are some popular mountains to hike:"],
+        options: ['Mount Pulag', 'Mount Apo', 'Mount Mayon', 'Mount Batulao', 'Mount Pico de Loro'], // Added Mount Pico de Loro
+        url: {
+            more: "https://www.tourism.gov.ph/",
+            link: ["#", "#", "#", "#", "#"]
+        }
+    },
+    waterfalls: {
+        title: ["Check out these stunning waterfalls:"],
+        options: ['Pagsanjan Falls', 'Maria Cristina Falls', 'Tinuy-an Falls', 'Kawasan Falls', 'Asik-Asik Falls'], // Added Asik-Asik Falls
+        url: {
+            more: "https://www.tourism.gov.ph/",
+            link: ["#", "#", "#", "#", "#"]
+        }
+    },
+    islands: {
+        title: ["Explore these beautiful islands:"],
+        options: ['Palawan', 'Cebu', 'Bohol', 'Camiguin', 'Siquijor'], // Added Siquijor
+        url: {
+            more: "https://www.tourism.gov.ph/",
+            link: ["#", "#", "#", "#", "#"]
+        }
+    },
+    caves: { // Added new "Caves" category
+        title: ["Discover some breathtaking caves:"],
+        options: ['Puerto Princesa Underground River', 'Callao Cave', 'Hinagdanan Cave', 'Sumaguing Cave', 'Sohoton Cave'],
+        url: {
+            more: "https://www.tourism.gov.ph/",
+            link: ["#", "#", "#", "#", "#"]
+        }
+    }
+};
 
-let userMessage = null; // Variable to store user's message
-const API_KEY = "sk-proj-225Yx9ViqNsRJ0R5wPZ2T3BlbkFJ3DRMVIzYWbL0u7p7oh04"; // Paste your API key here
-const inputInitHeight = chatInput.scrollHeight;
+document.getElementById("init").addEventListener("click", showChatBot);
+var cbot = document.getElementById("chat-box");
 
-const createChatLi = (message, className) => {
-    // Create a chat <li> element with passed message and className
-    const chatLi = document.createElement("li");
-    chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
-    chatLi.innerHTML = chatContent;
-    chatLi.querySelector("p").textContent = message;
-    return chatLi; // return chat <li> element
+var len1 = data.chatinit.title.length;
+
+function showChatBot() {
+    console.log(this.innerText);
+    if (this.innerHTML == '<i class="bx bx-support icon"></i>') {
+        document.getElementById('test').style.display = 'block';
+        document.getElementById('init').innerText = 'X';
+        initChat();
+    } else {
+        location.reload();
+    }
 }
 
-const generateResponse = (chatElement) => {
-    const API_URL = "https://api.openai.com/v1/chat/completions";
-    const messageElement = chatElement.querySelector("p");
+function initChat() {
+    j = 0;
+    cbot.innerHTML = '';
+    for (var i = 0; i < len1; i++) {
+        setTimeout(handleChat, (i * 500));
+    }
+    setTimeout(function() {
+        showOptions(data.chatinit.options)
+    }, ((len1 + 1) * 500))
+}
 
-    // Define the properties and message for the API request
-    const requestOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo-16k",
-            messages: [{role: "user", content: userMessage}],
-        })
+var j = 0;
+
+function handleChat() {
+    console.log(j);
+    var elm = document.createElement("p");
+    elm.innerHTML = data.chatinit.title[j];
+    elm.setAttribute("class", "msg");
+    cbot.appendChild(elm);
+    j++;
+    handleScroll();
+}
+
+function showOptions(options) {
+    for (var i = 0; i < options.length; i++) {
+        var opt = document.createElement("span");
+        var inp = '<div>' + options[i] + '</div>';
+        opt.innerHTML = inp;
+        opt.setAttribute("class", "opt");
+        opt.addEventListener("click", handleOpt);
+        cbot.appendChild(opt);
+        handleScroll();
+    }
+}
+
+function handleOpt() {
+    console.log(this);
+    var str = this.innerText;
+    var textArr = str.split(" ");
+    var findText = textArr[0];
+
+    document.querySelectorAll(".opt").forEach(el => {
+        el.remove();
+    })
+    var elm = document.createElement("p");
+    elm.setAttribute("class", "test");
+    var sp = '<span class="rep">' + this.innerText + '</span>';
+    elm.innerHTML = sp;
+    cbot.appendChild(elm);
+
+    console.log(findText.toLowerCase());
+    var tempObj = data[findText.toLowerCase()];
+    handleResults(tempObj.title, tempObj.options, tempObj.url);
+}
+
+function handleDelay(title) {
+    var elm = document.createElement("p");
+    elm.innerHTML = title;
+    elm.setAttribute("class", "msg");
+    cbot.appendChild(elm);
+}
+
+function handleResults(title, options, url) {
+    for (let i = 0; i < title.length; i++) {
+        setTimeout(function() {
+            handleDelay(title[i]);
+        }, i * 500)
+
     }
 
-    // Send POST request to API, get response and set the reponse as paragraph text
-    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
-        messageElement.textContent = data.choices[0].message.content.trim();
-    }).catch(() => {
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
-}
-
-const handleChat = () => {
-    userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
-    if(!userMessage) return;
-
-    // Clear the input textarea and set its height to default
-    chatInput.value = "";
-    chatInput.style.height = `${inputInitHeight}px`;
-
-    // Append the user's message to the chatbox
-    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-    
-    setTimeout(() => {
-        // Display "Thinking..." message while waiting for the response
-        const incomingChatLi = createChatLi("Thinking...", "incoming");
-        chatbox.appendChild(incomingChatLi);
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-        generateResponse(incomingChatLi);
-    }, 600);
-}
-
-chatInput.addEventListener("input", () => {
-    // Adjust the height of the input textarea based on its content
-    chatInput.style.height = `${inputInitHeight}px`;
-    chatInput.style.height = `${chatInput.scrollHeight}px`;
-});
-
-chatInput.addEventListener("keydown", (e) => {
-    // If Enter key is pressed without Shift key and the window 
-    // width is greater than 800px, handle the chat
-    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-        e.preventDefault();
-        handleChat();
+    const isObjectEmpty = (url) => {
+        return JSON.stringify(url) === "{}";
     }
-});
 
-sendChatBtn.addEventListener("click", handleChat);
-closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+    if (isObjectEmpty(url) == true) {
+        console.log("having more options");
+        setTimeout(function() {
+            showOptions(options);
+        }, title.length * 500)
 
+    } else {
+        console.log("end result");
+        setTimeout(function() {
+            handleOptions(options, url);
+        }, title.length * 500)
 
+    }
+}
+
+function handleOptions(options, url) {
+    for (var i = 0; i < options.length; i++) {
+        var opt = document.createElement("span");
+        var inp = '<a class="m-link" href="' + url.link[i] + '">' + options[i] + '</a>';
+        opt.innerHTML = inp;
+        opt.setAttribute("class", "opt");
+        cbot.appendChild(opt);
+    }
+    var opt = document.createElement("span");
+    var inp = '<a class="m-link" href="' + url.more + '">' + 'See more</a>';
+
+    opt.innerHTML = inp;
+    opt.setAttribute("class", "opt link");
+    cbot.appendChild(opt);
+    handleScroll();
+}
+
+function handleScroll() {
+    var elem = document.getElementById('chat-box');
+    elem.scrollTop = elem.scrollHeight;
+}

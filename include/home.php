@@ -37,6 +37,7 @@ try {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -124,27 +125,34 @@ try {
   </section>
 
 
-  <button class="chatbot-toggler">
-      <span class="material-symbols-rounded">mode_comment</span>
-      <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-      <header>
-        <h2>Travel Bot</h2>
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined">smart_toy</span>
-          <p>Hi there 👋<br>How can I help you today?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea spellcheck="false" required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
-    </div>
-
+  <button class="init" id="init"><i class="bx bx-support icon" ></i></button>
+  
+     <div id="test" style="position: fixed;top: 4rem;right: 8rem;display: none;margin-top:50px">
+         <div class="child" id="chatbot">
+             <div class="header9">
+                 <div class="h-child">
+                     <img src="../img/1.jpg" alt="avatar" id="avatar">
+                     <div>
+                         <span class="name" style=" font-size: 20px;">Chat Support</span>
+                         <br>
+                         <span style="color:lawngreen">online</span>
+                     </div>
+                 </div>
+                 <div class="sis">
+                     <button class="refBtn"><i class="fa fa-refresh" onclick="initChat()"></i></button>
+                 </div>
+             </div>
+ 
+             <div id="chat-box">
+ 
+             </div>
+             <div class="footer">
+                 <span> @TravelHunter</span>
+             </div>
+         </div>
+     </div>
+     </div>
+    
   <section class="package">
     <main>
       <header>
@@ -1217,13 +1225,13 @@ try {
 
           <div class="video-list">
             <div class="vid">
-              <video src="../Places/Pampanga/barundon.mp4" muted></video>
+              <video src="../img/12.mp4" muted></video>
               <h3 class="title">Bamboo Park</h3>
             </div>
 
             <div class="vid">
-              <video src="../Places/Pampanga/caposes island.mp4" muted></video>
-              <h3 class="title">Summer Place Palakol</h3>
+              <video src="../img/florida.mp4" muted></video>
+              <h3 class="title">Floridablanca</h3>
             </div>
 
             <div class="vid">

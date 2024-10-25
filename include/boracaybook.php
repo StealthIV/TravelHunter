@@ -228,7 +228,7 @@ if (isset($_SESSION['id'])) {
 
             // Email validation
             const email = document.getElementById('email').value;
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}&#8369;/;
             if (!email.match(emailPattern)) {
                document.getElementById('email-error').style.display = 'block';
                isValid = false;
