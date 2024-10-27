@@ -19,6 +19,7 @@ try {
         die("User not found.");
     }
     $profile_image = $user['image']; // Assuming this is the URL to the profile image
+    $user_id = $user['id']; // Fetch the user ID
 } catch (PDOException $error) {
     echo $error->getMessage();
     exit();
@@ -27,7 +28,7 @@ try {
 // If the request method is POST, process the form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if all required fields are set
-    if (isset($_POST['name'], $_POST['email'], $_POST['phone'], $_POST['days'], $_POST['checkin'], $_POST['package'], $_POST['guests'], $_POST['downpayment'], $_POST['balance'], $_POST['payment'], $_POST['Reference'])) {
+    if (isset($_POST['phone'], $_POST['days'], $_POST['checkin'], $_POST['package'], $_POST['guests'], $_POST['downpayment'], $_POST['balance'], $_POST['payment'], $_POST['Reference'])) {
         
         // Sanitize and format the downpayment and balance values
         $downpayment = floatval(str_replace(['₱', ','], '', $_POST['downpayment'])); // Remove currency symbols and commas
@@ -36,12 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Insert the data into the database
         try {
             $stmt = $pdoConnect->prepare("
-                INSERT INTO bookings (name, email, phone, days, checkin, package, guests, downpayment, balance, payment, Reference, status)
-                VALUES (:name, :email, :phone, :days, :checkin, :package, :guests, :downpayment, :balance, :payment, :Reference, :status)
+                INSERT INTO bookings (phone, days, checkin, package, guests, downpayment, balance, payment, Reference, status, user_id)
+                VALUES (:phone, :days, :checkin, :package, :guests, :downpayment, :balance, :payment, :Reference, :status, :user_id)
             ");
             $stmt->execute([
-                'name' => $_POST['name'],
-                'email' => $_POST['email'],
                 'phone' => $_POST['phone'],
                 'days' => $_POST['days'],
                 'checkin' => $_POST['checkin'],
@@ -51,7 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'balance' => $balance,
                 'payment' => $_POST['payment'],
                 'Reference' => $_POST['Reference'],
-                'status' => 'pending' // Default status
+                'status' => 'pending', // Default status
+                'user_id' => $user_id // Add the user ID
             ]);
 
             // Get the last inserted booking ID

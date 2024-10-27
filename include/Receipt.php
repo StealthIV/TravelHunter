@@ -21,14 +21,18 @@ if (!$booking) {
 
 $UserName = $_SESSION["UserName"];
 
-// Fetching user profile image from the database
+// Fetch user details using user_id from the bookings table
+$user_id = $booking['user_id'];
 try {
-  $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
+  // Fetch user details from the user table using the user_id
+  $pdoQuery = "SELECT FullName, UserName FROM user WHERE id = :user_id";
   $pdoResult = $pdoConnect->prepare($pdoQuery);
-  $pdoResult->execute(['UserName' => $UserName]);
+  $pdoResult->execute(['user_id' => $user_id]);
   $user = $pdoResult->fetch();
-  $profile_image = $user['image']; // Assuming this is the URL to the profile image
+
+  // Assign user details
   $full_name = $user['FullName'];
+  $email = $user['UserName']; // Assuming UserName holds the email
 
 } catch (PDOException $error) {
   echo $error->getMessage() . '';
@@ -41,12 +45,6 @@ use PHPMailer\PHPMailer\Exception;
 require_once 'phpmailer/src/Exception.php';
 require_once 'phpmailer/src/PHPMailer.php';
 require_once 'phpmailer/src/SMTP.php';
-
-// Extract and validate email address
-$email = $booking['email'];
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  die('Invalid email address.');
-}
 
 // Email configuration
 $mail = new PHPMailer(true);
@@ -75,7 +73,7 @@ try {
 
   // Recipients
   $mail->setFrom('cferdinand500@gmail.com', 'Travel Hunter');
-  $mail->addAddress($email, $booking['name']); // Use $booking['name']
+  $mail->addAddress($email, $full_name); // Use $full_name from user table
 
   // Content
   $mail->isHTML(true);
@@ -85,15 +83,15 @@ try {
   $emailContent = "
         <h1>Booking Receipt</h1>
         <p><strong>Booking ID:</strong> {$booking['id']}</p>
-        <p><strong>Name:</strong> {$booking['name']}</p>
-        <p><strong>Email:</strong> {$booking['email']}</p>
+        <p><strong>Name:</strong> {$full_name}</p>
+        <p><strong>Email:</strong> {$email}</p>
         <p><strong>Phone:</strong> {$booking['phone']}</p>
         <p><strong>Number of Days:</strong> {$booking['days']}</p>
         <p><strong>Booking Date:</strong> {$booking['checkin']}</p>
         <p><strong>Package:</strong> {$booking['package']}</p>
         <p><strong>Number of Guests:</strong> {$booking['guests']}</p>
         <p><strong>Downpayment:</strong> {$booking['downpayment']}</p>
-         <p><strong>Balance:</strong> {$booking['balance']}</p>
+        <p><strong>Balance:</strong> {$booking['balance']}</p>
         <p><strong>Payment Method:</strong> {$booking['payment']}</p>
         <p><strong>Reference Number:</strong> {$booking['Reference']}</p>
     ";
@@ -107,7 +105,6 @@ try {
   $emailSent = false;
   $mailError = $mail->ErrorInfo;
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -139,8 +136,8 @@ try {
 
       <?php if ($emailSent): ?>
         <p><strong>Booking ID:</strong> <?= htmlspecialchars($booking['id']) ?></p>
-        <p><strong>Name:</strong> <?= htmlspecialchars($booking['name']) ?></p>
-        <p><strong>Email:</strong> <?= htmlspecialchars($booking['email']) ?></p>
+        <p><strong>Name:</strong> <?= htmlspecialchars($full_name) ?></p>
+        <p><strong>Email:</strong> <?= htmlspecialchars($email) ?></p>
         <p><strong>Phone:</strong> <?= htmlspecialchars($booking['phone']) ?></p>
         <p><strong>Number of Days:</strong> <?= htmlspecialchars($booking['days']) ?></p>
         <p><strong>Booking Date:</strong> <?= htmlspecialchars($booking['checkin']) ?></p>
@@ -164,6 +161,7 @@ try {
 
 </html>
 
-<?php // Clear the booking ID after use
+<?php
+// Clear the booking ID after use
 unset($_SESSION['booking_id']);
 ?>

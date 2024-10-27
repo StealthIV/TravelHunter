@@ -77,132 +77,134 @@ if (isset($_SESSION['id'])) {
    <section class="overlay"></section>
 
    <section class="main">
-    <div class="container">
-        <header>Booking Form</header>
-        <div class="progress-bar">
+      <div class="container">
+         <header>Booking Form</header>
+         <div class="progress-bar">
             <div class="step active">
-                <p class="active">Personal</p>
-                <div class="bullet active"><span>1</span></div>
-                <div class="check active">✔</div>
+               <p class="active">Personal</p>
+               <div class="bullet active"><span>1</span></div>
+               <div class="check active">✔</div>
             </div>
             <div class="step">
-                <p>Booking</p>
-                <div class="bullet"><span>2</span></div>
-                <div class="check">✔</div>
+               <p>Booking</p>
+               <div class="bullet"><span>2</span></div>
+               <div class="check">✔</div>
             </div>
             <div class="step">
-                <p>Payment</p>
-                <div class="bullet"><span>3</span></div>
-                <div class="check">✔</div>
+               <p>Payment</p>
+               <div class="bullet"><span>3</span></div>
+               <div class="check">✔</div>
             </div>
             <div class="step">
-                <p>Submit</p>
-                <div class="bullet"><span>4</span></div>
-                <div class="check">✔</div>
+               <p>Submit</p>
+               <div class="bullet"><span>4</span></div>
+               <div class="check">✔</div>
             </div>
-        </div>
+         </div>
 
-        <div class="form-outer">
+         <div class="form-outer">
             <form id="bookingForm" action="user.php" method="post">
-                <div class="page slide-page">
-                    <div class="title">Basic Info:</div>
-                    <div class="field">
-                        <div class="label">Full Name</div>
-                        <input type="text" id="name" name="name" required>
-                        <span id="name-error" style="color:red; display:none;">Full Name is required</span>
-                    </div>
-                    <div class="field">
-                        <div class="label">Email Address</div>
-                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" readonly required>
-                        <span id="email-error" style="color:red; display:none;">Valid email is required</span>
-                    </div>
-                    <div class="field">
-                        <div class="label">Phone Number</div>
-                        <input type="text" id="phone" name="phone" required>
-                        <span id="phone-error" style="color:red; display:none;">Valid phone number is required</span>
-                    </div>
-                    <div class="field">
-                        <button class="firstNext next" type="button" onclick="validateStep1()">Next</button>
-                    </div>
-                </div>
+               <div class="page slide-page">
+                  <div class="title">Basic Info:</div>
+                  <div class="field">
+                     <div class="label">Full Name</div>
+                     <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($full_name); ?>" readonly
+                        required>
+                     <span id="name-error" style="color:red; display:none;">Full Name is required</span>
+                  </div>
+                  <div class="field">
+                     <div class="label">Email Address</div>
+                     <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>"
+                        readonly required>
+                     <span id="email-error" style="color:red; display:none;">Valid email is required</span>
+                  </div>
+                  <div class="field">
+                     <div class="label">Phone Number</div>
+                     <input type="text" id="phone" name="phone" required>
+                     <span id="phone-error" style="color:red; display:none;">Valid phone number is required</span>
+                  </div>
+                  <div class="field">
+                     <button class="firstNext next" type="button" onclick="validateStep1()">Next</button>
+                  </div>
+               </div>
 
-                <div class="page">   
-                    <div class="title">Booking Info:</div>
-                    <div class="field">
-                        <div class="label">Choose Package</div>
-                        <select id="package" name="package" onchange="calculatePayment()">
-                            <option value="">-- Select a Package --</option>
-                            <option value="Bronze Package - ₱6,999">Bronze Package - &#8369;6,999</option>
-                            <option value="Silver Package - ₱7,999">Silver Package - &#8369;7,999</option>
-                            <option value="Gold Package - ₱8,999">Gold Package - &#8369;8,999</option>
-                            <option value="Platinum Package - ₱10,999">Platinum Package - &#8369;10,999</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <div class="label">Booking Date</div>
-                        <input type="date" id="checkin" name="checkin" required>
-                    </div>
-                    <div class="field">
-                        <div class="label" for="quantity">Number of Guests</div> 
-                        <input type="number" id="guests" name="guests" value="1" min="1" required>
-                    </div>
-                    <div class="field">
-                        <div class="label">Number of Days</div>
-                        <input type="number" id="days" name="days" required>
-                    </div>
-                    <div class="field btns">
-                        <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
-                        <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
-                    </div>
-                </div>
+               <div class="page">
+                  <div class="title">Booking Info:</div>
+                  <div class="field">
+                     <div class="label">Choose Package</div>
+                     <select id="package" name="package" onchange="calculatePayment()">
+                        <option value="">-- Select a Package --</option>
+                        <option value="Bronze Package - ₱6,999">Bronze Package - &#8369;6,999</option>
+                        <option value="Silver Package - ₱7,999">Silver Package - &#8369;7,999</option>
+                        <option value="Gold Package - ₱8,999">Gold Package - &#8369;8,999</option>
+                        <option value="Platinum Package - ₱10,999">Platinum Package - &#8369;10,999</option>
+                     </select>
+                  </div>
+                  <div class="field">
+                     <div class="label">Booking Date</div>
+                     <input type="date" id="checkin" name="checkin" required>
+                  </div>
+                  <div class="field">
+                     <div class="label" for="quantity">Number of Guests</div>
+                     <input type="number" id="guests" name="guests" value="1" min="1" required>
+                  </div>
+                  <div class="field">
+                     <div class="label">Number of Days</div>
+                     <input type="number" id="days" name="days" required>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
+                     <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
+                  </div>
+               </div>
 
-                <div class="page">
-                    <div class="title">Payment:</div>
-                    <h1>Gcash account: 09663174570</h1>
-                    <div class="field">
-                        <div class="label">Mode of Payment</div>
-                        <select id="payment" name="payment" required>
-                            <option hidden>Payment Method</option>
-                            <option>Gcash</option>
-                            <option>Maya</option>
-                            <option>Paypal</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <div class="label" for="downpayment">Downpayment Amount (30%):</div>
-                        <input type="text" id="downpayment" name="downpayment" value="₱0" readonly>
-                    </div>
-                    <div class="field">
-                        <div class="label" for="balance">Balance Amount:</div>
-                        <input type="text" id="balance" name="balance" value="₱0" readonly>
-                    </div>
-                    <div class="field">
-                        <div class="label">Reference Number</div>
-                        <input type="text" id="Reference" name="Reference" required>
-                    </div>
-                    <div class="field btns">
-                        <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
-                        <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
-                    </div>
-                </div>
+               <div class="page">
+                  <div class="title">Payment:</div>
+                  <h1>Gcash account: 09663174570</h1>
+                  <div class="field">
+                     <div class="label">Mode of Payment</div>
+                     <select id="payment" name="payment" required>
+                        <option hidden>Payment Method</option>
+                        <option>Gcash</option>
+                        <option>Maya</option>
+                        <option>Paypal</option>
+                     </select>
+                  </div>
+                  <div class="field">
+                     <div class="label" for="downpayment">Downpayment Amount (30%):</div>
+                     <input type="text" id="downpayment" name="downpayment" value="₱0" readonly>
+                  </div>
+                  <div class="field">
+                     <div class="label" for="balance">Balance Amount:</div>
+                     <input type="text" id="balance" name="balance" value="₱0" readonly>
+                  </div>
+                  <div class="field">
+                     <div class="label">Reference Number</div>
+                     <input type="text" id="Reference" name="Reference" required>
+                  </div>
+                  <div class="field btns">
+                     <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
+                     <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>
+                  </div>
+               </div>
 
-                <div class="page">
-                    <div class="title">Confirm Booking:</div>
-                    <p>Please confirm your details before submitting.</p>
-                    <div class="field btns">
-                        <button class="prev-3 prev">Previous</button>
-                        <button class="submit" type="submit">Submit</button>
-                    </div>
-                </div>
+               <div class="page">
+                  <div class="title">Confirm Booking:</div>
+                  <p>Please confirm your details before submitting.</p>
+                  <div class="field btns">
+                     <button class="prev-3 prev">Previous</button>
+                     <button class="submit" type="submit">Submit</button>
+                  </div>
+               </div>
             </form>
-        </div>
-    </div>
+         </div>
+      </div>
 
-    <script src="../js/payselect.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/language.js"></script>
-    <script>
-        function calculatePayment() {
+      <script src="../js/payselect.js"></script>
+      <script src="../js/home.js"></script>
+      <script src="../js/language.js"></script>
+      <script>
+         function calculatePayment() {
             // Get the selected package
             const packageSelect = document.getElementById("package");
             const selectedPackage = packageSelect.value;
@@ -219,162 +221,162 @@ if (isset($_SESSION['id'])) {
             // Update the downpayment and balance fields
             document.getElementById("downpayment").value = "₱" + downpayment.toFixed(2);
             document.getElementById("balance").value = "₱" + balance.toFixed(2);
-        }
-
-        // Attach event listeners to the days input
-        document.getElementById("days").addEventListener("input", calculatePayment);
-    </script>
-</section>
-<script>
-
-         let currentPage = 0;
-
-         function validateStep1() {
-            let isValid = true;
-
-            // Full Name validation
-            const name = document.getElementById('name').value;
-            if (name.trim() === "") {
-               document.getElementById('name-error').style.display = 'block';
-               isValid = false;
-            } else {
-               document.getElementById('name-error').style.display = 'none';
-            }
-
-            // Email validation
-            const email = document.getElementById('email').value;
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-            if (!email.match(emailPattern)) {
-               document.getElementById('email-error').style.display = 'block';
-               isValid = false;
-            } else {
-               document.getElementById('email-error').style.display = 'none';
-            }
-
-            // Phone number validation
-            const phone = document.getElementById('phone').value;
-            const phonePattern = /^[0-9]{10,12}$/;
-            if (!phone.match(phonePattern)) {
-               document.getElementById('phone-error').style.display = 'block';
-               isValid = false;
-            } else {
-               document.getElementById('phone-error').style.display = 'none';
-            }
-
-            if (isValid) {
-               nextPage();
-            }
          }
 
-         function validateStep2() {
-            let isValid = true;
-            const packageSelect = document.getElementById('package');
-            const checkinDate = document.getElementById('checkin').value;
-            const guests = document.getElementById('guests').value;
-            const days = document.getElementById('days').value;
+         // Attach event listeners to the days input
+         document.getElementById("days").addEventListener("input", calculatePayment);
+      </script>
+   </section>
+   <script>
 
-            if (packageSelect.value === "") {
-               alert("Package selection is required.");
-               isValid = false;
-            }
+      let currentPage = 0;
 
-            if (checkinDate === "") {
-               alert("Check-in date is required.");
-               isValid = false;
-            }
+      function validateStep1() {
+         let isValid = true;
 
-            if (guests <= 0) {
-               alert("Number of guests must be greater than zero.");
-               isValid = false;
-            }
-
-            if (days <= 0) {
-               alert("Number of days must be greater than zero.");
-               isValid = false;
-            }
-
-            if (isValid) {
-               nextPage();
-            }
+         // Full Name validation
+         const name = document.getElementById('name').value;
+         if (name.trim() === "") {
+            document.getElementById('name-error').style.display = 'block';
+            isValid = false;
+         } else {
+            document.getElementById('name-error').style.display = 'none';
          }
 
-         function validateStep3() {
-            let isValid = true;
-            const paymentSelect = document.getElementById('payment');
-            const amount = document.getElementById('amount').value;
-            const reference = document.getElementById('Reference').value;
-
-            if (paymentSelect.value === "") {
-               alert("Payment method is required.");
-               isValid = false;
-            }
-
-            if (amount <= 0) {
-               alert("Down payment must be greater than zero.");
-               isValid = false;
-            }
-
-            if (reference.trim() === "") {
-               alert("Reference number is required.");
-               isValid = false;
-            }
-
-            if (isValid) {
-               nextPage();
-            }
+         // Email validation
+         const email = document.getElementById('email').value;
+         const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+         if (!email.match(emailPattern)) {
+            document.getElementById('email-error').style.display = 'block';
+            isValid = false;
+         } else {
+            document.getElementById('email-error').style.display = 'none';
          }
 
-         function nextPage() {
-            const pages = document.querySelectorAll('.page');
-            const steps = document.querySelectorAll('.progress-bar .step');
-
-            // Hide the current page
-            pages[currentPage].style.display = 'none';
-
-            // Update the step classes
-            steps[currentPage].classList.remove('active');
-            steps[currentPage].querySelector('.bullet').classList.remove('active');
-            steps[currentPage].querySelector('.check').classList.add('active');
-
-            currentPage++;
-
-            // Ensure we do not exceed the number of pages
-            if (currentPage < pages.length) {
-               pages[currentPage].style.display = 'block';
-               steps[currentPage].classList.add('active');
-               steps[currentPage].querySelector('.bullet').classList.add('active');
-               steps[currentPage].querySelector('p').classList.add('active');
-            }
+         // Phone number validation
+         const phone = document.getElementById('phone').value;
+         const phonePattern = /^[0-9]{10,12}$/;
+         if (!phone.match(phonePattern)) {
+            document.getElementById('phone-error').style.display = 'block';
+            isValid = false;
+         } else {
+            document.getElementById('phone-error').style.display = 'none';
          }
 
-         function prevPage() {
-            const pages = document.querySelectorAll('.page');
-            const steps = document.querySelectorAll('.progress-bar .step');
+         if (isValid) {
+            nextPage();
+         }
+      }
 
-            // Hide the current page
-            pages[currentPage].style.display = 'none';
+      function validateStep2() {
+         let isValid = true;
+         const packageSelect = document.getElementById('package');
+         const checkinDate = document.getElementById('checkin').value;
+         const guests = document.getElementById('guests').value;
+         const days = document.getElementById('days').value;
 
-            // Update the step classes
-            steps[currentPage].classList.remove('active');
-            steps[currentPage].querySelector('.bullet').classList.remove('active');
-            steps[currentPage].querySelector('.check').classList.remove('active');
+         if (packageSelect.value === "") {
+            alert("Package selection is required.");
+            isValid = false;
+         }
 
-            currentPage--;
+         if (checkinDate === "") {
+            alert("Check-in date is required.");
+            isValid = false;
+         }
 
-            // Show the previous page
+         if (guests <= 0) {
+            alert("Number of guests must be greater than zero.");
+            isValid = false;
+         }
+
+         if (days <= 0) {
+            alert("Number of days must be greater than zero.");
+            isValid = false;
+         }
+
+         if (isValid) {
+            nextPage();
+         }
+      }
+
+      function validateStep3() {
+         let isValid = true;
+         const paymentSelect = document.getElementById('payment');
+         const amount = document.getElementById('amount').value;
+         const reference = document.getElementById('Reference').value;
+
+         if (paymentSelect.value === "") {
+            alert("Payment method is required.");
+            isValid = false;
+         }
+
+         if (amount <= 0) {
+            alert("Down payment must be greater than zero.");
+            isValid = false;
+         }
+
+         if (reference.trim() === "") {
+            alert("Reference number is required.");
+            isValid = false;
+         }
+
+         if (isValid) {
+            nextPage();
+         }
+      }
+
+      function nextPage() {
+         const pages = document.querySelectorAll('.page');
+         const steps = document.querySelectorAll('.progress-bar .step');
+
+         // Hide the current page
+         pages[currentPage].style.display = 'none';
+
+         // Update the step classes
+         steps[currentPage].classList.remove('active');
+         steps[currentPage].querySelector('.bullet').classList.remove('active');
+         steps[currentPage].querySelector('.check').classList.add('active');
+
+         currentPage++;
+
+         // Ensure we do not exceed the number of pages
+         if (currentPage < pages.length) {
             pages[currentPage].style.display = 'block';
             steps[currentPage].classList.add('active');
             steps[currentPage].querySelector('.bullet').classList.add('active');
             steps[currentPage].querySelector('p').classList.add('active');
          }
+      }
 
-         // Initial state
+      function prevPage() {
          const pages = document.querySelectorAll('.page');
-         pages.forEach((page, index) => {
-            page.style.display = index === currentPage ? 'block' : 'none';
-         });
+         const steps = document.querySelectorAll('.progress-bar .step');
 
-      </script>
+         // Hide the current page
+         pages[currentPage].style.display = 'none';
+
+         // Update the step classes
+         steps[currentPage].classList.remove('active');
+         steps[currentPage].querySelector('.bullet').classList.remove('active');
+         steps[currentPage].querySelector('.check').classList.remove('active');
+
+         currentPage--;
+
+         // Show the previous page
+         pages[currentPage].style.display = 'block';
+         steps[currentPage].classList.add('active');
+         steps[currentPage].querySelector('.bullet').classList.add('active');
+         steps[currentPage].querySelector('p').classList.add('active');
+      }
+
+      // Initial state
+      const pages = document.querySelectorAll('.page');
+      pages.forEach((page, index) => {
+         page.style.display = index === currentPage ? 'block' : 'none';
+      });
+
+   </script>
    </section>
 </body>
 

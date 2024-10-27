@@ -161,7 +161,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
   <div class="profile">
-    <span id="name-span"><?php echo htmlspecialchars($UserName); ?></span>
+    <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
     <div class="dropdown">
       <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
       <div class="dropdown-content">

@@ -39,8 +39,13 @@ $totalBookingResult = $totalBookingsQuery->fetch(PDO::FETCH_ASSOC);
 $totalBookings = $totalBookingResult['totalBooking'];
 $totalPages = ceil($totalBookings / $limit);
 
-// Fetch bookings for the current page
-$pdoQuery = 'SELECT * FROM bookings LIMIT :limit OFFSET :offset';
+// Fetch bookings for the current page with user information
+$pdoQuery = "
+    SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email 
+    FROM bookings 
+    JOIN user ON bookings.user_id = user.id 
+    LIMIT :limit OFFSET :offset
+";
 $pdoResult = $pdoConnect->prepare($pdoQuery);
 $pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);
 $pdoResult->bindParam(':offset', $offset, PDO::PARAM_INT);
@@ -116,18 +121,12 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="logout.php"><i
-                                    class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
+                        <span><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>
             </div>
         </header>
-
-
         <main>
-
-
-
             <div class="page-header">
                 <h1>Dashboard</h1>
                 <small>Home / Dashboard</small>
@@ -171,7 +170,7 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Email</th> 
                                         <th>Phone</th>
                                         <th>Number of Days</th>
                                         <th>Booking Date</th>
@@ -188,133 +187,34 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                     <?php foreach ($bookings as $row): ?>
                                         <tr>
                                             <td><?php echo $row['id']; ?></td>
-                                            <td><?php echo $row['name']; ?></td>
-                                            <td><?php echo $row['email']; ?></td>
-                                            <td><?php echo $row['phone']; ?></td>
-                                            <td><?php echo $row['days']; ?></td>
-                                            <td><?php echo $row['checkin']; ?></td>
-                                            <td><?php echo $row['package']; ?></td>
-                                            <td><?php echo $row['guests']; ?></td>
-                                            <td><?php echo $row['amount']; ?></td>
-                                            <td><?php echo $row['payment']; ?></td>
-                                            <td><?php echo $row['Reference']; ?></td>
-                                            <td><?php echo $row['status']; ?></td>
+                                            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
+                                            <!-- Display user name -->
+                                            <td><?php echo htmlspecialchars($row['user_email']); ?></td>
+                                            <!-- Display user email -->
+                                            <td><?php echo htmlspecialchars($row['phone']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['days']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['package']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['guests']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['amount']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['payment']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['status']); ?></td>
                                             <td style='width: 15%;'>
                                                 <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
                                                     class="btn btn-confirm">Confirm</a>
                                                 <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
                                                     class="btn btn-delete"><i class='bx bx-trash'></i></a>
                                             </td>
-
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
-                            <!-- Pagination Controls -->
-                            <div class="pagination">
-                                <?php if ($page > 1): ?>
-                                    <a href="?page=<?php echo $page - 1; ?>">&laquo; Previous</a>
-                                <?php endif; ?>
-
-                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                    <a href="?page=<?php echo $i; ?>" class="<?php echo $i === $page ? 'active' : ''; ?>">
-                                        <?php echo $i; ?>
-                                    </a>
-                                <?php endfor; ?>
-
-                                <?php if ($page < $totalPages): ?>
-                                    <a href="?page=<?php echo $page + 1; ?>">Next &raquo;</a>
-                                <?php endif; ?>
-                            </div>
                         </div>
+
                     </div>
+
                 </div>
-            </div>
-        </main>
-
-        <div class="page-content">
-            <div class="analytics">
-
-                <div class="card">
-                    <?php
-                    // Count the total number of users
-                    $totalBookingQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalproduct FROM boracaymarket ");
-                    $totalBookingQuery->execute();
-                    $totalBookingResult = $totalBookingQuery->fetch(PDO::FETCH_ASSOC);
-                    $totalBooking = $totalBookingResult['totalproduct'];
-                    ?>
-
-                    <div class="card-head">
-                        <h2>
-                            <?php echo number_format($totalBooking); ?>
-                        </h2>
-                        <span class="las la-user-friends"></span>
-                    </div>
-                    <div class="card-progress">
-                        <small>Number of product</small>
-                        <div class="card-indicator">
-                        </div>
-                    </div>
-                </div>
-                <div class="records table-responsive">
-                    <div class="record-header">
-
-                        <div class="browse">
-                            <input type="search" placeholder="Search" class="record-search">
-                        </div>
-                    </div>
-                    <table id="info-table" width="100%">
-                        <thead>
-                            <tr>
-                                <th style='width: 10%;'>ID</th>
-                                <th style='width: 20%;'>Name</th>
-                                <th style='width: 20%;'>Email</th>
-                                <th style='width: 20%;'>Phone</th>
-                                <th style='width: 20%;'>Address</th>
-                                <th style='width: 20%;'>Product</th>
-                                <th style='width: 20%;'>Amount</th>
-                                <th style='width: 20%;'>Payment Method</th>
-                                <th style='width: 20%;'>Reference</th>
-                                <th style='width: 20%;'>action</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php
-                            $pdoQuery = 'SELECT * FROM boracaymarket';
-                            $pdoResult = $pdoConnect->prepare($pdoQuery);
-                            $pdoResult->execute();
-                            while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
-                                extract($row);
-
-                                echo "<tr>";
-                                echo "<td style='width: 10%;'>$id</td>";
-                                echo "<td style='width: 15%;'>$name</td>";
-                                echo "<td style='width: 15%;'>$email</td>";
-                                echo "<td style='width: 15%;'>$phone</td>";
-                                echo "<td style='width: 15%;'>$address</td>";
-                                echo "<td style='width: 15%;'>$Product</td>";
-                                echo "<td style='width: 15%;'>$amount</td>";
-                                echo "<td style='width: 15%;'>" . (isset($payment) ? $payment : 'N/A') . "</td>"; // Handle undefined variable
-                                echo "<td style='width: 15%;'>$reference</td>";
-
-                                echo "<td style='width: 15%;'>";
-                                echo "<a href='update_status.php?id=$id&status=confirmed' class='btn btn-confirm'>Confirm</a>";
-                                echo "<a href='boracaydelete.php?id=$id' class='btn btn-delete'><i class='bx bx-trash'></i></a>";
-                                echo "</td>";
-
-                                echo "</tr>";
-                            }
-
-                            ?>
-                        </tbody>
-
-                    </table>
-                </div>
-
-            </div>
-
-        </div>
         </main>
         <script>
             let searchBox = document.querySelector('.record-search');
