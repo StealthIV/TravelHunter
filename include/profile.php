@@ -76,25 +76,44 @@ if (isset($_SESSION['id'])) {
       background-color: #f4f4f4;
     }
 
+  .account-details-box{
+    width: 900px;
+    height: 300px;
+    background: url(../img/cof.jpg);
+    background-size: cover;
+  }
+
     .profile-header {
-      text-align: center;
-      margin-bottom: 20px;
+      position: static;
+     margin-left: 20px;
+      margin-top: 100px;
     }
 
     .profile-header img {
-      width: 100px;
-      height: 100px;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+     margin-top: 50px;
       border-radius: 50%;
+    }
+    .prof{
+      position: absolute;
+      margin-top: 120px;
+      margin-left: 170px;
     }
 
     .profile-header h2 {
       margin: 10px 0 0;
       font-size: 24px;
+      color: white;
+      
     }
 
     .profile-header p {
+  
       margin: 5px 0;
-      color: #888;
+      color: white;
+     
     }
 
     .profile-details {
@@ -126,12 +145,15 @@ if (isset($_SESSION['id'])) {
 
     .profile-actions button {
       padding: 10px 20px;
+      position: relative;
       border: none;
       background: #0A5831;
       color: white;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 230px;
+      margin-left: 740px;
     }
 
     .profile-actions button:hover {
@@ -171,38 +193,16 @@ if (isset($_SESSION['id'])) {
       <div class="profile-header">
         <img src="<?php echo htmlspecialchars($profile_image); ?>" alt="Profile Image">
         <!-- Display Full Name -->
+         <div class="prof">
         <h2><?php echo htmlspecialchars($full_name); ?></h2>
         <p><?php echo htmlspecialchars($email); ?></p>
       </div>
-      <div class="profile-details">
-        <div>
-          <label>Full Name:</label>
-          <span><?php echo htmlspecialchars($full_name); ?></span>
-        </div>
-        <div>
-          <label>Email:</label>
-          <span><?php echo htmlspecialchars($email); ?></span>
-        </div>
-        <div>
-          <label>Password:</label>
-          <!-- Mask the password for security -->
-          <span><?php echo str_repeat('*', strlen($password)); ?></span>
-        </div>
       </div>
+      
       <div class="profile-actions">
         <button onclick="window.location.href='edit_profile.php'">Edit Profile</button>
       </div>
 
-      <!-- Back button -->
-      <div class="back-button-container">
-        <button onclick="goBack()">Back</button>
-      </div>
-
-      <script>
-        function goBack() {
-          window.location.href = "home.php";
-        }
-      </script>
       
       <script src="../js/home.js"></script>
       <script src="../js/language.js"></script>

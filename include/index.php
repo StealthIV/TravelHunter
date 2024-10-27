@@ -74,7 +74,7 @@ if (isset($_POST["login"])) {
         if ($_SESSION["UserRole"] == "admin") {
           header("Location: ../crud/admin.php");
         } elseif ($_SESSION["UserRole"] == "manager") {
-          header("Location: ../crud/manage.php");
+          header("Location: ../manage/manage.php");
         } else {
           header("Location: home.php");
         }
