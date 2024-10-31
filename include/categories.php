@@ -10,22 +10,31 @@ require_once '../connect/dbcon.php';
 $UserName = $_SESSION["UserName"];
 
 try {
-    // Fetch the logged-in user's details
-    $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
-    $pdoResult = $pdoConnect->prepare($pdoQuery);
-    $pdoResult->execute(['UserName' => $UserName]);
-    $user = $pdoResult->fetch();
+    // Fetch the logged-in user's details if not already in session
+    if (!isset($_SESSION['name']) || !isset($_SESSION['email'])) {
+        $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
+        $pdoResult = $pdoConnect->prepare($pdoQuery);
+        $pdoResult->execute(['UserName' => $UserName]);
+        $user = $pdoResult->fetch();
 
-    // Ensure we have a user record
-    if (!$user) {
-        echo "User not found.";
-        exit();
+        // Ensure we have a user record
+        if (!$user) {
+            echo "User not found.";
+            exit();
+        }
+
+        // Store user details in session
+        $_SESSION['id'] = $user['id'];
+        $_SESSION['name'] = $user['UserName'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['profile_image'] = $user['image'];
     }
 
-    // Get the user's ID for filtering the bookings
-    $id = $user['id'];
-    $profile_image = $user['image'];
-    $full_name = $user['FullName'];
+    // Access the user's data from session variables
+    $id = $_SESSION['id'];
+    $full_name = $_SESSION['name'];
+    $email = $_SESSION['email'];
+    $profile_image = $_SESSION['profile_image'];
 
 } catch (PDOException $error) {
     echo "Error fetching user details: " . $error->getMessage();
@@ -72,28 +81,27 @@ try {
                     </thead>
                     <tbody>
                         <?php
-                        // Fetch the user's booking history from the historybookings table
-                        $pdoQuery = 'SELECT `history_id`, `id`, `name`, `email`, `phone`, `days`, `checkin`, `package`, `guests`, `amount`, `payment`, `Reference` 
-                                     FROM `historybookings` 
-                                     WHERE id = :id';
+                        // Query to fetch the booking history
+                        $pdoQuery = 'SELECT h.history_id, h.phone, h.days, h.checkin, h.package, h.guests, h.amount, h.payment, h.Reference
+                                     FROM historybookings h
+                                     WHERE h.user_id = :user_id';
                         $pdoResult = $pdoConnect->prepare($pdoQuery);
-                        $pdoResult->execute(['id' => $id]);  // Filter by user ID
+                        $pdoResult->execute(['user_id' => $id]);
 
                         while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
-                            extract($row);
                             echo "<tr>";
-                            echo "<td style='width: 20%;'>$name</td>";
-                            echo "<td style='width: 20%;'>$email</td>";
-                            echo "<td style='width: 20%;'>$phone</td>";
-                            echo "<td style='width: 20%;'>$days</td>";
-                            echo "<td style='width: 20%;'>$checkin</td>";
-                            echo "<td style='width: 20%;'>$package</td>";
-                            echo "<td style='width: 20%;'>$guests</td>";
-                            echo "<td style='width: 20%;'>$amount</td>";
-                            echo "<td style='width: 20%;'>$payment</td>";
-                            echo "<td style='width: 20%;'>$Reference</td>";
+                            echo "<td style='width: 20%;'>{$full_name }</td>";
+                            echo "<td style='width: 20%;'>{$email}</td>";
+                            echo "<td style='width: 20%;'>{$row['phone']}</td>";
+                            echo "<td style='width: 20%;'>{$row['days']}</td>";
+                            echo "<td style='width: 20%;'>{$row['checkin']}</td>";
+                            echo "<td style='width: 20%;'>{$row['package']}</td>";
+                            echo "<td style='width: 20%;'>{$row['guests']}</td>";
+                            echo "<td style='width: 20%;'>{$row['amount']}</td>";
+                            echo "<td style='width: 20%;'>{$row['payment']}</td>";
+                            echo "<td style='width: 20%;'>{$row['Reference']}</td>";
                             echo "<td style='width: 20%;'>
-                                    <a href='boracaydelete.php?id=$history_id' onclick=\"return confirm('Are you sure you want to delete this booking?');\"><i class='bx bx-trash'></i></a>
+                                    <a href='boracaydelete.php?id={$row['history_id']}' onclick=\"return confirm('Are you sure you want to delete this booking?');\"><i class='bx bx-trash'></i></a>
                                   </td>";
                             echo "</tr>";
                         }

@@ -12,8 +12,8 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
         $stmt = $pdoConnect->prepare("UPDATE bookings SET status = :status WHERE id = :id");
         $stmt->execute(['status' => $status, 'id' => $id]);
 
-        // Fetch user information related to the booking
-        $bookingQuery = $pdoConnect->prepare("SELECT user_id, checkin FROM bookings WHERE id = :id");
+        // Fetch booking information
+        $bookingQuery = $pdoConnect->prepare("SELECT * FROM bookings WHERE id = :id");
         $bookingQuery->execute(['id' => $id]);
         $booking = $bookingQuery->fetch(PDO::FETCH_ASSOC);
 
@@ -30,6 +30,26 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
                 'user_id' => $booking['user_id'],
                 'status' => 'Accepted', // Set status as Accepted
             ]);
+
+            // Insert record into historybookings
+            $historyQuery = $pdoConnect->prepare("
+                INSERT INTO historybookings (user_id, phone, days, checkin, package, guests, amount, payment, Reference)
+                VALUES (:user_id, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference)
+            ");
+            $historyQuery->execute([
+                'user_id' => $booking['user_id'],
+                'phone' => $booking['phone'],
+                'days' => $booking['days'],
+                'checkin' => $booking['checkin'],
+                'package' => $booking['package'],
+                'guests' => $booking['guests'],
+                'amount' => $booking['amount'],
+                'payment' => $booking['payment'],
+                'Reference' => $booking['Reference']
+            ]);
+        } else {
+            echo "Error: Booking data not found.";
+            exit;
         }
 
         // Redirect after updating
