@@ -41,6 +41,8 @@
       data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
       data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
       data-lang-ar="صياد السفر">TravelHunter</span>
+
+      
     <select class="language" id="language-select" onchange="changeLanguage()">
       <option value="en">English</option>
       <option value="es">Spanish</option>
@@ -60,8 +62,10 @@
           <span class="notification-badge"><?php echo count($notifications); ?></span>
         <?php endif; ?>
       </span>
+      
     </div>
-
+    
+  
     <div class="notification-container" id="notificationContainer">
       <h2>New Booking Requests</h2>
       <?php if (empty($notifications)): ?>
@@ -95,7 +99,7 @@
         <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
         <div class="dropdown-content">
           <a href="profile.php">Profile</a>
-
+          
 
           <a href="logout.php">Logout</a>
         </div>
