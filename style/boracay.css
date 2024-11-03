@@ -21,8 +21,9 @@ body {
 }
 .maps {
   text-align: center;
-  margin: 40px auto;
+  margin: auto;
   max-width: 800px;
+ 
 }
 
 .maps h5 {
@@ -30,6 +31,7 @@ body {
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 20px;
+
 }
 
 .fremas {
@@ -98,7 +100,12 @@ body {
       max-width: 100%;
       padding: 15px;
   }
-
+.mapa{
+  margin-top: 0;
+}
+.maps{
+  margin-top: 0;
+}
   .fremas {
       padding-bottom: 65%;
   }
@@ -582,6 +589,7 @@ left: 0;
   display: inline-block;
   background-color: #000;
   margin-top: 0;
+  margin-bottom: 0  ;
  
   
 }
@@ -685,11 +693,11 @@ margin-left: 100px;
   .sec2 .container2{
       grid-template-columns: 1.5fr 1fr;
       padding: 10px;
-     
-  
+  }
+  .sec2{
+    height: 135vh;
   }
 
-  
  
 }
 @media(max-width:768px){

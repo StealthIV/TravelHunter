@@ -708,406 +708,137 @@ if (isset($_SESSION['id'])) {
 
 
 
-
-
     <main>
-      <header>
-        <h1 data-lang-en="Boracay Water Activities" data-lang-es="Paquete de Tour en Boracay"
-          data-lang-fr="Forfait Tour à Boracay" data-lang-de="Boracay Tour-Paket" data-lang-zh="博拉acay旅游套餐"
-          data-lang-jp="ボラカイツアーパッケージ" data-lang-ru="Турпакет на Борокай" data-lang-it="Pacchetto Tour di Boracay"
-          data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="حزمة جولة بوراكاي"><i class="bx bx-run icon"
-            style="color: red;"></i>Boracay Water Activities</h1>
+  <header>
+    <h1 data-lang-en="Boracay Water Activities" data-lang-es="Paquete de Tour en Boracay"
+      data-lang-fr="Forfait Tour à Boracay" data-lang-de="Boracay Tour-Paket" data-lang-zh="博拉acay旅游套餐"
+      data-lang-jp="ボラカイツアーパッケージ" data-lang-ru="Турпакет на Борокай" data-lang-it="Pacchetto Tour di Boracay"
+      data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="حزمة جولة بوراكاي"><i class="bx bx-run icon"
+        style="color: red;"></i>Boracay Water Activities</h1>
+    <p>
+      <span class="span3">&#139;</span>
+      <span class="span3">&#155;</span>
+    </p>
+  </header>
+  <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
+  <section class="section6">
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
+      </picture>
+      <div class="detail">
         <p>
-          <span class="span3">&#139;</span>
-          <span class="span3">&#155;</span>
+          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+            data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
+            data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
+            data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
         </p>
-      </header>
-      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
-      <section class="section6">
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
-                data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
-                data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
-                data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+            data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
+            data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
+            data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
+            data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+            data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
+            data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
+            data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
 
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
-                data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
-                data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
-                data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
-                data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
+            data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
+            data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
+            data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
+            data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
+            data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
+            Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Go Island Hopping.jpg" alt="Go Island Hopping">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
+            data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
+            data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
+            data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
-                data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
-                data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
-                data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
+            data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="博拉acay站1"
+            data-lang-jp="ボラカイ島ステーション1" data-lang-ru="Станция 1, Борокай" data-lang-it="Stazione 1, Boracay"
+            data-lang-pt="Estação 1, Boracay" data-lang-ar="المحطة 1، بوراكاي">Station 1, Boracay</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Ride the Banana Boat.jpg" alt="Ride the Banana Boat">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
+            data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat"
+            data-lang-zh="乘坐香蕉船" data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
+            data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
+            data-lang-ar="ركوب القارب الموزي">Ride the Banana Boat</b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
-                data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
-                Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Go Island Hopping.jpg" alt="Go Island Hopping">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
-                data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
-                data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
-                data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
-                data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="博拉acay站1"
-                data-lang-jp="ボラカイ島ステーション1" data-lang-ru="Станция 1, Борокай" data-lang-it="Stazione 1, Boracay"
-                data-lang-pt="Estação 1, Boracay" data-lang-ar="المحطة 1، بوراكاي">Station 1, Boracay</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Parasail.jpg" alt="Parasail">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Parasail" data-lang-es="Parasailing" data-lang-fr="Parapente" data-lang-de="Parasailing"
-                data-lang-zh="滑翔伞" data-lang-jp="パラセーリング" data-lang-ru="Парасейлинг" data-lang-it="Parasailing"
-                data-lang-pt="Parasailing" data-lang-ar="الباراسيلينغ">Parasail</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="704 Sitio Pinaongon White House Beach Resort, Malay, Aklan Province 5608"
-                data-lang-es="704 Sitio Pinaongon White House Beach Resort, Malay, Provincia de Aklan 5608"
-                data-lang-fr="704 Sitio Pinaongon White House Beach Resort, Malay, Province d'Aklan 5608"
-                data-lang-de="704 Sitio Pinaongon White House Beach Resort, Malay, Provinz Aklan 5608"
-                data-lang-zh="704 Sitio Pinaongon白屋海滩度假村，马莱，阿克兰省5608"
-                data-lang-jp="704 Sitio Pinaongonホワイトハウスビーチリゾート、マレー、アクラン州5608"
-                data-lang-ru="704 Ситио Пинаонгон Уайт Хаус Бич Резорт, Малай, Провинция Аклан 5608"
-                data-lang-it="704 Sitio Pinaongon White House Beach Resort, Malay, Provincia di Aklan 5608"
-                data-lang-pt="704 Sitio Pinaongon White House Beach Resort, Malay, Província de Aklan 5608"
-                data-lang-ar="704 Sitio Pinaongon منتجع شاطئ وايت هاوس، مالاي، محافظة أكلان 5608">704 Sitio Pinaongon
-                White House Beach Resort, Malay, Aklan Province 5608</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Boracay Pub Crawl.jpg" alt="Boracay Pub Crawl">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Boracay Pub Crawl" data-lang-es="Boracay Pub Crawl" data-lang-fr="Boracay Pub Crawl"
-                data-lang-de="Boracay Pub Crawl" data-lang-zh="博拉acay酒吧爬行" data-lang-jp="ボラカイパブクロール"
-                data-lang-ru="Барный крафт на Борокае" data-lang-it="Boracay Pub Crawl" data-lang-pt="Boracay Pub Crawl"
-                data-lang-ar="جولة الحانات في بوراكاي">Boracay Pub Crawl</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Station 3, Front Beach Malay" data-lang-es="Estación 3, Playa Frontal Malay"
-                data-lang-fr="Station 3, Plage Avant Malay" data-lang-de="Station 3, Front Beach Malay"
-                data-lang-zh="马来站3前海滩" data-lang-jp="マレーのフロントビーチステーション3" data-lang-ru="Станция 3, Передний пляж, Малай"
-                data-lang-it="Stazione 3, Spiaggia Frontal Malay" data-lang-pt="Estação 3, Praia da Frente Malay"
-                data-lang-ar="المحطة 3، شاطئ الجبهة مالاي">Station 3, Front Beach Malay</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Bat Caves.jpg" alt="Bat Caves">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Bat Caves" data-lang-es="Cuevas de Murciélagos" data-lang-fr="Grottes de Chauves-Souris"
-                data-lang-de="Fledermaushöhlen" data-lang-zh="蝙蝠洞" data-lang-jp="バットケーブ"
-                data-lang-ru="Летучие мыши пещеры" data-lang-it="Grotte dei Pipistrelli"
-                data-lang-pt="Cavernas de Morcegos" data-lang-ar="كهوف الخفافيش">Bat Caves</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Main Road, Barangay Balabag (near BPI D'mall)"
-                data-lang-es="Carretera Principal, Barangay Balabag (cerca de BPI D'mall)"
-                data-lang-fr="Route Principale, Barangay Balabag (près de BPI D'mall)"
-                data-lang-de="Hauptstraße, Barangay Balabag (nahe BPI D'mall)" data-lang-zh="主路，巴拉巴格村（靠近BPI D'mall）"
-                data-lang-jp="メインロード、バランガイ・バラバグ（BPI D'mallの近く）"
-                data-lang-ru="Главная дорога, Барангай Балабаг (рядом с BPI D'mall)"
-                data-lang-it="Strada Principale, Barangay Balabag (vicino a BPI D'mall)"
-                data-lang-pt="Estrada Principal, Barangay Balabag (perto do BPI D'mall)"
-                data-lang-ar="الطريق الرئيسي، بارانغاي بالاباج (بالقرب من BPI D'mall)">Main Road, Barangay Balabag (near
-                BPI D'mall)</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Do Some Shopping.jpg" alt="Do Some Shopping">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Do Some Shopping" data-lang-es="Hacer Compras" data-lang-fr="Faire du Shopping"
-                data-lang-de="Einkaufen gehen" data-lang-zh="去购物" data-lang-jp="買い物をする" data-lang-ru="Сделать покупки"
-                data-lang-it="Fare Shopping" data-lang-pt="Fazer Compras" data-lang-ar="قم بالتسوق">Do Some
-                Shopping</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="D'Mall Boracay, Station 2" data-lang-es="D'Mall Boracay, Estación 2"
-                data-lang-fr="D'Mall Boracay, Station 2" data-lang-de="D'Mall Boracay, Station 2"
-                data-lang-zh="D'Mall博拉acay，站2" data-lang-jp="D'Mallボラカイ、ステーション2"
-                data-lang-ru="D'Mall Boracay, станция 2" data-lang-it="D'Mall Boracay, Stazione 2"
-                data-lang-pt="D'Mall Boracay, Estação 2" data-lang-ar="D'Mall بوراكاي، المحطة 2">D'Mall Boracay, Station
-                2</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Learn to Freedive.jpg" alt="Learn to Freedive">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Learn to Freedive" data-lang-es="Aprender a Hacer Apnea"
-                data-lang-fr="Apprendre à Plonger en Apnée" data-lang-de="Freediving Lernen" data-lang-zh="学习自由潜水"
-                data-lang-jp="フリーダイビングを学ぶ" data-lang-ru="Научитесь фридайвингу" data-lang-it="Impara a Freedive"
-                data-lang-pt="Aprender a Freedive" data-lang-ar="تعلم الغوص الحر">Learn to Freedive</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Station 3 Beachfront" data-lang-es="Frente a la playa de la estación 3"
-                data-lang-fr="Front de mer Station 3" data-lang-de="Strandstation 3" data-lang-zh="站3海滩前"
-                data-lang-jp="ステーション3ビーチフロント" data-lang-ru="Береговая линия станции 3"
-                data-lang-it="Fronte spiaggia Stazione 3" data-lang-pt="Frente para a praia da Estação 3"
-                data-lang-ar="واجهة الشاطئ لمحطة 3">Station 3 Beachfront</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Go Scuba Diving.jpg" alt="Go Scuba Diving">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Go Scuba Diving" data-lang-es="Ir a Bucear" data-lang-fr="Aller Plonger"
-                data-lang-de="Scubatauchgänge machen" data-lang-zh="去潜水" data-lang-jp="スキューバダイビングに行く"
-                data-lang-ru="Идите на дайвинг" data-lang-it="Fare Subacquea" data-lang-pt="Ir mergulhar"
-                data-lang-ar="اذهب للغوص">Go Scuba Diving</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Brgy. Balabag, Station 1" data-lang-es="Brgy. Balabag, Estación 1"
-                data-lang-fr="Brgy. Balabag, Station 1" data-lang-de="Brgy. Balabag, Station 1" data-lang-zh="巴拉巴格村，站1"
-                data-lang-jp="バランガイ・バラバグ、ステーション1" data-lang-ru="Барангай Балабаг, станция 1"
-                data-lang-it="Brgy. Balabag, Stazione 1" data-lang-pt="Brgy. Balabag, Estação 1"
-                data-lang-ar="برجي. بالاباج، المحطة 1">Brgy. Balabag, Station 1</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Philippine Mermaid Swimming Academy.jpg"
-              alt="Philippine Mermaid Swimming Academy">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Philippine Mermaid Swimming Academy" data-lang-es="Academia de Natación Sirena Filipina"
-                data-lang-fr="Académie de Natation Sirène Philippine"
-                data-lang-de="Philippinische Meerjungfrauenschwimmakademie" data-lang-zh="菲律宾美人鱼游泳学院"
-                data-lang-jp="フィリピン人魚水泳アカデミー" data-lang-ru="Филиппинская школа плавания русалок"
-                data-lang-it="Accademia di Nuoto Sirena Filippina" data-lang-pt="Academia de Natação Sereia Filipina"
-                data-lang-ar="أكاديمية السباحة حورية البحر الفلبينية">Philippine Mermaid Swimming Academy</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Dmall Boracay, Station 2 (next to Epic)"
-                data-lang-es="Dmall Boracay, Estación 2 (junto a Epic)"
-                data-lang-fr="Dmall Boracay, Station 2 (à côté d'Epic)"
-                data-lang-de="Dmall Boracay, Station 2 (neben Epic)" data-lang-zh="Dmall博拉acay，站2（紧邻Epic）"
-                data-lang-jp="Dmallボラカイ、ステーション2（Epicの隣）" data-lang-ru="Dmall Boracay, станция 2 (рядом с Epic)"
-                data-lang-it="Dmall Boracay, Stazione 2 (accanto a Epic)"
-                data-lang-pt="Dmall Boracay, Estação 2 (ao lado do Epic)"
-                data-lang-ar="Dmall بوراكاي، المحطة 2 (بجوار إبيك)">Dmall Boracay, Station 2 (next to Epic)</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Island Nature Tour.jpg" alt="Island Nature Tour">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Island Nature Tour" data-lang-es="Tour de Naturaleza en la Isla"
-                data-lang-fr="Visite de la Nature Insulaire" data-lang-de="Inselnaturtour" data-lang-zh="岛屿自然之旅"
-                data-lang-jp="アイランドネイチャーツアー" data-lang-ru="Тур по островам" data-lang-it="Tour della Natura dell'Isola"
-                data-lang-pt="Tour da Natureza da Ilha" data-lang-ar="جولة في الطبيعة في الجزيرة">Island Nature
-                Tour</b><br>
-
-              <i class="bx bx-map icon" style="color: red;"></i>
-              <small data-lang-en="Bolabog & Angol, Malay, Philippines" data-lang-es="Bolabog y Angol, Malay, Filipinas"
-                data-lang-fr="Bolabog & Angol, Malay, Philippines" data-lang-de="Bolabog & Angol, Malay, Philippinen"
-                data-lang-zh="菲律宾马来，博拉博克和安戈尔" data-lang-jp="フィリピン、マレーのボラボグとアンゴル"
-                data-lang-ru="Болабог и Ангол, Малай, Филиппины" data-lang-it="Bolabog & Angol, Malay, Filippine"
-                data-lang-pt="Bolabog & Angol, Malay, Filipinas" data-lang-ar="بولابوغ وأنغول، مالاي، الفلبين">Bolabog &
-                Angol, Malay, Philippines</small>
-            </p>
-          </div>
-          <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-          </div>
-        </div>
-      </section>
-
-    </main>
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="White Beach, Boracay, Malay, 5608 Aklan" data-lang-es="Playa Blanca, Boracay, Malay, 5608 Aklan"
+            data-lang-fr="Plage Blanche, Boracay, Malay, 5608 Aklan" data-lang-de="Weißer Strand, Boracay, Malay, 5608 Aklan"
+            data-lang-zh="白沙滩，博拉acay，马来，5608阿克兰" data-lang-jp="ホワイトビーチ、ボラカイ、マレー、5608アクラン"
+            data-lang-ru="Белый пляж, Борокай, Малай, 5608 Аклан" data-lang-it="Spiaggia Bianca, Boracay, Malay, 5608 Aklan"
+            data-lang-pt="Praia Branca, Boracay, Malay, 5608 Aklan" data-lang-ar="الشاطئ الأبيض، بوراكاي، مالاي، 5608 أكلان">
+            White Beach, Boracay, Malay, 5608 Aklan</small>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
 
 
 
