@@ -220,6 +220,88 @@ button {
     border-radius: 5px;
 }
 
+
+
+
+/* Base (Light Mode) Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffffff; /* Light background */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+nav .logo .menu-icon, 
+.nav-link .icon, 
+.notification-icon {
+  color: #000000; /* Light mode icon color */
+}
+.logo .logo-name, 
+.nav-link .link, 
+.profile span, 
+.language {
+  color: #333333; /* Light mode text color */
+}
+nav .sidebar {
+  background-color: #ffffff; /* Light mode sidebar */
+}
+.lists .nav-link:hover {
+  background-color: #dde1e7; /* Light mode hover color */
+}
+.notification-container, 
+.dropdown-content {
+  background-color: #f9f9f9; /* Light mode background for dropdowns */
+  color: #333333; /* Light mode dropdown text color */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: #000000; /* Dark background */
+}
+.dark-mode .logo .menu-icon, 
+.dark-mode .nav-link .icon, 
+.dark-mode .notification-icon {
+  color: #ffffff; /* Dark mode icon color */
+}
+.dark-mode .logo .logo-name, 
+.dark-mode .nav-link .link, 
+.dark-mode .profile span, 
+.dark-mode .language {
+  color: #f3f3f3; /* Dark mode text color */
+}
+.dark-mode .sidebar {
+  background-color: #000000; /* Dark mode sidebar */
+}
+.dark-mode .lists .nav-link:hover {
+  background-color: #6f90eb; /* Dark mode hover color */
+}
+.dark-mode .notification-container, 
+.dark-mode .dropdown-content {
+  background-color: #333333; /* Dark mode background for dropdowns */
+  color: #f3f3f3; /* Dark mode dropdown text color */
+}
+
+#darkModeToggle{
+  position: absolute;
+  margin-left: 1400px;
+  margin-top: 0;
+  border-radius: 50%;
+  
+ 
+ 
+ 
+}
+
+
+
+
+
+
 .main{
     
     height: 90vh;

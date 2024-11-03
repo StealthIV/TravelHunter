@@ -48,6 +48,11 @@ try {
 
   <Section class="main">
     <div class="container">
+
+    <button onclick="toggleDarkMode()" id="darkModeToggle">
+    <i class="fas fa-moon" id="toggleIcon"></i>
+  </button>
+
       <h1 data-lang-en="Top Tourist Destinations" data-lang-es="Principales Destinos Turísticos" data-lang-fr="Meilleures Destinations Touristiques"
         data-lang-de="Top-Touristenziele" data-lang-zh="顶级旅游目的地 (Dǐngjí Lǚyóu Mùdìdì)" data-lang-jp="トップ観光地 (Toppu Kankōchi)ター"
         data-lang-ru="Топ Туристических Направлений" data-lang-it="Principali Destinazioni Turistiche"
@@ -65,6 +70,8 @@ try {
         data-lang-ar="اكتشف الجنة: استكشف الفلبين معنا !!">
         Discover the Paradise: Explore the Philippines with us!!
       </p>
+
+     
       <main>
 
         <div id="carousel" class="carousel">
