@@ -140,13 +140,13 @@ nav .logo {
   margin: 0 24px;
 }
 .logo .menu-icon {
-  color: #ffffff;
+  color: #fffefe;
   font-size: 24px;
   margin-right: 14px;
   cursor: pointer;
 }
 .logo .logo-name {
-  color: #f3f3f3;
+  color: #fffdfd;
   font-size: 22px;
   font-weight: 500;
 }
@@ -183,7 +183,7 @@ nav.open .sidebar {
   text-decoration: none;
 }
 .lists .nav-link:hover {
-  background-color: #6f90eb;
+  background-color: #4070f4;
 }
 .nav-link .icon {
   margin-right: 14px;
@@ -192,7 +192,7 @@ nav.open .sidebar {
 }
 .nav-link .link {
   font-size: 16px;
-  color: #fffdfd;
+  color: #ffffff;
   font-weight: 50;
 }
 .lists .nav-link:hover .icon,
@@ -215,21 +215,17 @@ nav.open ~ .overlay {
   left: 260px;
   pointer-events: auto;
 }
-
-button {
-  margin: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-}
-
-.content {
-  padding: 20px;
+.language{
+  margin-left: 10px;
+  height: 25px;
+  background-color: #a5f6ffd0;
+  border-radius: 5px;
+  margin-left: 20px;
 }
 
 .profile {
   display: flex;
-  position: fixed;
-  margin-left: 1200px;
+  margin-left: 900px;
   align-items: center;
 }
 
@@ -268,132 +264,13 @@ button {
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
+  
 }
 
 .profile:hover .dropdown-content {
   display: block;
 }
 
-
-
-.notification-icon {
-  font-size: 24px;
-  margin-left: 50px;
-  color: #007bff;
-  cursor: pointer;
-  position: relative; /* To position the notification badge */
-}
-
-.notification-badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 12px;
-}
-
-.notification-container {
-  display: none; /* Hide notifications by default */
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
-  margin: 10px auto;
-}
-
-.p2{
-  margin-left: 50px;
-  color:white
-}
-
-
-.language{
-    margin-left: 15px;
-    height: 25px;
-    background-color: #a5f6ffd0;
-    border-radius: 5px;
-}
-
-
-
-
-/* Base (Light Mode) Styles */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 70px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: #ffffff; /* Light background */
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-nav .logo .menu-icon, 
-.nav-link .icon, 
-.notification-icon {
-  color: #000000; /* Light mode icon color */
-}
-.logo .logo-name, 
-.nav-link .link, 
-.profile span, 
-.language {
-  color: #333333; /* Light mode text color */
-}
-nav .sidebar {
-  background-color: #ffffff; /* Light mode sidebar */
-}
-.lists .nav-link:hover {
-  background-color: #dde1e7; /* Light mode hover color */
-}
-.notification-container, 
-.dropdown-content {
-  background-color: #f9f9f9; /* Light mode background for dropdowns */
-  color: #333333; /* Light mode dropdown text color */
-}
-
-/* Dark Mode Styles */
-.dark-mode {
-  background: #000000; /* Dark background */
-}
-.dark-mode .logo .menu-icon, 
-.dark-mode .nav-link .icon, 
-.dark-mode .notification-icon {
-  color: #ffffff; /* Dark mode icon color */
-}
-.dark-mode .logo .logo-name, 
-.dark-mode .nav-link .link, 
-.dark-mode .profile span, 
-.dark-mode .language {
-  color: #f3f3f3; /* Dark mode text color */
-}
-.dark-mode .sidebar {
-  background-color: #000000; /* Dark mode sidebar */
-}
-.dark-mode .lists .nav-link:hover {
-  background-color: #6f90eb; /* Dark mode hover color */
-}
-.dark-mode .notification-container, 
-.dark-mode .dropdown-content {
-  background-color: #333333; /* Dark mode background for dropdowns */
-  color: #f3f3f3; /* Dark mode dropdown text color */
-}
-
-#darkModeToggle{
-  position: absolute;
-  margin-left: 1400px;
-  margin-top: 0;
-  border-radius: 50%;
-  
- 
- 
- 
-}
 
 
 .main{
@@ -630,20 +507,8 @@ left: 0;
   }
 
   .profile {
-    margin-left: 400px;
-    
-  }
-  .language{
     margin-left: 10px;
-    width: 70px;
-
-  }
-  .notification-icon {
-    margin-left: 0;
-    
-  }
-  #name-span {
-    display: none;
+    font-size: 8px;
   }
 
   

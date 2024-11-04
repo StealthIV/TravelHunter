@@ -699,6 +699,7 @@ color: white;
     width: 200px;
   }
   #carousel div.selected {
+    
     z-index: 10;
     left: 50%;
     transform: translateY(0px) translateX(-50%);
@@ -798,7 +799,7 @@ color: white;
       font-size: 1.25rem;
       padding: 12px 42px;
     }
-
+    
   
    
   }
@@ -985,7 +986,7 @@ color: white;
     }
 
     .profile {
-      margin-left: 380px;
+      margin-left: 420px;
       
     }
 
@@ -1006,7 +1007,7 @@ color: white;
 
     .language{
       margin-left: 10px;
-      width: 70px;
+      width: 80px;
 
     }
 

@@ -52,6 +52,11 @@
   color: cadetblue;
   margin: 0;
 }
+.chats{
+  width: 500px;
+  height: 600px;
+  background-color: white;
+}
 .parent{
   position: relative;
   height: 100%;
@@ -125,6 +130,7 @@
 }
 
 .sis{
+ 
   margin-top: 25px;
   height: 40px;
   z-index: 5;
@@ -219,4 +225,33 @@
   background: white;
   border: 1px solid blueviolet;
   color: blueviolet;
+}
+
+@media (max-width: 768px) {
+  #test {
+      width: 70%; /* Take most of the screen width */
+      right: 5%;
+      top: 5rem; /* Adjust positioning */
+  }
+  .child{
+    margin-left: 10px;
+  }
+
+  .init {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 8px;
+  }
+
+  .name {
+      font-size: 18px; /* Slightly reduce font size */
+  }
+
+  #chat-box {
+      height: 500px; /* Reduce chat box height */
+  }
+
+  .footer {
+      font-size: 0.8em;
+  }
 }
