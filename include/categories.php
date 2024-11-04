@@ -66,17 +66,17 @@ try {
                 <table id="info-table" class="table">
                     <thead>
                         <tr>
-                            <th style='width: 20%;'>Name</th>
-                            <th style='width: 20%;'>Email</th>
-                            <th style='width: 20%;'>Phone</th>
-                            <th style='width: 20%;'>Number of Days</th>
-                            <th style='width: 20%;'>Booking Date</th>
-                            <th style='width: 20%;'>Package</th>
-                            <th style='width: 20%;'>Number of Guests</th>
-                            <th style='width: 20%;'>Total Amount</th>
-                            <th style='width: 20%;'>Payment Method</th>
-                            <th style='width: 20%;'>Reference</th>
-                            <th style='width: 20%;'>Action</th>
+                            <th style='width: 10%;'>Name</th>
+                            <th style='width: 10%;'>Email</th>
+                            <th style='width: 5%;'>Phone</th>
+                            <th style='width: 12%;'>Number of Days</th>
+                            <th style='width: 10%;'>Booking Date</th>
+                            <th style='width: 10%;'>Package</th>
+                            <th style='width: 10%;'>Number of Guests</th>
+                            <th style='width: 10%;'>Total Amount</th>
+                            <th style='width: 10%;'>Payment Method</th>
+                            <th style='width: 10%;'>Reference</th>
+                            <th style='width: 10%;'>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -90,16 +90,16 @@ try {
 
                         while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
-                            echo "<td style='width: 20%;'>{$full_name }</td>";
-                            echo "<td style='width: 20%;'>{$email}</td>";
-                            echo "<td style='width: 20%;'>{$row['phone']}</td>";
-                            echo "<td style='width: 20%;'>{$row['days']}</td>";
-                            echo "<td style='width: 20%;'>{$row['checkin']}</td>";
-                            echo "<td style='width: 20%;'>{$row['package']}</td>";
-                            echo "<td style='width: 20%;'>{$row['guests']}</td>";
-                            echo "<td style='width: 20%;'>{$row['amount']}</td>";
-                            echo "<td style='width: 20%;'>{$row['payment']}</td>";
-                            echo "<td style='width: 20%;'>{$row['Reference']}</td>";
+                            echo "<td style='width: 10%;'>{$full_name }</td>";
+                            echo "<td style='width: 10%;'>{$email}</td>";
+                            echo "<td style='width: 5%;'>{$row['phone']}</td>";
+                            echo "<td style='width: 12%;'>{$row['days']}</td>";
+                            echo "<td style='width: 10%;'>{$row['checkin']}</td>";
+                            echo "<td style='width: 10%;'>{$row['package']}</td>";
+                            echo "<td style='width: 10%;'>{$row['guests']}</td>";
+                            echo "<td style='width: 10%;'>{$row['amount']}</td>";
+                            echo "<td style='width: 10%;'>{$row['payment']}</td>";
+                            echo "<td style='width: 10%;'>{$row['Reference']}</td>";
                             echo "<td style='width: 20%;'>
                                     <a href='boracaydelete.php?id={$row['history_id']}' onclick=\"return confirm('Are you sure you want to delete this booking?');\"><i class='bx bx-trash'></i></a>
                                   </td>";
