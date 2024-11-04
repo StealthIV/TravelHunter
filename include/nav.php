@@ -5,7 +5,9 @@ require_once '../connect/dbcon.php';
 
 // Fetch new notifications for the logged-in user only
 $user_id = $_SESSION['id'];  // Get the current logged-in user's ID
-$query = "SELECT name, created_at, status FROM notifications WHERE user_id = :user_id"; // Filter by user_id
+$query = "SELECT name, created_at, status, read_status FROM notifications WHERE user_id = :user_id ORDER BY created_at DESC";
+
+
 $stmt = $pdoConnect->prepare($query);
 $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);  // Bind user_id to the query
 $stmt->execute();
@@ -76,6 +78,17 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   .notification-text span {
     font-weight: bold;
   }
+
+  .notification-item.unread {
+    background-color: #f0f8ff; /* Light color for unread notifications */
+    font-weight: bold;
+}
+
+.notification-item.read {
+    background-color: #ffffff;
+    font-weight: normal;
+}
+
 </style>
 
 <nav>
@@ -100,13 +113,22 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </select>
   </div>
 
+  <?php
+  $unreadCount = 0;
+  foreach ($notifications as $notification) {
+    if ($notification['read_status'] == 0) {
+      $unreadCount++;
+    }
+  }
+  ?>
   <span class="notification-icon" onclick="toggleNotifications()" aria-expanded="false"
     aria-controls="notificationContainer">
     <i class="fas fa-bell"></i>
-    <?php if (!empty($notifications)): ?>
-      <span class="notification-badge"><?php echo count($notifications); ?></span>
+    <?php if ($unreadCount > 0): ?>
+      <span class="notification-badge"><?php echo $unreadCount; ?></span>
     <?php endif; ?>
   </span>
+
   </div>
 
   <div class="notification-container" id="notificationContainer">
@@ -115,9 +137,8 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <p>No new notifications at the moment.</p>
     <?php else: ?>
       <ul class="notification-list">
-        <!-- Loop through notifications and display them -->
         <?php foreach ($notifications as $notification): ?>
-          <li class="notification-item">
+          <li class="notification-item <?php echo $notification['read_status'] == 0 ? 'unread' : 'read'; ?>">
             <div class="notification-title"><?php echo htmlspecialchars($notification['name']); ?></div>
             <div class="notification-text">
               <span>Date:</span> <?php echo htmlspecialchars($notification['created_at']); ?><br>
@@ -150,13 +171,10 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
         xhr.send(); // You can send any additional data if necessary
       }
 
-      // Update aria-expanded attribute
+      // Update aria-expanded attribute 
       document.querySelector('.notification-icon').setAttribute('aria-expanded', !isExpanded);
     }
   </script>
-
-
-
 
 
 
