@@ -170,7 +170,7 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Email</th> 
+                                        <th>Email</th>
                                         <th>Phone</th>
                                         <th>Number of Days</th>
                                         <th>Booking Date</th>
@@ -201,19 +201,24 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                             <td><?php echo htmlspecialchars($row['Reference']); ?></td>
                                             <td><?php echo htmlspecialchars($row['status']); ?></td>
                                             <td style='width: 15%;'>
-                                                <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
-                                                    class="btn btn-confirm">Confirm</a>
+                                                <?php if ($row['status'] !== 'confirmed'): ?>
+                                                    <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
+                                                        class="btn btn-confirm"
+                                                        onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
+                                                <?php endif; ?>
                                                 <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
-                                                    class="btn btn-delete"><i class='bx bx-trash'></i></a>
+                                                    class="btn btn-delete"
+                                                    onclick="return confirm('Are you sure you want to delete this booking?');">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
                                             </td>
+
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
-
                     </div>
-
                 </div>
         </main>
         <script>

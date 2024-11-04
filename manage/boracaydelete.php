@@ -37,7 +37,7 @@
             $pdoResult = $pdoConnect->prepare($pdoQuery);
             $pdoResult->execute();
 
-            header("Location: boracayadmin.php?id=");
+            header("Location: manage.php");
             exit();
 
         } else {

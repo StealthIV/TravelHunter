@@ -1,5 +1,4 @@
 <?php
-// update_status.php
 session_start();
 require_once '../connect/dbcon.php';
 
@@ -8,6 +7,9 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
     $status = $_GET['status'];
 
     try {
+        // Begin transaction
+        $pdoConnect->beginTransaction();
+
         // Update booking status
         $stmt = $pdoConnect->prepare("UPDATE bookings SET status = :status WHERE id = :id");
         $stmt->execute(['status' => $status, 'id' => $id]);
@@ -19,7 +21,7 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
 
         if ($booking) {
             // Insert a notification for the user with a custom message
-            $notificationMessage = "Your booking is accepted for check-in on " . $booking['checkin'];
+            $notificationMessage = "Your booking is accepted for check-in on " . htmlspecialchars($booking['checkin']);
             $notificationQuery = $pdoConnect->prepare("
                 INSERT INTO notifications (name, booking_date, user_id, status, created_at) 
                 VALUES (:name, :booking_date, :user_id, :status, NOW())
@@ -47,6 +49,9 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
                 'payment' => $booking['payment'],
                 'Reference' => $booking['Reference']
             ]);
+
+            // Commit the transaction
+            $pdoConnect->commit();
         } else {
             echo "Error: Booking data not found.";
             exit;
@@ -56,7 +61,11 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
         header("Location: manage.php");
         exit;
     } catch (PDOException $e) {
+        // Rollback the transaction if something fails
+        $pdoConnect->rollBack();
         echo "Error updating status: " . $e->getMessage();
     }
+} else {
+    echo "Invalid request: Booking ID or status is missing.";
 }
 ?>
