@@ -75,7 +75,7 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="" >
+                    <a href="">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
@@ -116,8 +116,7 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
 
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="logout.php"><i
-                                    class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
+                        <span><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>
             </div>
@@ -166,14 +165,18 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                                     <td><?php echo $row['rebooking_date']; ?></td>
                                     <td><?php echo $row['status']; ?></td>
                                     <td>
-                                        <a href='approve_cancel.php?id=<?php echo $row['id']; ?>'
-                                            class="btn btn-confirm">Approve</a>
-                                        <a href='delete_cancel.php?id=<?php echo $row['id']; ?>'
-                                            class="btn btn-delete">Delete</a>
+                                        <?php if ($row['status'] !== 'approved'): ?>
+                                            <a href='approve_cancel.php?id=<?php echo $row['id']; ?>' class="btn btn-confirm"
+                                                onclick="return confirm('Are you sure you want to approve this cancellation?');">Approve</a>
+                                        <?php endif; ?>
+                                        <a href='delete_cancel.php?id=<?php echo $row['id']; ?>' class="btn btn-delete"
+                                            onclick="return confirm('Are you sure you want to delete this cancellation request?');">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
+
+
                     </table>
                     <!-- Pagination Controls for cancelbook -->
                     <div class="pagination">

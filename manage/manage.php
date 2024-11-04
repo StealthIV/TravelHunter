@@ -212,7 +212,6 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                                     <i class='bx bx-trash'></i>
                                                 </a>
                                             </td>
-
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
