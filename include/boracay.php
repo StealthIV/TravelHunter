@@ -131,7 +131,7 @@ if (isset($_SESSION['id'])) {
   </section>
 
   <div class="img">
-    <h1 class="exp6">Discover the wonders of Boracay — where adventure meets paradise!</h1>
+    <h1 class="exp6">Discover the wonders of Boracay where adventure meets paradise!</h1>
     <main>
 
       <div id="carousel" class="carousel">
@@ -873,15 +873,15 @@ if (isset($_SESSION['id'])) {
                 data-lang-zh="纳尔卡海鲜餐厅" data-lang-jp="ナルカシーフードレストラン" data-lang-ru="Налка Рыбный Ресторан"
                 data-lang-it="Ristorante di Pesce Nalka" data-lang-pt="Restaurante de Mariscos Nalka"
                 data-lang-ar="مطعم نالكا للمأكولات البحرية">Nalka Seafood Restaurant</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Malay, Aklan" data-lang-es="Malayo, Aklan" data-lang-fr="Malay, Aklan"
                 data-lang-de="Malay, Aklan" data-lang-zh="阿克兰，马来" data-lang-jp="アクラン、マレー" data-lang-ru="Малай, Аклан"
                 data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">Malay, Aklan</small>
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -895,6 +895,8 @@ if (isset($_SESSION['id'])) {
               <b data-lang-en="Café Maruja" data-lang-es="Café Maruja" data-lang-fr="Café Maruja"
                 data-lang-de="Café Maruja" data-lang-zh="卡菲马鲁亚" data-lang-jp="カフェマルハ" data-lang-ru="Кафе Маруха"
                 data-lang-it="Café Maruja" data-lang-pt="Café Maruja" data-lang-ar="مقهى ماروجا">Café Maruja</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Station 3 Beachfront, Boracay Island 5608"
                 data-lang-es="Frente a la Playa de la Estación 3, Isla de Boracay 5608"
                 data-lang-fr="Front de mer de la Station 3, Île de Boracay 5608"
@@ -906,9 +908,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -922,6 +922,8 @@ if (isset($_SESSION['id'])) {
               <b data-lang-en="Café del Sol" data-lang-es="Café del Sol" data-lang-fr="Café del Sol"
                 data-lang-de="Café del Sol" data-lang-zh="太阳咖啡馆" data-lang-jp="カフェデソル" data-lang-ru="Кафе дель Соль"
                 data-lang-it="Café del Sol" data-lang-pt="Café del Sol" data-lang-ar="مقهى ديل سول">Café del Sol</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Beachfront D'Mall of Boracay, Station 2, Malay, 5608 Aklan"
                 data-lang-es="Frente a la Playa D'Mall de Boracay, Estación 2, Malay, 5608 Aklan"
                 data-lang-fr="Front de mer D'Mall de Boracay, Station 2, Malay, 5608 Aklan"
@@ -935,9 +937,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -952,6 +952,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-de="Barlo Restaurant" data-lang-zh="巴洛餐厅" data-lang-jp="バーロレストラン"
                 data-lang-ru="Ресторан Барло" data-lang-it="Ristorante Barlo" data-lang-pt="Restaurante Barlo"
                 data-lang-ar="مطعم بارلو">Barlo Restaurant</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
                 data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="长滩岛，站1"
                 data-lang-jp="ステーション1、ボラカイ" data-lang-ru="Станция 1, Боракай" data-lang-it="Stazione 1, Boracay"
@@ -959,9 +961,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+            
           </div>
         </div>
 
@@ -976,6 +976,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-de="Los Indios Bravos" data-lang-zh="洛斯印第安勇士" data-lang-jp="ロスインディオスブラボス"
                 data-lang-ru="Лос Индьос Бравос" data-lang-it="Los Indios Bravos" data-lang-pt="Los Indios Bravos"
                 data-lang-ar="لوس إنديوس برافوس">Los Indios Bravos</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="704 Sitio Pinaongon White House Beach Resort, Malay, Aklan Province 5608"
                 data-lang-es="704 Sitio Pinaongon White House Beach Resort, Malay, Provincia de Aklan 5608"
                 data-lang-fr="704 Sitio Pinaongon White House Beach Resort, Malay, Province d'Aklan 5608"
@@ -989,9 +991,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1010,6 +1010,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-it="Vhub Dampa Ristorante e Grigliata di Pesce"
                 data-lang-pt="Restaurante e Churrascaria de Mariscos Vhub Dampa"
                 data-lang-ar="مطعم وشواء المأكولات البحرية فيهاب دامبا">Vhub Dampa Seafood Grill and Restaurant</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Station 3, Front Beach Malay" data-lang-es="Estación 3, Playa Frontal de Malay"
                 data-lang-fr="Station 3, Front de Plage Malay" data-lang-de="Station 3, Strandfront Malay"
                 data-lang-zh="长滩岛马来前滩3号站" data-lang-jp="マレーフロントビーチ、ステーション3" data-lang-ru="Станция 3, Малай, Пляж"
@@ -1018,9 +1020,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1034,6 +1034,8 @@ if (isset($_SESSION['id'])) {
               <b data-lang-en="Meze Wrap" data-lang-es="Meze Wrap" data-lang-fr="Meze Wrap" data-lang-de="Meze Wrap"
                 data-lang-zh="梅兹卷" data-lang-jp="メゼラップ" data-lang-ru="Мезе Ролл" data-lang-it="Meze Wrap"
                 data-lang-pt="Meze Wrap" data-lang-ar="ميز راب">Meze Wrap</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Main Road, Barangay Balabag (near BPI D'mall)"
                 data-lang-es="Carretera Principal, Barangay Balabag (cerca de BPI D'mall)"
                 data-lang-fr="Route Principale, Barangay Balabag (près de BPI D'mall)"
@@ -1047,9 +1049,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1063,6 +1063,8 @@ if (isset($_SESSION['id'])) {
               <b data-lang-en="SpiceBird" data-lang-es="SpiceBird" data-lang-fr="SpiceBird" data-lang-de="SpiceBird"
                 data-lang-zh="香料鸟" data-lang-jp="スパイスバード" data-lang-ru="Спайс Бёрд" data-lang-it="SpiceBird"
                 data-lang-pt="SpiceBird" data-lang-ar="سبايس بيرد">SpiceBird</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="D'Mall Boracay, Station 2" data-lang-es="D'Mall Boracay, Estación 2"
                 data-lang-fr="D'Mall Boracay, Station 2" data-lang-de="D'Mall Boracay, Station 2"
                 data-lang-zh="长滩岛D'mall，2号站" data-lang-jp="ボラカイ島のD'mall、ステーション2"
@@ -1072,9 +1074,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1089,6 +1089,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-fr="Le Café du Côté Ensoleillé" data-lang-de="Das Sonnige Café" data-lang-zh="阳光咖啡馆"
                 data-lang-jp="サニーサイドカフェ" data-lang-ru="Солнечное Кафе" data-lang-it="The Sunny Side Cafe"
                 data-lang-pt="O Café do Lado Ensolarado" data-lang-ar="مقهى الجانب المشمس">The Sunny Side Cafe</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Station 3 Beachfront" data-lang-es="Frente a la Playa de la Estación 3"
                 data-lang-fr="Front de mer de la Station 3" data-lang-de="Strandfront Station 3" data-lang-zh="长滩岛3号站海滨"
                 data-lang-jp="ボラカイ島、ステーション3ビーチフロント" data-lang-ru="Станция 3, Пляж, Боракай"
@@ -1097,9 +1099,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1114,6 +1114,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-fr="Bar à Café Blackfish" data-lang-de="Blackfish Kaffee-Bar" data-lang-zh="黑鱼咖啡吧"
                 data-lang-jp="ブラックフィッシュコーヒーバー" data-lang-ru="Кофейня Blackfish" data-lang-it="Blackfish Coffee Bar"
                 data-lang-pt="Bar de Café Blackfish" data-lang-ar="مقهى بلاكفيش">Blackfish Coffee Bar</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Brgy. Balabag, Station 1" data-lang-es="Brgy. Balabag, Estación 1"
                 data-lang-fr="Brgy. Balabag, Station 1" data-lang-de="Brgy. Balabag, Station 1"
                 data-lang-zh="Balabag村，长滩岛1号站" data-lang-jp="バランガイ・バラバグ、ステーション1"
@@ -1123,9 +1125,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1140,6 +1140,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-de="Kleiner Taj Boracay" data-lang-zh="小泰姬长滩岛" data-lang-jp="リトルタージ・ボラカイ"
                 data-lang-ru="Маленький Тадж Боракай" data-lang-it="Little Taj Boracay"
                 data-lang-pt="Pequeno Taj Boracay" data-lang-ar="ليتل تاج بوراكاي">Little Taj Boracay</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Dmall Boracay, Station 2 (next to Epic)"
                 data-lang-es="Dmall Boracay, Estación 2 (junto a Epic)"
                 data-lang-fr="Dmall Boracay, Station 2 (à côté d'Epic)"
@@ -1151,9 +1153,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+           
           </div>
         </div>
 
@@ -1168,6 +1168,8 @@ if (isset($_SESSION['id'])) {
                 data-lang-de="Congas Restaurant" data-lang-zh="Congas餐厅" data-lang-jp="コンガスレストラン"
                 data-lang-ru="Ресторан Congas" data-lang-it="Ristorante Congas" data-lang-pt="Restaurante Congas"
                 data-lang-ar="مطعم كونغاس">Congas Restaurant</b><br>
+
+                <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Bolabog & Angol, Malay, Philippines" data-lang-es="Bolabog y Angol, Malay, Filipinas"
                 data-lang-fr="Bolabog et Angol, Malay, Philippines" data-lang-de="Bolabog & Angol, Malay, Philippinen"
                 data-lang-zh="菲律宾长滩岛Bolabog和Angol" data-lang-jp="ボラカイ島ボラボグとアンゴール、フィリピン"
@@ -1177,9 +1179,7 @@ if (isset($_SESSION['id'])) {
             </p>
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong><strong>&star;</strong>
-            </p>
+            
           </div>
         </div>
       </section>
@@ -1213,13 +1213,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+          
 
           </div>
         </div>
@@ -1235,13 +1229,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1257,13 +1245,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1279,13 +1261,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1301,13 +1277,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1323,13 +1293,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1345,13 +1309,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1367,13 +1325,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+          
 
           </div>
         </div>
@@ -1389,14 +1341,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
-
+           
           </div>
         </div>
         <div class="product">
@@ -1411,13 +1356,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1433,13 +1372,7 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
+           
 
           </div>
         </div>
@@ -1455,13 +1388,6 @@ if (isset($_SESSION['id'])) {
 
           </div>
           <div class="button7">
-            <p class="star">
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-              <strong>&star;</strong>
-            </p>
 
           </div>
         </div>
