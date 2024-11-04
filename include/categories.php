@@ -25,8 +25,8 @@ try {
 
         // Store user details in session
         $_SESSION['id'] = $user['id'];
-        $_SESSION['name'] = $user['UserName'];
-        $_SESSION['email'] = $user['email'];
+        $_SESSION['name'] = $user['FullName'];
+        $_SESSION['email'] = $user['UserName'];
         $_SESSION['profile_image'] = $user['image'];
     }
 
