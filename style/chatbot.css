@@ -78,7 +78,7 @@
   margin: auto;
   display: flex;
   position: fixed; /* Keeps it fixed in view */
-  z-index: 5; /* Higher z-index to place it in front of both .package and .package main */
+  z-index: 10; /* Higher z-index to place it in front of both .package and .package main */
   background: white;
 }
 .header9 img{
@@ -235,6 +235,7 @@
   }
   .child{
     margin-left: 10px;
+    z-index: 10;
   }
 
   .init {
