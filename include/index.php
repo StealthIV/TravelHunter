@@ -160,7 +160,9 @@ if (isset($_POST["login"])) {
 <body>
   <!-- Header with Login and Signup Buttons -->
   <header class="header">
+  <img class="logos" src="../img/logo.png" alt="" srcset="">
     <nav class="nav">
+     
       <a href="#" class="nav_logo">Travel Hunter</a>
       <button class="button" id="login-btn">Login</button>
       <button class="button" id="signup-btn">Signup</button>

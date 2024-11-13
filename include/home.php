@@ -166,7 +166,7 @@ try {
         <h1 data-lang-en="Top Tourist Destination in Pampanga" data-lang-es="Principal Destino Turístico en Pampanga" data-lang-fr="Meilleure Destination Touristique à Pampanga"
           data-lang-de="Top-Touristenziel in Pampanga" data-lang-zh="邦板牙的顶级旅游目的地" data-lang-jp="パンパンガのトップ観光地 "
           data-lang-ru="Топ Туристическое Направление в Пампанге" data-lang-it="Principale Destinazione Turistica a Pampanga"
-          data-lang-pt="Principal Destino Turístico em Pampanga" data-lang-ar="أفضل وجهة سياحية في بامبانجا">  <i class="bx bx-map icon" style="color: red;"></i><span></span>Top Tourist Destination in Pampanga</h1><br>
+          data-lang-pt="Principal Destino Turístico em Pampanga" data-lang-ar="أفضل وجهة سياحية في بامبانجا">  <i class="bx bx-map icon" style=" color: #32b4ff;"></i><span></span>Top Tourist Destination in Pampanga</h1><br>
          
         <p>
           <span class="span1">&#139;</span>
@@ -188,7 +188,7 @@ try {
                 data-lang-ru="Летнее Место (Палакол)" data-lang-it="Luogo Estivo (Palakol)"
                 data-lang-pt="Lugar de Verão (Palakol)" data-lang-ar="مكان الصيف "><i class="bx bx-water icon"></i>Summer Place(Palakol) </b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="San Jose Floridablanca, Pampanga" data-lang-es="Lugar de Verano (Palakol)" data-lang-fr="Endroit Estival (Palakol)"
                 data-lang-de="Sommerort (Palakol)" data-lang-zh="圣何塞佛罗里达布兰卡 " data-lang-jp="サン・ホセ・フロリダブランカ、パンパンガ "
                 data-lang-ru="Сан-Хосе Флоридабланка, Пампанга" data-lang-it="Luogo Estivo (Palakol)"
@@ -208,7 +208,7 @@ try {
                 data-lang-ru="Вид на Гору Набуклод" data-lang-it="Vista sulla Montagna Nabuclod"
                 data-lang-pt="Vista da Montanha Nabuclod" data-lang-ar="إطلالة جبل نابوكلود "><i class="bx bx-chevrons-up icon"></i>Nabuclod Mountain View</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
                 data-lang-de="Nabuclod, Floridablanca, Pampanga" data-lang-zh=" 那布克洛德  " data-lang-jp=" ナブクロッド、フロリダブランカ、パンパンガ 眺め "
                 data-lang-ru="Набуклод, Флоридабланка" data-lang-it="Nabuclod, Floridablanca, Pampanga"
@@ -231,7 +231,7 @@ try {
                 data-lang-ru="Лагуна Тунгаб" data-lang-it="Laguna di Tungab"
                 data-lang-pt="Lagoa Tungab" data-lang-ar="بحيرة تونجاب"> <i class="bx bx-water icon"></i>Tungab Lagoon</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
                 data-lang-de="Nabuclod, Floridablanca, Pampanga" data-lang-zh=" 那布克洛德  " data-lang-jp=" ナブクロッド、フロリダブランカ、パンパンガ 眺め "
                 data-lang-ru="Набуклод, Флоридабланка" data-lang-it="Nabuclod, Floridablanca, Pampanga"
@@ -255,7 +255,7 @@ try {
                 data-lang-ru="Лагуна Тунгаб" data-lang-it="Laguna di Sumuclab"
                 data-lang-pt="Lagoa Sumuclab" data-lang-ar="بحيرة تونجاب"><i class="bx bx-water icon"></i>Sumuclab Lagoon</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Nabuclod, Floridablanca, Pampanga" data-lang-es="Nabuclod, Floridablanca, Pampanga" data-lang-fr="Nabuclod, Floridablanca, Pampanga"
                 data-lang-de="Nabuclod, Floridablanca, Pampanga" data-lang-zh=" 那布克洛德  " data-lang-jp=" ナブクロッド、フロリダブランカ、パンパンガ 眺め "
                 data-lang-ru="Набуклод, Флоридабланка" data-lang-it="Nabuclod, Floridablanca, Pampanga"
@@ -279,7 +279,7 @@ try {
                 data-lang-ru="Горячий Источник Пуньин " data-lang-it="Sorgente Termale di Puning"
                 data-lang-pt="Fonte Termal de Puning" data-lang-ar=" الينابيع الساخنة في بونينغ "><i class="bx bx-water icon"></i>Puning Hot Spring</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Sapang Bato, Angeles City,Pampanga" data-lang-es="Sapang Bato, Ciudad de Angeles, Pampanga" data-lang-fr="Sapang Bato, Ville d'Angeles, Pampanga "
                 data-lang-de="Sapang Bato, Angeles Stadt, Pampanga" data-lang-zh=" 萨庞巴托，安赫莱斯市，邦板牙  " data-lang-jp=" サパンバト、アンヘレス市、パンパンガ  "
                 data-lang-ru="Сапанг Батo, Город Анджелес, Пампанга" data-lang-it=" Sapang Bato, Città di Angeles, Pampanga"
@@ -302,7 +302,7 @@ try {
                 data-lang-ru="Гора Пинатубо " data-lang-it="Monte Pinatubo"
                 data-lang-pt="Monte Pinatubo" data-lang-ar="جبل بيناتوبو "><i class="bx bx-chevrons-up icon"></i>Mount Pinatubo</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Station 3, Front Beach Malay" data-lang-es="Estación 3, Playa Frontal Malay" data-lang-fr="Station 3, Plage Frontale Malay"
                 data-lang-de="Station 3, Frontstrand Malay" data-lang-zh="马来正滩 3 号站" data-lang-jp=" ステーション3、フロントビーチ・マレイ  "
                 data-lang-ru="Станция 3, Пляж Малай " data-lang-it="Stazione 3, Spiaggia Frontale Malay"
@@ -326,7 +326,7 @@ try {
                 data-lang-ru="Водопады Миямит" data-lang-it="Cascate Miyamit"
                 data-lang-pt="Cachoeiras Miyamit" data-lang-ar="شلالات مياميت"><i class="bx bx-water icon"></i>Miyamit Falls</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Baranggay Sapang Uwak, Porac,Pampanga" data-lang-es="Baranggay Sapang Uwak, Porac,Pampanga" data-lang-fr="Baranggay Sapang Uwak, Porac,Pampanga"
                 data-lang-de="Baranggay Sapang Uwak, Porac,Pampanga" data-lang-zh="  沙邦乌瓦克村，波拉克，邦板牙省  " data-lang-jp=" バランガイ・サパン・ウワク、ポラック、パンパンガ  "
                 data-lang-ru="Барангаи Сапанг Увак, Порак, Пампанга" data-lang-it="Barangay Sapang Uwak, Porac, Pampanga"
@@ -349,7 +349,7 @@ try {
                 data-lang-ru="Национальный парк Маунт Араят" data-lang-it="Parco Nazionale del Monte Arayat"
                 data-lang-pt="Parque Nacional do Monte Arayat" data-lang-ar="منتزه جبل أرايات الوطني"><i class="bx bx-chevrons-up icon"></i>Mount Arayat National Park</b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Arayat, Pampanga" data-lang-es="Arayat, Pampanga" data-lang-fr="Arayat, Pampanga"
                 data-lang-de="Arayat, Pampanga" data-lang-zh="阿拉亚特，邦板牙省" data-lang-jp=" アラヤット、パンパンガ   "
                 data-lang-ru="Араят, Пампанга" data-lang-it="Arayat, Pampanga"
@@ -370,7 +370,7 @@ try {
                 data-lang-ru="река амбар" data-lang-it="fiume granaio"
                 data-lang-pt="rio celeiro" data-lang-ar="نهر المخزن "><i class="bx bx-water icon"></i>Ilog Kamalig </b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Pio, Porac, Pampanga" data-lang-es=" Pio, Porac, Provincia de Pampanga" data-lang-fr="Pio, Porac, Province de Pampanga"
                 data-lang-de=" Pio, Porac, Provinz Pampanga" data-lang-zh="皮奥，波拉克，邦板牙省 " data-lang-jp="  ピオ、ポラック、パンパンガ州  "
                 data-lang-ru="Пио, Порак, провинция Пампанга" data-lang-it="Pio, Porac, Provincia di Pampanga"
@@ -391,7 +391,7 @@ try {
                 data-lang-ru="Ана ан Водопады " data-lang-it="Ana an Cascate"
                 data-lang-pt="Ana an Cachoeiras" data-lang-ar="آنا آن شلالات "><i class="bx bx-water icon"></i>Ana an Falls </b><br>
 
-                <i class="bx bx-map icon" style="color: red;"></i>
+                <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Inararo,Porac, Pampanga " data-lang-es=" Inararo, Porac, Provincia de Pampanga" data-lang-fr="Inararo, Porac, Province de Pampanga"
                 data-lang-de="  Inararo, Porac, Provinz Pampanga" data-lang-zh="  伊纳拉罗，波拉克，邦板牙省  " data-lang-jp="  イナラロ、ポラック、パンパンガ州"
                 data-lang-ru=" Индараро, Порак, провинция Пампанга" data-lang-it="Inararo, Porac, Provincia di Pampanga"
@@ -467,7 +467,7 @@ try {
                 White Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
                 data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
                 data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
@@ -492,7 +492,7 @@ try {
             <p>
               <b><i class="bx bx-water icon"></i>Puka Shell Beach</b><br>
               
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small> Malay, Aklan</small>
             </p>
 
@@ -518,7 +518,7 @@ try {
                 Puka Shell Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"
@@ -554,7 +554,7 @@ try {
                 Ariel's Point
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Batason, Buruanga, Malay, Aklan Province"
                 data-lang-es="Batason, Buruanga, Malay, Provincia de Aklan"
                 data-lang-fr="Batason, Buruanga, Malay, Province d'Aklan"
@@ -589,7 +589,7 @@ try {
                 Diniwid Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan."
                 data-lang-es="Malay, Aklan."
                 data-lang-fr="Malay, Aklan."
@@ -625,7 +625,7 @@ try {
                 Willy's Rock
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="XW99+7FW, Malay, Aklan"
                 data-lang-es="XW99+7FW, Malay, Aklan"
                 data-lang-fr="XW99+7FW, Malay, Aklan"
@@ -661,7 +661,7 @@ try {
                 Ilig Iligan Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"
@@ -697,7 +697,7 @@ try {
                 Mount Luho
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"
@@ -733,7 +733,7 @@ try {
                 Bulabog Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"
@@ -769,7 +769,7 @@ try {
                 Crystal Cove Island
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Tabon Point, Malay, Aklan"
                 data-lang-es="Punta Tabon, Malay, Aklan"
                 data-lang-fr="Point Tabon, Malay, Aklan"
@@ -805,7 +805,7 @@ try {
                 Crocodile Island
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"
@@ -841,7 +841,7 @@ try {
                 Balinghai Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Road-C, Malay, Aklan"
                 data-lang-es="Camino-C, Malay, Aklan"
                 data-lang-fr="Route-C, Malay, Aklan"
@@ -877,7 +877,7 @@ try {
                 Tambisaan Beach
               </b><br>
 
-              <i class="bx bx-map icon" style="color: red;"></i>
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="Malay, Aklan"
                 data-lang-es="Malay, Aklan"
                 data-lang-fr="Malay, Aklan"

@@ -131,7 +131,7 @@ if (isset($_SESSION['id'])) {
   </section>
 
   <div class="img">
-    <h1 class="exp6">Discover the wonders of Boracay where adventure meets paradise!</h1>
+   
     <main>
 
       <div id="carousel" class="carousel">
@@ -724,14 +724,14 @@ if (isset($_SESSION['id'])) {
   <section class="section6">
     <div class="product">
       <picture>
-        <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
+        <img src="../places/boracay/Zipline Boracay.jpg"  alt="Zipline in Boracay">
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+          <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
             data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
             data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
-            data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+            data-lang-ar="زيبلاين بوراكاي" ><a href="../include/boracayactivities.php">Zipline Boracay</a></b><br>
 
           <i class="bx bx-map icon" style="color: red;"></i>
           <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
@@ -752,7 +752,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+          <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
             data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
             data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
             data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
@@ -777,7 +777,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+          <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
             data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
             data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
             data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
@@ -802,7 +802,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
+          <b class="sh1" data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
             data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
             data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
             data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
@@ -821,7 +821,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
+          <b class="sh1" data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
             data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat"
             data-lang-zh="乘坐香蕉船" data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
             data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
@@ -843,7 +843,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+          <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
             data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
             data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
             data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
@@ -867,7 +867,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+          <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
             data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
             data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
             data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
@@ -892,7 +892,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+          <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
             data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
             data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
             data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
@@ -917,7 +917,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
+          <b class="sh1" data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
             data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
             data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
             data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
@@ -936,7 +936,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
+          <b class="sh1" data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
             data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat"
             data-lang-zh="乘坐香蕉船" data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
             data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
@@ -958,7 +958,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+          <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
             data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
             data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
             data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
@@ -982,7 +982,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+          <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
             data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
             data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
             data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
@@ -1007,7 +1007,7 @@ if (isset($_SESSION['id'])) {
       </picture>
       <div class="detail">
         <p>
-          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+          <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
             data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
             data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
             data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
@@ -1058,11 +1058,11 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Nalka Seafood Restaurant" data-lang-es="Restaurante de Mariscos Nalka"
+              <b class="sh1" data-lang-en="Nalka Seafood Restaurant" data-lang-es="Restaurante de Mariscos Nalka"
                 data-lang-fr="Restaurant de Fruits de Mer Nalka" data-lang-de="Nalka Fischrestaurant"
                 data-lang-zh="纳尔卡海鲜餐厅" data-lang-jp="ナルカシーフードレストラン" data-lang-ru="Налка Рыбный Ресторан"
                 data-lang-it="Ristorante di Pesce Nalka" data-lang-pt="Restaurante de Mariscos Nalka"
-                data-lang-ar="مطعم نالكا للمأكولات البحرية">Nalka Seafood Restaurant</b><br>
+                data-lang-ar="مطعم نالكا للمأكولات البحرية"><a href="../include/boracayresto.php">Nalka Seafood Resturant</a></b><br>
 
                 <i class="bx bx-map icon" style="color: red;"></i>
               <small data-lang-en="Malay, Aklan" data-lang-es="Malayo, Aklan" data-lang-fr="Malay, Aklan"
@@ -1082,7 +1082,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Café Maruja" data-lang-es="Café Maruja" data-lang-fr="Café Maruja"
+              <b class="sh1" data-lang-en="Café Maruja" data-lang-es="Café Maruja" data-lang-fr="Café Maruja"
                 data-lang-de="Café Maruja" data-lang-zh="卡菲马鲁亚" data-lang-jp="カフェマルハ" data-lang-ru="Кафе Маруха"
                 data-lang-it="Café Maruja" data-lang-pt="Café Maruja" data-lang-ar="مقهى ماروجا">Café Maruja</b><br>
 
@@ -1109,7 +1109,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Café del Sol" data-lang-es="Café del Sol" data-lang-fr="Café del Sol"
+              <b class="sh1" data-lang-en="Café del Sol" data-lang-es="Café del Sol" data-lang-fr="Café del Sol"
                 data-lang-de="Café del Sol" data-lang-zh="太阳咖啡馆" data-lang-jp="カフェデソル" data-lang-ru="Кафе дель Соль"
                 data-lang-it="Café del Sol" data-lang-pt="Café del Sol" data-lang-ar="مقهى ديل سول">Café del Sol</b><br>
 
@@ -1138,7 +1138,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Barlo Restaurant" data-lang-es="Restaurante Barlo" data-lang-fr="Restaurant Barlo"
+              <b class="sh1" data-lang-en="Barlo Restaurant" data-lang-es="Restaurante Barlo" data-lang-fr="Restaurant Barlo"
                 data-lang-de="Barlo Restaurant" data-lang-zh="巴洛餐厅" data-lang-jp="バーロレストラン"
                 data-lang-ru="Ресторан Барло" data-lang-it="Ristorante Barlo" data-lang-pt="Restaurante Barlo"
                 data-lang-ar="مطعم بارلو">Barlo Restaurant</b><br>
@@ -1162,7 +1162,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Los Indios Bravos" data-lang-es="Los Indios Bravos" data-lang-fr="Los Indios Bravos"
+              <b class="sh1" data-lang-en="Los Indios Bravos" data-lang-es="Los Indios Bravos" data-lang-fr="Los Indios Bravos"
                 data-lang-de="Los Indios Bravos" data-lang-zh="洛斯印第安勇士" data-lang-jp="ロスインディオスブラボス"
                 data-lang-ru="Лос Индьос Бравос" data-lang-it="Los Indios Bravos" data-lang-pt="Los Indios Bravos"
                 data-lang-ar="لوس إنديوس برافوس">Los Indios Bravos</b><br>
@@ -1192,7 +1192,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Vhub Dampa Seafood Grill and Restaurant"
+              <b class="sh1" data-lang-en="Vhub Dampa Seafood Grill and Restaurant"
                 data-lang-es="Restaurante y Parrilla de Mariscos Vhub Dampa"
                 data-lang-fr="Restaurant et Grillade de Fruits de Mer Vhub Dampa"
                 data-lang-de="Vhub Dampa Fischgrillrestaurant" data-lang-zh="Vhub丹帕海鲜烧烤餐厅"
@@ -1221,7 +1221,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Meze Wrap" data-lang-es="Meze Wrap" data-lang-fr="Meze Wrap" data-lang-de="Meze Wrap"
+              <b class="sh1" data-lang-en="Meze Wrap" data-lang-es="Meze Wrap" data-lang-fr="Meze Wrap" data-lang-de="Meze Wrap"
                 data-lang-zh="梅兹卷" data-lang-jp="メゼラップ" data-lang-ru="Мезе Ролл" data-lang-it="Meze Wrap"
                 data-lang-pt="Meze Wrap" data-lang-ar="ميز راب">Meze Wrap</b><br>
 
@@ -1250,7 +1250,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="SpiceBird" data-lang-es="SpiceBird" data-lang-fr="SpiceBird" data-lang-de="SpiceBird"
+              <b class="sh1" data-lang-en="SpiceBird" data-lang-es="SpiceBird" data-lang-fr="SpiceBird" data-lang-de="SpiceBird"
                 data-lang-zh="香料鸟" data-lang-jp="スパイスバード" data-lang-ru="Спайс Бёрд" data-lang-it="SpiceBird"
                 data-lang-pt="SpiceBird" data-lang-ar="سبايس بيرد">SpiceBird</b><br>
 
@@ -1275,7 +1275,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="The Sunny Side Cafe" data-lang-es="El Café Lado Soleado"
+              <b class="sh1" data-lang-en="The Sunny Side Cafe" data-lang-es="El Café Lado Soleado"
                 data-lang-fr="Le Café du Côté Ensoleillé" data-lang-de="Das Sonnige Café" data-lang-zh="阳光咖啡馆"
                 data-lang-jp="サニーサイドカフェ" data-lang-ru="Солнечное Кафе" data-lang-it="The Sunny Side Cafe"
                 data-lang-pt="O Café do Lado Ensolarado" data-lang-ar="مقهى الجانب المشمس">The Sunny Side Cafe</b><br>
@@ -1300,7 +1300,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Blackfish Coffee Bar" data-lang-es="Bar de Café Blackfish"
+              <b class="sh1" data-lang-en="Blackfish Coffee Bar" data-lang-es="Bar de Café Blackfish"
                 data-lang-fr="Bar à Café Blackfish" data-lang-de="Blackfish Kaffee-Bar" data-lang-zh="黑鱼咖啡吧"
                 data-lang-jp="ブラックフィッシュコーヒーバー" data-lang-ru="Кофейня Blackfish" data-lang-it="Blackfish Coffee Bar"
                 data-lang-pt="Bar de Café Blackfish" data-lang-ar="مقهى بلاكفيش">Blackfish Coffee Bar</b><br>
@@ -1326,7 +1326,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Little Taj Boracay" data-lang-es="Pequeño Taj Boracay" data-lang-fr="Petit Taj Boracay"
+              <b class="sh1" data-lang-en="Little Taj Boracay" data-lang-es="Pequeño Taj Boracay" data-lang-fr="Petit Taj Boracay"
                 data-lang-de="Kleiner Taj Boracay" data-lang-zh="小泰姬长滩岛" data-lang-jp="リトルタージ・ボラカイ"
                 data-lang-ru="Маленький Тадж Боракай" data-lang-it="Little Taj Boracay"
                 data-lang-pt="Pequeno Taj Boracay" data-lang-ar="ليتل تاج بوراكاي">Little Taj Boracay</b><br>
@@ -1354,7 +1354,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Congas Restaurant" data-lang-es="Restaurante Congas" data-lang-fr="Restaurant Congas"
+              <b class="sh1" data-lang-en="Congas Restaurant" data-lang-es="Restaurante Congas" data-lang-fr="Restaurant Congas"
                 data-lang-de="Congas Restaurant" data-lang-zh="Congas餐厅" data-lang-jp="コンガスレストラン"
                 data-lang-ru="Ресторан Congas" data-lang-it="Ristorante Congas" data-lang-pt="Restaurante Congas"
                 data-lang-ar="مطعم كونغاس">Congas Restaurant</b><br>
@@ -1397,7 +1397,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Shangri-La Hotels and Resorts</b><br>
+              <b class="sh1"><a href="../include/boracayhotel.php">Shangri-La Hotels and Resorts</a></b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Barangay Yapak, Boracay Island, Malay, Aklan 5608</small>
             </p>
 
@@ -1413,7 +1415,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Mandala Spa and Resort Villas</b><br>
+              <b class="sh1">Mandala Spa and Resort Villas</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small> Station 3, Barangay Manoc-Manoc, Boracay Island</small>
             </p>
 
@@ -1429,7 +1433,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Fairways & Bluewater Boracay</b><br>
+              <b class="sh1">Fairways & Bluewater Boracay</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Station 1, Balabag and Yapak, Balabag, 5608 Boracay</small>
             </p>
 
@@ -1445,7 +1451,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Henann Crystal Sands Resort</b><br>
+              <b class="sh1">Henann Crystal Sands Resort</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Station 1 (In between boat station 1 and D'mall) Boracay Island.</small>
             </p>
 
@@ -1461,7 +1469,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Astoria Current</b><br>
+              <b class="sh1">Astoria Current</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Sitio Mangayad, Brgy. Manoc Manoc, Station 3, Malay</small>
             </p>
 
@@ -1477,7 +1487,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Mandarin Bay Resort & Spa</b><br>
+              <b class="sh1">Mandarin Bay Resort & Spa</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Beachfront, Station 2, Boracay, Malay</small>
             </p>
 
@@ -1493,7 +1505,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Mövenpick Resort & Spa Boracay</b><br>
+              <b class="sh1">Mövenpick Resort & Spa Boracay</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Punta Bunga Cove, Barangay Yapak, Boracay Island, Malay</small>
             </p>
 
@@ -1509,7 +1523,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Hue Hotels and Resorts Boracay</b><br>
+              <b class="sh1">Hue Hotels and Resorts Boracay</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Station 2, Hue Hotels and Resorts Boracay </small>
             </p>
 
@@ -1525,7 +1541,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>Belmont Hotel Boracay</b><br>
+              <b class="sh1">Belmont Hotel Boracay</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Newcoast Drive, Boracay Newcoast, Barangay Yapak, Boracay Island, Malay</small>
             </p>
 
@@ -1540,7 +1558,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b>The Lind Boracay</b><br>
+              <b class="sh1">The Lind Boracay</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Station 1, Malay</small>
             </p>
 
@@ -1557,6 +1577,8 @@ if (isset($_SESSION['id'])) {
           <div class="detail">
             <p>
               <b>Savoy Hotel Boracay Newcoast</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Newcoast Drive Malay</small>
             </p>
 
@@ -1572,7 +1594,9 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b> La Carmela de Boracay Resort Hotel</b><br>
+              <b class="sh1"> La Carmela de Boracay Resort Hotel</b><br>
+
+              <i class="bx bx-map icon" style="color: red;"></i>
               <small>Station 2, Balabag, Boracay Island, Malay</small>
             </p>
 
@@ -1602,6 +1626,7 @@ if (isset($_SESSION['id'])) {
 
         </p>
       </header>
+      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
       <section class="section6">
         <div class="product">
           <picture>
@@ -1609,7 +1634,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
+              <b class="sh1" data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
                 data-lang-de="Muschel-Schlüsselanhänger" data-lang-zh="贝壳钥匙链" data-lang-jp="シェルキーホルダー"
                 data-lang-ru="Брелоки с ракушками" data-lang-it="Portachiavi con Conchiglie"
                 data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف">Shell Keychains</b><br>
@@ -1630,7 +1655,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Beaded Bracelets" data-lang-es="Pulseras de Cuentas" data-lang-fr="Bracelets en Perles"
+              <b class="sh1" data-lang-en="Beaded Bracelets" data-lang-es="Pulseras de Cuentas" data-lang-fr="Bracelets en Perles"
                 data-lang-de="Perlenarmbänder" data-lang-zh="珠饰手链" data-lang-jp="ビーズブレスレット"
                 data-lang-ru="Браслеты с Бусинами" data-lang-it="Braccialetti di Perline"
                 data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز">Beaded Bracelets</b><br>
@@ -1651,7 +1676,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Handwoven Bag" data-lang-es="Bolsa Tejida" data-lang-fr="Sac Tissé"
+              <b class="sh1" data-lang-en="Handwoven Bag" data-lang-es="Bolsa Tejida" data-lang-fr="Sac Tissé"
                 data-lang-de="Handgewebte Tasche" data-lang-zh="手工编织包" data-lang-jp="手織りバッグ"
                 data-lang-ru="Ручная плетеная сумка" data-lang-it="Borsa Intrecciata" data-lang-pt="Bolsa Feita à Mão"
                 data-lang-ar="حقيبة منسوجة">Handwoven Bag</b><br>
@@ -1674,7 +1699,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="White Beach Sarong" data-lang-es="Sarong de Playa Blanco"
+              <b class="sh1" data-lang-en="White Beach Sarong" data-lang-es="Sarong de Playa Blanco"
                 data-lang-fr="Paréo de Plage Blanc" data-lang-de="Weißer Strand-Sarong" data-lang-zh="白色沙滩纱笼"
                 data-lang-jp="ホワイトビーチサロン" data-lang-ru="Белый Пляжный Парео" data-lang-it="Sarong da Spiaggia Bianco"
                 data-lang-pt="Sarong de Praia Branco" data-lang-ar="سارونج شاطئ أبيض">White Beach Sarong</b><br>
@@ -1695,7 +1720,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Bamboo Craft Wooden Figure" data-lang-es="Figura de Madera de Bambú"
+              <b class="sh1" data-lang-en="Bamboo Craft Wooden Figure" data-lang-es="Figura de Madera de Bambú"
                 data-lang-fr="Figurine en Bois de Bambou" data-lang-de="Bambuskunst-Holzfigur" data-lang-zh="竹制工艺木雕"
                 data-lang-jp="竹工芸木製フィギュア" data-lang-ru="Бамбуковая Деревянная Фигура"
                 data-lang-it="Figura di Legno in Bambù" data-lang-pt="Figura de Madeira de Bambu"
@@ -1716,7 +1741,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Boracay Island Tee" data-lang-es="Camiseta de la Isla de Boracay"
+              <b class="sh1" data-lang-en="Boracay Island Tee" data-lang-es="Camiseta de la Isla de Boracay"
                 data-lang-fr="T-shirt de l'île de Boracay" data-lang-de="Boracay-Insel T-Shirt" data-lang-zh="博拉凯岛T恤"
                 data-lang-jp="ボラカイ島のTシャツ" data-lang-ru="Футболка Острова Борокай"
                 data-lang-it="T-shirt Isola di Boracay" data-lang-pt="Camiseta da Ilha de Boracay"
@@ -1737,7 +1762,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Coral Reef Wall Art" data-lang-es="Arte de Pared de Arrecife de Coral"
+              <b class="sh1" data-lang-en="Coral Reef Wall Art" data-lang-es="Arte de Pared de Arrecife de Coral"
                 data-lang-fr="Art Mural de Récif de Corail" data-lang-de="Wandkunst des Korallenriffs"
                 data-lang-zh="珊瑚礁墙面艺术" data-lang-jp="サンゴ礁の壁アート" data-lang-ru="Настенное искусство кораллового рифа"
                 data-lang-it="Arte Murale della Barriera Corallina" data-lang-pt="Arte de Parede de Recifes de Coral"
@@ -1758,7 +1783,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Pinoy Straw Hat" data-lang-es="Sombrero de Paja Pinoy"
+              <b class="sh1" data-lang-en="Pinoy Straw Hat" data-lang-es="Sombrero de Paja Pinoy"
                 data-lang-fr="Chapeau de Paille Pinoy" data-lang-de="Pinoy-Strohhut" data-lang-zh="菲律宾草帽"
                 data-lang-jp="ピノイストローハット" data-lang-ru="Филиппинская соломенная шляпа"
                 data-lang-it="Cappello di Paglia Pinoy" data-lang-pt="Chapéu de Palha Pinoy"
@@ -1779,7 +1804,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Beach Towel" data-lang-es="Toalla de Playa" data-lang-fr="Serviette de Plage"
+              <b class="sh1" data-lang-en="Beach Towel" data-lang-es="Toalla de Playa" data-lang-fr="Serviette de Plage"
                 data-lang-de="Strandtuch" data-lang-zh="沙滩毛巾" data-lang-jp="ビーチタオル" data-lang-ru="Пляжное Полотенце"
                 data-lang-it="Asciugamano da Spiaggia" data-lang-pt="Toalha de Praia" data-lang-ar="منشفة الشاطئ">
                 Beach Towel
@@ -1798,7 +1823,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Fridge Magnet" data-lang-es="Imán de Nevera" data-lang-fr="Aimant de Frigo"
+              <b class="sh1" data-lang-en="Fridge Magnet" data-lang-es="Imán de Nevera" data-lang-fr="Aimant de Frigo"
                 data-lang-de="Kühlschrankmagnet" data-lang-zh="冰箱磁铁" data-lang-jp="冷蔵庫用マグネット"
                 data-lang-ru="Холодильный Магнит" data-lang-it="Magnete da Frigo" data-lang-pt="Imã de Geladeira"
                 data-lang-ar="مغناطيس الثلاجة">
@@ -1818,7 +1843,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Coconut Soap" data-lang-es="Jabón de Coco" data-lang-fr="Savon de Noix de Coco"
+              <b class="sh1" data-lang-en="Coconut Soap" data-lang-es="Jabón de Coco" data-lang-fr="Savon de Noix de Coco"
                 data-lang-de="Kokosnuss-Seife" data-lang-zh="椰子肥皂" data-lang-jp="ココナッツソープ" data-lang-ru="Кокосовое Мыло"
                 data-lang-it="Sapone di Cocco" data-lang-pt="Sabão de Coco" data-lang-ar="صابون جوز الهند">
                 Coconut Soap
@@ -1837,7 +1862,7 @@ if (isset($_SESSION['id'])) {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Sundet Art Fit" data-lang-es="Sundet Art Fit" data-lang-fr="Sundet Art Fit"
+              <b class="sh1" data-lang-en="Sundet Art Fit" data-lang-es="Sundet Art Fit" data-lang-fr="Sundet Art Fit"
                 data-lang-de="Sundet Art Fit" data-lang-zh="Sundet Art Fit" data-lang-jp="Sundet Art Fit"
                 data-lang-ru="Sundet Art Fit" data-lang-it="Sundet Art Fit" data-lang-pt="Sundet Art Fit"
                 data-lang-ar="Sundet Art Fit">
