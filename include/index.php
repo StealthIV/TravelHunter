@@ -3,9 +3,15 @@
 session_start(); // Start the session
 require_once '../connect/dbcon.php'; // Database connection
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'phpmailer/src/Exception.php';
+require_once 'phpmailer/src/PHPMailer.php';
+require_once 'phpmailer/src/SMTP.php';
+
 // Check if the user is already logged in
 if (isset($_SESSION["UserName"])) {
-  // Redirect to the home page if the user is already logged in
   header("Location: home.php");
   exit();
 }
@@ -19,34 +25,69 @@ if (isset($_POST["register"])) {
   // Check if password is at least 8 characters
   if (strlen($PassWord) < 8) {
     $_SESSION['error'] = "Password must be at least 8 characters long.";
-    header("Location: register.php"); // Redirect back to the registration page
+    header("Location: register.php");
     exit();
   }
+
+  // Generate a 6-character verification code
+  $verificationCode = strtoupper(substr(md5(rand()), 0, 6)); // 6-character alphanumeric code
 
   // Proceed with password hashing and user registration
   $hashedPassWord = password_hash($PassWord, PASSWORD_DEFAULT);
   $defaultImage = '../uploads/default.jpg'; // Default profile image
 
   try {
-    $pdoQuery = "INSERT INTO user (UserName, PassWord, FullName, image) VALUES (:UserName, :PassWord, :FullName, :image)";
+    $pdoQuery = "INSERT INTO user (UserName, PassWord, FullName, image, verification_code) 
+                 VALUES (:UserName, :PassWord, :FullName, :image, :verification_code)";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute([
       ":UserName" => $UserName,
       ":PassWord" => $hashedPassWord,
       ":FullName" => $FullName,
       ":image" => $defaultImage,
+      ":verification_code" => $verificationCode
     ]);
 
-    $_SESSION['success'] = "Successfully registered!";
-    header("Location: index.php"); // Redirect to login after registration
-    exit();
+    // Send the verification email
+    $mail = new PHPMailer(true);  // Create PHPMailer instance
+
+    try {
+      $mail->isSMTP();  // Set mailer to use SMTP
+      $mail->Host = 'smtp.gmail.com';  // Set SMTP server
+      $mail->SMTPAuth = true;  // Enable SMTP authentication
+      $mail->Username = 'huntertravel150@gmail.com'; // Your email address
+      $mail->Password = 'igvxyavzuysqskby'; // Your SMTP password or app-specific password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+      $mail->Port = 587;  // SMTP port
+
+      $mail->setFrom('cferdinand500@gmail.com', 'Travel Hunter');
+      $mail->addAddress($UserName);  // Send verification email to the user
+
+      // Email content
+      $mail->isHTML(true);
+      $mail->Subject = 'Please Verify Your Email Address';
+      $mail->Body = "Thank you for registering! To verify your account, please use the following verification code:<br><br>
+                        <strong>$verificationCode</strong><br><br>
+                        Enter this code in the verification form on the website to complete your registration.";
+
+      $mail->send();
+
+      $_SESSION['success'] = "Successfully registered! Please check your email for the verification code.";
+      header("Location: verify.php");
+      exit();
+
+    } catch (Exception $e) {
+      $_SESSION['error'] = "Error: Could not send verification email. Please try again.";
+      header("Location: index.php");
+      exit();
+    }
+
   } catch (PDOException $e) {
     $_SESSION['error'] = "Error: " . $e->getMessage();
-    header("Location: register.php");
+    header("Location: index.php");
     exit();
   }
 }
-
 
 // Login
 if (isset($_POST["login"])) {
@@ -95,6 +136,7 @@ if (isset($_POST["login"])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -107,12 +149,14 @@ if (isset($_POST["login"])) {
     .form_container .signup_form {
       display: none;
     }
+
     .form_container .login_form.active,
     .form_container .signup_form.active {
       display: block;
     }
   </style>
 </head>
+
 <body>
   <!-- Header with Login and Signup Buttons -->
   <header class="header">
@@ -175,54 +219,54 @@ if (isset($_POST["login"])) {
         </form>
       </div>
     </div>
- 
 
-  <script>
-    // JavaScript to handle form toggling
-    const loginBtn = document.querySelector("#login-btn"),
-      signupBtn = document.querySelector("#signup-btn"),
-      home = document.querySelector(".home"),
-      formContainer = document.querySelector(".form_container"),
-      formCloseBtn = document.querySelector(".form_close"),
-      pwShowHide = document.querySelectorAll(".pw_hide"),
-      loginForm = document.querySelector(".login_form"),
-      signupForm = document.querySelector(".signup_form");
 
-    // Open login form when Login button is clicked
-    loginBtn.addEventListener("click", () => {
-      home.classList.add("show");
-      signupForm.classList.remove("active"); // Hide signup form
-      loginForm.classList.add("active");     // Show login form
-    });
+    <script>
+      // JavaScript to handle form toggling
+      const loginBtn = document.querySelector("#login-btn"),
+        signupBtn = document.querySelector("#signup-btn"),
+        home = document.querySelector(".home"),
+        formContainer = document.querySelector(".form_container"),
+        formCloseBtn = document.querySelector(".form_close"),
+        pwShowHide = document.querySelectorAll(".pw_hide"),
+        loginForm = document.querySelector(".login_form"),
+        signupForm = document.querySelector(".signup_form");
 
-    // Open signup form when Signup button is clicked
-    signupBtn.addEventListener("click", () => {
-      home.classList.add("show");
-      loginForm.classList.remove("active");  // Hide login form
-      signupForm.classList.add("active");    // Show signup form
-    });
-
-    // Close form container when close button is clicked
-    formCloseBtn.addEventListener("click", () => {
-      home.classList.remove("show");
-      loginForm.classList.remove("active");
-      signupForm.classList.remove("active");
-    });
-
-    // Toggle password visibility
-    pwShowHide.forEach((icon) => {
-      icon.addEventListener("click", () => {
-        let getPwInput = icon.parentElement.querySelector("input");
-        if (getPwInput.type === "password") {
-          getPwInput.type = "text";
-          icon.classList.replace("uil-eye-slash", "uil-eye");
-        } else {
-          getPwInput.type = "password";
-          icon.classList.replace("uil-eye", "uil-eye-slash");
-        }
+      // Open login form when Login button is clicked
+      loginBtn.addEventListener("click", () => {
+        home.classList.add("show");
+        signupForm.classList.remove("active"); // Hide signup form
+        loginForm.classList.add("active");     // Show login form
       });
-    });
-  </script>
+
+      // Open signup form when Signup button is clicked
+      signupBtn.addEventListener("click", () => {
+        home.classList.add("show");
+        loginForm.classList.remove("active");  // Hide login form
+        signupForm.classList.add("active");    // Show signup form
+      });
+
+      // Close form container when close button is clicked
+      formCloseBtn.addEventListener("click", () => {
+        home.classList.remove("show");
+        loginForm.classList.remove("active");
+        signupForm.classList.remove("active");
+      });
+
+      // Toggle password visibility
+      pwShowHide.forEach((icon) => {
+        icon.addEventListener("click", () => {
+          let getPwInput = icon.parentElement.querySelector("input");
+          if (getPwInput.type === "password") {
+            getPwInput.type = "text";
+            icon.classList.replace("uil-eye-slash", "uil-eye");
+          } else {
+            getPwInput.type = "password";
+            icon.classList.replace("uil-eye", "uil-eye-slash");
+          }
+        });
+      });
+    </script>
 
 
     <div class="slider">
@@ -237,8 +281,8 @@ if (isset($_POST["login"])) {
             <div class="title">El Nido</div>
             <div class="type">Palawan</div>
             <div class="description">
-            Your Gateway to Untouched Beauty
-                 
+              Your Gateway to Untouched Beauty
+
             </div>
 
           </div>
@@ -251,7 +295,7 @@ if (isset($_POST["login"])) {
             <div class="title">Boracay</div>
             <div class="type">Aklan</div>
             <div class="description">
-            Dive into Crystal Clear Waters
+              Dive into Crystal Clear Waters
             </div>
 
           </div>
@@ -264,7 +308,7 @@ if (isset($_POST["login"])) {
             <div class="title">Silanguin Cove</div>
             <div class="type">Zambales</div>
             <div class="description">
-            Find Peace in the Pristine Shores of Silanguin Cove
+              Find Peace in the Pristine Shores of Silanguin Cove
 
             </div>
 
@@ -277,7 +321,7 @@ if (isset($_POST["login"])) {
             <div class="title">Mt. Pinatubo</div>
             <div class="type">Pampanga</div>
             <div class="description">
-            Experience the Thrill of Mt. Pinatubo’s Epic Trail
+              Experience the Thrill of Mt. Pinatubo’s Epic Trail
 
             </div>
 
@@ -291,7 +335,7 @@ if (isset($_POST["login"])) {
             <div class="title">Taal Volcano</div>
             <div class="type">Batangas</div>
             <div class="description">
-            Witness the Awe of Taal Volcano
+              Witness the Awe of Taal Volcano
 
             </div>
 
@@ -305,7 +349,7 @@ if (isset($_POST["login"])) {
             <div class="title">White Peak</div>
             <div class="type">Bataan</div>
             <div class="description">
-            Conquer the Summit at White Peak
+              Conquer the Summit at White Peak
             </div>
 
           </div>
@@ -318,7 +362,7 @@ if (isset($_POST["login"])) {
             <div class="title">Kawasan Falls</div>
             <div class="type">Cebu</div>
             <div class="description">
-            Chase the Cascades at Kawasan Falls
+              Chase the Cascades at Kawasan Falls
 
             </div>
 
