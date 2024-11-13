@@ -72,8 +72,22 @@ a {
 }
 
 #signup-btn{
-  background-color: #4caf50;
+  padding: 6px 24px;
+  border: 2px solid #fff;
+  background-color: #4bea90;
+  border-radius: 6px;
+  cursor: pointer;
+ 
 }
+
+#signup-btn:active {
+  transform: scale(0.98);
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+
 /* Home */
 .home {
   position: relative;
