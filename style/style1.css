@@ -70,6 +70,10 @@ a {
   position: absolute;
   margin-left: 900px;
 }
+
+#signup-btn{
+  background-color: #4caf50;
+}
 /* Home */
 .home {
   position: relative;
