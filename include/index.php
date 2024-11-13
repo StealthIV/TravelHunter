@@ -94,51 +94,44 @@ if (isset($_POST["login"])) {
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Hunter</title>
   <link rel="stylesheet" href="../style/style1.css" />
-  <!-- Unicons -->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <style>
+    /* CSS to toggle visibility of forms */
+    .form_container .login_form,
+    .form_container .signup_form {
+      display: none;
+    }
+    .form_container .login_form.active,
+    .form_container .signup_form.active {
+      display: block;
+    }
+  </style>
 </head>
-
 <body>
-  <!-- Notifications -->
-  <?php if (isset($_SESSION['success'])): ?>
-    <div class="notification success">
-      <p><?php echo $_SESSION['success'];
-      unset($_SESSION['success']); ?></p>
-    </div>
-  <?php elseif (isset($_SESSION['error'])): ?>
-    <div class="notification error">
-      <p><?php echo $_SESSION['error'];
-      unset($_SESSION['error']); ?></p>
-    </div>
-  <?php endif; ?>
-
-  <!-- Header -->
+  <!-- Header with Login and Signup Buttons -->
   <header class="header">
     <nav class="nav">
       <a href="#" class="nav_logo">Travel Hunter</a>
-
-      <button class="button" id="form-open">Login</button>
+      <button class="button" id="login-btn">Login</button>
+      <button class="button1" id="signup-btn">Signup</button>
     </nav>
   </header>
 
-  <!-- Home -->
+  <!-- Main Section for Login and Signup Forms -->
   <section class="home">
     <div class="form_container">
       <i class="uil uil-times form_close"></i>
-      <!-- Login From -->
+
+      <!-- Login Form -->
       <div class="form login_form">
         <form method="POST">
           <h2>Login</h2>
-
           <div class="input_box">
             <input type="email" name="UserName" placeholder="Enter your username" required />
             <i class="uil uil-envelope-alt email"></i>
@@ -148,7 +141,6 @@ if (isset($_POST["login"])) {
             <i class="uil uil-lock password"></i>
             <i class="uil uil-eye-slash pw_hide"></i>
           </div>
-
           <div class="option_field">
             <span class="checkbox">
               <input type="checkbox" id="check" />
@@ -156,10 +148,8 @@ if (isset($_POST["login"])) {
             </span>
             <a href="#" class="forgot_pw">Forgot password?</a>
           </div>
-
           <button class="button" type="submit" name="login" value="Login">Login Now</button>
-
-          <div class="login_signup">Don't have an account? <a href="register.php" id="signup">Signup</a></div>
+          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
         </form>
       </div>
 
@@ -167,7 +157,6 @@ if (isset($_POST["login"])) {
       <div class="form signup_form">
         <form method="post" autocomplete="off">
           <h2>Signup</h2>
-
           <div class="input_box">
             <input type="email" name="regUserName" placeholder="Enter your email" required />
             <i class="uil uil-envelope-alt email"></i>
@@ -179,15 +168,61 @@ if (isset($_POST["login"])) {
           </div>
           <div class="input_box">
             <input type="text" name="regFullName" placeholder="Fullname" required />
-            <i class="uil uil-lock password"></i>
+            <i class="uil uil-user username"></i>
           </div>
-
           <button class="button" type="submit" name="register" value="Register">Signup Now</button>
-
-          <div class="login_signup">Already have an account? <a href="index.php" id="login">Login</a></div>
+          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
         </form>
       </div>
     </div>
+ 
+
+  <script>
+    // JavaScript to handle form toggling
+    const loginBtn = document.querySelector("#login-btn"),
+      signupBtn = document.querySelector("#signup-btn"),
+      home = document.querySelector(".home"),
+      formContainer = document.querySelector(".form_container"),
+      formCloseBtn = document.querySelector(".form_close"),
+      pwShowHide = document.querySelectorAll(".pw_hide"),
+      loginForm = document.querySelector(".login_form"),
+      signupForm = document.querySelector(".signup_form");
+
+    // Open login form when Login button is clicked
+    loginBtn.addEventListener("click", () => {
+      home.classList.add("show");
+      signupForm.classList.remove("active"); // Hide signup form
+      loginForm.classList.add("active");     // Show login form
+    });
+
+    // Open signup form when Signup button is clicked
+    signupBtn.addEventListener("click", () => {
+      home.classList.add("show");
+      loginForm.classList.remove("active");  // Hide login form
+      signupForm.classList.add("active");    // Show signup form
+    });
+
+    // Close form container when close button is clicked
+    formCloseBtn.addEventListener("click", () => {
+      home.classList.remove("show");
+      loginForm.classList.remove("active");
+      signupForm.classList.remove("active");
+    });
+
+    // Toggle password visibility
+    pwShowHide.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        let getPwInput = icon.parentElement.querySelector("input");
+        if (getPwInput.type === "password") {
+          getPwInput.type = "text";
+          icon.classList.replace("uil-eye-slash", "uil-eye");
+        } else {
+          getPwInput.type = "password";
+          icon.classList.replace("uil-eye", "uil-eye-slash");
+        }
+      });
+    });
+  </script>
 
 
     <div class="slider">

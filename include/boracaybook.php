@@ -141,9 +141,16 @@ if (isset($_SESSION['id'])) {
                      </select>
                   </div>
                   <div class="field">
-                     <div class="label">Booking Date</div>
-                     <input type="date" id="checkin" name="checkin" required>
-                  </div>
+                    <div class="label">Booking Date</div>
+                      <input type="date" id="checkin" name="checkin" required min="">
+                    </div>
+
+                  <script>
+  // Set the minimum date to today's date
+                    const checkinInput = document.getElementById('checkin');
+                     const today = new Date().toISOString().split('T')[0];
+                     checkinInput.setAttribute('min', today);
+                      </script>
                   <div class="field">
                      <div class="label" for="quantity">Number of Guests</div>
                      <input type="number" id="guests" name="guests" value="1" min="1" required>
