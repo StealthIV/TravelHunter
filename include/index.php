@@ -3,9 +3,15 @@
 session_start(); // Start the session
 require_once '../connect/dbcon.php'; // Database connection
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'phpmailer/src/Exception.php';
+require_once 'phpmailer/src/PHPMailer.php';
+require_once 'phpmailer/src/SMTP.php';
+
 // Check if the user is already logged in
 if (isset($_SESSION["UserName"])) {
-  // Redirect to the home page if the user is already logged in
   header("Location: home.php");
   exit();
 }
@@ -19,33 +25,71 @@ if (isset($_POST["register"])) {
   // Check if password is at least 8 characters
   if (strlen($PassWord) < 8) {
     $_SESSION['error'] = "Password must be at least 8 characters long.";
-    header("Location: register.php"); // Redirect back to the registration page
+    header("Location: register.php");
     exit();
   }
+
+  // Generate a 6-character verification code
+  $verificationCode = strtoupper(substr(md5(rand()), 0, 6)); // 6-character alphanumeric code
 
   // Proceed with password hashing and user registration
   $hashedPassWord = password_hash($PassWord, PASSWORD_DEFAULT);
   $defaultImage = '../uploads/default.jpg'; // Default profile image
 
   try {
-    $pdoQuery = "INSERT INTO user (UserName, PassWord, FullName, image) VALUES (:UserName, :PassWord, :FullName, :image)";
+    $pdoQuery = "INSERT INTO user (UserName, PassWord, FullName, image, verification_code) 
+                 VALUES (:UserName, :PassWord, :FullName, :image, :verification_code)";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute([
       ":UserName" => $UserName,
       ":PassWord" => $hashedPassWord,
       ":FullName" => $FullName,
       ":image" => $defaultImage,
+      ":verification_code" => $verificationCode
     ]);
 
-    $_SESSION['success'] = "Successfully registered!";
-    header("Location: index.php"); // Redirect to login after registration
-    exit();
+    // Send the verification email
+    $mail = new PHPMailer(true);  // Create PHPMailer instance
+
+    try {
+      $mail->isSMTP();  // Set mailer to use SMTP
+      $mail->Host = 'smtp.gmail.com';  // Set SMTP server
+      $mail->SMTPAuth = true;  // Enable SMTP authentication
+      $mail->Username = 'huntertravel150@gmail.com'; // Your email address
+      $mail->Password = 'igvxyavzuysqskby'; // Your SMTP password or app-specific password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+      $mail->Port = 587;  // SMTP port
+
+      $mail->setFrom('cferdinand500@gmail.com', 'Travel Hunter');
+      $mail->addAddress($UserName);  // Send verification email to the user
+
+      // Email content
+      $mail->isHTML(true);
+      $mail->Subject = 'Please Verify Your Email Address';
+      $mail->Body    = "Thank you for registering! To verify your account, please use the following verification code:<br><br>
+                        <strong>$verificationCode</strong><br><br>
+                        Enter this code in the verification form on the website to complete your registration.";
+
+      $mail->send();
+      
+      $_SESSION['success'] = "Successfully registered! Please check your email for the verification code.";
+      header("Location: verify.php");
+      exit();
+
+    } catch (Exception $e) {
+      $_SESSION['error'] = "Error: Could not send verification email. Please try again.";
+      header("Location: index.php");
+      exit();
+    }
+
   } catch (PDOException $e) {
     $_SESSION['error'] = "Error: " . $e->getMessage();
-    header("Location: register.php");
+    header("Location: index.php");
     exit();
   }
 }
+
+
 
 
 // Login
