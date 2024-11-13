@@ -108,7 +108,7 @@ if (isset($_POST["login"])) {
 
   if (empty($username) || empty($password)) {
     $_SESSION['error'] = "All fields are required!";
-    header("Location: index.php"); // Redirect back to login if empty
+    header("Location: index.php");
     exit();
   } else {
     try {
@@ -118,23 +118,59 @@ if (isset($_POST["login"])) {
       $user = $pdoResult->fetch();
 
       if ($user && password_verify($password, $user["PassWord"])) {
+        // Store user information in session
         $_SESSION["UserName"] = $user["UserName"];
         $_SESSION["UserRole"] = $user["UserRole"];
-        $_SESSION['success'] = "Login successful!";
         $_SESSION["id"] = $user["id"];
 
-        // Redirect based on role
-        if ($_SESSION["UserRole"] == "admin") {
-          header("Location: ../crud/admin.php");
-        } elseif ($_SESSION["UserRole"] == "manager") {
-          header("Location: ../manage/manage.php");
+        // If the user is an admin or manager, send a verification code
+        if ($_SESSION["UserRole"] == "admin" || $_SESSION["UserRole"] == "manager") {
+          // Generate a verification code
+          $verificationCode = strtoupper(substr(md5(rand()), 0, 6)); // 6-character code
+
+          // Store the verification code in the session
+          $_SESSION['verification_code'] = $verificationCode;
+
+          // Send verification code via email
+          $mail = new PHPMailer(true);
+          try {
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'huntertravel150@gmail.com'; // Your email address
+            $mail->Password = 'igvxyavzuysqskby'; // Your SMTP password or app-specific password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+
+            $mail->setFrom('cferdinand500@gmail.com', 'Travel Hunter');
+            $mail->addAddress($user['UserName']);  // Send to the user's email
+
+            // Email content
+            $mail->isHTML(true);
+            $mail->Subject = 'Login Verification Code';
+            $mail->Body = "You are logging in as an admin or manager. Please use the following verification code to complete your login process:<br><br>
+                          <strong>$verificationCode</strong><br><br>
+                          Enter this code in the verification form on the website.";
+
+            $mail->send();
+
+            // Redirect to the verification page
+            header("Location: verify_code.php");
+            exit();
+          } catch (Exception $e) {
+            $_SESSION['error'] = "Error: Could not send verification email. Please try again.";
+            header("Location: index.php");
+            exit();
+          }
         } else {
+          // Normal user login, redirect directly to their homepage
+          $_SESSION['success'] = "Login successful!";
           header("Location: home.php");
+          exit();
         }
-        exit();
       } else {
         $_SESSION['error'] = "Invalid username or password";
-        header("Location: index.php"); // Redirect back to login if wrong credentials
+        header("Location: index.php");
         exit();
       }
     } catch (PDOException $error) {
@@ -144,6 +180,7 @@ if (isset($_POST["login"])) {
     }
   }
 }
+
 ?>
 
 <!DOCTYPE html>
