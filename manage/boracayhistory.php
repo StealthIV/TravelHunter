@@ -3,6 +3,17 @@ session_start();
 
 require_once "../connect/dbcon.php";
 
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+    exit();
+}
+
 try {
     $pdoConnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdoQuery = "SELECT * FROM `audit_trail` ORDER BY `timestamp` DESC";

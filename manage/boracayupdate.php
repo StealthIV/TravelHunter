@@ -18,6 +18,17 @@
     <?php
     session_start();
 
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is an admin
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+        exit();
+    }
+
     // Check if the user is logged in
     if (!isset($_SESSION["UserName"])) {
         header("location: ../include/index.php");
@@ -66,8 +77,8 @@
 
         $pdoResult = $pdoQuery->execute(
             array(
-                ':name' =>  $name ,
-                ':email' =>  $email,
+                ':name' => $name,
+                ':email' => $email,
                 ':phone' => $phone,
                 ':days' => $days,
                 ':checkin' => $checkin,
@@ -110,13 +121,14 @@
         <div class="profile-image-container">
             <img src="../pic/<?php echo $newImageName ?? $image; ?>" alt="Profile Image" class="profile-image">
         </div>
-       name:(Optional)<input type="file" name="profileImage"><br>
+        name:(Optional)<input type="file" name="profileImage"><br>
         email : <input type="text" name="User" value="<?php echo $pdoResult[0]['UserName']; ?>" required
             placeholder="UserName"> <br>
-        Password: <input type="password" name="Pass" value="<?php echo $pdoResult[0]['PassWord']; ?>" required placeholder="Password"><br>
+        Password: <input type="password" name="Pass" value="<?php echo $pdoResult[0]['PassWord']; ?>" required
+            placeholder="Password"><br>
         Fullname: <input type="text" name="FName" value="<?php echo $pdoResult[0]['FullName']; ?>" required
             placeholder="FullName"><br>
-            UserRole: <input type="text" name="UserRole" value="<?php echo $pdoResult[0]['UserRole']; ?>" required
+        UserRole: <input type="text" name="UserRole" value="<?php echo $pdoResult[0]['UserRole']; ?>" required
             placeholder="UserRole"><br>
         <input type="submit" name="modify" value="Update">
     </form>

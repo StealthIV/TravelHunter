@@ -18,6 +18,16 @@ try {
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
 
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is an admin
+    if ($user['UserRole'] !== 'admin') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+        exit();
+    }
 
     $pdoConnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdoQuery = "SELECT * FROM `audit_trail` ORDER BY `timestamp` DESC";
@@ -29,6 +39,7 @@ try {
     exit;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +86,7 @@ try {
                     </li>
                     <li>
                         <a href="audit.php" class="active">
-                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+                            <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                             <small>Audit Trail</small>
                         </a>
@@ -101,8 +112,7 @@ try {
 
                 <div class="header-menu">
                     <div class="user">
-                        <span><a href="logout.php"><i
-                                    class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
+                        <span><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></span>
                     </div>
                 </div>
             </div>
@@ -119,27 +129,27 @@ try {
             </div>
 
             <div class="container">
-        <?php if (isset($audittrailData) && !empty($audittrailData)): ?>
-            <table border="1">
-                <tr>
-                    <?php foreach ($audittrailData as $log): ?>
-                        <td>
-                            <?= $log['action'] ?>
-                        </td>
-                        <td>
-                            <?= $log['user'] ?> 
-                        </td>
-                        <td>
-                            <?= $log['timestamp'] ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-        <?php else: ?>
-            <p>no Audit Available</p>
-        <?php endif; ?>
+                <?php if (isset($audittrailData) && !empty($audittrailData)): ?>
+                    <table border="1">
+                        <tr>
+                            <?php foreach ($audittrailData as $log): ?>
+                                <td>
+                                    <?= $log['action'] ?>
+                                </td>
+                                <td>
+                                    <?= $log['user'] ?>
+                                </td>
+                                <td>
+                                    <?= $log['timestamp'] ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
+                <?php else: ?>
+                    <p>no Audit Available</p>
+                <?php endif; ?>
 
-    </div>
+            </div>
 
 
 

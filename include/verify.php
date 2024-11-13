@@ -7,23 +7,30 @@ if (isset($_POST['verify_code'])) {
     $enteredCode = $_POST['verification_code'];
 
     try {
-        // Check if the entered verification code matches the one in the database
-        $pdoQuery = "SELECT * FROM user WHERE verification_code = :verification_code";
+        // Check if the entered verification code matches the one in the database and if the user is not already verified
+        $pdoQuery = "SELECT * FROM user WHERE verification_code = :verification_code AND is_verified = 0";
         $pdoResult = $pdoConnect->prepare($pdoQuery);
         $pdoResult->execute([':verification_code' => $enteredCode]);
         $user = $pdoResult->fetch();
 
         if ($user) {
-            // If a user is found, mark them as verified
+            // If a user is found and not verified, mark them as verified
             $updateQuery = "UPDATE user SET is_verified = 1 WHERE verification_code = :verification_code";
             $pdoResult = $pdoConnect->prepare($updateQuery);
             $pdoResult->execute([':verification_code' => $enteredCode]);
 
-            $_SESSION['success'] = "Your email has been successfully verified!";
-            header("Location: home.php");
+            // You can also check the user role if necessary and redirect to a specific page (e.g., 'admin' or 'user')
+            if ($user['UserRole'] == 'admin') {
+                $_SESSION['success'] = "Your email has been successfully verified, and you are an admin!";
+                header("Location: admin_dashboard.php"); // Redirect to admin dashboard
+            } else {
+                $_SESSION['success'] = "Your email has been successfully verified!";
+                header("Location: home.php"); // Redirect to home page for regular users
+            }
+
             exit();
         } else {
-            $_SESSION['error'] = "Invalid verification code.";
+            $_SESSION['error'] = "Invalid or already verified verification code.";
             header("Location: verify.php");
             exit();
         }
@@ -33,7 +40,6 @@ if (isset($_POST['verify_code'])) {
         exit();
     }
 }
-
 ?>
 
 <!-- HTML Form to enter the verification code -->

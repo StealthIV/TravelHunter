@@ -1,6 +1,17 @@
 <?php
 session_start();
 
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+    exit();
+}
+
 // Check if the user is logged in
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     header("location: admin.php");
