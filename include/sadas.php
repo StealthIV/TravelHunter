@@ -1,0 +1,3 @@
+ALTER TABLE user 
+ADD COLUMN verification_code VARCHAR(255) NULL,
+ADD COLUMN is_verified BOOLEAN DEFAULT FALSE;
