@@ -208,15 +208,6 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </li>
 
         <li class="list">
-          <a href="../include/chat.php" class="nav-link">
-            <i class="bx bx-home-alt icon"></i>
-            <span class="link" data-lang-en="Home" data-lang-es=" Inicio" data-lang-fr="d'accueil"
-              data-lang-de=" Startseite" data-lang-zh="首页" data-lang-jp="ホーム (Hōmu)ー" data-lang-ru="Главная"
-              data-lang-it=" Home" data-lang-pt="Início" data-lang-ar="الصفحة الرئيسية">Messages</span>
-          </a>
-        </li>
-
-        <li class="list">
           <a href="../include/place.php" class="nav-link">
             <i class="bx bx-map icon"></i>
             <span class="link" data-lang-en="Place" data-lang-es=" Lugar" data-lang-fr="Lieu" data-lang-de="Ort"

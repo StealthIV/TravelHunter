@@ -20,7 +20,7 @@ if (isset($_POST['verify_code'])) {
             $pdoResult->execute([':verification_code' => $enteredCode]);
 
             $_SESSION['success'] = "Your email has been successfully verified!";
-            header("Location: home.php");
+            header("Location: ../include/home.php");
             exit();
         } else {
             $_SESSION['error'] = "Invalid verification code.";
