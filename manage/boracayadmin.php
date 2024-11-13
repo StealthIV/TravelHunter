@@ -1,42 +1,62 @@
 <?php
 session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION["UserName"])) {
-    header("location: boracayadmin.php");
-    exit();
-}
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
-
-// Check if the user is an admin
-if ($user['UserRole'] !== 'manager') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-    exit();
-}
-
 require_once '../connect/dbcon.php';
 
-if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
-    echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
-
-} else {
-    // Handle the case where the ID is not provided or invalid
-    // You can redirect or display an error message
+// Check if the user is logged in
+if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
+    header("location: boracayadmin.php"); // Redirect to login page if not logged in
+    exit();
 }
 
+$userId = $_SESSION['id'];  // Use session ID to fetch the user's data
+
 try {
-    // Fetch user information based on the provided ID
-    $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
+    // Fetch user information based on the session ID
+    $pdoQuery = "SELECT * FROM user WHERE id = :id";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
+
+    // Check if user is found
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is a manager
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
+        exit();
+    }
+
+    // Check if a booking ID is provided
+    if (isset($_GET['id'])) {
+        $bookingId = $_GET['id'];
+        echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
+        
+        // Fetch booking details based on the provided booking ID
+        $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
+        $pdoResult = $pdoConnect->prepare($pdoQuery);
+        $pdoResult->execute(['id' => $bookingId]);
+        $booking = $pdoResult->fetch();
+
+        // Handle the case where the booking ID does not exist
+        if (!$booking) {
+            echo "Booking not found.";
+            exit;
+        }
+
+        // Process the booking details as needed
+
+    } else {
+        // Handle the case where the ID is not provided
+        echo "No booking ID provided.";
+        exit;
+    }
+
 } catch (PDOException $error) {
-    echo $error->getMessage();
-    exit;
+    echo "Database error: " . $error->getMessage();
+    exit();
 }
 ?>
 

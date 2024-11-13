@@ -3,18 +3,34 @@ session_start();
 
 require_once "../connect/dbcon.php";
 
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
-
-// Check if the user is an admin
-if ($user['UserRole'] !== 'manager') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+// Check if the user is logged in
+if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
+    header("location: manage.php");  // Redirect to manage.php if not logged in
     exit();
 }
 
+$userId = $_SESSION['id'];  // Use session ID to fetch the user's data
+
 try {
+    // Fetch user information based on the session ID
+    $pdoQuery = "SELECT * FROM user WHERE id = :id"; // Use user ID here
+    $pdoResult = $pdoConnect->prepare($pdoQuery);
+    $pdoResult->execute(['id' => $userId]);
+    $user = $pdoResult->fetch();
+
+    // Check if user is found
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is a manager
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
+        exit();
+    }
+
+    // Fetch audit trail data
     $pdoConnect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdoQuery = "SELECT * FROM `audit_trail` ORDER BY `timestamp` DESC";
     $pdoResult = $pdoConnect->query($pdoQuery);
@@ -22,8 +38,11 @@ try {
 
 } catch (PDOException $error) {
     $message = $error->getMessage();
+    echo "Database error: " . $message;
+    exit();
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +52,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trail</title>
     <link rel="stylesheet" type="text/css" href="../style/audits.css">
-    
+
 </head>
 
 <body>
@@ -74,7 +93,7 @@ try {
                             <?= $log['action'] ?>
                         </td>
                         <td>
-                            <?= $log['user'] ?> 
+                            <?= $log['user'] ?>
                         </td>
                         <td>
                             <?= $log['timestamp'] ?>
