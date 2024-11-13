@@ -19,15 +19,8 @@ if (isset($_POST['verify_code'])) {
             $pdoResult = $pdoConnect->prepare($updateQuery);
             $pdoResult->execute([':verification_code' => $enteredCode]);
 
-            // You can also check the user role if necessary and redirect to a specific page (e.g., 'admin' or 'user')
-            if ($user['UserRole'] == 'admin') {
-                $_SESSION['success'] = "Your email has been successfully verified, and you are an admin!";
-                header("Location: admin_dashboard.php"); // Redirect to admin dashboard
-            } else {
-                $_SESSION['success'] = "Your email has been successfully verified!";
-                header("Location: home.php"); // Redirect to home page for regular users
-            }
-
+            $_SESSION['success'] = "Your email has been successfully verified!";
+            header("Location: home.php");
             exit();
         } else {
             $_SESSION['error'] = "Invalid or already verified verification code.";
