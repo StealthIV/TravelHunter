@@ -2,10 +2,36 @@
 session_start();
 require_once '../connect/dbcon.php'; // Adjust the path to your DB connection file
 
-// Check if user is logged in (optional)
+// Check if the user is logged in
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     header("location: manage.php");
     exit();
+}
+
+$userId = $_SESSION['id'];  // Use session ID to fetch the user's data
+
+try {
+    // Fetch user information based on the session ID
+    $pdoQuery = "SELECT * FROM user WHERE id = :id";
+    $pdoResult = $pdoConnect->prepare($pdoQuery);
+    $pdoResult->execute(['id' => $userId]);
+    $user = $pdoResult->fetch();
+
+    // Check if user is found
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is a manager
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
+        exit();
+    }
+
+} catch (PDOException $error) {
+    echo $error->getMessage();
+    exit;
 }
 
 // Handle delete action

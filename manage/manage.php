@@ -1,13 +1,12 @@
 <?php
 session_start();
+require_once '../connect/dbcon.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     header("location: manage.php");
     exit();
 }
-
-require_once '../connect/dbcon.php';
 
 $userId = $_SESSION['id'];  // Use session ID to fetch the user's data
 
@@ -18,10 +17,18 @@ try {
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
 
+    // Check if user is found
     if (!$user) {
         echo "User not found.";
         exit;
     }
+
+    // Check if the user is a manager
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
+        exit();
+    }
+
 } catch (PDOException $error) {
     echo $error->getMessage();
     exit;
@@ -41,10 +48,10 @@ $totalPages = ceil($totalBookings / $limit);
 
 // Fetch bookings for the current page with user information
 $pdoQuery = "
-    SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email 
-    FROM bookings 
-    JOIN user ON bookings.user_id = user.id 
-    LIMIT :limit OFFSET :offset
+SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email
+FROM bookings
+JOIN user ON bookings.user_id = user.id
+LIMIT :limit OFFSET :offset
 ";
 $pdoResult = $pdoConnect->prepare($pdoQuery);
 $pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);

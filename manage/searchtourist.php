@@ -1,5 +1,17 @@
 <?php
 session_start();
+
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+    exit();
+}
+
 require_once '../connect/dbcon.php'; // Adjust the path to your DB connection file
 
 $searchTerm = isset($_GET['query']) ? $_GET['query'] : '';

@@ -2,6 +2,18 @@
 require '../connect/dbcon.php';
 session_start();
 
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'admin') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+
+    exit();
+}
+
 // Check if the user is logged in
 if (isset($_SESSION['id'])) {
     $user_id = $_SESSION['id'];
@@ -12,6 +24,7 @@ if (isset($_SESSION['id'])) {
         $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
 
         if ($user) {
             $email = $user['UserName'];

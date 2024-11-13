@@ -1,32 +1,62 @@
 <?php
 session_start();
+require_once '../connect/dbcon.php';
 
 // Check if the user is logged in
-if (!isset($_SESSION["UserName"])) {
-    header("location: boracayadmin.php");
+if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
+    header("location: boracayadmin.php"); // Redirect to login page if not logged in
     exit();
 }
 
-require_once '../connect/dbcon.php';
-
-if (isset($_GET['id'])) {
-    $userId = $_GET['id'];
-    echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
-
-} else {
-    // Handle the case where the ID is not provided or invalid
-    // You can redirect or display an error message
-}
+$userId = $_SESSION['id'];  // Use session ID to fetch the user's data
 
 try {
-    // Fetch user information based on the provided ID
-    $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
+    // Fetch user information based on the session ID
+    $pdoQuery = "SELECT * FROM user WHERE id = :id";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
+
+    // Check if user is found
+    if (!$user) {
+        echo "User not found.";
+        exit;
+    }
+
+    // Check if the user is a manager
+    if ($user['UserRole'] !== 'manager') {
+        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
+        exit();
+    }
+
+    // Check if a booking ID is provided
+    if (isset($_GET['id'])) {
+        $bookingId = $_GET['id'];
+        echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
+        
+        // Fetch booking details based on the provided booking ID
+        $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
+        $pdoResult = $pdoConnect->prepare($pdoQuery);
+        $pdoResult->execute(['id' => $bookingId]);
+        $booking = $pdoResult->fetch();
+
+        // Handle the case where the booking ID does not exist
+        if (!$booking) {
+            echo "Booking not found.";
+            exit;
+        }
+
+        // Process the booking details as needed
+
+    } else {
+        // Handle the case where the ID is not provided
+        echo "No booking ID provided.";
+        exit;
+    }
+
 } catch (PDOException $error) {
-    echo $error->getMessage();
-    exit;
+    echo "Database error: " . $error->getMessage();
+    exit();
 }
 ?>
 
@@ -39,10 +69,8 @@ try {
     <link rel="stylesheet" href="../style/admin.css">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-        <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"
-    />
-    
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
     <script src="https://kit.fontawesome.com/efa820665e.js" crossorigin="anonymous"></script>
 </head>
 
@@ -54,35 +82,35 @@ try {
             <h3>A<span>dmin</span></h3>
         </div>
 
-       
 
-            <div class="side-menu">
-                <ul>
-                    <li>
-                        <a href="" class="active">
-                            <span class="las la-home"></span>
-                            <small>Dashboard</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../include/boracayad.php?id=<?php echo $_SESSION['id'] ?>">
+
+        <div class="side-menu">
+            <ul>
+                <li>
+                    <a href="" class="active">
+                        <span class="las la-home"></span>
+                        <small>Dashboard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="../include/boracayad.php?id=<?php echo $_SESSION['id'] ?>">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
-                            <small>Annoucement</small>
-                        </a>
-                    </li>
+                        <small>Annoucement</small>
+                    </a>
+                </li>
 
-                    <li>
-                        <a href="edit.php?id=<?php echo $_SESSION['id'] ?>">
-                            <span class="las la-user-alt"></span>
-                            <small>Personal Info</small>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            
+                <li>
+                    <a href="edit.php?id=<?php echo $_SESSION['id'] ?>">
+                        <span class="las la-user-alt"></span>
+                        <small>Personal Info</small>
+                    </a>
+                </li>
+            </ul>
         </div>
+
+
+    </div>
     </div>
 
     <div class="main-content">
@@ -143,7 +171,7 @@ try {
 
                         <div class="records table-responsive">
                             <div class="record-header">
-                               
+
                                 <div class="browse">
                                     <input type="search" placeholder="Search" class="record-search">
                                 </div>
@@ -185,7 +213,7 @@ try {
                                         echo "<td style='width: 15%;'>$amount</td>";
                                         echo "<td style='width: 15%;'>$payment</td>";
                                         echo "<td style='width: 15%;'>$Reference</td>";
-                                       
+
                                         echo "<td style='width: 15%;'> 
             <a href='boracaydelete.php?id=$id'><i class='bx bx-trash'></i></a></td>";
                                         echo "</tr>";
@@ -202,83 +230,83 @@ try {
         </main>
 
         <div class="page-content">
-                <div class="analytics">
+            <div class="analytics">
 
-                    <div class="card">
-                        <?php
-                        // Count the total number of users
-                        $totalBookingQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalproduct FROM boracaymarket ");
-                        $totalBookingQuery->execute();
-                        $totalBookingResult = $totalBookingQuery->fetch(PDO::FETCH_ASSOC);
-                        $totalBooking = $totalBookingResult['totalproduct'];
-                        ?>
+                <div class="card">
+                    <?php
+                    // Count the total number of users
+                    $totalBookingQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalproduct FROM boracaymarket ");
+                    $totalBookingQuery->execute();
+                    $totalBookingResult = $totalBookingQuery->fetch(PDO::FETCH_ASSOC);
+                    $totalBooking = $totalBookingResult['totalproduct'];
+                    ?>
 
-                        <div class="card-head">
-                            <h2>
-                                <?php echo number_format($totalBooking); ?>
-                            </h2>
-                            <span class="las la-user-friends"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>Number of product</small>
-                            <div class="card-indicator">
-                            </div>
+                    <div class="card-head">
+                        <h2>
+                            <?php echo number_format($totalBooking); ?>
+                        </h2>
+                        <span class="las la-user-friends"></span>
+                    </div>
+                    <div class="card-progress">
+                        <small>Number of product</small>
+                        <div class="card-indicator">
                         </div>
                     </div>
-        <div class="records table-responsive">
-                            <div class="record-header">
-                            
-                                <div class="browse">
-                                    <input type="search" placeholder="Search" class="record-search">
-                                </div>
-                            </div>
-                            <table id="info-table" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th style='width: 10%;'>ID</th>
-                                        <th style='width: 20%;'>Name</th>
-                                        <th style='width: 20%;'>Email</th>
-                                        <th style='width: 20%;'>Phone</th>
-                                        <th style='width: 20%;'>Address</th>
-                                        <th style='width: 20%;'>Product</th>
-                                        <th style='width: 20%;'>Amount</th>
-                                        <th style='width: 20%;'>Payment Method</th>
-                                        <th style='width: 20%;'>Reference</th>
-                                        <th style='width: 20%;'>action</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <?php
-                                    $pdoQuery = 'SELECT * FROM boracaymarket';
-                                    $pdoResult = $pdoConnect->prepare($pdoQuery);
-                                    $pdoResult->execute();
-                                    while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
-                                        extract($row);
-                                        echo "<tr>";
-                                        echo "<td style='width: 10%;'>$id</td>";
-                                        echo "<td style='width: 15%;'>$name</td>";
-                                        echo "<td style='width: 15%;'>$email</td>";
-                                        echo "<td style='width: 15%;'>$phone</td>";
-                                        echo "<td style='width: 15%;'>$address</td>";
-                                        echo "<td style='width: 15%;'>$Product</td>";
-                                        echo "<td style='width: 15%;'>$amount</td>";
-                                        echo "<td style='width: 15%;'>$payment</td>";
-                                        echo "<td style='width: 15%;'>$reference</td>";
-                                       
-                                        echo "<td style='width: 15%;'> 
-            <a href='boracaydelete.php?id=$id'><i class='bx bx-trash'></i></a></td>";
-                                        echo "</tr>";
-                                    }
-                                    ?>
-                                </tbody>
-
-                            </table>
-                        </div>
-
-                    </div>
-
                 </div>
+                <div class="records table-responsive">
+                    <div class="record-header">
+
+                        <div class="browse">
+                            <input type="search" placeholder="Search" class="record-search">
+                        </div>
+                    </div>
+                    <table id="info-table" width="100%">
+                        <thead>
+                            <tr>
+                                <th style='width: 10%;'>ID</th>
+                                <th style='width: 20%;'>Name</th>
+                                <th style='width: 20%;'>Email</th>
+                                <th style='width: 20%;'>Phone</th>
+                                <th style='width: 20%;'>Address</th>
+                                <th style='width: 20%;'>Product</th>
+                                <th style='width: 20%;'>Amount</th>
+                                <th style='width: 20%;'>Payment Method</th>
+                                <th style='width: 20%;'>Reference</th>
+                                <th style='width: 20%;'>action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php
+                            $pdoQuery = 'SELECT * FROM boracaymarket';
+                            $pdoResult = $pdoConnect->prepare($pdoQuery);
+                            $pdoResult->execute();
+                            while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
+                                extract($row);
+                                echo "<tr>";
+                                echo "<td style='width: 10%;'>$id</td>";
+                                echo "<td style='width: 15%;'>$name</td>";
+                                echo "<td style='width: 15%;'>$email</td>";
+                                echo "<td style='width: 15%;'>$phone</td>";
+                                echo "<td style='width: 15%;'>$address</td>";
+                                echo "<td style='width: 15%;'>$Product</td>";
+                                echo "<td style='width: 15%;'>$amount</td>";
+                                echo "<td style='width: 15%;'>$payment</td>";
+                                echo "<td style='width: 15%;'>$reference</td>";
+
+                                echo "<td style='width: 15%;'> 
+            <a href='boracaydelete.php?id=$id'><i class='bx bx-trash'></i></a></td>";
+                                echo "</tr>";
+                            }
+                            ?>
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
         </main>
         <script>
             let searchBox = document.querySelector('.record-search');

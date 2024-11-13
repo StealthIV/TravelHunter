@@ -165,3 +165,4 @@ try {
 // Clear the booking ID after use
 unset($_SESSION['booking_id']);
 ?>
+  
