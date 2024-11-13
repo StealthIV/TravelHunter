@@ -43,8 +43,6 @@ const span3 = document.getElementsByClassName('span4');
 	span2[1].onclick = ()=>{right_mover();}
 	span2[0].onclick = ()=>{left_mover();}
 
-	span3[1].onclick = ()=>{right_mover();}
-	span3[0].onclick = ()=>{left_mover();}
 
 
 	

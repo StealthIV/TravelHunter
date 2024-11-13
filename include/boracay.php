@@ -98,14 +98,14 @@ if (isset($_SESSION['id'])) {
           <a href="../include/boracaybook.php" data-lang-en="Book Now!!" data-lang-es="¡Reserva Ahora!!"
             data-lang-fr="Réservez Maintenant!!" data-lang-de="Jetzt Buchen!!" data-lang-zh="立即预订！！"
             data-lang-jp="今すぐ予約！！" data-lang-ru="Забронируйте Сейчас!!" data-lang-it="Prenota Ora!!"
-            data-lang-pt="Reserve Agora!!" data-lang-ar="احجز الآن!!">Book Now!!</a>
+            data-lang-pt="Reserve Agora!!" data-lang-ar="احجز الآن!!">Book Now</a>
         </button>
 
         <button class="button">
           <a href="../include/boracayfeed.html" data-lang-en="Newsfeed!!" data-lang-es="¡Feed de Noticias!!"
             data-lang-fr="Fil d'Actualités!!" data-lang-de="Nachrichtenticker!!" data-lang-zh="新闻动态！！"
             data-lang-jp="ニュースフィード！！" data-lang-ru="Новости!!" data-lang-it="Notizie!!"
-            data-lang-pt="Feed de Notícias!!" data-lang-ar="موجز الأخبار!!">Newsfeed!!</a>
+            data-lang-pt="Feed de Notícias!!" data-lang-ar="موجز الأخبار!!">Newsfeed</a>
         </button>
 
         <button class="button">
@@ -837,6 +837,196 @@ if (isset($_SESSION['id'])) {
         </p>
       </div>
     </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+            data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
+            data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
+            data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+            data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
+            data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
+            data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
+            data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+            data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
+            data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
+            data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
+            data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
+            data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
+            data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
+            data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
+            data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
+            Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Go Island Hopping.jpg" alt="Go Island Hopping">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
+            data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
+            data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
+            data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
+            data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="博拉acay站1"
+            data-lang-jp="ボラカイ島ステーション1" data-lang-ru="Станция 1, Борокай" data-lang-it="Stazione 1, Boracay"
+            data-lang-pt="Estação 1, Boracay" data-lang-ar="المحطة 1، بوراكاي">Station 1, Boracay</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Ride the Banana Boat.jpg" alt="Ride the Banana Boat">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
+            data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat"
+            data-lang-zh="乘坐香蕉船" data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
+            data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
+            data-lang-ar="ركوب القارب الموزي">Ride the Banana Boat</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="White Beach, Boracay, Malay, 5608 Aklan" data-lang-es="Playa Blanca, Boracay, Malay, 5608 Aklan"
+            data-lang-fr="Plage Blanche, Boracay, Malay, 5608 Aklan" data-lang-de="Weißer Strand, Boracay, Malay, 5608 Aklan"
+            data-lang-zh="白沙滩，博拉acay，马来，5608阿克兰" data-lang-jp="ホワイトビーチ、ボラカイ、マレー、5608アクラン"
+            data-lang-ru="Белый пляж, Борокай, Малай, 5608 Аклан" data-lang-it="Spiaggia Bianca, Boracay, Malay, 5608 Aklan"
+            data-lang-pt="Praia Branca, Boracay, Malay, 5608 Aklan" data-lang-ar="الشاطئ الأبيض، بوراكاي، مالاي، 5608 أكلان">
+            White Beach, Boracay, Malay, 5608 Aklan</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay" data-lang-fr="Tyrolienne à Boracay"
+            data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索" data-lang-jp="ボラカイジップライン"
+            data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay" data-lang-pt="Tirolina Boracay"
+            data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
+            data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
+            data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
+            data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
+            data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
+            data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
+            data-lang-fr="Front de mer Station 3, Île Boracay 5608"
+            data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
+            data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
+            data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
+            data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
+            data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
+            5608</small>
+        </p>
+      </div>
+    </div>
+    <div class="product">
+      <picture>
+        <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
+      </picture>
+      <div class="detail">
+        <p>
+          <b data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
+            data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
+            data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
+            data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
+
+          <i class="bx bx-map icon" style="color: red;"></i>
+          <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
+            data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
+            data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
+            data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
+            data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
+            data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
+            data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
+            Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
+        </p>
+      </div>
+    </div>
+  
   </section>
 </main>
 

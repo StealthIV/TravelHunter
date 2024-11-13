@@ -80,15 +80,15 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   .notification-item.unread {
-    background-color: #f0f8ff; /* Light color for unread notifications */
+    background-color: #f0f8ff;
+    /* Light color for unread notifications */
     font-weight: bold;
-}
+  }
 
-.notification-item.read {
+  .notification-item.read {
     background-color: #ffffff;
     font-weight: normal;
-}
-
+  }
 </style>
 
 <nav>
@@ -175,8 +175,6 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       document.querySelector('.notification-icon').setAttribute('aria-expanded', !isExpanded);
     }
   </script>
-
-
 
   <div class="profile">
     <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
@@ -269,11 +267,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
               data-lang-it="Categorie" data-lang-pt="Categorias" data-lang-ar="الفئات">Booking History</span>
           </a>
         </li>
-
       </ul>
-
-
     </div>
-  </div>
   </div>
 </nav>

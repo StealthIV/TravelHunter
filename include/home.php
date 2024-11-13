@@ -77,42 +77,42 @@ try {
         <div id="carousel" class="carousel">
 
           <div id='item_1' class="hideLeft">
-            <a class="top" href="../include/boracay.php"><img src="../img/5_20241024_104832_0004.png"></a>
+            <a class="top" href="boracay.php"><img src="../img/5_20241024_104832_0004.png"></a>
 
           </div>
 
           <div id='item_2' class="prevLeftSecond">
-            <a class="top" href="../include/boracay.php"> <img src="../img/4_20241024_104832_0003.png"></a>
+            <a class="top" href="boracay.php"> <img src="../img/4_20241024_104832_0003.png"></a>
 
           </div>
 
           <div id='item_3' class="prev">
-            <a class="top" href="../include/boracay.php"> <img src="../img/3_20241024_104832_0002.png"></a>
+            <a class="top" href="boracay.php"> <img src="../img/3_20241024_104832_0002.png"></a>
 
           </div>
 
           <div id='item_4' class="selected">
-            <a class="top" href="../include/boracay.php"> <img src="../img/5_20241024_104832_0004.png"></a>
+            <a class="top" href="boracay.php"> <img src="../img/5_20241024_104832_0004.png"></a>
 
           </div>
 
           <div id='item_5' class="next">
-            <a class="top" href="../include/boracay.php"> <img src="../img/2_20241024_104832_0001.png"></a>
+            <a class="top" href="boracay.php"> <img src="../img/2_20241024_104832_0001.png"></a>
 
           </div>
 
           <div id='item_6' class="nextRightSecond">
-            <a class="top" href="../include/boracay.php"> <img src="../img/1_20241024_104831_0000.png"></a>
+            <a class="top" href="boracay.html"> <img src="../img/1_20241024_104831_0000.png"></a>
 
           </div>
 
           <div id='item_7' class="hideRight">
-            <a class="top" href="../include/boracay.php"> <img src="../places/palawan/Travel Hunter - 2.png"></a>
+            <a class="top" href="boracay.html"> <img src="../places/palawan/Travel Hunter - 2.png"></a>
 
           </div>
 
           <div id='item_8' class="hideRight">
-            <a class="top" href="../include/boracay.php"> <img src="../places/palawan/Travel Hunter - 3.png"></a>
+            <a class="top" href="boracay.html"> <img src="../places/palawan/Travel Hunter - 3.png"></a>
 
           </div>
 
@@ -1287,7 +1287,6 @@ try {
       </Section>
 
       <script src="../js/home.js"></script>
-      <script src="../js/app1.js"></script>
       <script src="../js/chatbot.js"></script>
       <script src="../js/index.js"></script>
       <script src="../js/darkmode.js"></script>
