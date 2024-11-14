@@ -89,6 +89,41 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     background-color: #ffffff;
     font-weight: normal;
   }
+
+  /* Dark Mode Styles */
+.dark-mode {
+  background: #000000; /* Dark background */
+}
+.dark-mode .logo .menu-icon, 
+.dark-mode .nav-link .icon, 
+.dark-mode .notification-icon {
+  color: #ffffff; /* Dark mode icon color */
+}
+.dark-mode .logo .logo-name, 
+.dark-mode .nav-link .link, 
+.dark-mode .profile span, 
+.dark-mode .language {
+  color: #f3f3f3; /* Dark mode text color */
+}
+.dark-mode .sidebar {
+  background-color: #000000; /* Dark mode sidebar */
+}
+.dark-mode .lists .nav-link:hover {
+  background-color: #6f90eb; /* Dark mode hover color */
+}
+.dark-mode .notification-container, 
+.dark-mode .dropdown-content {
+  background-color: #333333; /* Dark mode background for dropdowns */
+  color: #f3f3f3; /* Dark mode dropdown text color */
+}
+
+#darkModeToggle{
+  position: absolute;
+  margin-left: 1400px;
+  margin-top: 10;
+  border-radius: 50%;
+}
+
 </style>
 
 <nav>
@@ -186,6 +221,13 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </div>
     </div>
   </div>
+
+  <button onclick="toggleDarkMode()" id="darkModeToggle">
+    <i class="fas fa-moon" id="toggleIcon"></i>
+  </button>
+
+  <script src="../js/darkmode.js"></script>
+
 
   <div class="sidebar">
     <div class="logo">
