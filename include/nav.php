@@ -91,39 +91,62 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   /* Dark Mode Styles */
-.dark-mode {
-  background: #000000; /* Dark background */
-}
-.dark-mode .logo .menu-icon, 
-.dark-mode .nav-link .icon, 
-.dark-mode .notification-icon {
-  color: #ffffff; /* Dark mode icon color */
-}
-.dark-mode .logo .logo-name, 
-.dark-mode .nav-link .link, 
-.dark-mode .profile span, 
-.dark-mode .language {
-  color: #f3f3f3; /* Dark mode text color */
-}
-.dark-mode .sidebar {
-  background-color: #000000; /* Dark mode sidebar */
-}
-.dark-mode .lists .nav-link:hover {
-  background-color: #6f90eb; /* Dark mode hover color */
-}
-.dark-mode .notification-container, 
-.dark-mode .dropdown-content {
-  background-color: #333333; /* Dark mode background for dropdowns */
-  color: #f3f3f3; /* Dark mode dropdown text color */
-}
+  .dark-mode {
+    background: #000000;
+    /* Dark background */
+  }
 
-#darkModeToggle{
+  .dark-mode .logo .menu-icon,
+  .dark-mode .nav-link .icon,
+  .dark-mode .notification-icon {
+    color: #ffffff;
+    /* Dark mode icon color */
+  }
+
+  .dark-mode .logo .logo-name,
+  .dark-mode .nav-link .link,
+  .dark-mode .profile span,
+  .dark-mode .language {
+    color: #f3f3f3;
+    /* Dark mode text color */
+  }
+
+  .dark-mode .sidebar {
+    background-color: #000000;
+    /* Dark mode sidebar */
+  }
+
+  .dark-mode .lists .nav-link:hover {
+    background-color: #6f90eb;
+    /* Dark mode hover color */
+  }
+
+  .dark-mode .notification-container,
+  .dark-mode .dropdown-content {
+    background-color: #333333;
+    /* Dark mode background for dropdowns */
+    color: #f3f3f3;
+    /* Dark mode dropdown text color */
+  }
+
+  #darkModeToggle {
   position: absolute;
-  margin-left: 1400px;
-  margin-top: 10;
+  margin-left: 1320px;
+  bottom: 15px;
+  margin-top: 17px;
   border-radius: 50%;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  width: 40px; /* Set the width */
+  height: 40px; /* Set the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Adjust font size to make the icon smaller */
+  padding: 5px; /* Adjust padding to control the inner spacing */
 }
-
+ 
 </style>
 
 <nav>
