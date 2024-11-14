@@ -100,10 +100,6 @@ if (isset($_POST["register"])) {
 }
 
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 // Login
 if (isset($_POST["login"])) {
   $username = trim($_POST["UserName"]);

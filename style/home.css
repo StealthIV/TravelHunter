@@ -287,7 +287,7 @@ nav .sidebar {
 #darkModeToggle{
   position: absolute;
   margin-left: 1400px;
-  margin-top: 0;
+  margin-top: 10;
   border-radius: 50%;
 }
 

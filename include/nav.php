@@ -187,6 +187,12 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
   </div>
 
+  <button onclick="toggleDarkMode()" id="darkModeToggle">
+    <i class="fas fa-moon" id="toggleIcon"></i>
+  </button>
+
+
+
   <div class="sidebar">
     <div class="logo">
       <i class="bx bx-menu menu-icon"></i>
