@@ -174,12 +174,12 @@ nav.open ~ .overlay {
 
 label,
 input,
-button {
+.edits {
   display: block;
   margin-bottom: 10px;
 }
 
-button {
+.edits {
   background-color: #4caf50;
   color: white;
   padding: 10px;
@@ -201,10 +201,9 @@ button {
   border-radius: 5px;
 }
 
-
 .profile {
   display: flex;
-  margin-left: 900px;
+  margin-left: 830px;
   align-items: center;
 }
 
@@ -247,5 +246,3 @@ button {
 .profile:hover .dropdown-content {
   display: block;
 }
-
-

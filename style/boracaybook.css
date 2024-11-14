@@ -343,7 +343,6 @@ form .page .btns button.next {
   display: none;
 }
 .progress-bar .step .check.active {
-  display: block;
   color: #fff;
 }
 

@@ -200,7 +200,7 @@ if (isset($_SESSION['id'])) {
       </div>
       
       <div class="profile-actions">
-        <button onclick="window.location.href='edit_profile.php'">Edit Profile</button>
+        <button class="edits" onclick="window.location.href='edit_profile.php'">Edit Profile</button>
       </div>
 
       
