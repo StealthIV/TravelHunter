@@ -265,7 +265,7 @@ if (isset($_POST["login"])) {
             <i class="uil uil-user username"></i>
           </div>
           <button class="button" type="submit" name="register" value="Register">Signup Now</button>
-          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          <div class="login_signup">Already have an account? <a href="../include/index.php" id="login">Login</a></div>
         </form>
       </div>
     </div>
