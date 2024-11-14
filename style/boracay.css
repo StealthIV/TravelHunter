@@ -423,7 +423,7 @@ position: relative;
 }
 40%
 {
-    background-image: url(../img/ttt.jpg.crdownload);
+    background-image: url(../img/wwww.jpg);
 }
 60%
 {
@@ -595,11 +595,11 @@ left: 0;
 }
 
 .img{
-  background: white;
+  background: whitesmoke;
   height: auto;
   width: 100%;
   position: absolute;
-  margin-top: 50px;
+
   left: 0;
 
 }
@@ -1080,9 +1080,9 @@ main h1{
 
 
 #carousel {
+  margin-top: 80px;
   position: relative;
   height: 400px;
-  left: 0;
   top: 50%;
   transform: translateY(-50%);
   overflow: hidden;
@@ -1093,7 +1093,7 @@ main h1{
   opacity: 1;
 }
 #carousel div img {
-  width: 400px;
+  width: 500px;
   transition: width 400ms;
    -webkit-user-drag: none;
    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -1138,6 +1138,7 @@ main h1{
   width: 200px;
 }
 #carousel div.selected {
+  
   z-index: 10;
   left: 50%;
   transform: translateY(0px) translateX(-50%);
