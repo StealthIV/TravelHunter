@@ -309,29 +309,29 @@ nav .sidebar {
 @keyframes change{
   0%
   {
-      background-image: url(../img/wwww.jpg);
+      background-image: url(../img/coronpalawan.jpg);
   }
   20%
   {
-      background-image: url(../img/qqqq.jpg);
+      background-image: url(../img/bgg2.png);
   }
   40%
   {
-      background-image: url(../img/ttt.jpg.crdownload);
+      background-image: url(../img/bgg4.jpg);
   }
   60%
   {
-      background-image: url(../img/ii.jpg);
+      background-image: url(../img/bgg7.jpeg);
   }
   80%
   {
-      background-image: url(../img/i.jpg);
+      background-image: url(../img/bgg8.jpeg);
   }
   100%
   {
-      background-image: url(../img/u.jpg);
+      background-image: url(../img/bgg9.jpeg);
   }
-  }
+}
 
 
 
@@ -781,6 +781,56 @@ color: rgb(0, 0, 0);
       600ms
       cubic-bezier(.3, .7, .4, 1);
   }
+
+
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: 10% auto;
+  padding: 0;
+  max-width: 600px;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   @media (min-width: 768px) {
     .main .button-82-front {
@@ -990,22 +1040,19 @@ color: rgb(0, 0, 0);
     color: #000000;
   }
   .package main small{color: #000000;}
-  .package main .a1{
-    text-decoration: none;
-    
-    width: 150px;
-    text-align: center;
-      font-size: 15px;
-      font-weight: bolder;
-      height: 40px;
-      margin: 5px 0 0 20px;
-      display: inline-block;
-      text-align: center;
-      margin-left: 80px;
-      background: #6773ff;
-      color: rgb(255, 255, 255);
-      border-radius: 5px;
-  }
+  
+ main .a1{
+  text-decoration: none;
+  padding: 6px 14px;
+  width: 120px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 100px;
+   text-align: center;
+    display: inline-block;
+    background: #6773ff;
+    color: white;
+}
 
   .detail b i{
     margin-right: 5px;

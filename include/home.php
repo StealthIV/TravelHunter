@@ -199,7 +199,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/pampanga/nabuclod.jpg">
+            <img src="../places/pampanga/nabuclod.jpg"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -220,9 +220,11 @@ try {
 
           </div>
         </div>
+
+        
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/tungab1.jpg">
+            <img src="../places/Pampanga/tungab1.jpg" class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -246,7 +248,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/sumuclab.jpg">
+            <img src="../places/Pampanga/sumuclab.jpg" class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -270,7 +272,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/puning1.jpg">
+            <img src="../places/Pampanga/puning1.jpg"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -293,7 +295,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/mtp.jpg">
+            <img src="../places/Pampanga/mtp.jpg" class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -317,7 +319,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/miyamit.jpg">
+            <img src="../places/Pampanga/miyamit.jpg"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -340,7 +342,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/mt arayat.jpg">
+            <img src="../places/Pampanga/mt arayat.jpg" class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -361,7 +363,7 @@ try {
         </div>
         <div class="product">
           <picture>
-            <img src="../places/Pampanga/ilog kamalig.jpg">
+            <img src="../places/Pampanga/ilog kamalig.jpg" class="clickable-image">
           </picture>
           <div class="detail">
             <p>
@@ -431,7 +433,64 @@ try {
         </div>
       </section>
     </main>
-   
+   <script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // Language Switcher Function
+  function switchLanguage(lang) {
+    document.querySelectorAll(`[data-lang-${lang}]`).forEach(element => {
+      element.textContent = element.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Initialize Language Selection Event Listeners
+  function setupLanguageSwitcher() {
+    document.querySelectorAll('.language-option').forEach(button => {
+      button.addEventListener('click', function () {
+        const selectedLang = this.getAttribute('data-lang');
+        switchLanguage(selectedLang);
+      });
+    });
+  }
+
+  // Modal Popup Functionality for Images
+  function enableImageModal(imageSelector) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img class="modal-image" src="" alt="Enlarged Image">
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const modalImage = modal.querySelector('.modal-image');
+    const closeButton = modal.querySelector('.close-button');
+
+    document.querySelectorAll(imageSelector).forEach(image => {
+      image.addEventListener('click', function () {
+        modalImage.src = this.src;
+        modal.style.display = 'block';
+      });
+    });
+
+    closeButton.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+
+  // Initialize Features
+  setupLanguageSwitcher();
+  enableImageModal('.clickable-image');
+});
+
+   </script>
 
     <main>
 
@@ -929,9 +988,10 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
-              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i><span><span></span></span>Buy Now!!</a>
+            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
+              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
+              data-lang-ar="اشتري الآن!!">Buy Now</a>
           </div>
         </div>
 
@@ -949,9 +1009,10 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
-              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
+            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
+              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
+              data-lang-ar="اشتري الآن!!">Buy Now</a>
           </div>
         </div>
 
@@ -969,9 +1030,10 @@ try {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
-              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
+            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
+              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
+              data-lang-ar="اشتري الآن!!">Buy Now</a>
           </div>
         </div>
 
@@ -991,9 +1053,10 @@ try {
             <samp>₱300.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
-              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
-              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
+            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
+              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
+              data-lang-ar="اشتري الآن!!">Buy Now</a>
           </div>
         </div>
 

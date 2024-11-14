@@ -153,7 +153,7 @@ if (isset($_SESSION['id'])) {
         </div>
 
         <div id='item_5' class="next">
-          <img src="../places/boracay/6.jpg">
+          <img src="../img/qqq.jpg">
         </div>
 
         <div id='item_6' class="nextRightSecond">
@@ -1642,7 +1642,7 @@ if (isset($_SESSION['id'])) {
             <samp>₱500.00</samp>
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
               data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
               data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
               data-lang-ar="اشتري الآن!!">Buy Now!!</a>
