@@ -1,18 +1,35 @@
 <?php
 session_start();
-require_once '../connect/dbcon.php';
 
 // Check if the user is logged in
-if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: boracayadmin.php"); // Redirect to login page if not logged in
+if (!isset($_SESSION["UserName"])) {
+    header("location: boracayadmin.php");
+    exit();
+}
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
     exit();
 }
 
-$userId = $_SESSION['id'];  // Use session ID to fetch the user's data
+require_once '../connect/dbcon.php';
+
+if (isset($_GET['id'])) {
+    $userId = $_GET['id'];
+    echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
+} else {
+    // Handle the case where the ID is not provided or invalid
+    // You can redirect or display an error message
+}
 
 try {
-    // Fetch user information based on the session ID
-    $pdoQuery = "SELECT * FROM user WHERE id = :id";
+    // Fetch user information based on the provided ID
+    $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
@@ -27,7 +44,7 @@ try {
     if (isset($_GET['id'])) {
         $bookingId = $_GET['id'];
         echo "<h3>Welcome, Boracay Management " . $_SESSION["UserName"] . '</h3>';
-        
+
         // Fetch booking details based on the provided booking ID
         $pdoQuery = "SELECT * FROM bookings WHERE id = :id";
         $pdoResult = $pdoConnect->prepare($pdoQuery);
@@ -47,10 +64,9 @@ try {
         echo "No booking ID provided.";
         exit;
     }
-
 } catch (PDOException $error) {
-    echo "Database error: " . $error->getMessage();
-    exit();
+    echo $error->getMessage();
+    exit;
 }
 ?>
 
@@ -332,7 +348,6 @@ try {
                     }
                 });
             });
-
         </script>
 
 </body>

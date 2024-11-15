@@ -12,5 +12,5 @@ if(isset ($_SESSION['UserName'])){
 
 unset($_SESSION['user']);
 session_destroy();
-header('location: index.php');
+header('location: ../include/index.php');
 ?>

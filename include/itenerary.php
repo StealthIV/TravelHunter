@@ -102,14 +102,24 @@ try {
         <div class="error-message"><?php echo $errorMessage; ?></div>
       <?php endif; ?>
 
-      <!-- Itinerary Form -->
-      <form method="POST" action="">
-        <input type="text" name="activity" placeholder="Activity" required>
-        <input type="date" name="date" required>
-        <input type="time" name="time" required>
-        <input type="text" name="location" placeholder="Location" required>
-        <button type="submit">Add Activity</button>
-      </form>
+<!-- Itinerary Form -->
+<form method="POST" action="">
+  <select name="activity" required>
+    <option value="" disabled selected>Select Activity</option>
+    <option value="Hiking">Hiking</option>
+    <option value="City Tour">City Tour</option>
+    <option value="Beach">Beach</option>
+    <option value="Museum Visit">Museum Visit</option>
+    <option value="Food Trip">Food Trip</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="date" name="date" required>
+  <input type="time" name="time" required>
+  <input type="text" name="location" placeholder="Location" required>
+  <button type="submit">Add Activity</button>
+</form>
+
 
       <!-- Itinerary Table -->
       <table id="itineraryTable">

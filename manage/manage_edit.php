@@ -1,8 +1,18 @@
 <?php
 session_start();
 
-// Check if the user is logged in
-if (!isset($_SESSION["UserName"]) || !isset($_SESSION['id'])) {
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+    exit();
+}
+
+if (!isset($_SESSION["UserName"])) {
     header("location: manage.php");
     exit();
 }
@@ -18,18 +28,14 @@ try {
     $pdoResult = $pdoConnect->prepare($pdoQuery);
     $pdoResult->execute(['UserId' => $UserId]);
     $user = $pdoResult->fetch();
-
-    // If no user is found, throw an exception
     if (!$user) {
         throw new Exception("User not found.");
     }
-
-    // Set user details
+    
     $profile_image = !empty($user['image']) ? $user['image'] : 'default_profile.jpg';
     $full_name = $user['FullName'];
     $email = $user['UserName'];
     $password = $user['PassWord'];
-
 } catch (PDOException $error) {
     echo "Database error: " . $error->getMessage();
     exit();
@@ -37,8 +43,8 @@ try {
     echo $e->getMessage();
     exit();
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,8 +74,7 @@ try {
 
         <div class="side-content">
             <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url('../pic/<?php echo $profile_image; ?>');">
-                </div>
+                <div class="profile-img bg-img" style="background-image: url('../pic/<?php echo $profile_image; ?>');"></div>
                 <small><?php echo htmlspecialchars($full_name); ?></small>
             </div>
 

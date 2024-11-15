@@ -109,16 +109,12 @@ nav.open ~ .overlay {
     color: #000000;
     height: 90vh;
     width: 100%;
-    background-image: url(../img/coronpalawan.jpg);
+    background: white;
     margin-top: 70px;
     display: flex;
     justify-content: center;
     
 }
-
-
-
-
 
 .language{
   margin-left: 30px;
@@ -232,8 +228,6 @@ h1{
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
- 
-
 
 .post-actions button:hover {
   background-color: #0056b3;

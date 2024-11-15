@@ -16,8 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Redirect to the appropriate dashboard based on user role
         if ($_SESSION["UserRole"] == "admin") {
+            $_SESSION["UserName"] = $user["UserName"];
+            $_SESSION["UserRole"] = $user["UserRole"];
+            $_SESSION["id"] = $user["id"];
+    
             header("Location: ../admin/admin.php");
         } elseif ($_SESSION["UserRole"] == "manager") {
+            $_SESSION["UserName"] = $user["UserName"];
+            $_SESSION["UserRole"] = $user["UserRole"];
+            $_SESSION["id"] = $user["id"];
+    
             header("Location: ../manage/manage.php");
         }
         exit();
@@ -42,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-image: url(../img/qqqq.jpg);
         }
 
         .container {

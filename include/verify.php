@@ -55,7 +55,7 @@ if (isset($_POST['verify_code'])) {
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-color: #f4f4f9;
+            background-image: url(../img/qqqq.jpg);
             color: #333;
         }
 

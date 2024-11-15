@@ -110,8 +110,6 @@ function getTimeElapsed($datetime)
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,7 +119,7 @@ function getTimeElapsed($datetime)
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Hunter</title>
   <!-- CSS -->
-  <link rel="stylesheet" href="../style/itenerary.css">
+  
   <link rel="stylesheet" href="styles/feed.css">
 
 

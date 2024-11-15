@@ -135,11 +135,12 @@ nav.open ~ .overlay {
 
 .search-box {
   flex: 1;
-  position: relative;
+  position: absolute;
   width: 300px;
-  margin-left: 100px;
-  margin-top: 50px;
+  margin-left: 500px;
+  margin-top: 10px;
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 .search-box input {

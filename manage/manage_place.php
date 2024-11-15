@@ -2,9 +2,14 @@
 session_start();
 require_once '../connect/dbcon.php'; // Adjust the path to your DB connection file
 
-// Check if the user is logged in
-if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: manage.php");
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
     exit();
 }
 
@@ -22,11 +27,14 @@ try {
         echo "User not found.";
         exit;
     }
-
-
 } catch (PDOException $error) {
     echo $error->getMessage();
     exit;
+    // Check if user is logged in (optional)
+    if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
+        header("location: manage.php");
+        exit();
+    }
 }
 
 // Handle delete action
@@ -135,7 +143,7 @@ $touristSpots = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <input style="margin: 20px 0px 0px 10px" type="text" id="search" placeholder="Search for tourist spots..." />
 
                 <!-- Add Button -->
-                <button  style="margin: 20px 0 20px 500px;"  onclick="window.location.href='manage_addplace.php'">
+                <button style="margin: 20px 0 20px 500px;" onclick="window.location.href='manage_addplace.php'">
                     Add Tourist Spot
                 </button>
 
@@ -184,7 +192,7 @@ $touristSpots = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                         <a href="?page=<?php echo $i; ?>" <?php if ($i == $page)
-                               echo 'class="active"'; ?>><?php echo $i; ?></a>
+                                                                echo 'class="active"'; ?>><?php echo $i; ?></a>
                     <?php endfor; ?>
 
                     <?php if ($page < $totalPages): ?>
@@ -195,15 +203,17 @@ $touristSpots = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script>
-                $(document).ready(function () {
-                    $('#search').on('input', function () {
+                $(document).ready(function() {
+                    $('#search').on('input', function() {
                         var searchTerm = $(this).val();
 
                         $.ajax({
                             url: 'searchtourist.php', // Create this file to handle search
                             type: 'GET',
-                            data: { query: searchTerm },
-                            success: function (data) {
+                            data: {
+                                query: searchTerm
+                            },
+                            success: function(data) {
                                 $('#spots-table-body').html(data);
                             }
                         });

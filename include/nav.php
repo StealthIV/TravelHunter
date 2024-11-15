@@ -131,10 +131,9 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   #darkModeToggle {
   position: absolute;
-  margin-left: 1320px;
+  margin-left: 1360px;
   bottom: 15px;
-  margin-top: 6px;
-  top: 5px;
+margin-bottom: 2px;
   border-radius: 50%;
   background-color: #4caf50;
   border: none;

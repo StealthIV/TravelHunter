@@ -29,29 +29,29 @@ try {
 }
 
 // Pagination settings
-$limit = 10; // Number of records per page
-$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$limit = 10;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $limit;
 
-// Get total number of bookings
-$totalBookingsQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalBooking FROM bookings");
-$totalBookingsQuery->execute();
-$totalBookingResult = $totalBookingsQuery->fetch(PDO::FETCH_ASSOC);
-$totalBookings = $totalBookingResult['totalBooking'];
-$totalPages = ceil($totalBookings / $limit);
+try {
+    // Fetch total number of records for pagination
+    $totalMarketQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalMarket FROM market");
+    $totalMarketQuery->execute();
+    $totalMarketResult = $totalMarketQuery->fetch(PDO::FETCH_ASSOC);
+    $totalMarkets = $totalMarketResult['totalMarket'];
+    $totalPages = ceil($totalMarkets / $limit);
 
-// Fetch bookings for the current page with user information
-$pdoQuery = "
-    SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email 
-    FROM bookings 
-    JOIN user ON bookings.user_id = user.id 
-    LIMIT :limit OFFSET :offset
-";
-$pdoResult = $pdoConnect->prepare($pdoQuery);
-$pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);
-$pdoResult->bindParam(':offset', $offset, PDO::PARAM_INT);
-$pdoResult->execute();
-$bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
+    // Fetch market records with pagination
+    $pdoQuery = "SELECT `id`, `name`, `email`, `phone`, `address`, `checkin`, `Item`, `quantity`, `downpayment`, `balance`, `payment`, `Reference`, `status` FROM `market` LIMIT :limit OFFSET :offset";
+    $pdoResult = $pdoConnect->prepare($pdoQuery);
+    $pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $pdoResult->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $pdoResult->execute();
+    $markets = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $error) {
+    error_log("Error fetching data: " . $error->getMessage(), 3, "errors.log");
+    exit;
+}
 ?>
 
 
@@ -166,57 +166,55 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                     <input type="search" placeholder="Search" class="record-search">
                                 </div>
                             </div>
-                            <table id="info-table" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Number of Days</th>
-                                        <th>Booking Date</th>
-                                        <th>Package</th>
-                                        <th>Number of Guests</th>
-                                        <th>Total Amount</th>
-                                        <th>Payment Method</th>
-                                        <th>Reference</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($bookings as $row): ?>
+                                <!-- HTML Table Structure -->
+                                <table id="info-table" width="100%">
+                                    <thead>
                                         <tr>
-                                            <td><?php echo $row['id']; ?></td>
-                                            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
-                                            <!-- Display user name -->
-                                            <td><?php echo htmlspecialchars($row['user_email']); ?></td>
-                                            <!-- Display user email -->
-                                            <td><?php echo htmlspecialchars($row['phone']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['days']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['package']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['guests']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['amount']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['payment']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['status']); ?></td>
-                                            <td style='width: 15%;'>
-                                                <?php if ($row['status'] !== 'confirmed'): ?>
-                                                    <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
-                                                        class="btn btn-confirm"
-                                                        onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
-                                                <?php endif; ?>
-                                                <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
-                                                    class="btn btn-delete"
-                                                    onclick="return confirm('Are you sure you want to delete this booking?');">Delete
-                                                    <i class='bx bx-trash'></i>
-                                                </a>
-                                            </td>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Address</th>
+                                            <th>Check-in Date</th>
+                                            <th>Item</th>
+                                            <th>Quantity</th>
+                                            <th>Downpayment</th>
+                                            <th>Balance</th>
+                                            <th>Payment Method</th>
+                                            <th>Reference</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
                                         </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($markets as $row): ?>
+                                            <tr>
+                                                <td><?php echo htmlspecialchars($row['id']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['email']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['phone']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['address']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['checkin']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['Item']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['quantity']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['downpayment']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['balance']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['payment']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['Reference']); ?></td>
+                                                <td><?php echo htmlspecialchars($row['status']); ?></td>
+                                                <td>
+                                                    <!-- Add buttons for actions like Confirm and Delete -->
+                                                    <?php if ($row['status'] !== 'confirmed'): ?>
+                                                        <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed' class="btn btn-confirm"
+                                                            onclick="return confirm('Are you sure you want to confirm this order?');">Confirm</a>
+                                                    <?php endif; ?>
+                                                    <a href='marketdelete.php?id=<?php echo $row['id']; ?>' class="btn btn-delete"
+                                                        onclick="return confirm('Are you sure you want to delete this order?');">Delete <i class='bx bx-trash'></i></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
                         </div>
                     </div>
                 </div>
@@ -251,7 +249,6 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                     }
                 });
             });
-
         </script>
 
 </body>

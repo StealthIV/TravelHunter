@@ -1,12 +1,24 @@
 <?php
 session_start();
-require_once '../connect/dbcon.php';
+
+if (!$user) {
+    echo "User not found.";
+    exit;
+}
+
+// Check if the user is an admin
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
+    exit();
+}
 
 // Check if the user is logged in
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: admin.php"); // Redirect if not logged in
+    header("location: admin.php");
     exit();
 }
+
+require_once '../connect/dbcon.php';
 
 $userId = $_SESSION['id'];  // Use session ID to fetch the user's data
 
@@ -17,23 +29,14 @@ try {
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
 
-    // Check if user is found
     if (!$user) {
         echo "User not found.";
         exit;
     }
-
-    // Check if the user is a manager
-    if ($user['UserRole'] !== 'manager') {
-        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
-        exit();
-    }
-
 } catch (PDOException $error) {
-    echo "Database error: " . $error->getMessage();
-    exit();
+    echo $error->getMessage();
+    exit;
 }
-
 // Pagination settings for cancelbook
 $limitCancel = 10; // Number of records per page
 $pageCancel = isset($_GET['pageCancel']) ? (int) $_GET['pageCancel'] : 1;
@@ -53,6 +56,7 @@ $cancelbookResult->bindParam(':limitCancel', $limitCancel, PDO::PARAM_INT);
 $cancelbookResult->bindParam(':offsetCancel', $offsetCancel, PDO::PARAM_INT);
 $cancelbookResult->execute();
 $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
