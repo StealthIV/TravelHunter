@@ -206,6 +206,7 @@ if (isset($_POST["login"])) {
 </head>
 
 <body>
+  
   <!-- Header with Login and Signup Buttons -->
   <header class="header">
   <img class="logos" src="../img/logo.png" alt="" srcset="">

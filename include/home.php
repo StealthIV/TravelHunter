@@ -161,6 +161,346 @@ try {
   </div>
 
   <section class="package">
+
+
+
+  <main>
+
+      <header>
+        <h1 data-lang-en="Top Tourist Destination in Boracay" data-lang-es="Principal Destino Turístico en Boracay"
+          data-lang-fr="Meilleure Destination Touristique à Boracay" data-lang-de="Top-Touristenziel in Boracay"
+          data-lang-zh="邦板牙的顶级旅游目的地" data-lang-jp="パンパンガのトップ観光地 "
+          data-lang-ru="Топ Туристическое Направление в Пампанге"
+          data-lang-it="Principale Destinazione Turistica a Boracay"
+          data-lang-pt="Principal Destino Turístico em Boracay" data-lang-ar="أفضل وجهة سياحية في بامبانجا"> <i
+            class="bx bx-map icon" style="color: red;"></i>Top Tourist Destination in Boracay</h1>
+        <p>
+          <span class="span2">&#139;</span>
+          <span class="span2">&#155;</span>
+
+        </p>
+      </header>
+      <p class="p2">Discover paradise in Boracay with pristine white sand beaches, vibrant nightlife, and world-class adventures – your perfect escape awaits!!</p>
+      <section class="section6">
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/white1.jpg"  class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="White Beach" data-lang-es="Playa Blanca" data-lang-fr="Plage Blanche"
+                data-lang-de="Weißer Strand" data-lang-zh="白沙滩" data-lang-jp="ホワイトビーチ" data-lang-ru="Белый Пляж"
+                data-lang-it="Spiaggia Bianca" data-lang-pt="Praia Branca" data-lang-ar="شاطئ أبيض"><a href="../include/boracay.php"><i
+                  class="bx bx-water icon"></i>
+                White Beach</a></b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
+            </p>
+          </div>
+
+        </div>
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/bulabog.jpg" class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Bulabog Beach" data-lang-es="Playa Bulabog" data-lang-fr="Plage de Bulabog"
+                data-lang-de="Bulabog Strand" data-lang-zh="布拉博沙滩" data-lang-jp="ブラバグビーチ" data-lang-ru="Пляж Булобог"
+                data-lang-it="Spiaggia di Bulabog" data-lang-pt="Praia de Bulabog" data-lang-ar="شاطئ بولابوغ"><a href="../include/boracay.php"><i
+                  class="bx bx-water icon"></i>
+                Bulabog Beach
+              </a></b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+               White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/Puka Shell Beach.jpg" class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Puka Shell Beach" data-lang-es="Playa de Conchas Puka"
+                data-lang-fr="Plage de Coquilles Puka" data-lang-de="Puka-Muschel-Strand" data-lang-zh="普卡贝壳沙滩"
+                data-lang-jp="プカシェルビーチ" data-lang-ru="Пляж Пука" data-lang-it="Spiaggia Puka"
+                data-lang-pt="Praia de Conchas Puka" data-lang-ar="شاطئ بوكه"><a href="../include/boracay.php"><i class="bx bx-water icon"></i>
+                Puka Shell Beach
+              </a></b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/ariel1.jpg" class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Ariel's Point" data-lang-es="Punto de Ariel" data-lang-fr="Point d'Ariel"
+                data-lang-de="Ariels Punkt" data-lang-zh="阿里尔角" data-lang-jp="アリエルズポイント" data-lang-ru="Точка Ариэль"
+                data-lang-it="Punto di Ariel" data-lang-pt="Ponto de Ariel" data-lang-ar="نقطة أرييل"><a href="../include/boracay.php"><i
+                  class="bx bx-water icon"></i>
+                Ariel's Point
+              </a></b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="Batason, Buruanga, Malay, Aklan Province"
+                data-lang-es="Batason, Buruanga, Malay, Provincia de Aklan"
+                data-lang-fr="Batason, Buruanga, Malay, Province d'Aklan"
+                data-lang-de="Batason, Buruanga, Malay, Provinz Aklan" data-lang-zh="巴塔松，布鲁安加，阿克兰省，马来"
+                data-lang-jp="バタソン、ブルアンダ、マレー、アクラン州" data-lang-ru="Батасон, Буруанга, Малай, Провинция Аклан"
+                data-lang-it="Batason, Buruanga, Malay, Provincia di Aklan"
+                data-lang-pt="Batason, Buruanga, Malay, Província de Aklan"
+                data-lang-ar="باتاسون، بوروانغا، مالاي، محافظة أكلان">
+                Batason, Buruanga, Malay, Aklan Province
+              </small>
+            </p>
+          </div>
+        </div>
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/din.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Diniwid Beach" data-lang-es="Playa Diniwid" data-lang-fr="Plage de Diniwid"
+                data-lang-de="Diniwid Strand" data-lang-zh="迪尼维德沙滩" data-lang-jp="ディニウィッドビーチ"
+                data-lang-ru="Пляж Динивид" data-lang-it="Spiaggia di Diniwid" data-lang-pt="Praia Diniwid"
+                data-lang-ar="شاطئ دينيود"><i class="bx bx-water icon"></i>
+                Diniwid Beach
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan." data-lang-es="Malay, Aklan." data-lang-fr="Malay, Aklan."
+                data-lang-de="Malay, Aklan." data-lang-zh="马来，阿克兰。" data-lang-jp="マレー、アklan。"
+                data-lang-ru="Малай, Аклан." data-lang-it="Malay, Aklan." data-lang-pt="Malay, Aklan."
+                data-lang-ar="مالاي، أكلان.">
+                Malay, Aklan.
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/will.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Willy's Rock" data-lang-es="Roca de Willy" data-lang-fr="Rocher de Willy"
+                data-lang-de="Willys Felsen" data-lang-zh="威利岩" data-lang-jp="ウィリーの岩" data-lang-ru="Скала Уилли"
+                data-lang-it="Roccia di Willy" data-lang-pt="Pedra do Willy" data-lang-ar="صخرة ويلي"><i
+                  class="bx bx-water icon"></i>
+                Willy's Rock
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="XW99+7FW, Malay, Aklan" data-lang-es="XW99+7FW, Malay, Aklan"
+                data-lang-fr="XW99+7FW, Malay, Aklan" data-lang-de="XW99+7FW, Malay, Aklan"
+                data-lang-zh="XW99+7FW，马来，阿克兰" data-lang-jp="XW99+7FW、マレー、アklan" data-lang-ru="XW99+7FW, Малай, Аклан"
+                data-lang-it="XW99+7FW, Malay, Aklan" data-lang-pt="XW99+7FW, Malay, Aklan"
+                data-lang-ar="XW99+7FW، مالاي، أكلان">
+                XW99+7FW, Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/Iligiligan-beach.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Ilig Iligan Beach" data-lang-es="Playa Ilig Iligan" data-lang-fr="Plage Ilig Iligan"
+                data-lang-de="Ilig Iligan Strand" data-lang-zh="伊利格伊利根沙滩" data-lang-jp="イリグイリガンビーチ"
+                data-lang-ru="Пляж Илиг Илигн" data-lang-it="Spiaggia di Ilig Iligan" data-lang-pt="Praia Ilig Iligan"
+                data-lang-ar="شاطئ إيلغ إيلغن"><i class="bx bx-water icon"></i>
+                Ilig Iligan Beach
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/mount-luho.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Mount Luho" data-lang-es="Monte Luho" data-lang-fr="Mont Luho" data-lang-de="Berg Luho"
+                data-lang-zh="卢霍山" data-lang-jp="マウントルホ" data-lang-ru="Гора Лухо" data-lang-it="Monte Luho"
+                data-lang-pt="Monte Luho" data-lang-ar="جبل لوه"><i class="bx bx-water icon"></i>
+                Mount Luho
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/bulabog.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Bulabog Beach" data-lang-es="Playa Bulabog" data-lang-fr="Plage de Bulabog"
+                data-lang-de="Bulabog Strand" data-lang-zh="布拉博沙滩" data-lang-jp="ブラバグビーチ" data-lang-ru="Пляж Булобог"
+                data-lang-it="Spiaggia di Bulabog" data-lang-pt="Praia de Bulabog" data-lang-ar="شاطئ بولابوغ"><i
+                  class="bx bx-water icon"></i>
+                Bulabog Beach
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/crystal.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Crystal Cove Island" data-lang-es="Isla Crystal Cove" data-lang-fr="Île Crystal Cove"
+                data-lang-de="Crystal Cove Insel" data-lang-zh="水晶湾岛" data-lang-jp="クリスタルコーブアイランド"
+                data-lang-ru="Остров Кристал Ков" data-lang-it="Isola Crystal Cove" data-lang-pt="Ilha Crystal Cove"
+                data-lang-ar="جزيرة كريستال كوف"><i class="bx bx-water icon"></i>
+                Crystal Cove Island
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Tabon Point, Malay, Aklan" data-lang-es="Punta Tabon, Malay, Aklan"
+                data-lang-fr="Point Tabon, Malay, Aklan" data-lang-de="Tabon Point, Malay, Aklan"
+                data-lang-zh="塔博点，马来，阿克兰" data-lang-jp="タボンポイント、マレー、アklan" data-lang-ru="Точка Табон, Малай, Аклан"
+                data-lang-it="Punto Tabon, Malay, Aklan" data-lang-pt="Ponto Tabon, Malay, Aklan"
+                data-lang-ar="نقطة تابون، مالاي، أكلان">
+                Tabon Point, Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/crocodile.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Crocodile Island" data-lang-es="Isla Cocodrilo" data-lang-fr="Île Crocodile"
+                data-lang-de="Krokodilinsel" data-lang-zh="鳄鱼岛" data-lang-jp="クロコダイルアイランド"
+                data-lang-ru="Остров Крокодил" data-lang-it="Isola Crocodile" data-lang-pt="Ilha Crocodile"
+                data-lang-ar="جزيرة تمساح"><i class="bx bx-water icon"></i>
+                Crocodile Island
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/baling.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Balinghai Beach" data-lang-es="Playa Balinghai" data-lang-fr="Plage Balinghai"
+                data-lang-de="Balinghai Strand" data-lang-zh="巴林海沙滩" data-lang-jp="バリンハイビーチ"
+                data-lang-ru="Пляж Балингхай" data-lang-it="Spiaggia di Balinghai" data-lang-pt="Praia de Balinghai"
+                data-lang-ar="شاطئ بالينغهاي"><i class="bx bx-water icon"></i>
+                Balinghai Beach
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Road-C, Malay, Aklan" data-lang-es="Camino-C, Malay, Aklan"
+                data-lang-fr="Route-C, Malay, Aklan" data-lang-de="Straße-C, Malay, Aklan" data-lang-zh="马来，阿克兰的C路"
+                data-lang-jp="マレー、アklanのC通り" data-lang-ru="Дорога-C, Малай, Аклан" data-lang-it="Strada-C, Malay, Aklan"
+                data-lang-pt="Estrada-C, Malay, Aklan" data-lang-ar="الطريق-C، مالاي، أكلان">
+                Road-C, Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+            <img src="../places/boracay/tambisan.jpg">
+          </picture>
+          <div class="detail">
+            <p>
+              <b data-lang-en="Tambisaan Beach" data-lang-es="Playa Tambisaan" data-lang-fr="Plage Tambisaan"
+                data-lang-de="Tambisaan Strand" data-lang-zh="坦比萨安沙滩" data-lang-jp="タンビサアンビーチ"
+                data-lang-ru="Пляж Тамбисан" data-lang-it="Spiaggia di Tambisaan" data-lang-pt="Praia de Tambisaan"
+                data-lang-ar="شاطئ تامبيسان"><i class="bx bx-water icon"></i>
+                Tambisaan Beach
+              </b><br>
+
+              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
+                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
+                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
+                Malay, Aklan
+              </small>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+
     <main>
       <header>
         <h1 data-lang-en="Top Tourist Destination in Pampanga" data-lang-es="Principal Destino Turístico en Pampanga"
@@ -178,7 +518,7 @@ try {
 
         </p>
       </header>
-      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
+      <p class="p2">The heart of Filipino culture and cuisine, where world-class flavors, vibrant festivals, and unforgettable experiences await!!</p>
       <section class="section6">
         <div class="product">
           <picture>
@@ -190,8 +530,8 @@ try {
               <b data-lang-en="Summer Place(Palakol)" data-lang-es="Lugar de Verano (Palakol)"
                 data-lang-fr="Endroit Estival (Palakol)" data-lang-de="Sommerort (Palakol)" data-lang-zh="夏日之地 "
                 data-lang-jp="夏の場所" data-lang-ru="Летнее Место (Палакол)" data-lang-it="Luogo Estivo (Palakol)"
-                data-lang-pt="Lugar de Verão (Palakol)" data-lang-ar="مكان الصيف "><i
-                  class="bx bx-water icon"></i>Summer Place(Palakol) </b><br>
+                data-lang-pt="Lugar de Verão (Palakol)" data-lang-ar="مكان الصيف "><a href="../include/boracay.php"><i
+                  class="bx bx-water icon"></i>Summer Place(Palakol) </a></b><br>
 
               <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
               <small data-lang-en="San Jose Floridablanca, Pampanga" data-lang-es="Lugar de Verano (Palakol)"
@@ -518,38 +858,37 @@ try {
 
     </script>
 
-    <main>
+  
+<main>
+  <div class="marvs">
+      <div class="text">
 
+      </div>
       <header>
-        <h1 data-lang-en="Top Tourist Destination in Boracay" data-lang-es="Principal Destino Turístico en Boracay"
-          data-lang-fr="Meilleure Destination Touristique à Boracay" data-lang-de="Top-Touristenziel in Boracay"
-          data-lang-zh="邦板牙的顶级旅游目的地" data-lang-jp="パンパンガのトップ観光地 "
-          data-lang-ru="Топ Туристическое Направление в Пампанге"
-          data-lang-it="Principale Destinazione Turistica a Boracay"
-          data-lang-pt="Principal Destino Turístico em Boracay" data-lang-ar="أفضل وجهة سياحية في بامبانجا"> <i
-            class="bx bx-map icon" style="color: red;"></i>Top Tourist Destination in Boracay</h1>
+        <h1 data-lang-en="Top Hottest Products in Boracay" data-lang-es="Los Productos Más Populares" data-lang-fr="Produits Les Plus Tendance"
+          data-lang-de="Die Beliebtesten Produkte" data-lang-zh="最热门的产品" data-lang-jp="最も人気のある製品 "
+          data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
+          data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة ">Top Hottest Products in Boracay</h1>
         <p>
-          <span class="span2">&#139;</span>
-          <span class="span2">&#155;</span>
+          <span class="span3">&#139;</span>
+          <span class="span3">&#155;</span>
 
         </p>
       </header>
-      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
+      <p class="p2">Boracay is renowned for its unique local products, such as handmade jewelry, vibrant beachwear, and artisanal crafts, capturing the essence of this tropical paradise.</p>
       <section class="section6">
         <div class="product">
           <picture>
-            <img src="../places/boracay/white1.jpg">
+            <img src="../places/boracay/1_20240923_211810_0000.png" alt="Shell Keychains"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="White Beach" data-lang-es="Playa Blanca" data-lang-fr="Plage Blanche"
-                data-lang-de="Weißer Strand" data-lang-zh="白沙滩" data-lang-jp="ホワイトビーチ" data-lang-ru="Белый Пляж"
-                data-lang-it="Spiaggia Bianca" data-lang-pt="Praia Branca" data-lang-ar="شاطئ أبيض"><i
-                  class="bx bx-water icon"></i>
-                White Beach
-              </b><br>
+              <b data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
+                data-lang-de="Muschel-Schlüsselanhänger" data-lang-zh="贝壳钥匙链" data-lang-jp="シェルキーホルダー"
+                data-lang-ru="Брелоки с ракушками" data-lang-it="Portachiavi con Conchiglie"
+                data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف">Shell Keychains (₱500.00)</b><br>
 
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
+                <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
               <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
                 data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
                 data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
@@ -562,370 +901,80 @@ try {
                 White Beach Station 1, Boracay Island, Malay, Philippines
               </small>
             </p>
-          </div>
-
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Puka Shell Beach.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b><i class="bx bx-water icon"></i>Puka Shell Beach</b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small> Malay, Aklan</small>
-            </p>
-
-          </div>
-
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Puka Shell Beach.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Puka Shell Beach" data-lang-es="Playa de Conchas Puka"
-                data-lang-fr="Plage de Coquilles Puka" data-lang-de="Puka-Muschel-Strand" data-lang-zh="普卡贝壳沙滩"
-                data-lang-jp="プカシェルビーチ" data-lang-ru="Пляж Пука" data-lang-it="Spiaggia Puka"
-                data-lang-pt="Praia de Conchas Puka" data-lang-ar="شاطئ بوكه"><i class="bx bx-water icon"></i>
-                Puka Shell Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/ariel1.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Ariel's Point" data-lang-es="Punto de Ariel" data-lang-fr="Point d'Ariel"
-                data-lang-de="Ariels Punkt" data-lang-zh="阿里尔角" data-lang-jp="アリエルズポイント" data-lang-ru="Точка Ариэль"
-                data-lang-it="Punto di Ariel" data-lang-pt="Ponto de Ariel" data-lang-ar="نقطة أرييل"><i
-                  class="bx bx-water icon"></i>
-                Ariel's Point
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Batason, Buruanga, Malay, Aklan Province"
-                data-lang-es="Batason, Buruanga, Malay, Provincia de Aklan"
-                data-lang-fr="Batason, Buruanga, Malay, Province d'Aklan"
-                data-lang-de="Batason, Buruanga, Malay, Provinz Aklan" data-lang-zh="巴塔松，布鲁安加，阿克兰省，马来"
-                data-lang-jp="バタソン、ブルアンダ、マレー、アクラン州" data-lang-ru="Батасон, Буруанга, Малай, Провинция Аклан"
-                data-lang-it="Batason, Buruanga, Malay, Provincia di Aklan"
-                data-lang-pt="Batason, Buruanga, Malay, Província de Aklan"
-                data-lang-ar="باتاسون، بوروانغا، مالاي، محافظة أكلان">
-                Batason, Buruanga, Malay, Aklan Province
-              </small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/din.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Diniwid Beach" data-lang-es="Playa Diniwid" data-lang-fr="Plage de Diniwid"
-                data-lang-de="Diniwid Strand" data-lang-zh="迪尼维德沙滩" data-lang-jp="ディニウィッドビーチ"
-                data-lang-ru="Пляж Динивид" data-lang-it="Spiaggia di Diniwid" data-lang-pt="Praia Diniwid"
-                data-lang-ar="شاطئ دينيود"><i class="bx bx-water icon"></i>
-                Diniwid Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan." data-lang-es="Malay, Aklan." data-lang-fr="Malay, Aklan."
-                data-lang-de="Malay, Aklan." data-lang-zh="马来，阿克兰。" data-lang-jp="マレー、アklan。"
-                data-lang-ru="Малай, Аклан." data-lang-it="Malay, Aklan." data-lang-pt="Malay, Aklan."
-                data-lang-ar="مالاي، أكلان.">
-                Malay, Aklan.
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/will.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Willy's Rock" data-lang-es="Roca de Willy" data-lang-fr="Rocher de Willy"
-                data-lang-de="Willys Felsen" data-lang-zh="威利岩" data-lang-jp="ウィリーの岩" data-lang-ru="Скала Уилли"
-                data-lang-it="Roccia di Willy" data-lang-pt="Pedra do Willy" data-lang-ar="صخرة ويلي"><i
-                  class="bx bx-water icon"></i>
-                Willy's Rock
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="XW99+7FW, Malay, Aklan" data-lang-es="XW99+7FW, Malay, Aklan"
-                data-lang-fr="XW99+7FW, Malay, Aklan" data-lang-de="XW99+7FW, Malay, Aklan"
-                data-lang-zh="XW99+7FW，马来，阿克兰" data-lang-jp="XW99+7FW、マレー、アklan" data-lang-ru="XW99+7FW, Малай, Аклан"
-                data-lang-it="XW99+7FW, Malay, Aklan" data-lang-pt="XW99+7FW, Malay, Aklan"
-                data-lang-ar="XW99+7FW، مالاي، أكلان">
-                XW99+7FW, Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Iligiligan-beach.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Ilig Iligan Beach" data-lang-es="Playa Ilig Iligan" data-lang-fr="Plage Ilig Iligan"
-                data-lang-de="Ilig Iligan Strand" data-lang-zh="伊利格伊利根沙滩" data-lang-jp="イリグイリガンビーチ"
-                data-lang-ru="Пляж Илиг Илигн" data-lang-it="Spiaggia di Ilig Iligan" data-lang-pt="Praia Ilig Iligan"
-                data-lang-ar="شاطئ إيلغ إيلغن"><i class="bx bx-water icon"></i>
-                Ilig Iligan Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/mount-luho.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Mount Luho" data-lang-es="Monte Luho" data-lang-fr="Mont Luho" data-lang-de="Berg Luho"
-                data-lang-zh="卢霍山" data-lang-jp="マウントルホ" data-lang-ru="Гора Лухо" data-lang-it="Monte Luho"
-                data-lang-pt="Monte Luho" data-lang-ar="جبل لوه"><i class="bx bx-water icon"></i>
-                Mount Luho
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/bulabog.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Bulabog Beach" data-lang-es="Playa Bulabog" data-lang-fr="Plage de Bulabog"
-                data-lang-de="Bulabog Strand" data-lang-zh="布拉博沙滩" data-lang-jp="ブラバグビーチ" data-lang-ru="Пляж Булобог"
-                data-lang-it="Spiaggia di Bulabog" data-lang-pt="Praia de Bulabog" data-lang-ar="شاطئ بولابوغ"><i
-                  class="bx bx-water icon"></i>
-                Bulabog Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/crystal.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Crystal Cove Island" data-lang-es="Isla Crystal Cove" data-lang-fr="Île Crystal Cove"
-                data-lang-de="Crystal Cove Insel" data-lang-zh="水晶湾岛" data-lang-jp="クリスタルコーブアイランド"
-                data-lang-ru="Остров Кристал Ков" data-lang-it="Isola Crystal Cove" data-lang-pt="Ilha Crystal Cove"
-                data-lang-ar="جزيرة كريستال كوف"><i class="bx bx-water icon"></i>
-                Crystal Cove Island
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Tabon Point, Malay, Aklan" data-lang-es="Punta Tabon, Malay, Aklan"
-                data-lang-fr="Point Tabon, Malay, Aklan" data-lang-de="Tabon Point, Malay, Aklan"
-                data-lang-zh="塔博点，马来，阿克兰" data-lang-jp="タボンポイント、マレー、アklan" data-lang-ru="Точка Табон, Малай, Аклан"
-                data-lang-it="Punto Tabon, Malay, Aklan" data-lang-pt="Ponto Tabon, Malay, Aklan"
-                data-lang-ar="نقطة تابون، مالاي، أكلان">
-                Tabon Point, Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/crocodile.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Crocodile Island" data-lang-es="Isla Cocodrilo" data-lang-fr="Île Crocodile"
-                data-lang-de="Krokodilinsel" data-lang-zh="鳄鱼岛" data-lang-jp="クロコダイルアイランド"
-                data-lang-ru="Остров Крокодил" data-lang-it="Isola Crocodile" data-lang-pt="Ilha Crocodile"
-                data-lang-ar="جزيرة تمساح"><i class="bx bx-water icon"></i>
-                Crocodile Island
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/baling.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Balinghai Beach" data-lang-es="Playa Balinghai" data-lang-fr="Plage Balinghai"
-                data-lang-de="Balinghai Strand" data-lang-zh="巴林海沙滩" data-lang-jp="バリンハイビーチ"
-                data-lang-ru="Пляж Балингхай" data-lang-it="Spiaggia di Balinghai" data-lang-pt="Praia de Balinghai"
-                data-lang-ar="شاطئ بالينغهاي"><i class="bx bx-water icon"></i>
-                Balinghai Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Road-C, Malay, Aklan" data-lang-es="Camino-C, Malay, Aklan"
-                data-lang-fr="Route-C, Malay, Aklan" data-lang-de="Straße-C, Malay, Aklan" data-lang-zh="马来，阿克兰的C路"
-                data-lang-jp="マレー、アklanのC通り" data-lang-ru="Дорога-C, Малай, Аклан" data-lang-it="Strada-C, Malay, Aklan"
-                data-lang-pt="Estrada-C, Malay, Aklan" data-lang-ar="الطريق-C، مالاي، أكلان">
-                Road-C, Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/tambisan.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Tambisaan Beach" data-lang-es="Playa Tambisaan" data-lang-fr="Plage Tambisaan"
-                data-lang-de="Tambisaan Strand" data-lang-zh="坦比萨安沙滩" data-lang-jp="タンビサアンビーチ"
-                data-lang-ru="Пляж Тамбисан" data-lang-it="Spiaggia di Tambisaan" data-lang-pt="Praia de Tambisaan"
-                data-lang-ar="شاطئ تامبيسان"><i class="bx bx-water icon"></i>
-                Tambisaan Beach
-              </b><br>
-
-              <i class="bx bx-map icon" style=" color: #32b4ff;"></i>
-              <small data-lang-en="Malay, Aklan" data-lang-es="Malay, Aklan" data-lang-fr="Malay, Aklan"
-                data-lang-de="Malay, Aklan" data-lang-zh="马来，阿克兰" data-lang-jp="マレー、アklan" data-lang-ru="Малай, Аклан"
-                data-lang-it="Malay, Aklan" data-lang-pt="Malay, Aklan" data-lang-ar="مالاي، أكلان">
-                Malay, Aklan
-              </small>
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-
-
-    <main>
-      <div class="text">
-
-      </div>
-      <header>
-        <h1 data-lang-en="Top Hottest Products in Boracay" data-lang-es="Los Productos Más Populares"
-          data-lang-fr="Produits Les Plus Tendance" data-lang-de="Die Beliebtesten Produkte" data-lang-zh="最热门的产品"
-          data-lang-jp="最も人気のある製品 " data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
-          data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة "><i class="bx bx-gift icon"
-            style="color: red;"></i>Top Hottest Products</h1>
-        <p>
-          <span class="span3">&#139;</span>
-          <span class="span3">&#155;</span>
-
-        </p>
-      </header>
-      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
-      <section class="section6">
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/1_20240923_211810_0000.png" alt="Shell Keychains">
-          </picture>
-          <div class="detail">
-            <p>
-              <b data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
-                data-lang-de="Muschel-Schlüsselanhänger" data-lang-zh="贝壳钥匙链" data-lang-jp="シェルキーホルダー"
-                data-lang-ru="Брелоки с ракушками" data-lang-it="Portachiavi con Conchiglie"
-                data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف"><i
-                  class="bx bx-shopping-bag icon"></i>Shell Keychains</b><br>
-            </p>
-            <samp>₱500.00</samp>
+          
           </div>
           <div class="button7">
-            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
-              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
-              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
-              data-lang-ar="اشتري الآن!!">Buy Now</a>
+            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
         <div class="product">
           <picture>
-            <img src="../places/boracay/2_20240923_211811_0001.png" alt="Beaded Bracelets">
+            <img src="../places/boracay/2_20240923_211811_0001.png" alt="Beaded Bracelets"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
               <b data-lang-en="Beaded Bracelets" data-lang-es="Pulseras de Cuentas" data-lang-fr="Bracelets en Perles"
                 data-lang-de="Perlenarmbänder" data-lang-zh="珠饰手链" data-lang-jp="ビーズブレスレット"
                 data-lang-ru="Браслеты с Бусинами" data-lang-it="Braccialetti di Perline"
-                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز"><i
-                  class="bx bx-shopping-bag icon"></i>Beaded Bracelets</b><br>
+                data-lang-pt="Pulseiras de Miçangas" data-lang-ar="أساور خرز"><i class="bx bx-cart icon"></i>Beaded Bracelets (₱300.00)</b><br>
+
+                
+                <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱300.00</samp>
+          
           </div>
           <div class="button7">
-            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
-              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
-              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
-              data-lang-ar="اشتري الآن!!">Buy Now</a>
+            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
         <div class="product">
           <picture>
-            <img src="../places/boracay/3_20240923_211811_0002.png" alt="Handwoven Bag">
+            <img src="../places/boracay/3_20240923_211811_0002.png" alt="Handwoven Bag"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
               <b data-lang-en="Handwoven Bag" data-lang-es="Bolsa Tejida" data-lang-fr="Sac Tissé"
                 data-lang-de="Handgewebte Tasche" data-lang-zh="手工编织包" data-lang-jp="手織りバッグ"
-                data-lang-ru="Ручная плетеная сумка" data-lang-it="Borsa Intrecciata" data-lang-pt="Bolsa Feita à Mão"
-                data-lang-ar="حقيبة منسوجة"><i class="bx bx-shopping-bag icon"></i>Handwoven Bag</b><br>
+                data-lang-ru="Ручная плетеная сумка" data-lang-it="Borsa Intrecciata"
+                data-lang-pt="Bolsa Feita à Mão" data-lang-ar="حقيبة منسوجة">Handwoven Bag (₱500.00)</b><br>
+
+                
+                <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱500.00</samp>
+           
           </div>
           <div class="button7">
-            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
-              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
-              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
-              data-lang-ar="اشتري الآن!!">Buy Now</a>
+            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -933,23 +982,35 @@ try {
 
         <div class="product">
           <picture>
-            <img src="../places/boracay/4_20240923_211811_0003.png" alt="White Beach Sarong">
+            <img src="../places/boracay/4_20240923_211811_0003.png" alt="White Beach Sarong"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="White Beach Sarong" data-lang-es="Sarong de Playa Blanco"
-                data-lang-fr="Paréo de Plage Blanc" data-lang-de="Weißer Strand-Sarong" data-lang-zh="白色沙滩纱笼"
-                data-lang-jp="ホワイトビーチサロン" data-lang-ru="Белый Пляжный Парео" data-lang-it="Sarong da Spiaggia Bianco"
-                data-lang-pt="Sarong de Praia Branco" data-lang-ar="سارونج شاطئ أبيض"><i
-                  class="bx bx-shopping-bag icon"></i>White Beach Sarong</b><br>
+              <b data-lang-en="White Beach Sarong" data-lang-es="Sarong de Playa Blanco" data-lang-fr="Paréo de Plage Blanc"
+                data-lang-de="Weißer Strand-Sarong" data-lang-zh="白色沙滩纱笼" data-lang-jp="ホワイトビーチサロン"
+                data-lang-ru="Белый Пляжный Парео" data-lang-it="Sarong da Spiaggia Bianco"
+                data-lang-pt="Sarong de Praia Branco" data-lang-ar="سارونج شاطئ أبيض">White Beach Sarong (₱300.00)</b><br>
+
+                
+                <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱300.00</samp>
+            
           </div>
           <div class="button7">
-            <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
-              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
-              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
-              data-lang-ar="اشتري الآن!!">Buy Now</a>
+            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -960,19 +1021,32 @@ try {
           <div class="detail">
             <p>
               <b data-lang-en="Bamboo Craft Wooden Figure" data-lang-es="Figura de Madera de Bambú"
-                data-lang-fr="Figurine en Bois de Bambou" data-lang-de="Bambuskunst-Holzfigur" data-lang-zh="竹制工艺木雕"
-                data-lang-jp="竹工芸木製フィギュア" data-lang-ru="Бамбуковая Деревянная Фигура"
-                data-lang-it="Figura di Legno in Bambù" data-lang-pt="Figura de Madeira de Bambu"
-                data-lang-ar="تمثال خشبي من الخيزران"><i class="bx bx-shopping-bag icon"></i>Bamboo Craft Wooden
-                Figure</b><br>
+                data-lang-fr="Figurine en Bois de Bambou" data-lang-de="Bambuskunst-Holzfigur"
+                data-lang-zh="竹制工艺木雕" data-lang-jp="竹工芸木製フィギュア"
+                data-lang-ru="Бамбуковая Деревянная Фигура" data-lang-it="Figura di Legno in Bambù"
+                data-lang-pt="Figura de Madeira de Bambu" data-lang-ar="تمثال خشبي من الخيزران">Bamboo Craft Wooden Figure (₱300.00)</b><br>
+
+                <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
+
+                
             </p>
-            <samp>₱300.00</samp>
+           
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
-              data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！"
-              data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!"
-              data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
+            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+              data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
+              data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
         <div class="product">
@@ -981,15 +1055,34 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Boracay Island Tee" data-lang-es="Camiseta de la Isla de Boracay"
-                data-lang-fr="T-shirt de l'île de Boracay" data-lang-de="Boracay-Insel T-Shirt" data-lang-zh="博拉凯岛T恤"
-                data-lang-jp="ボラカイ島のTシャツ" data-lang-ru="Футболка Острова Борокай"
-                data-lang-it="T-shirt Isola di Boracay" data-lang-pt="Camiseta da Ilha de Boracay"
-                data-lang-ar="تي شيرت جزيرة بوراكاي"><i class="bx bx-shopping-bag icon"></i>
-                Boracay Island Tee
+              <b data-lang-en="Boracay Island Tee"
+                data-lang-es="Camiseta de la Isla de Boracay"
+                data-lang-fr="T-shirt de l'île de Boracay"
+                data-lang-de="Boracay-Insel T-Shirt"
+                data-lang-zh="博拉凯岛T恤"
+                data-lang-jp="ボラカイ島のTシャツ"
+                data-lang-ru="Футболка Острова Борокай"
+                data-lang-it="T-shirt Isola di Boracay"
+                data-lang-pt="Camiseta da Ilha de Boracay"
+                data-lang-ar="تي شيرت جزيرة بوراكاي">
+                Boracay Island Tee (₱600.00)
               </b><br>
+
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱600.00</samp>
+          
           </div>
           <div class="button7">
             <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
@@ -1002,15 +1095,33 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Coral Reef Wall Art" data-lang-es="Arte de Pared de Arrecife de Coral"
-                data-lang-fr="Art Mural de Récif de Corail" data-lang-de="Wandkunst des Korallenriffs"
-                data-lang-zh="珊瑚礁墙面艺术" data-lang-jp="サンゴ礁の壁アート" data-lang-ru="Настенное искусство кораллового рифа"
-                data-lang-it="Arte Murale della Barriera Corallina" data-lang-pt="Arte de Parede de Recifes de Coral"
-                data-lang-ar="فن الحائط للشعاب المرجانية"><i class="bx bx-shopping-bag icon"></i>
-                Coral Reef Wall Art
+              <b data-lang-en="Coral Reef Wall Art"
+                data-lang-es="Arte de Pared de Arrecife de Coral"
+                data-lang-fr="Art Mural de Récif de Corail"
+                data-lang-de="Wandkunst des Korallenriffs"
+                data-lang-zh="珊瑚礁墙面艺术"
+                data-lang-jp="サンゴ礁の壁アート"
+                data-lang-ru="Настенное искусство кораллового рифа"
+                data-lang-it="Arte Murale della Barriera Corallina"
+                data-lang-pt="Arte de Parede de Recifes de Coral"
+                data-lang-ar="فن الحائط للشعاب المرجانية">
+                Coral Reef Wall Art (₱1000.00)
               </b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱1000.00</samp>
+           
           </div>
           <div class="button7">
             <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
@@ -1023,15 +1134,33 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Pinoy Straw Hat" data-lang-es="Sombrero de Paja Pinoy"
-                data-lang-fr="Chapeau de Paille Pinoy" data-lang-de="Pinoy-Strohhut" data-lang-zh="菲律宾草帽"
-                data-lang-jp="ピノイストローハット" data-lang-ru="Филиппинская соломенная шляпа"
-                data-lang-it="Cappello di Paglia Pinoy" data-lang-pt="Chapéu de Palha Pinoy"
-                data-lang-ar="قبعة القش الفلبينية"><i class="bx bx-shopping-bag icon"></i>
-                Pinoy Straw Hat
-              </b><br>
+              <b data-lang-en="Pinoy Straw Hat"
+                data-lang-es="Sombrero de Paja Pinoy"
+                data-lang-fr="Chapeau de Paille Pinoy"
+                data-lang-de="Pinoy-Strohhut"
+                data-lang-zh="菲律宾草帽"
+                data-lang-jp="ピノイストローハット"
+                data-lang-ru="Филиппинская соломенная шляпа"
+                data-lang-it="Cappello di Paglia Pinoy"
+                data-lang-pt="Chapéu de Palha Pinoy"
+                data-lang-ar="قبعة القش الفلبينية">
+                Pinoy Straw Hat (₱200.00)
+              </b><br> 
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱200.00</samp>
+           
           </div>
           <div class="button7">
             <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
@@ -1044,14 +1173,34 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Beach Towel" data-lang-es="Toalla de Playa" data-lang-fr="Serviette de Plage"
-                data-lang-de="Strandtuch" data-lang-zh="沙滩毛巾" data-lang-jp="ビーチタオル" data-lang-ru="Пляжное Полотенце"
-                data-lang-it="Asciugamano da Spiaggia" data-lang-pt="Toalha de Praia" data-lang-ar="منشفة الشاطئ"><i
-                  class="bx bx-shopping-bag icon"></i>
-                Beach Towel
+              <b data-lang-en="Beach Towel"
+                data-lang-es="Toalla de Playa"
+                data-lang-fr="Serviette de Plage"
+                data-lang-de="Strandtuch"
+                data-lang-zh="沙滩毛巾"
+                data-lang-jp="ビーチタオル"
+                data-lang-ru="Пляжное Полотенце"
+                data-lang-it="Asciugamano da Spiaggia"
+                data-lang-pt="Toalha de Praia"
+                data-lang-ar="منشفة الشاطئ">
+                Beach Towel (₱300.00)
               </b><br>
+
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱300.00</samp>
+          
           </div>
           <div class="button7">
             <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
@@ -1064,17 +1213,36 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Fridge Magnet" data-lang-es="Imán de Nevera" data-lang-fr="Aimant de Frigo"
-                data-lang-de="Kühlschrankmagnet" data-lang-zh="冰箱磁铁" data-lang-jp="冷蔵庫用マグネット"
-                data-lang-ru="Холодильный Магнит" data-lang-it="Magnete da Frigo" data-lang-pt="Imã de Geladeira"
-                data-lang-ar="مغناطيس الثلاجة"><i class="bx bx-shopping-bag icon"></i>
-                Fridge Magnet
+              <b data-lang-en="Fridge Magnet"
+                data-lang-es="Imán de Nevera"
+                data-lang-fr="Aimant de Frigo"
+                data-lang-de="Kühlschrankmagnet"
+                data-lang-zh="冰箱磁铁"
+                data-lang-jp="冷蔵庫用マグネット"
+                data-lang-ru="Холодильный Магнит"
+                data-lang-it="Magnete da Frigo"
+                data-lang-pt="Imã de Geladeira"
+                data-lang-ar="مغناطيس الثلاجة">
+                Fridge Magnet (₱300.00)
               </b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱300.00</samp>
+          
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1084,17 +1252,36 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Coconut Soap" data-lang-es="Jabón de Coco" data-lang-fr="Savon de Noix de Coco"
-                data-lang-de="Kokosnuss-Seife" data-lang-zh="椰子肥皂" data-lang-jp="ココナッツソープ" data-lang-ru="Кокосовое Мыло"
-                data-lang-it="Sapone di Cocco" data-lang-pt="Sabão de Coco" data-lang-ar="صابون جوز الهند"><i
-                  class="bx bx-shopping-bag icon"></i>
-                Coconut Soap
+              <b data-lang-en="Coconut Soap"
+                data-lang-es="Jabón de Coco"
+                data-lang-fr="Savon de Noix de Coco"
+                data-lang-de="Kokosnuss-Seife"
+                data-lang-zh="椰子肥皂"
+                data-lang-jp="ココナッツソープ"
+                data-lang-ru="Кокосовое Мыло"
+                data-lang-it="Sapone di Cocco"
+                data-lang-pt="Sabão de Coco"
+                data-lang-ar="صابون جوز الهند">
+                Coconut Soap (₱700.00)
               </b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱700.00</samp>
+            
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
 
@@ -1104,19 +1291,43 @@ try {
           </picture>
           <div class="detail">
             <p>
-              <b data-lang-en="Sundet Art Fit" data-lang-es="Sundet Art Fit" data-lang-fr="Sundet Art Fit"
-                data-lang-de="Sundet Art Fit" data-lang-zh="Sundet Art Fit" data-lang-jp="Sundet Art Fit"
-                data-lang-ru="Sundet Art Fit" data-lang-it="Sundet Art Fit" data-lang-pt="Sundet Art Fit"
-                data-lang-ar="Sundet Art Fit"><i class="bx bx-shopping-bag icon"></i>
-                Sundet Art Fit
+              <b data-lang-en="Sundet Art Fit"
+                data-lang-es="Sundet Art Fit"
+                data-lang-fr="Sundet Art Fit"
+                data-lang-de="Sundet Art Fit"
+                data-lang-zh="Sundet Art Fit"
+                data-lang-jp="Sundet Art Fit"
+                data-lang-ru="Sundet Art Fit"
+                data-lang-it="Sundet Art Fit"
+                data-lang-pt="Sundet Art Fit"
+                data-lang-ar="Sundet Art Fit">
+                Sundet Art Fit (₱150.00)
               </b><br>
+
+              <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon" style=" color: #32b4ff;"></i></a>
+              <small data-lang-en="White Beach Station 1, Boracay Island, Malay, Philippines"
+                data-lang-es="Estación 1 de Playa Blanca, Isla Boracay, Malay, Filipinas"
+                data-lang-fr="Station 1 de la Plage Blanche, Île de Boracay, Malay, Philippines"
+                data-lang-de="Weißer Strand Station 1, Boracay-Insel, Malay, Philippinen" data-lang-zh="白沙滩站1，菲律宾马来博拉凯岛"
+                data-lang-jp="ホワイトビーチステーション1、ボラカイ島、マレーシア、フィリピン"
+                data-lang-ru="Станция 1 Белого Пляжа, Остров Борокай, Малай, Филиппины"
+                data-lang-it="Stazione 1 della Spiaggia Bianca, Isola di Boracay, Malay, Filippine"
+                data-lang-pt="Estação 1 da Praia Branca, Ilha de Boracay, Malay, Filipinas"
+                data-lang-ar="محطة 1 لشاطئ أبيض، جزيرة بوراكاي، مالاي، الفلبين">
+                White Beach Station 1, Boracay Island, Malay, Philippines
+              </small>
             </p>
-            <samp>₱150.00</samp>
+          
           </div>
           <div class="button7">
-            <a class="a1" href="#">Buy Now!!</a>
+            <a class="a1" href="#"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
         </div>
+
+      </section>
+      </div>
+    </main>
+
 
       </section>
 

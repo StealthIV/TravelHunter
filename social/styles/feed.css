@@ -232,6 +232,8 @@ h1{
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+ 
+
 
 .post-actions button:hover {
   background-color: #0056b3;

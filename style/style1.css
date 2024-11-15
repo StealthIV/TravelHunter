@@ -190,13 +190,16 @@ a {
   color: #707070;
 }
 .input_box i.email,
-.input_box i.password {
+.input_box i.password,
+.input_box i.username {
   left: 0;
 }
 .input_box input:focus ~ i.email,
-.input_box input:focus ~ i.password {
+.input_box input:focus ~ i.password,
+.input_box input:focus ~ i.username {
   color: #7d2ae8;
 }
+
 .input_box i.pw_hide {
   right: 0;
   font-size: 18px;

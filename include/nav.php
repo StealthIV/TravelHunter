@@ -133,14 +133,15 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   position: absolute;
   margin-left: 1320px;
   bottom: 15px;
-  margin-top: 17px;
+  margin-top: 6px;
+  top: 5px;
   border-radius: 50%;
   background-color: #4caf50;
   border: none;
   color: white;
   width: 40px; /* Set the width */
   height: 40px; /* Set the height */
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 18px; /* Adjust font size to make the icon smaller */
