@@ -868,7 +868,7 @@ try {
         <h1 data-lang-en="Top Hottest Products in Boracay" data-lang-es="Los Productos Más Populares" data-lang-fr="Produits Les Plus Tendance"
           data-lang-de="Die Beliebtesten Produkte" data-lang-zh="最热门的产品" data-lang-jp="最も人気のある製品 "
           data-lang-ru="Самые Популярные Продукты " data-lang-it="I Prodotti Più Popolari"
-          data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة ">Top Hottest Products in Boracay</h1>
+          data-lang-pt="Os Produtos Mais Populares" data-lang-ar="أكثر المنتجات شهرة "><i class="bx bx-cart icon"></i>Top Hottest Products in Boracay</h1>
         <p>
           <span class="span3">&#139;</span>
           <span class="span3">&#155;</span>

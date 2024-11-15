@@ -129,7 +129,7 @@ button {
 .profile {
   display: flex;
   position: fixed;
-  margin-left: 1200px;
+  margin-left: 1140px;
   align-items: center;
 }
 
@@ -1020,6 +1020,10 @@ color: rgb(0, 0, 0);
   .marvs i.icon{
     font-size: 15px;
     color: white;
+  }
+
+  .marvs h1{
+    font-family: 'Times New Roman', Times, serif;
   }
   .package main .a1{
   text-decoration: none;

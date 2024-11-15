@@ -13,11 +13,6 @@ if (!$user) {
     exit;
 }
 
-// Check if the user is an admin
-if ($user['UserRole'] !== 'manager') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-    exit();
-}
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

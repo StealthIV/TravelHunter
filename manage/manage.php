@@ -17,18 +17,6 @@ try {
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
 
-    // Check if user is found
-    if (!$user) {
-        echo "User not found.";
-        exit;
-    }
-
-    // Check if the user is a manager
-    if ($user['UserRole'] !== 'manager') {
-        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
-        exit();
-    }
-
 } catch (PDOException $error) {
     echo $error->getMessage();
     exit;

@@ -228,7 +228,7 @@ if (isset($_POST["login"])) {
         <form method="POST">
           <h2>Login</h2>
           <div class="input_box">
-            <input type="email" name="UserName" placeholder="Enter your username" required />
+            <input type="email" name="UserName" placeholder="Enter your Email" required />
             <i class="uil uil-envelope-alt email"></i>
           </div>
           <div class="input_box">
@@ -244,7 +244,7 @@ if (isset($_POST["login"])) {
             <a href="#" class="forgot_pw">Forgot password?</a>
           </div>
           <button class="button" type="submit" name="login" value="Login">Login Now</button>
-          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+         
         </form>
       </div>
 
@@ -266,7 +266,7 @@ if (isset($_POST["login"])) {
             <i class="uil uil-user username"></i>
           </div>
           <button class="button" type="submit" name="register" value="Register">Signup Now</button>
-          <div class="login_signup">Already have an account? <a href="../include/index.php" id="login">Login</a></div>
+        
         </form>
       </div>
     </div>
@@ -424,24 +424,32 @@ if (isset($_POST["login"])) {
       <div class="thumbnail">
 
         <div class="item">
+        <h1>Palawan</h1>
           <img src="../img/el.jpg" alt="">
+         
         </div>
         <div class="item">
+        <h1>Boracay</h1>
           <img src="../img/b11.jpg" alt="">
         </div>
         <div class="item">
+        <h1>Zambales</h1>
           <img src="../img/21.jpg" alt="">
         </div>
         <div class="item">
+        <h1>MT. Pinatubo</h1>
           <img src="../img/mtp.jpg" alt="">
         </div>
         <div class="item">
+        <h1>Taal Volcano</h1>
           <img src="../img/batangas.jpg" alt="">
         </div>
         <div class="item">
+        <h1>Bataan</h1>
           <img src="../img/bataan.jpg" alt="">
         </div>
         <div class="item">
+        <h1>Cebu</h1>
           <img src="../img/cebu.jpg" alt="">
         </div>
 

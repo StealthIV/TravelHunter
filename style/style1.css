@@ -348,7 +348,20 @@ h3 {
   display: flex;
   gap: 20px;
 }
-
+ h1{
+  z-index: 100;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  position: absolute;
+  margin-top: 190px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgba(159, 155, 155, 0.648);
+  width: 100%;
+  text-align: center;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0); 
+  text-stroke: 0.5px  rgb(0, 0, 0); 
+}
 .thumbnail .item {
   width: 150px;
   height: 220px;

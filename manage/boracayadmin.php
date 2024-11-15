@@ -23,12 +23,6 @@ try {
         exit;
     }
 
-    // Check if the user is a manager
-    if ($user['UserRole'] !== 'manager') {
-        header("Location: ../include/index.php");  // Redirect to index.php if not a manager
-        exit();
-    }
-
     // Check if a booking ID is provided
     if (isset($_GET['id'])) {
         $bookingId = $_GET['id'];
