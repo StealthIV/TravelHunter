@@ -7,25 +7,16 @@ if (!isset($_SESSION['UserName'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $inputCode = $_POST['verification_code'];
+    $inputCode = implode("", $_POST['verification_code']); // Combine input boxes into one code
 
     // Compare input verification code with stored code in session
     if ($inputCode == $_SESSION['verification_code']) {
-        // Clear the verification code from session
-        unset($_SESSION['verification_code']);
+        unset($_SESSION['verification_code']); // Clear the verification code from session
 
-        // Redirect to the appropriate dashboard based on user role
+        // Redirect based on user role
         if ($_SESSION["UserRole"] == "admin") {
-            $_SESSION["UserName"] = $user["UserName"];
-            $_SESSION["UserRole"] = $user["UserRole"];
-            $_SESSION["id"] = $user["id"];
-    
             header("Location: ../admin/admin.php");
         } elseif ($_SESSION["UserRole"] == "manager") {
-            $_SESSION["UserName"] = $user["UserName"];
-            $_SESSION["UserRole"] = $user["UserRole"];
-            $_SESSION["id"] = $user["id"];
-    
             header("Location: ../manage/manage.php");
         }
         exit();
@@ -51,6 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 0;
             font-family: Arial, sans-serif;
             background-image: url(../img/qqqq.jpg);
+            background-size: cover;
+            background-position: center;
         }
 
         .container {
@@ -68,29 +61,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-bottom: 1rem;
         }
 
-        .form-group {
+        .verification-code {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 1rem;
-            text-align: left;
         }
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #666;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 0.75rem;
+        .verification-code input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 1.5rem;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 1rem;
             outline: none;
-            transition: border 0.3s;
+            transition: border-color 0.3s;
         }
 
-        input[type="text"]:focus {
+        .verification-code input:focus {
             border-color: #007bff;
         }
 
@@ -129,14 +117,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php unset($_SESSION['error']); ?>
         <?php endif; ?>
         <form method="POST">
-            <div class="form-group">
-                <label for="verification_code">Enter Verification Code:</label>
-                <input type="text" name="verification_code" id="verification_code" required maxlength="6"
-                    pattern="[0-9A-Za-z]{6}" title="Please enter a 6-character code">
+            <div class="verification-code">
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
+                <input type="text" name="verification_code[]" maxlength="1" pattern="[A-Za-z0-9]" required>
             </div>
             <button type="submit">Verify</button>
         </form>
     </div>
+
+    <script>
+        const inputs = document.querySelectorAll('.verification-code input');
+        inputs.forEach((input, index) => {
+            input.addEventListener('input', () => {
+                if (input.value.length > 0 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && input.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
