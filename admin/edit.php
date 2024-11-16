@@ -10,17 +10,7 @@ require_once '../connect/dbcon.php';
 $UserName = $_SESSION["UserName"];
 $UserId = $_SESSION['id']; // Get user ID from session
 
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
 
-// Check if the user is an admin
-if ($user['UserRole'] !== 'admin') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-
-    exit();
-}
 
 
 try {

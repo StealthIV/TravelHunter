@@ -2,16 +2,6 @@
 session_start();
 require_once '../connect/dbcon.php'; // Adjust the path to your DB connection file
 
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
-
-// Check if the user is an admin
-if ($user['UserRole'] !== 'manager') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-    exit();
-}
 
 $userId = $_SESSION['id'];  // Use session ID to fetch the user's data
 

@@ -7,18 +7,6 @@ if (!$user) {
     exit;
 }
 
-// Check if the user is an admin
-if ($user['UserRole'] !== 'manager') {
-    header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-    exit();
-}
-
-// Check if user is logged in (optional)
-if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
-    header("location: manage.php");
-    exit();
-}
-
 // Handle form submissions for adding and updating tourist spots
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? null; // Get id if available (for updates)

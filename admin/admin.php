@@ -18,16 +18,6 @@ try {
     $pdoResult->execute(['id' => $userId]);
     $user = $pdoResult->fetch();
 
-    if (!$user) {
-        echo "User not found.";
-        exit;
-    }
-
-    // Check if the user is an admin
-    if ($user['UserRole'] !== 'admin') {
-        header("Location: ../include/index.php");  // Redirect to index.php if not an admin
-        exit();
-    }
 
 } catch (PDOException $error) {
     echo $error->getMessage();
