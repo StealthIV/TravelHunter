@@ -126,12 +126,12 @@ try {
 
 <body>
 
-  <?php require_once "nav.php" ?>
+  <?php require_once "nav.php"; ?>
 
   <section class="overlay"></section>
 
   <section class="main">
-    <div class="form">
+    <div class="form" id="receipt">
       <h1>Booking Receipt</h1>
 
       <?php if ($emailSent): ?>
@@ -147,7 +147,7 @@ try {
         <p><strong>Balance:</strong> <?= htmlspecialchars($booking['balance']) ?></p>
         <p><strong>Payment Method:</strong> <?= htmlspecialchars($booking['payment']) ?></p>
         <p><strong>Reference Number:</strong> <?= htmlspecialchars($booking['Reference']) ?></p>
-        <button onclick="window.print()">Print Receipt</button>
+        <a class="download-button" id="downloadReceipt">Download Receipt</a>
       <?php else: ?>
         <p>Failed to send email. Please contact support. Error: <?= htmlspecialchars($mailError) ?></p>
       <?php endif; ?>
@@ -155,10 +155,22 @@ try {
     </div>
   </section>
 
-  <script src="../js/home.js"></script>
-  <script src="../js/language.js"></script>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    document.getElementById("downloadReceipt").addEventListener("click", function () {
+      const receiptElement = document.getElementById("receipt");
 
+      // Use html2canvas to render the receipt as an image
+      html2canvas(receiptElement).then(canvas => {
+        // Convert the canvas to a data URL
+        const link = document.createElement("a");
+        link.download = "Booking_Receipt.jpg"; // File name
+        link.href = canvas.toDataURL("image/jpeg", 1.0); // JPG format
+        link.click(); // Trigger the download
+      });
+    });
+  </script>
+</body>
 </html>
 
 <?php

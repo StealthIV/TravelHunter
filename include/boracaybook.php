@@ -119,10 +119,28 @@ if (isset($_SESSION['id'])) {
                      <span id="email-error" style="color:red; display:none;">Valid email is required</span>
                   </div>
                   <div class="field">
-                     <div class="label">Phone Number</div>
-                     <input type="text" id="phone" name="phone" required>
-                     <span id="phone-error" style="color:red; display:none;">Valid phone number is required</span>
-                  </div>
+   <div class="label">Phone Number</div>
+   <input type="text" id="phone" name="phone" required>
+   <span id="phone-error" style="color:red; display:none;">Valid phone number is required</span>
+</div>
+
+<script>
+   document.getElementById("phone").addEventListener("input", function(event) {
+      var phoneInput = event.target;
+      var value = phoneInput.value;
+      var errorElement = document.getElementById("phone-error");
+
+      // Remove non-numeric characters from the input
+      phoneInput.value = value.replace(/\D/g, '');
+
+      // Check if the input is empty or invalid
+      if (phoneInput.value === "" || phoneInput.value.length < 10) {
+         errorElement.style.display = "inline"; // Show error
+      } else {
+         errorElement.style.display = "none"; // Hide error
+      }
+   });
+</script>
                   <div class="field">
                      <button class="firstNext next" type="button" onclick="validateStep1()">Next</button>
                   </div>
@@ -186,9 +204,29 @@ if (isset($_SESSION['id'])) {
                      <input type="text" id="balance" name="balance" value="₱0" readonly>
                   </div>
                   <div class="field">
-                     <div class="label">Reference Number</div>
-                     <input type="text" id="Reference" name="Reference" required>
-                  </div>
+   <div class="label">Reference Number</div>
+   <input type="text" id="Reference" name="Reference" required>
+   <span id="reference-error" style="color:red; display:none;">Valid reference number is required</span>
+</div>
+
+<script>
+   document.getElementById("Reference").addEventListener("input", function(event) {
+      var referenceInput = event.target;
+      var value = referenceInput.value;
+      var errorElement = document.getElementById("reference-error");
+
+      // Remove non-numeric characters from the input
+      referenceInput.value = value.replace(/\D/g, '');
+
+      // Check if the input is empty or invalid (example: length less than 6 digits)
+      if (referenceInput.value === "" || referenceInput.value.length < 6) {
+         errorElement.style.display = "inline"; // Show error
+      } else {
+         errorElement.style.display = "none"; // Hide error
+      }
+   });
+</script>
+
                   <div class="field btns">
                      <button class="prev-1 prev" type="button" onclick="prevPage()">Previous</button>
                      <button class="next-1 next" type="button" onclick="validateStep2()">Next</button>

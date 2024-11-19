@@ -77,20 +77,20 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="manage.php">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
                 </li>
                 <li>
-                    <a href="../crud/req.php" class="active">
+                    <a href="../manage/req.php" class="active">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Request</small>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="admin.php">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Annoucement</small>

@@ -311,6 +311,23 @@ nav .sidebar {
   }
 }
 
+.download-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.download-button:hover {
+  background: #218838;
+}
 
 
 .form{

@@ -108,10 +108,18 @@ if (isset($_SESSION['id'])) {
         </button>
 
         <button class="button">
-          <a href="../include/boracayfeed.html" data-lang-en="Offline" data-lang-es="Sin conexión"
-            data-lang-fr="Hors ligne" data-lang-de="Offline" data-lang-zh="离线" data-lang-jp="オフライン"
-            data-lang-ru="Офлайн" data-lang-it="Offline" data-lang-pt="Offline" data-lang-ar="غير متصل">Offline</a>
-        </button>
+    <a href="../img/Travel Hunter.pdf" download="Travel Hunter.pdf" 
+       data-lang-en="Offline" 
+       data-lang-es="Sin conexión" 
+       data-lang-fr="Hors ligne" 
+       data-lang-de="Offline" 
+       data-lang-zh="离线" 
+       data-lang-jp="オフライン" 
+       data-lang-ru="Офлайн" 
+       data-lang-it="Offline" 
+       data-lang-pt="Offline" 
+       data-lang-ar="غير متصل">Offline</a>
+  </button>
       </div>
 
 

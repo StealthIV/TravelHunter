@@ -94,10 +94,10 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+                    <a href="admin.php">
+                    <span class="las la-note-alt"></span>
 
-                       <a href="market.php"> <small>AAnnoucement</small></a>
+                       <a href="admin.php"> <small>Annoucement</small></a>
                     </a>
                 </li>
 

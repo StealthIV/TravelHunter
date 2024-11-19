@@ -104,21 +104,63 @@ try {
 
 <!-- Itinerary Form -->
 <form method="POST" action="">
-  <select name="activity" required>
-    <option value="" disabled selected>Select Activity</option>
-    <option value="Hiking">Hiking</option>
-    <option value="City Tour">City Tour</option>
-    <option value="Beach">Beach</option>
-    <option value="Museum Visit">Museum Visit</option>
-    <option value="Food Trip">Food Trip</option>
-    <option value="Shopping">Shopping</option>
-    <option value="Other">Other</option>
+  <!-- Location Dropdown -->
+  <select id="location" name="location" required>
+    <option value="" disabled selected>Select Location</option>
+    <option value="Boracay">Boracay</option>
+    <option value="Pampanga">Pampanga</option>
+    <option value="Palawan">Palawan</option>
+    <option value="Batanes">Batanes</option>
+    <option value="Cebu">Cebu</option>
+    <option value="Bataan">Bataan</option>
   </select>
+
+  <!-- Activity Dropdown -->
+  <select id="activity" name="activity" required>
+    <option value="" disabled selected>Select Activity</option>
+  </select>
+
+  <!-- Date, Time, and Submit -->
   <input type="date" name="date" required>
   <input type="time" name="time" required>
-  <input type="text" name="location" placeholder="Location" required>
   <button type="submit">Add Activity</button>
 </form>
+
+<script>
+  // Activity options based on location
+  const activitiesByLocation = {
+    Boracay: ["Island Hopping", "Scuba Diving", "Beach Party", "Parasailing", "Snorkeling"],
+    Pampanga: ["Hot Air Balloon Ride", "Cultural Tour", "Food Trip", "Shopping", "Nature Tour"],
+    Palawan: ["Underground River Tour", "Island Hopping", "Diving", "Hiking"],
+    Batanes: ["Sightseeing", "Museum Visit", "Photography", "Cycling"],
+    Cebu: ["City Tour", "Cultural Show", "Island Hopping", "Food Tasting"],
+    Bataan: ["Historical Tour", "Beach Outing", "Mountain Trekking", "Shopping"]
+  };
+
+  // Elements
+  const locationSelect = document.getElementById("location");
+  const activitySelect = document.getElementById("activity");
+
+  // Update activity dropdown based on location selection
+  locationSelect.addEventListener("change", () => {
+    // Clear current activity options
+    activitySelect.innerHTML = '<option value="" disabled selected>Select Activity</option>';
+
+    // Get selected location
+    const selectedLocation = locationSelect.value;
+
+    // Populate activity dropdown with relevant options
+    if (activitiesByLocation[selectedLocation]) {
+      activitiesByLocation[selectedLocation].forEach(activity => {
+        const option = document.createElement("option");
+        option.value = activity;
+        option.textContent = activity;
+        activitySelect.appendChild(option);
+      });
+    }
+  });
+</script>
+
 
 
       <!-- Itinerary Table -->

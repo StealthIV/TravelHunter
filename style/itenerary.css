@@ -248,3 +248,13 @@ button:hover {
 .profile:hover .dropdown-content {
   display: block;
 }
+
+#location{
+  padding: 10px;
+  margin: 5px;
+}
+
+#activity{
+  padding: 10px;
+  margin: 5px;
+}

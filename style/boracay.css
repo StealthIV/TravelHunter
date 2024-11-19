@@ -122,6 +122,13 @@ body {
 
 
 
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 nav {
   position: fixed;
   top: 0;
@@ -229,7 +236,7 @@ button {
 .profile {
   display: flex;
   position: fixed;
-  margin-left: 1200px;
+  margin-left: 1140px;
   align-items: center;
 }
 
@@ -363,8 +370,6 @@ nav .sidebar {
   background-color: #f9f9f9; /* Light mode background for dropdowns */
   color: #333333; /* Light mode dropdown text color */
 }
-
-
 
 .main{
     

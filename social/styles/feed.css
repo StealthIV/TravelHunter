@@ -8,6 +8,7 @@
 /* Body Styles */
 body {
   font-family: Arial, sans-serif;
+  background: url(../img/gg.jpg);
   
 }
 
@@ -109,7 +110,7 @@ nav.open ~ .overlay {
     color: #000000;
     height: 90vh;
     width: 100%;
-    background: white;
+    background-size: contain;
     margin-top: 70px;
     display: flex;
     justify-content: center;
@@ -129,6 +130,7 @@ h1{
 }
 /* Container Styles */
 .containers {
+  
   width: 900px;
   margin: 20px auto;
   padding: 0 20px;
@@ -239,6 +241,7 @@ h1{
   height: 40px;
   border-radius: 20px;
 }
+
 
 #timestamp {
   position: absolute;
