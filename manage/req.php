@@ -103,6 +103,13 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
 
                 <li>
+                    <a href="market.php" >
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
+                    </a>
+                </li>
+
+                <li>
                     <a href="manage_edit.php">
                         <span class="las la-user-alt"></span>
                         <small>Personal Info</small>
