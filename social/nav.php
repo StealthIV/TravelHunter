@@ -235,7 +235,7 @@ margin-bottom: 2px;
   </script>
 
 <div class="profile">
-      <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
+      <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
       
       <div class="dropdown">
         <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
