@@ -1,4 +1,62 @@
+<?php
+session_start();
+if (!isset($_SESSION["UserName"])) {
+  header("location: index.php");
+  exit();
+}
 
+require_once '../connect/dbcon.php';
+
+$UserName = $_SESSION["UserName"];
+
+try {
+  $pdoQuery = "SELECT * FROM user WHERE UserName = :UserName";
+  $pdoResult = $pdoConnect->prepare($pdoQuery);
+  $pdoResult->execute(['UserName' => $UserName]);
+  $user = $pdoResult->fetch();
+  $profile_image = $user['image']; // Assuming this is the URL to the profile image
+
+} catch (PDOException $error) {
+  echo $error->getMessage() . '';
+  exit;
+}
+
+?>
+
+<?php
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+  $user_id = $_SESSION['id'];
+
+  try {
+    // Fetch the user's details from the database using user_id
+    $stmt = $pdoConnect->prepare("SELECT UserName, FullName, PassWord, image FROM user WHERE id = :user_id");
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+      // Extract user details
+      $email = $user['UserName'];
+      $full_name = $user['FullName'];
+      $password = $user['PassWord'];
+      $profile_image = !empty($user['image']) ? $user['image'] : 'img/default_profile.jpg'; // Fallback to default image
+    } else {
+      // Handle the case where user details are not found
+      echo "User details not found.";
+      exit();
+    }
+  } catch (PDOException $e) {
+    // Handle database connection error or query failure
+    echo "Error: " . $e->getMessage();
+    exit();
+  }
+} else {
+  // Redirect to the login page if the user is not logged in
+  header("Location: login.php");
+  exit();
+}
+?>
 
 
 <!DOCTYPE html>
@@ -6,6 +64,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <title>Event Calendar</title>
    
     <style>
@@ -64,13 +123,19 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
+       .bts {
+            width: 150px;
+        }
     </style>
 </head>
 <body>
+            <a href="manage.php"> <i class="bx bx-log-out icon"><button class="bts" >Back</button></i></a>
     <header>
         <h1>Event Calendar</h1>
     </header>
     <main>
+        
         <form id="admin-form">
             <label for="title">Page Title:</label>
             <input type="text" id="title" name="title" required><br>

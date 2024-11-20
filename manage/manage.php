@@ -167,55 +167,64 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                             </div>
                             <table id="info-table" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Number of Days</th>
-                                        <th>Booking Date</th>
-                                        <th>Package</th>
-                                        <th>Number of Guests</th>
-                                        <th>Total Amount</th>
-                                        <th>Payment Method</th>
-                                        <th>Reference</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($bookings as $row): ?>
-                                        <tr>
-                                            <td><?php echo $row['id']; ?></td>
-                                            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
-                                            <!-- Display user name -->
-                                            <td><?php echo htmlspecialchars($row['user_email']); ?></td>
-                                            <!-- Display user email -->
-                                            <td><?php echo htmlspecialchars($row['phone']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['days']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['package']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['guests']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['amount']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['payment']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
-                                            <td><?php echo htmlspecialchars($row['status']); ?></td>
-                                            <td style='width: 15%;'>
-                                                <?php if ($row['status'] !== 'confirmed'): ?>
-                                                    <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
-                                                        class="btn btn-confirm"
-                                                        onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
-                                                <?php endif; ?>
-                                                <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
-                                                    class="btn btn-delete"
-                                                    onclick="return confirm('Are you sure you want to delete this booking?');">Delete
-                                                    <i class='bx bx-trash'></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
+                            <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Number of Days</th>
+        <th>Booking Date</th>
+        <th>Package</th>
+        <th>Number of Guests</th>
+        <th>Total Amount</th>
+        <th>Downpayment</th>
+        <th>Balance</th>
+        <th>Payment Method</th>
+        <th>Reference</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <?php foreach ($bookings as $row): ?>
+        <?php
+        // Calculate Downpayment (e.g., 50% of Total Amount)
+        $downpayment = $row['amount'] * 0.5; 
+        // Calculate Balance
+        $balance = $row['amount'] - $downpayment;
+        ?>
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
+            <td><?php echo htmlspecialchars($row['user_email']); ?></td>
+            <td><?php echo htmlspecialchars($row['phone']); ?></td>
+            <td><?php echo htmlspecialchars($row['days']); ?></td>
+            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
+            <td><?php echo htmlspecialchars($row['package']); ?></td>
+            <td><?php echo htmlspecialchars($row['guests']); ?></td>
+            <td><?php echo htmlspecialchars(number_format($row['amount'], 2)); ?></td>
+            <td><?php echo htmlspecialchars(number_format($downpayment, 2)); ?></td>
+            <td><?php echo htmlspecialchars(number_format($balance, 2)); ?></td>
+            <td><?php echo htmlspecialchars($row['payment']); ?></td>
+            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
+            <td><?php echo htmlspecialchars($row['status']); ?></td>
+            <td style='width: 15%;'>
+                <?php if ($row['status'] !== 'confirmed'): ?>
+                    <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
+                        class="btn btn-confirm"
+                        onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
+                <?php endif; ?>
+                <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
+                    class="btn btn-delete"
+                    onclick="return confirm('Are you sure you want to delete this booking?');">Delete
+                    <i class='bx bx-trash'></i>
+                </a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</tbody>
+
                             </table>
                         </div>
                     </div>

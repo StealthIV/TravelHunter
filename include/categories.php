@@ -61,55 +61,65 @@ try {
     <section class="overlay"></section>
 
     <section class="main">
-        <div class="page-content">
-            <div class="records table-responsive">
-                <table id="info-table" class="table">
-                    <thead>
-                        <tr>
-                            <th style='width: 10%;'>Name</th>
-                            <th style='width: 10%;'>Email</th>
-                            <th style='width: 5%;'>Phone</th>
-                            <th style='width: 12%;'>Number of Days</th>
-                            <th style='width: 10%;'>Booking Date</th>
-                            <th style='width: 10%;'>Package</th>
-                            <th style='width: 10%;'>Number of Guests</th>
-                            <th style='width: 10%;'>Total Amount</th>
-                            <th style='width: 10%;'>Payment Method</th>
-                            <th style='width: 10%;'>Reference</th>
-                            <th style='width: 10%;'>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // Query to fetch the booking history
-                        $pdoQuery = 'SELECT h.history_id, h.phone, h.days, h.checkin, h.package, h.guests, h.amount, h.payment, h.Reference
-                                     FROM historybookings h
-                                     WHERE h.user_id = :user_id';
-                        $pdoResult = $pdoConnect->prepare($pdoQuery);
-                        $pdoResult->execute(['user_id' => $id]);
+    <div class="page-content">
+        <div class="records table-responsive">
+            <table id="info-table" class="table">
+                <thead>
+                    <tr>
+                        <th style='width: 10%;'>Name</th>
+                        <th style='width: 10%;'>Email</th>
+                        <th style='width: 5%;'>Phone</th>
+                        <th style='width: 12%;'>Number of Days</th>
+                        <th style='width: 10%;'>Booking Date</th>
+                        <th style='width: 10%;'>Package</th>
+                        <th style='width: 10%;'>Number of Guests</th>
+                        <th style='width: 10%;'>Downpayment</th>
+                        <th style='width: 10%;'>Balance</th>
+                        <th style='width: 10%;'>Total Amount</th>
+                        <th style='width: 10%;'>Payment Method</th>
+                        <th style='width: 10%;'>Reference</th>
+                        <th style='width: 10%;'>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    // Query to fetch the booking history and calculate the total amount
+                    $pdoQuery = 'SELECT 
+                                    h.history_id, h.phone, h.days, h.checkin, h.package, h.guests, 
+                                    h.downpayment, h.balance, 
+                                    (h.downpayment + h.balance) AS total_amount, 
+                                    h.payment, h.Reference 
+                                 FROM historybookings h
+                                 WHERE h.user_id = :user_id';
+                    $pdoResult = $pdoConnect->prepare($pdoQuery);
+                    $pdoResult->execute(['user_id' => $id]);
 
-                        while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<tr>";
-                            echo "<td style='width: 10%;'>{$full_name }</td>";
-                            echo "<td style='width: 10%;'>{$email}</td>";
-                            echo "<td style='width: 5%;'>{$row['phone']}</td>";
-                            echo "<td style='width: 12%;'>{$row['days']}</td>";
-                            echo "<td style='width: 10%;'>{$row['checkin']}</td>";
-                            echo "<td style='width: 10%;'>{$row['package']}</td>";
-                            echo "<td style='width: 10%;'>{$row['guests']}</td>";
-                            echo "<td style='width: 10%;'>{$row['amount']}</td>";
-                            echo "<td style='width: 10%;'>{$row['payment']}</td>";
-                            echo "<td style='width: 10%;'>{$row['Reference']}</td>";
-                            echo "<td style='width: 20%;'>
-                                    <a href='boracaydelete.php?id={$row['history_id']}' onclick=\"return confirm('Are you sure you want to delete this booking?');\"><i class='bx bx-trash'></i></a>
-                                  </td>";
-                            echo "</tr>";
-                        }
-                        ?>
-                    </tbody>
-                </table>
-            </div>
+                    while ($row = $pdoResult->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<tr>";
+                        echo "<td style='width: 10%;'>{$full_name}</td>";
+                        echo "<td style='width: 10%;'>{$email}</td>";
+                        echo "<td style='width: 5%;'>{$row['phone']}</td>";
+                        echo "<td style='width: 12%;'>{$row['days']}</td>";
+                        echo "<td style='width: 10%;'>{$row['checkin']}</td>";
+                        echo "<td style='width: 10%;'>{$row['package']}</td>";
+                        echo "<td style='width: 10%;'>{$row['guests']}</td>";
+                        echo "<td style='width: 10%;'>{$row['downpayment']}</td>";
+                        echo "<td style='width: 10%;'>{$row['balance']}</td>";
+                        echo "<td style='width: 10%;'>{$row['total_amount']}</td>";
+                        echo "<td style='width: 10%;'>{$row['payment']}</td>";
+                        echo "<td style='width: 10%;'>{$row['Reference']}</td>";
+                        echo "<td style='width: 20%;'>
+                                <a href='boracaydelete.php?id={$row['history_id']}' onclick=\"return confirm('Are you sure you want to delete this booking?');\"><i class='bx bx-trash'></i></a>
+                              </td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
         </div>
+    </div>
+</section>
+
     </section>
 
     <script src="../js/home.js"></script>
