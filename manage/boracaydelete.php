@@ -1,59 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+session_start();
+require_once '../connect/dbcon.php';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../style/styles.css">
-    <title>display</title>
-</head>
+// Check if the session contains a booking ID and action
+if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'delete') {
+    $bookingId = $_SESSION['booking_id'];
 
-<body>
-    <div class="container">
-        <h1>crud</h1>
-        <p>landing page</p>
-    </div>
+    // Delete the booking
+    $pdoQuery = "DELETE FROM bookings WHERE id = :id";
+    $stmt = $pdoConnect->prepare($pdoQuery);
+    $stmt->execute(['id' => $bookingId]);
 
-    <?php
-    require_once "../connect/dbcon.php";
-    session_start();
+    // Clear session data after use
+    unset($_SESSION['booking_id']);
+    unset($_SESSION['action']);
 
-    if (!$user) {
-        echo "User not found.";
-        exit;
-    }
-    
-    if (isset($_GET['id'])) {
-        $userId = $_GET['id'];
-
-        
-        // Retrieve user information before deletion for audit trail
-        $userQuery = "SELECT * FROM bookings WHERE id = :id";
-        $userResult = $pdoConnect->prepare($userQuery);
-        $userResult->execute(array("id" => $userId));
-        $user = $userResult->fetch(PDO::FETCH_ASSOC);
-
-        $pdoQuery = "DELETE FROM bookings WHERE id = :id";
-        $pdoResult = $pdoConnect->prepare($pdoQuery);
-        $success = $pdoResult->execute(array("id" => $userId));
-
-        if ($success) {
-            $pdoQuery = "INSERT INTO `audit_trail`(`action`) VALUES('User Deleted')";
-            $pdoResult = $pdoConnect->prepare($pdoQuery);
-            $pdoResult->execute();
-
-            header("Location: manage.php");
-            exit();
-
-        } else {
-            echo "Error deleting user.";
-        }
-    } else {
-        echo "Invalid request. Please provide a valid id.";
-    }
-
-    $pdoConnect = null;
-    ?>
-</body>
-
-</html>
+    // Redirect back to the bookings page
+    header("Location: manage.php");
+    exit();
+} else {
+    echo "No booking ID or action specified.";
+}
+?>

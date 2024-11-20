@@ -7,7 +7,6 @@ if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     exit();
 }
 
-
 require_once '../connect/dbcon.php';
 
 $userId = $_SESSION['id'];  // Use session ID to fetch the user's data
@@ -24,7 +23,9 @@ try {
         exit;
     }
 } catch (PDOException $error) {
-    echo $error->getMessage();
+    // Log the error (use error_log or a logging library)
+    error_log($error->getMessage());
+    echo "An error occurred while fetching data. Please try again later.";
     exit;
 }
 
@@ -42,10 +43,11 @@ $totalPages = ceil($totalBookings / $limit);
 
 // Fetch bookings for the current page with user information
 $pdoQuery = "
-    SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email 
-    FROM bookings 
-    JOIN user ON bookings.user_id = user.id 
-    LIMIT :limit OFFSET :offset
+  SELECT bookings.*, user.FullName AS user_name, user.UserName AS user_email 
+FROM bookings 
+JOIN user ON bookings.user_id = user.id 
+ORDER BY bookings.id DESC 
+LIMIT :limit OFFSET :offset
 ";
 $pdoResult = $pdoConnect->prepare($pdoQuery);
 $pdoResult->bindParam(':limit', $limit, PDO::PARAM_INT);
@@ -53,7 +55,6 @@ $pdoResult->bindParam(':offset', $offset, PDO::PARAM_INT);
 $pdoResult->execute();
 $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -74,14 +75,13 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <h3>M<span>angement</span></h3>
+            <h3>M<span>agement</span></h3>
         </div>
-
 
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="" class="active">
+                    <a href="manage.php" class="active">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
@@ -95,9 +95,16 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
                 <li>
                     <a href="admin.php">
-                    <span class="las la-note-alt"></span>
+                        <span class="las la-note-alt"></span>
 
-                       <a href="admin.php"> <small>Annoucement</small></a>
+                        <a href="admin.php"> <small>Annoucement</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php" >
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
                     </a>
                 </li>
 
@@ -109,7 +116,6 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
             </ul>
         </div>
-    </div>
     </div>
 
     <div class="main-content">
@@ -134,134 +140,101 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <div class="page-content">
-                <div class="analytics">
-
-                    <div class="card">
-                        <?php
-                        // Count the total number of users
-                        $totalBookingQuery = $pdoConnect->prepare("SELECT COUNT(*) as totalBooking FROM bookings ");
-                        $totalBookingQuery->execute();
-                        $totalBookingResult = $totalBookingQuery->fetch(PDO::FETCH_ASSOC);
-                        $totalBooking = $totalBookingResult['totalBooking'];
-                        ?>
-
-                        <div class="card-head">
-                            <h2>
-                                <?php echo number_format($totalBooking); ?>
-                            </h2>
-                            <span class="las la-user-friends"></span>
-                        </div>
-                        <div class="card-progress">
-                            <small>Number of Bookings</small>
-                            <div class="card-indicator">
-                            </div>
+                <div class="records table-responsive">
+                    <div class="record-header">
+                        <div class="browse">
+                            <input type="search" placeholder="Search" class="record-search">
                         </div>
                     </div>
-
-
-                    <div class="page-content">
-                        <div class="records table-responsive">
-                            <div class="record-header">
-                                <div class="browse">
-                                    <input type="search" placeholder="Search" class="record-search">
-                                </div>
-                            </div>
-                            <table id="info-table" width="100%">
-                            <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Number of Days</th>
-        <th>Booking Date</th>
-        <th>Package</th>
-        <th>Number of Guests</th>
-        <th>Total Amount</th>
-        <th>Downpayment</th>
-        <th>Balance</th>
-        <th>Payment Method</th>
-        <th>Reference</th>
-        <th>Status</th>
-        <th>Action</th>
-    </tr>
-</thead>
-<tbody>
-    <?php foreach ($bookings as $row): ?>
-        <?php
-        // Calculate Downpayment (e.g., 50% of Total Amount)
-        $downpayment = $row['amount'] * 0.5; 
-        // Calculate Balance
-        $balance = $row['amount'] - $downpayment;
-        ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo htmlspecialchars($row['user_name']); ?></td>
-            <td><?php echo htmlspecialchars($row['user_email']); ?></td>
-            <td><?php echo htmlspecialchars($row['phone']); ?></td>
-            <td><?php echo htmlspecialchars($row['days']); ?></td>
-            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
-            <td><?php echo htmlspecialchars($row['package']); ?></td>
-            <td><?php echo htmlspecialchars($row['guests']); ?></td>
-            <td><?php echo htmlspecialchars(number_format($row['amount'], 2)); ?></td>
-            <td><?php echo htmlspecialchars(number_format($downpayment, 2)); ?></td>
-            <td><?php echo htmlspecialchars(number_format($balance, 2)); ?></td>
-            <td><?php echo htmlspecialchars($row['payment']); ?></td>
-            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
-            <td><?php echo htmlspecialchars($row['status']); ?></td>
-            <td style='width: 15%;'>
-                <?php if ($row['status'] !== 'confirmed'): ?>
-                    <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed'
-                        class="btn btn-confirm"
-                        onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
-                <?php endif; ?>
-                <a href='boracaydelete.php?id=<?php echo $row['id']; ?>'
-                    class="btn btn-delete"
-                    onclick="return confirm('Are you sure you want to delete this booking?');">Delete
-                    <i class='bx bx-trash'></i>
-                </a>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</tbody>
-
-                            </table>
-                        </div>
-                    </div>
+                    <table id="info-table" width="100%">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Number of Days</th>
+                                <th>Booking Date</th>
+                                <th>Package</th>
+                                <th>Number of Guests</th>
+                                <th>Total Amount</th>
+                                <th>Downpayment</th>
+                                <th>Balance</th>
+                                <th>Payment Method</th>
+                                <th>Reference</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($bookings as $row): ?>
+                                <tr>
+                                    <td><?php echo $row['id']; ?></td>
+                                    <td><?php echo htmlspecialchars($row['user_name']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['user_email']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['phone']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['days']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['checkin']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['package']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['guests']); ?></td>
+                                    <td><?php echo htmlspecialchars(number_format($row['balance'] + $row['downpayment'], 2)); ?>
+                                    </td> <!-- Updated Amount -->
+                                    <td><?php echo htmlspecialchars(number_format($row['downpayment'], 2)); ?></td>
+                                    <td><?php echo htmlspecialchars(number_format($row['balance'], 2)); ?></td>
+                                    <td><?php echo htmlspecialchars($row['payment']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['Reference']); ?></td>
+                                    <td><?php echo htmlspecialchars($row['status']); ?></td>
+                                    <td style='width: 15%;'>
+                                        <?php if ($row['status'] !== 'confirmed'): ?>
+                                            <a href="set_session1.php?id=<?php echo $row['id']; ?>&action=confirm"
+                                                class="btn btn-confirm"
+                                                onclick="return confirm('Are you sure you want to confirm this booking?');">Confirm</a>
+                                        <?php endif; ?>
+                                        <a href="set_session1.php?id=<?php echo $row['id']; ?>&action=delete"
+                                            class="btn btn-delete"
+                                            onclick="return confirm('Are you sure you want to delete this booking?');">Delete
+                                            <i class='bx bx-trash'></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
         </main>
-        <script>
-            let searchBox = document.querySelector('.record-search');
-            let rows = document.querySelectorAll('#info-table tbody tr');
-            console.log(rows);
+    </div>
 
-            searchBox.addEventListener('input', () => {
-                console.log('start');
-                let searchValue = searchBox.value.trim().toLowerCase();
+    <script>
+        let searchBox = document.querySelector('.record-search');
+        let rows = document.querySelectorAll('#info-table tbody tr');
+        searchBox.addEventListener('input', () => {
+            let searchValue = searchBox.value.trim().toLowerCase();
+            rows.forEach(row => {
+                let id = row.querySelector('td:first-child').textContent.toLowerCase();
+                let userName = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                let fullName = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
 
-
-
-                rows.forEach(row => {
-                    console.log('row');
-                    let id = row.querySelector('td:first-child').textContent.toLowerCase();
-                    let userName = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
-                    let fullName = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
-
-
-                    if (searchValue === "" || id.includes(searchValue)) {
-                        // If the search input is empty or matches the ID, show the row
-                        row.style.display = 'table-row';
-                        console.log("true")
-                    } else {
-                        // Hide the row if it doesn't match the search value
-                        row.style.display = 'none';
-                        console.log("false")
-
-                    }
-                });
+                if (searchValue === "" || id.includes(searchValue)) {
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.display = 'none';
+                }
             });
+        });
 
-        </script>
+        let timeout;
+        searchBox.addEventListener('input', () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                let searchValue = searchBox.value.trim().toLowerCase();
+                rows.forEach(row => {
+                    let rowText = row.textContent.toLowerCase();
+                    row.style.display = rowText.includes(searchValue) ? 'table-row' : 'none';
+                });
+            }, 300); // Wait for 300ms before processing
+        });
+    </script>
 
 </body>
 

@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 <?php
 require_once '../connect/dbcon.php';

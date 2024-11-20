@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 <?php
 require_once '../connect/dbcon.php';
@@ -130,23 +131,26 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   #darkModeToggle {
-  position: absolute;
-  margin-left: 1360px;
-  bottom: 15px;
-margin-bottom: 2px;
-  border-radius: 50%;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  width: 40px; /* Set the width */
-  height: 40px; /* Set the height */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; /* Adjust font size to make the icon smaller */
-  padding: 5px; /* Adjust padding to control the inner spacing */
-}
- 
+    position: absolute;
+    margin-left: 1360px;
+    bottom: 15px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    width: 40px;
+    /* Set the width */
+    height: 40px;
+    /* Set the height */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    /* Adjust font size to make the icon smaller */
+    padding: 5px;
+    /* Adjust padding to control the inner spacing */
+  }
 </style>
 
 <nav>
@@ -234,6 +238,7 @@ margin-bottom: 2px;
     }
   </script>
 
+<<<<<<< HEAD
 <div class="profile">
       <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
       
@@ -242,11 +247,21 @@ margin-bottom: 2px;
         <div class="dropdown-content">
           <a href="profile.php">Profile</a>
           
+=======
+  <div class="profile">
+    <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
+>>>>>>> 13bf37df2067c161c039792ac3a89cef56d0472a
 
-          <a href="logout.php">Logout</a>
-        </div>
+    <div class="dropdown">
+      <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
+      <div class="dropdown-content">
+        <a href="profile.php">Profile</a>
+
+
+        <a href="logout.php">Logout</a>
       </div>
     </div>
+  </div>
 
 
   <button onclick="toggleDarkMode()" id="darkModeToggle">

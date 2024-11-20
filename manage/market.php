@@ -30,7 +30,7 @@ try {
 
 // Pagination settings
 $limit = 10;
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 $offset = ($page - 1) * $limit;
 
 try {
@@ -67,6 +67,30 @@ try {
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/efa820665e.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Button Styles */
+        .btn-confirm {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-delete {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn-confirm:hover,
+        .btn-delete:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 
 <body>
@@ -98,6 +122,13 @@ try {
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Annoucement</small>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php" class="active">
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
                     </a>
                 </li>
 
@@ -166,55 +197,58 @@ try {
                                     <input type="search" placeholder="Search" class="record-search">
                                 </div>
                             </div>
-                                <!-- HTML Table Structure -->
-                                <table id="info-table" width="100%">
-                                    <thead>
+                            <!-- HTML Table Structure -->
+                            <table id="info-table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Address</th>
+                                        <th>Check-in Date</th>
+                                        <th>Item</th>
+                                        <th>Quantity</th>
+                                        <th>Downpayment</th>
+                                        <th>Balance</th>
+                                        <th>Payment Method</th>
+                                        <th>Reference</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($markets as $row): ?>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Phone</th>
-                                            <th>Address</th>
-                                            <th>Check-in Date</th>
-                                            <th>Item</th>
-                                            <th>Quantity</th>
-                                            <th>Downpayment</th>
-                                            <th>Balance</th>
-                                            <th>Payment Method</th>
-                                            <th>Reference</th>
-                                            <th>Status</th>
-                                            <th>Action</th>
+                                            <td><?php echo htmlspecialchars($row['id']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['name']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['email']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['phone']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['address']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['checkin']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['Item']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['quantity']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['downpayment']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['balance']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['payment']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['Reference']); ?></td>
+                                            <td><?php echo htmlspecialchars($row['status']); ?></td>
+                                            <td>
+                                                <!-- Add buttons for actions like Confirm and Delete -->
+                                                <?php if ($row['status'] !== 'confirmed'): ?>
+                                                    <a href='update_status1.php?id=<?php echo $row['id']; ?>&status=confirmed'
+                                                        class="btn btn-confirm"
+                                                        onclick="return confirm('Are you sure you want to confirm this order?');">Confirm</a>
+                                                <?php endif; ?>
+                                                <a href='marketdelete.php?id=<?php echo $row['id']; ?>'
+                                                    class="btn btn-delete"
+                                                    onclick="return confirm('Are you sure you want to delete this order?');">Delete
+                                                    <i class='bx bx-trash'></i></a>
+                                            </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php foreach ($markets as $row): ?>
-                                            <tr>
-                                                <td><?php echo htmlspecialchars($row['id']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['name']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['email']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['phone']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['address']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['checkin']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['Item']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['quantity']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['downpayment']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['balance']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['payment']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['Reference']); ?></td>
-                                                <td><?php echo htmlspecialchars($row['status']); ?></td>
-                                                <td>
-                                                    <!-- Add buttons for actions like Confirm and Delete -->
-                                                    <?php if ($row['status'] !== 'confirmed'): ?>
-                                                        <a href='update_status.php?id=<?php echo $row['id']; ?>&status=confirmed' class="btn btn-confirm"
-                                                            onclick="return confirm('Are you sure you want to confirm this order?');">Confirm</a>
-                                                    <?php endif; ?>
-                                                    <a href='marketdelete.php?id=<?php echo $row['id']; ?>' class="btn btn-delete"
-                                                        onclick="return confirm('Are you sure you want to delete this order?');">Delete <i class='bx bx-trash'></i></a>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

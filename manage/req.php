@@ -7,6 +7,11 @@ session_start();
 if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     header("location: admin.php");
     exit();
+
+    // Check if ID is passed via POST
+    if (isset($_POST['id'])) {
+        $_SESSION['cancel_request_id'] = $_POST['id'];
+    }
 }
 
 require_once '../connect/dbcon.php';
@@ -98,6 +103,13 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
 
                 <li>
+                    <a href="market.php" >
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
+                    </a>
+                </li>
+
+                <li>
                     <a href="manage_edit.php">
                         <span class="las la-user-alt"></span>
                         <small>Personal Info</small>
@@ -168,11 +180,17 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                                     <td><?php echo $row['status']; ?></td>
                                     <td>
                                         <?php if ($row['status'] !== 'approved'): ?>
-                                            <a href='approve_cancel.php?id=<?php echo $row['id']; ?>' class="btn btn-confirm"
-                                                onclick="return confirm('Are you sure you want to approve this cancellation?');">Approve</a>
+                                            <a href="approve_cancel.php" class="btn btn-confirm"
+                                                onclick="setSessionId(<?php echo $row['id']; ?>); return confirm('Are you sure you want to approve this cancellation?');">
+                                                Approve
+                                            </a>
+
                                         <?php endif; ?>
-                                        <a href='delete_cancel.php?id=<?php echo $row['id']; ?>' class="btn btn-delete"
-                                            onclick="return confirm('Are you sure you want to delete this cancellation request?');">Delete</a>
+                                        <a href="delete_cancel.php" class="btn btn-delete"
+                                            onclick="setSessionId(<?php echo $row['id']; ?>); return confirm('Are you sure you want to delete this cancellation request?');">
+                                            Delete
+                                        </a>
+
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -231,6 +249,18 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 }
             });
         });
+        function setSessionId(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "set_session.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText); // Optional: log the server response for debugging
+                }
+            };
+            xhr.send("id=" + id);
+        }
+
 
     </script>
 
