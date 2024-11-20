@@ -1,11 +1,6 @@
 <?php
 session_start();
 
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
-
 
 require_once '../connect/dbcon.php';
 

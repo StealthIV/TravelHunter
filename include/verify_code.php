@@ -16,10 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Redirect based on user role
         if ($_SESSION["UserRole"] == "admin") {
             header("Location: ../admin/admin.php");
-            
         } elseif ($_SESSION["UserRole"] == "manager") {
             header("Location: ../manage/manage.php");
-
         }
         exit();
     } else {

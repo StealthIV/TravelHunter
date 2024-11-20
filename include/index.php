@@ -179,6 +179,7 @@ if (isset($_POST["login"])) {
     }
   }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -205,12 +206,12 @@ if (isset($_POST["login"])) {
 </head>
 
 <body>
-
+  
   <!-- Header with Login and Signup Buttons -->
   <header class="header">
-    <img class="logos" src="../img/logo.png" alt="" srcset="">
+  <img class="logos" src="../img/logo.png" alt="" srcset="">
     <nav class="nav">
-
+     
       <a href="#" class="nav_logo">Travel Hunter</a>
       <button class="button" id="login-btn">Login</button>
       <button class="button" id="signup-btn">Signup</button>
@@ -243,7 +244,7 @@ if (isset($_POST["login"])) {
             <a href="#" class="forgot_pw">Forgot password?</a>
           </div>
           <button class="button" type="submit" name="login" value="Login">Login Now</button>
-
+         
         </form>
       </div>
 
@@ -265,7 +266,7 @@ if (isset($_POST["login"])) {
             <i class="uil uil-user username"></i>
           </div>
           <button class="button" type="submit" name="register" value="Register">Signup Now</button>
-
+        
         </form>
       </div>
     </div>
@@ -423,32 +424,32 @@ if (isset($_POST["login"])) {
       <div class="thumbnail">
 
         <div class="item">
-          <h1>Palawan</h1>
+        <h1>Palawan</h1>
           <img src="../img/el.jpg" alt="">
-
+         
         </div>
         <div class="item">
-          <h1>Boracay</h1>
+        <h1>Boracay</h1>
           <img src="../img/b11.jpg" alt="">
         </div>
         <div class="item">
-          <h1>Zambales</h1>
+        <h1>Zambales</h1>
           <img src="../img/21.jpg" alt="">
         </div>
         <div class="item">
-          <h1>MT. Pinatubo</h1>
+        <h1>MT. Pinatubo</h1>
           <img src="../img/mtp.jpg" alt="">
         </div>
         <div class="item">
-          <h1>Taal Volcano</h1>
+        <h1>Taal Volcano</h1>
           <img src="../img/batangas.jpg" alt="">
         </div>
         <div class="item">
-          <h1>Bataan</h1>
+        <h1>Bataan</h1>
           <img src="../img/bataan.jpg" alt="">
         </div>
         <div class="item">
-          <h1>Cebu</h1>
+        <h1>Cebu</h1>
           <img src="../img/cebu.jpg" alt="">
         </div>
 

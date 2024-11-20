@@ -2097,7 +2097,7 @@ if (isset($_SESSION['id'])) {
         <div class="container2">
           <div class="main-video">
             <div class="Video">
-              <video class="secvid" src="../Places/Pampanga/barundon.mp4" controls unmuted autoplay></video>
+              <video class="secvid" src="../Places/Pampanga/barundon.mp4" controls muted autoplay></video>
               <h3 class="title">Barundon <br><i class="bx bx-map icon" style="color: red;"></i>Camias, Porac, Pampanga
               </h3>
 
