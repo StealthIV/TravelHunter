@@ -21,6 +21,11 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
         $booking = $bookingQuery->fetch(PDO::FETCH_ASSOC);
 
         if ($booking) {
+            // Print the fetched booking details to debug
+            echo "<pre>";
+            print_r($booking);
+            echo "</pre>";
+
             // Insert a notification for the user with a custom message
             $notificationMessage = "Your booking is accepted for check-in on " . htmlspecialchars($booking['checkin']);
             $notificationQuery = $pdoConnect->prepare("
@@ -35,9 +40,13 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
             ]);
 
             // Insert record into historybookings
+            // Ensure correct values for downpayment, balance, and amount
+            $downpayment = isset($booking['downpayment']) ? $booking['downpayment'] : 0;
+            $balance = isset($booking['balance']) ? $booking['balance'] : 0;
+
             $historyQuery = $pdoConnect->prepare("
-                INSERT INTO historybookings (user_id, phone, days, checkin, package, guests, amount, payment, Reference)
-                VALUES (:user_id, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference)
+                INSERT INTO historybookings (user_id, phone, days, checkin, package, guests, amount, payment, Reference, downpayment, balance)
+                VALUES (:user_id, :phone, :days, :checkin, :package, :guests, :amount, :payment, :Reference, :downpayment, :balance)
             ");
             $historyQuery->execute([
                 'user_id' => $booking['user_id'],
@@ -48,7 +57,9 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
                 'guests' => $booking['guests'],
                 'amount' => $booking['amount'],
                 'payment' => $booking['payment'],
-                'Reference' => $booking['Reference']
+                'Reference' => $booking['Reference'],
+                'downpayment' => $downpayment,  // Ensure this is passed correctly
+                'balance' => $balance           // Ensure this is passed correctly
             ]);
 
             // Commit the transaction

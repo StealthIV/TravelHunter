@@ -56,7 +56,6 @@ $pdoResult->execute();
 $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -171,9 +170,10 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                     <td><?php echo htmlspecialchars($row['checkin']); ?></td>
                                     <td><?php echo htmlspecialchars($row['package']); ?></td>
                                     <td><?php echo htmlspecialchars($row['guests']); ?></td>
-                                    <td><?php echo htmlspecialchars(number_format($row['amount'], 2)); ?></td>
-                                    <td><?php echo htmlspecialchars(number_format($row['amount'] * 0.5, 2)); ?></td>
-                                    <td><?php echo htmlspecialchars(number_format($row['amount'] - ($row['amount'] * 0.5), 2)); ?></td>
+                                    <td><?php echo htmlspecialchars(number_format($row['balance'] + $row['downpayment'], 2)); ?>
+                                    </td> <!-- Updated Amount -->
+                                    <td><?php echo htmlspecialchars(number_format($row['downpayment'], 2)); ?></td>
+                                    <td><?php echo htmlspecialchars(number_format($row['balance'], 2)); ?></td>
                                     <td><?php echo htmlspecialchars($row['payment']); ?></td>
                                     <td><?php echo htmlspecialchars($row['Reference']); ?></td>
                                     <td><?php echo htmlspecialchars($row['status']); ?></td>
@@ -192,7 +192,6 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
-
                     </table>
                 </div>
             </div>
