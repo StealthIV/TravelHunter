@@ -2,21 +2,22 @@
 session_start();
 require_once '../connect/dbcon.php';
 
-if (isset($_GET['id']) && isset($_GET['status'])) {
-    $id = $_GET['id'];
-    $status = $_GET['status'];
+// Check if the session contains a booking ID and action
+if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
+    $bookingId = $_SESSION['booking_id'];
 
     try {
         // Begin transaction
         $pdoConnect->beginTransaction();
 
-        // Update booking status
-        $stmt = $pdoConnect->prepare("UPDATE bookings SET status = :status WHERE id = :id");
-        $stmt->execute(['status' => $status, 'id' => $id]);
+        // Confirm the booking (update status)
+        $pdoQuery = "UPDATE bookings SET status = 'confirmed' WHERE id = :id";
+        $stmt = $pdoConnect->prepare($pdoQuery);
+        $stmt->execute(['id' => $bookingId]);
 
-        // Fetch booking information
+        // Fetch the booking information
         $bookingQuery = $pdoConnect->prepare("SELECT * FROM bookings WHERE id = :id");
-        $bookingQuery->execute(['id' => $id]);
+        $bookingQuery->execute(['id' => $bookingId]);
         $booking = $bookingQuery->fetch(PDO::FETCH_ASSOC);
 
         if ($booking) {
@@ -52,20 +53,24 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
 
             // Commit the transaction
             $pdoConnect->commit();
+
+            // Clear session data after use
+            unset($_SESSION['booking_id']);
+            unset($_SESSION['action']);
+
+            // Redirect back to the bookings page
+            header("Location: manage.php");
+            exit();
         } else {
             echo "Error: Booking data not found.";
             exit;
         }
-
-        // Redirect after updating
-        header("Location: manage.php");
-        exit;
     } catch (PDOException $e) {
         // Rollback the transaction if something fails
         $pdoConnect->rollBack();
-        echo "Error updating status: " . $e->getMessage();
+        echo "Error: " . $e->getMessage();
     }
 } else {
-    echo "Invalid request: Booking ID or status is missing.";
+    echo "No booking ID or action specified.";
 }
 ?>

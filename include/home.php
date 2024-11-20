@@ -1337,7 +1337,7 @@ try {
         <div class="container2">
           <div class="main-video">
             <div class="Video">
-              <video class="secvid" src="../Places/Pampanga/barundon.mp4" controls unmuted autoplay></video>
+              <video class="secvid" src="../Places/Pampanga/barundon.mp4" controls muted autoplay></video>
               <h3 class="title"><i class="bx bx-map icon" style="color: red;"></i>Barundon(Camias, Porac, Pampanga)</h3>
 
             </div>
@@ -1424,7 +1424,6 @@ try {
       <script src="../js/language.js"></script>
       <script src="../js/explore.js" defer></script>
       <script src="../js/script.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
       <script src="../js/product.js"></script>
       <script src="../js/explore2.js" defer></script>
       <script type="text/javascript" src="../js/fin.js"></script>

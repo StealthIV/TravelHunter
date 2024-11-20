@@ -8,30 +8,36 @@ if (!isset($_SESSION["UserName"]) || !isset($_SESSION["id"])) {
     exit();
 }
 
-if (!$user) {
-    echo "User not found.";
-    exit;
+// Ensure the user is a manager
+$userId = $_SESSION['id'];
+$pdoQuery = "SELECT * FROM user WHERE id = :id";
+$stmt = $pdoConnect->prepare($pdoQuery);
+$stmt->execute(['id' => $userId]);
+$user = $stmt->fetch();
+
+if ($user['UserRole'] !== 'manager') {
+    header("Location: ../include/index.php");  // Redirect if not a manager
+    exit();
 }
 
-
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+// Check if the cancellation request ID is stored in the session
+if (isset($_SESSION['cancel_request_id'])) {
+    $id = $_SESSION['cancel_request_id'];
 
     try {
         // Update the status to 'approved'
-        $updateQuery = "UPDATE cancelbook SET status = 'approved' WHERE id = :id";
-        $stmt = $pdoConnect->prepare($updateQuery);
+        $approveQuery = "UPDATE cancelbook SET status = 'approved' WHERE id = :id";
+        $stmt = $pdoConnect->prepare($approveQuery);
         $stmt->execute(['id' => $id]);
 
-        // Redirect back to the management page with a success message
+        // Redirect to the request page after approval
         header("Location: req.php");
         exit();
     } catch (PDOException $error) {
-        // Handle error
         echo $error->getMessage();
         exit;
     }
 } else {
-    echo "Invalid request.";
+    echo "Invalid request: No cancellation ID found.";
 }
 ?>
