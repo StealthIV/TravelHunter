@@ -67,7 +67,6 @@ if (isset($_POST["register"])) {
 
     $mail->send();
 
-    // Send verification email successfully, now you can proceed to insert user data (or store it as needed)
     // Here, insert user data into the database
     try {
       $pdoQuery = "INSERT INTO user (UserName, PassWord, FullName, image, verification_code, UserRole) 

@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once '../connect/dbcon.php';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once '../include/phpmailer/src/Exception.php';
+require_once '../include/phpmailer/src/PHPMailer.php';
+require_once '../include/phpmailer/src/SMTP.php';
 
 // Check if the session contains a booking ID and action
 if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
@@ -21,10 +27,11 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
         $booking = $bookingQuery->fetch(PDO::FETCH_ASSOC);
 
         if ($booking) {
-            // Print the fetched booking details to debug
-            echo "<pre>";
-            print_r($booking);
-            echo "</pre>";
+            // Fetch user email (UserName) from user table using user_id
+            $userQuery = $pdoConnect->prepare("SELECT UserName FROM user WHERE id = :user_id");
+            $userQuery->execute(['user_id' => $booking['user_id']]);
+            $user = $userQuery->fetch(PDO::FETCH_ASSOC);
+            $userEmail = $user['UserName']; // Assuming UserName is the email address
 
             // Insert a notification for the user with a custom message
             $notificationMessage = "Your booking is accepted for check-in on " . htmlspecialchars($booking['checkin']);
@@ -40,7 +47,6 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
             ]);
 
             // Insert record into historybookings
-            // Ensure correct values for downpayment, balance, and amount
             $downpayment = isset($booking['downpayment']) ? $booking['downpayment'] : 0;
             $balance = isset($booking['balance']) ? $booking['balance'] : 0;
 
@@ -58,9 +64,59 @@ if (isset($_SESSION['booking_id']) && $_SESSION['action'] == 'confirm') {
                 'amount' => $booking['amount'],
                 'payment' => $booking['payment'],
                 'Reference' => $booking['Reference'],
-                'downpayment' => $downpayment,  // Ensure this is passed correctly
-                'balance' => $balance           // Ensure this is passed correctly
+                'downpayment' => $downpayment,
+                'balance' => $balance
             ]);
+
+            // Send confirmation email
+            $mail = new PHPMailer(true);
+            try {
+                // Server settings
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'huntertravel150@gmail.com'; // Your email address
+                $mail->Password = 'igvxyavzuysqskby'; // Your SMTP password or app-specific password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Port = 465;
+                $mail->SMTPOptions = array(
+                    'ssl' => array(
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                        'allow_self_signed' => true
+                    )
+                );
+
+                // Recipients
+                $mail->setFrom('cferdinand500@gmail.com', 'Travel Hunter');
+                $mail->addAddress($userEmail); // Send email to the user
+
+                // Content
+                $mail->isHTML(true);
+                $mail->Subject = 'Booking Confirmation';
+
+                // Email body
+                $emailContent = "
+                    <h1>Your Booking is Confirmed!</h1>
+                    <p><strong>Booking ID:</strong> {$booking['id']}</p>
+                    <p><strong>Check-in Date:</strong> {$booking['checkin']}</p>
+                    <p><strong>Package:</strong> {$booking['package']}</p>
+                    <p><strong>Guests:</strong> {$booking['guests']}</p>
+                    <p><strong>Amount:</strong> {$booking['amount']}</p>
+                    <p><strong>Downpayment:</strong> {$booking['downpayment']}</p>
+                    <p><strong>Balance:</strong> {$booking['balance']}</p>
+                    <p><strong>Payment Method:</strong> {$booking['payment']}</p>
+                    <p><strong>Reference Number:</strong> {$booking['Reference']}</p>
+                    <p>We look forward to your stay with us. If you have any questions, feel free to reach out!</p>
+                ";
+
+                $mail->Body = $emailContent;
+
+                // Send email
+                $mail->send();
+            } catch (Exception $e) {
+                echo "Error sending email: " . $mail->ErrorInfo;
+            }
 
             // Commit the transaction
             $pdoConnect->commit();

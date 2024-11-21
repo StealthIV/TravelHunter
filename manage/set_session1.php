@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../connect/dbcon.php';
 
 // Check if the action and id are set
 if (isset($_GET['id']) && isset($_GET['action'])) {
