@@ -92,7 +92,7 @@ try {
           
           </div>
           <div class="button7">
-            <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
+            <a class="a1" href="boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!" data-lang-fr="Acheter Maintenant!"
               data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！" data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!"
               data-lang-it="Acquista Ora!" data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>
           </div>
