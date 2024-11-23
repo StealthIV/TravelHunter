@@ -131,27 +131,31 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   #darkModeToggle {
-  position: absolute;
-  margin-left: 1300px;
-  bottom: 15px;
-margin-bottom: 2px;
-  border-radius: 50%;
-  background-color: #4caf50;
-  border: none;
-  color: white;
-  width: 40px; /* Set the width */
-  height: 40px; /* Set the height */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; /* Adjust font size to make the icon smaller */
-  padding: 5px; /* Adjust padding to control the inner spacing */
-}
- 
+    position: absolute;
+    margin-left: 1300px;
+    bottom: 15px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    width: 40px;
+    /* Set the width */
+    height: 40px;
+    /* Set the height */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    /* Adjust font size to make the icon smaller */
+    padding: 5px;
+    /* Adjust padding to control the inner spacing */
+  }
 </style>
 
 <nav>
   <div class="logo">
+  <a href="../include/home.php" class="nav-link">
     <i class="bx bx-menu menu-icon"></i>
     <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
       data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
@@ -170,6 +174,7 @@ margin-bottom: 2px;
       <option value="pt">🇵🇹 Portuguese</option>
       <option value="ar">🇸🇦 Arabic</option>
     </select>
+    </a>
   </div>
 
   <?php
@@ -255,11 +260,13 @@ margin-bottom: 2px;
 
   <div class="sidebar">
     <div class="logo">
-      <i class="bx bx-menu menu-icon"></i>
-      <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
-        data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
-        data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
-        data-lang-ar="صياد السفر">TravelHunter</span>
+      <a href="../include/home.php" class="nav-link">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
+          data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
+          data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
+          data-lang-ar="صياد السفر">TravelHunter</span>
+      </a>
     </div>
 
     <div class="bottom-content">
