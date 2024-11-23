@@ -9,6 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   background: url(../img/gg.jpg);
+  z-index: -8;
   
 }
 
@@ -22,7 +23,7 @@ nav {
   align-items: center;
   background: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 5;
 }
 nav .logo {
   display: flex;
@@ -50,6 +51,7 @@ nav .sidebar {
   background-color: #fff;
   box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
+  z-index: 100%;
 }
 nav.open .sidebar {
   left: 0;
@@ -114,6 +116,7 @@ nav.open ~ .overlay {
     margin-top: 70px;
     display: flex;
     justify-content: center;
+    z-index: -100;
     
 }
 

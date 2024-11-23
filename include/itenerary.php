@@ -121,7 +121,13 @@ try {
   </select>
 
   <!-- Date, Time, and Submit -->
-  <input type="date" name="date" required>
+  <input type="date" name="date" id="date" required>
+  <script>
+  // Set the minimum date to today's date
+                    const checkinInput = document.getElementById('date');
+                     const today = new Date().toISOString().split('T')[0];
+                     checkinInput.setAttribute('min', today);
+                      </script>
   <input type="time" name="time" required>
   <button type="submit">Add Activity</button>
 </form>

@@ -47,12 +47,7 @@ try {
 
 <body>
   <?php require_once 'nav.php'; ?>
-  <div class="search-box">
-    <form>
-      <button type="submit"><i class="fa fa-search"></i></button>
-      <input type="text" id="search-box" placeholder="Search a place here..">
-    </form>
-  </div>
+  
   <section class="overlay"></section>
 
   <section class="main">

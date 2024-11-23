@@ -30,7 +30,7 @@ if (isset($_SESSION['UserName']) && isset($_POST['post_id']) && isset($_POST['co
 
         if ($postOwner) {
             // Add a notification for the comment
-            $notification_name = $_SESSION['UserName'] . ' commented on your post';
+            $notification_name = $_SESSION['FullName'] . ' commented on your post';
             $post_owner_id = $postOwner['user_id'];  // Get the post owner's user_id
 
             // Insert into notifications (leave status blank)

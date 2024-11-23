@@ -384,3 +384,90 @@ span {
 .location:hover {
   text-decoration: underline; /* Underline on hover */
 }
+/* Mobile Responsive Styles */
+/* Responsive for screen widths between 430px and 1024px */
+@media (min-width: 430px) and (max-width: 1024px) {
+  /* Adjust sidebar */
+  nav .sidebar {
+    width: 200px;
+  }
+
+  nav.open .sidebar {
+    left: 0;
+  }
+
+  .sidebar-content .list {
+    padding: 20px 8px;
+  }
+
+  .nav-link {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  /* Adjust logo and navbar height */
+  nav .logo .logo-name {
+    font-size: 18px;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  /* Adjust search box */
+  .search-box {
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+
+  .search-box input {
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .search-box button {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Adjust cards for smaller layouts */
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .intro {
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 16px;
+  }
+
+  .intro p {
+    font-size: 12px;
+  }
+
+  /* Adjust modal content */
+  .modal-content {
+    width: 90%;
+  }
+
+  .close {
+    font-size: 30px;
+    top: 15px;
+    right: 20px;
+  }
+}

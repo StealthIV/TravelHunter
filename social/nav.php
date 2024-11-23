@@ -132,7 +132,7 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   #darkModeToggle {
     position: absolute;
-    margin-left: 1360px;
+    margin-left: 1300px;
     bottom: 15px;
     margin-bottom: 2px;
     border-radius: 50%;
@@ -238,31 +238,16 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
   </script>
 
-<<<<<<< HEAD
-<div class="profile">
-      <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
-      
-      <div class="dropdown">
-        <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
-        <div class="dropdown-content">
-          <a href="profile.php">Profile</a>
-          
-=======
   <div class="profile">
     <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
->>>>>>> 13bf37df2067c161c039792ac3a89cef56d0472a
-
     <div class="dropdown">
       <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
       <div class="dropdown-content">
         <a href="profile.php">Profile</a>
-
-
         <a href="logout.php">Logout</a>
       </div>
     </div>
   </div>
-
 
   <button onclick="toggleDarkMode()" id="darkModeToggle">
     <i class="fas fa-moon" id="toggleIcon"></i>

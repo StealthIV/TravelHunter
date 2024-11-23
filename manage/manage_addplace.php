@@ -2,11 +2,6 @@
 session_start();
 require_once '../connect/dbcon.php'; // Adjust the path to your DB connection file
 
-if (!$user) {
-    echo "User not found.";
-    exit;
-}
-
 // Handle form submissions for adding and updating tourist spots
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? null; // Get id if available (for updates)
