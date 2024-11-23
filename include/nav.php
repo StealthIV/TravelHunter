@@ -151,17 +151,19 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
     padding: 5px;
     /* Adjust padding to control the inner spacing */
   }
+
 </style>
 
 <nav>
   <div class="logo">
-  <a href="../include/home.php" class="nav-link">
-    <i class="bx bx-menu menu-icon"></i>
+
+  <i class="bx bx-menu menu-icon"></i>  
+  <a href="../include/home.php" class="nav-link" style=" text-decoration: none;">
     <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
       data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
       data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"
-      data-lang-ar="صياد السفر">TravelHunter</span>
-
+      data-lang-ar="صياد السفر">TravelHunter</span> </a>
+</a>
     <select class="language" id="language-select" onchange="changeLanguage()">
       <option value="en">🇺🇸 English</option>
       <option value="es">🇪🇸 Spanish</option>
@@ -174,7 +176,6 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <option value="pt">🇵🇹 Portuguese</option>
       <option value="ar">🇸🇦 Arabic</option>
     </select>
-    </a>
   </div>
 
   <?php
@@ -260,8 +261,9 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="sidebar">
     <div class="logo">
-      <a href="../include/home.php" class="nav-link">
+     
         <i class="bx bx-menu menu-icon"></i>
+        <a href="../include/home.php" class="nav-link" style=" text-decoration: none;">
         <span class="logo-name" data-lang-en="Travel Hunter" data-lang-es="Cazador de viajes"
           data-lang-fr="Chasseur de voyages" data-lang-de="Reisejäger" data-lang-zh="旅行猎人" data-lang-jp="トラベルハンター"
           data-lang-ru="Охотник за путешествиями" data-lang-it="Cacciatore di viaggi" data-lang-pt="Caçador de viagens"

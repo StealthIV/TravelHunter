@@ -107,6 +107,7 @@ if (isset($_SESSION['id'])) {
         </div>
 
         <div class="image-container"></div>
+        <div class="place-name" id="place-name">Shangri-La Hotel </div>
       </div>
     </div>
     </div>

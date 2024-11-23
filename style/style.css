@@ -16,7 +16,9 @@ body {
 }
 
 
-
+.sidebar a .logo-name{
+  text-decoration: none;
+}
 #bg-video {
   width: 100%;
   height: 100%;
@@ -77,6 +79,11 @@ nav.open .sidebar {
 .sidebar-content .list {
   list-style: none;
 }
+
+.nav-link .logo-name{
+    text-decoration: none;
+}
+
 .list .nav-link {
   display: flex;
   align-items: center;

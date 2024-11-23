@@ -47,11 +47,7 @@ nav .logo {
   margin-right: 14px;
   cursor: pointer;
 }
-.logo .logo-name {
-  color: #333;
-  font-size: 22px;
-  font-weight: 500;
-}
+
 nav .sidebar {
   position: fixed;
   top: 0;

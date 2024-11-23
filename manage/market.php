@@ -98,14 +98,13 @@ try {
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <h3>M<span>angement</span></h3>
+            <h3>M<span>agement</span></h3>
         </div>
-
 
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="" class="active">
+                    <a href="manage.php">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
@@ -118,10 +117,18 @@ try {
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+                    <a href="admin.php">
+                        <span class="las la-note-alt"></span>
 
-                        <small>Annoucement</small>
+                        <a href="admin.php"> <small>Annoucement</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manageplace.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Add Places</small></a>
                     </a>
                 </li>
 
@@ -140,7 +147,6 @@ try {
                 </li>
             </ul>
         </div>
-    </div>
     </div>
 
     <div class="main-content">

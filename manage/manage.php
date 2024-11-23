@@ -102,7 +102,15 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
 
                 <li>
-                    <a href="market.php" >
+                    <a href="manageplace.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Add Places</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php">
                         <span class="las la-user-alt"></span>
                         <small>Market</small>
                     </a>

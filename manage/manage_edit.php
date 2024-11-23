@@ -16,7 +16,7 @@ try {
     if (!$user) {
         throw new Exception("User not found.");
     }
-    
+
     $profile_image = !empty($user['image']) ? $user['image'] : 'default_profile.jpg';
     $full_name = $user['FullName'];
     $email = $user['UserName'];
@@ -41,7 +41,7 @@ try {
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <script src="https://kit.fontawesome.com/efa820665e.js" crossorigin="anonymous"></script>
     <script>
-        window.onload = function () {
+        window.onload = function() {
             // Refresh profile image on load to avoid cache issues
             var profileImage = document.querySelector('.profile-header img');
             profileImage.src = profileImage.src + '?' + new Date().getTime();
@@ -54,37 +54,54 @@ try {
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <h3>A<span>dmin</span></h3>
+            <h3>M<span>agement</span></h3>
         </div>
 
-        <div class="side-content">
-            <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url('../pic/<?php echo $profile_image; ?>');"></div>
-                <small><?php echo htmlspecialchars($full_name); ?></small>
-            </div>
+        <div class="side-menu">
+            <ul>
+                <li>
+                    <a href="manage.php">
+                        <span class="las la-home"></span>
+                        <small>Dashboard</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="req.php">
+                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
-            <div class="side-menu">
-                <ul>
-                    <li>
-                        <a href="admin.php">
-                            <span class="las la-home"></span>
-                            <small>Dashboard</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="audit.php">
-                            <span class="fa-solid fa-file-waveform"></span>
-                            <small>Audit Trail</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="edit.php" class="active">
-                            <span class="las la-user-alt"></span>
-                            <small>Personal Info</small>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <small>Request</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Annoucement</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manageplace.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Add Places</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php">
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manage_edit.php" class="active">
+                        <span class="las la-user-alt"></span>
+                        <small>Personal Info</small>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 

@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["modify"])) {
         // Clear session for the current edit to avoid conflicts
         unset($_SESSION['updateUserId']);
 
-        header("Location: ../crud/admin.php");
+        header("Location: ../admin/admin.php");
         exit();
     } else {
         echo "Update failed: " . implode(" ", $pdoQuery->errorInfo());

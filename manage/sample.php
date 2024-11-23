@@ -71,8 +71,6 @@ $bookings = $pdoResult->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <style>
-
-   
 main header {
             text-align: center;
             margin-top: 40px;
@@ -196,7 +194,7 @@ main header {
         </header>
         <main>
             <div class="page-header">
-                <h1>Event Calendar</h1>
+                <h1>Dashboard</h1>
                 <small>Home / Dashboard</small>
             </div>
 

@@ -34,11 +34,6 @@ nav {
   z-index: 1;
 }
 
-#darkModeToggle {
-  left: 50px;
-  top: 15px;
-}
-
 nav .logo {
   display: flex;
   align-items: center;

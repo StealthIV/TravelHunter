@@ -132,10 +132,10 @@ if (isset($_SESSION['id'])) {
         </div>
 
         <div class="image-container"></div>
+        <div class="place-name" id="place-name">Shangri-La Hotel </div>
+        
       </div>
     </div>
-
-    <h1 class="asd">drag to control:</h1>
     </div>
   </section>
   <div class="img">

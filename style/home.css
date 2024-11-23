@@ -359,6 +359,130 @@ nav .sidebar {
   display: none;
 }
 
+
+
+/* Responsiveness for devices between 430px and 1024px */
+@media (max-width: 1024px) and (min-width: 430px) {
+  body {
+    height: auto;
+  }
+
+  #bg-video {
+    height: auto;
+    object-fit: cover;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .logo .logo-name {
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 220px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .sidebar-content {
+    padding: 20px 10px;
+  }
+
+  .profile {
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  .profile img.user {
+    width: 30px;
+    height: 30px;
+  }
+
+  .dropdown-content {
+    right: -20px; /* Adjust dropdown position */
+  }
+
+  .notification-icon {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  .notification-badge {
+    top: -4px;
+    right: -6px;
+  }
+
+  .main {
+    height: auto;
+    margin-top: 60px;
+  }
+
+  .main .row h1,
+  .container h1 {
+    font-size: 28px;
+    margin-left: 20px;
+  }
+
+  .container .pl {
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  #filterable-cards .card {
+    width: 12rem; /* Adjust card size for smaller screens */
+    margin: 10px auto;
+  }
+}
+
+/* Responsiveness for devices below 430px */
+@media (max-width: 430px) {
+  nav {
+    height: 50px;
+  }
+
+  .logo .logo-name {
+    font-size: 16px;
+  }
+
+  .profile img.user {
+    width: 25px;
+    height: 25px;
+  }
+
+  .notification-icon {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .notification-badge {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .main {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .main .row h1,
+  .container h1 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .container .pl {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  #filterable-cards .card {
+    width: 10rem;
+  }
+}
+
+
+
+
 @media (max-width: 600px) {
     .main{
         display:inherit;
@@ -791,6 +915,8 @@ color: rgb(0, 0, 0);
   font-size: 24px;
   cursor: pointer;
 }
+
+
 
 
 

@@ -75,9 +75,8 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
     <input type="checkbox" id="menu-toggle">
     <div class="sidebar">
         <div class="side-header">
-            <h3>M<span>angement</span></h3>
+            <h3>M<span>agement</span></h3>
         </div>
-
 
         <div class="side-menu">
             <ul>
@@ -88,7 +87,7 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </li>
                 <li>
-                    <a href="../manage/req.php" class="active">
+                    <a href="req.php" class="active">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Request</small>
@@ -96,14 +95,22 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
                 <li>
                     <a href="admin.php">
-                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+                        <span class="las la-note-alt"></span>
 
-                        <small>Annoucement</small>
+                        <a href="admin.php"> <small>Annoucement</small></a>
                     </a>
                 </li>
 
                 <li>
-                    <a href="market.php" >
+                    <a href="manageplace.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Add Places</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php">
                         <span class="las la-user-alt"></span>
                         <small>Market</small>
                     </a>
@@ -249,19 +256,18 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 }
             });
         });
+
         function setSessionId(id) {
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "set_session.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     console.log(xhr.responseText); // Optional: log the server response for debugging
                 }
             };
             xhr.send("id=" + id);
         }
-
-
     </script>
 
 </body>
