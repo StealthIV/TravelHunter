@@ -82,21 +82,38 @@ $touristSpots = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="manage.php" class="active">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
                 </li>
                 <li>
-                    <a href="req.php" class="active">
-                        <span><i class="fa-solid fa-file-waveform"></i></span> <br>
+                    <a href="req.php">
+                        <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
+
                         <small>Request</small>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span><i class="fa-solid fa-file-waveform"></i></span> <br>
-                        <small>Announcement</small>
+                    <a href="admin.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="admin.php"> <small>Annoucement</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="manage_place.php">
+                        <span class="las la-note-alt"></span>
+
+                        <a href="manage_place.php"> <small>Add Places</small></a>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="market.php">
+                        <span class="las la-user-alt"></span>
+                        <small>Market</small>
                     </a>
                 </li>
 

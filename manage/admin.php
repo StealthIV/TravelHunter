@@ -155,10 +155,10 @@ main header {
                 </li>
 
                 <li>
-                    <a href="manageplace.php">
+                    <a href="manage_place.php">
                         <span class="las la-note-alt"></span>
 
-                        <a href="admin.php"> <small>Add Places</small></a>
+                        <a href="manage_place.php"> <small>Add Places</small></a>
                     </a>
                 </li>
 

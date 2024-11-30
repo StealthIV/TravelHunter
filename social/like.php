@@ -41,7 +41,7 @@ try {
         $stmt->execute();
 
         // Add a notification for the like
-        $notification_name = $_SESSION['FullName'] . ' liked your post';
+        $notification_name = $_SESSION['UserName'] . ' liked your post';
 
         // Insert into notifications (leave status blank)
         $stmt = $pdoConnect->prepare("INSERT INTO notifications (name, post_id, user_id, created_at) VALUES (:name, :post_id, :user_id, NOW())");

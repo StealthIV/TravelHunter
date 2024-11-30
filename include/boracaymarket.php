@@ -144,15 +144,17 @@ if (!isset($_SESSION['id'])) {
 
                <!-- Payment Step -->
                <div class="page">
-                  <div class="title">Payment:</div>
-                  <h1>Gcash account: 09663174570</h1>
+               <div id="qr-code-container" style="margin-top: 20px; display: none;">
+            <h3>Scan QR Code to Pay</h3>
+            <img id="qr-code" src="" alt="QR Code" style="width: 200px; cursor: pointer;" onclick="zoomQRCode()">
+        </div>
                   <div class="field">
                      <div class="label">Mode of Payment</div>
                      <select id="payment" name="payment" required>
                         <option hidden>Payment Method</option>
-                        <option>Gcash</option>
-                        <option>Maya</option>
-                        <option>Paypal</option>
+                        <option value="gcash">GCash (09663174570)</option>
+                        <option value="paymaya">PayMaya (09663174570)</option>
+                        <option value="paypal">PayPal (09663174570)</option>
                      </select>
                   </div>
 
@@ -176,6 +178,49 @@ if (!isset($_SESSION['id'])) {
                   </div>
                </div>
 
+
+               <style>
+    /* General container styling */
+    #qr-code-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        max-width: 200px;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* QR Code Image Styling */
+    #qr-code {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    #qr-code:hover {
+        transform: scale(1.1);
+        border-color: #007bff;
+    }
+
+    /* Title above the QR code */
+    #qr-code-container h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+    }
+</style>
+
                <!-- Confirmation Step -->
                <div class="page">
                   <div class="title">Confirm Order Item:</div>
@@ -188,6 +233,78 @@ if (!isset($_SESSION['id'])) {
             </form>
          </div>
       </div>
+
+
+
+      <script>
+         function calculatePayment() {
+    // Get the selected item
+    const itemSelect = document.getElementById("item");
+    const selectedItem = itemSelect.value;
+
+    // Extract the price from the selected option
+    const priceMatch = selectedItem.match(/₱([\d,]+)/);
+    const price = priceMatch ? parseFloat(priceMatch[1].replace(/,/g, '')) : 0;
+
+    // Get the quantity and address
+    const quantity = parseInt(document.getElementById("quantity").value) || 0;
+    const address = document.getElementById("address").value.trim();
+
+    // Calculate additional charge (₱500 fixed per transaction if address is provided)
+    const additionalCharge = address ? 500 : 0;
+
+    // Calculate total price
+    const totalPrice = (price * quantity) + additionalCharge;
+
+    // Calculate downpayment and balance
+    const downpayment = totalPrice * 0.3; // 30% of the total price
+    const balance = totalPrice - downpayment; // Total minus downpayment
+
+    // Update the downpayment and balance fields
+    document.getElementById("downpayment").value = "₱" + downpayment.toFixed(2);
+    document.getElementById("balance").value = "₱" + balance.toFixed(2);
+}
+
+// Attach event listeners to inputs
+document.getElementById("item").addEventListener("change", calculatePayment);
+document.getElementById("quantity").addEventListener("input", calculatePayment);
+document.getElementById("address").addEventListener("input", calculatePayment);
+
+function updateQRCode() {
+    const paymentMethod = document.getElementById("payment").value;
+    const qrCodeContainer = document.getElementById("qr-code-container");
+    const qrCodeImage = document.getElementById("qr-code");
+
+    // Set QR Code image based on selected payment method
+    switch (paymentMethod) {
+        case "gcash":
+            qrCodeImage.src = "../img/gcash.jpg"; // Replace with actual GCash QR code image path
+            break;
+        case "paymaya":
+            qrCodeImage.src = "../img/maya.png"; // Replace with actual PayMaya QR code image path
+            break;
+        case "paypal":
+            qrCodeImage.src = "path/to/paypal-qr-code.png"; // Replace with actual PayPal QR code image path
+            break;
+    }
+
+    // Show QR Code container
+    qrCodeContainer.style.display = "block";
+}
+
+function zoomQRCode() {
+    const qrCodeImage = document.getElementById("qr-code");
+    const zoomWindow = window.open("", "QR Code", "width=500,height=500");
+    zoomWindow.document.write(`<img src="${qrCodeImage.src}" alt="Zoomed QR Code" style="width: 100%;">`);
+}
+
+// Attach event listeners
+document.getElementById("item").addEventListener("change", calculatePayment);
+document.getElementById("quantity").addEventListener("input", calculatePayment);
+document.getElementById("address").addEventListener("input", calculatePayment);
+document.getElementById("payment").addEventListener("change", updateQRCode);
+
+      </script>
 
       <script src="../js/market.js"></script>
       <script src="../js/home.js"></script>

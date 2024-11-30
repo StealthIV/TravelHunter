@@ -8,7 +8,7 @@
 /* Body Styles */
 body {
   font-family: Arial, sans-serif;
-  background: url(../img/gg.jpg);
+  background-color: white;
   z-index: -8;
   
 }
@@ -347,7 +347,7 @@ h1{
 .profile {
   display: flex;
   position: fixed;
-  margin-left: 1200px;
+  margin-left: 1140px;
   align-items: center;
 }
 

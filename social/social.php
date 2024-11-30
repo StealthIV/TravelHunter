@@ -14,7 +14,7 @@ if (isset($_SESSION['UserName'])) {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-      $first_name = $user['FullName'];
+      $full_name = $user['FullName'];
       $profile_image = $user['image']; // Assuming this is the URL to the profile image
     } else {
       // Handle the case where user details are not found

@@ -6,13 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-  background: url("../Places/boracay/b1.jpg"),
-    -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  
+  height: 100%;
+  max-width: 900px;
+  background: url("../Places/boracay/b1.jpg");
   background-size: cover;
 }
 
@@ -119,12 +116,12 @@ nav.open ~ .overlay {
 .profile {
   display: flex;
   position: fixed;
-  margin-left: 1200px;
+  margin-left: 1140px;
   align-items: center;
 }
 
 .profile span {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-right: 10px;
 }
 
@@ -163,6 +160,9 @@ nav.open ~ .overlay {
 .profile:hover .dropdown-content {
   display: block;
 }
+
+
+
 
 .main {
   height: auto;

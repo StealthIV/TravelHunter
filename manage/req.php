@@ -81,13 +81,13 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="manage.php">
+                    <a href="manage.php" class="active">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
                 </li>
                 <li>
-                    <a href="req.php" class="active">
+                    <a href="req.php">
                         <span> <i class="fa-solid fa-file-waveform"></i> </span> <br>
 
                         <small>Request</small>
@@ -102,10 +102,10 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
 
                 <li>
-                    <a href="manageplace.php">
+                    <a href="manage_place.php">
                         <span class="las la-note-alt"></span>
 
-                        <a href="admin.php"> <small>Add Places</small></a>
+                        <a href="manage_place.php"> <small>Add Places</small></a>
                     </a>
                 </li>
 
@@ -124,7 +124,6 @@ $cancelbookEntries = $cancelbookResult->fetchAll(PDO::FETCH_ASSOC);
                 </li>
             </ul>
         </div>
-    </div>
     </div>
 
     <div class="main-content">

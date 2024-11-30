@@ -104,7 +104,7 @@ try {
         <div class="side-menu">
             <ul>
                 <li>
-                    <a href="manage.php">
+                    <a href="manage.php" class="active">
                         <span class="las la-home"></span>
                         <small>Dashboard</small>
                     </a>
@@ -125,15 +125,15 @@ try {
                 </li>
 
                 <li>
-                    <a href="manageplace.php">
+                    <a href="manage_place.php">
                         <span class="las la-note-alt"></span>
 
-                        <a href="admin.php"> <small>Add Places</small></a>
+                        <a href="manage_place.php"> <small>Add Places</small></a>
                     </a>
                 </li>
 
                 <li>
-                    <a href="market.php" class="active">
+                    <a href="market.php">
                         <span class="las la-user-alt"></span>
                         <small>Market</small>
                     </a>

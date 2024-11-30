@@ -893,7 +893,9 @@ try {
                 <b data-lang-en="Shell Keychains" data-lang-es="Llaveros de Concha" data-lang-fr="Porte-clés Coquillage"
                   data-lang-de="Muschel-Schlüsselanhänger" data-lang-zh="贝壳钥匙链" data-lang-jp="シェルキーホルダー"
                   data-lang-ru="Брелоки с ракушками" data-lang-it="Portachiavi con Conchiglie"
-                  data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف">Shell Keychains (₱500.00)</b><br>
+                  data-lang-pt="Chaveiros de Conchas" data-lang-ar="ميداليات الصدف"><a
+                  href="../include/boracaymarket.php"><i class="bx bx-water icon"></i>
+                  Shell Keychains (₱500.00)</a></b><br>
 
                 <a href="https://maps.app.goo.gl/D62S8DkAw1XJh1Qm8"><i class="bx bx-map icon"
                     style=" color: #32b4ff;"></i></a>
@@ -912,7 +914,7 @@ try {
 
             </div>
             <div class="button7">
-              <a class="a1" href="#" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
+              <a class="a1" href="../include/boracaymarket.php" data-lang-en="Buy Now!!" data-lang-es="¡Compra Ahora!"
                 data-lang-fr="Acheter Maintenant!" data-lang-de="Jetzt Kaufen!" data-lang-zh="立即购买！"
                 data-lang-jp="今すぐ購入！" data-lang-ru="Купить Сейчас!" data-lang-it="Acquista Ora!"
                 data-lang-pt="Compre Agora!" data-lang-ar="اشتري الآن!!"><i class="bx bx-cart icon"></i>Buy Now!!</a>

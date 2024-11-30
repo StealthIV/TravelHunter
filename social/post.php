@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':post_image' => $file_destination
         ])) {
             // Add a notification for the new post
-            $notification_name = $_SESSION['UserName'] . ' created a new post';
+            $notification_name = $_SESSION['FullName'] . ' created a new post';
             $stmt = $pdoConnect->prepare("INSERT INTO notifications (name, user_id, post_id, created_at) VALUES (:name, :user_id, LAST_INSERT_ID(), NOW())");
             $stmt->bindParam(':name', $notification_name, PDO::PARAM_STR);
             $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);

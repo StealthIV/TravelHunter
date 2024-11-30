@@ -147,8 +147,8 @@ if (isset($_SESSION['id'])) {
 
       <div id="carousel" class="carousel">
 
-        <div id='item_1' class="hideLeft">
-          <img src="../places/boracay/1.jpg">
+        <div id='item_1' class="hideLeft" >
+          <img src="../places/boracay/1.jpg" >
         </div>
 
         <div id='item_2' class="prevLeftSecond">
@@ -160,7 +160,7 @@ if (isset($_SESSION['id'])) {
         </div>
 
         <div id='item_4' class="selected">
-          <img src="../places/boracay/5.jpg">
+          <img src="../places/boracay/5.jpg" class="clickable-image">
         </div>
 
         <div id='item_5' class="next">
@@ -719,335 +719,303 @@ if (isset($_SESSION['id'])) {
 
 
     <main>
-      <header>
-        <h1 data-lang-en="Boracay Water Activities" data-lang-es="Paquete de Tour en Boracay"
-          data-lang-fr="Forfait Tour à Boracay" data-lang-de="Boracay Tour-Paket" data-lang-zh="博拉acay旅游套餐"
-          data-lang-jp="ボラカイツアーパッケージ" data-lang-ru="Турпакет на Борокай" data-lang-it="Pacchetto Tour di Boracay"
-          data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="حزمة جولة بوراكاي"><i class="bx bx-run icon"
-            style="color: red;"></i>Boracay Water Activities</h1>
-        <p>
-          <span class="span2">&#139;</span>
-          <span class="span2">&#155;</span>
-        </p>
-      </header>
-      <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
-      <section class="section6">
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay"
-                data-lang-fr="Tyrolienne à Boracay" data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索"
-                data-lang-jp="ボラカイジップライン" data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay"
-                data-lang-pt="Tirolina Boracay" data-lang-ar="زيبلاين بوراكاي"><a
-                  href="../include/boracayactivities.php">Zipline Boracay</a></b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
-                data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
-                data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
-                data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
-                data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
+<header>
+  <h1><i class="bx bx-home icon" style="color: red;"></i>Top Hottest Accomodations</h1>
+  <p>
+    <span class="span4">&#139;</span>
+    <span class="span4">&#155;</span>
+  </p>
+</header>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
-                data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
-                data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
-                data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
+<p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
+<section class="section6">
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/shangrila.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1"> <i class="bx bx-home-smile icon" style="color: blue;"></i><a href="../include/boracayhotel.php" style=" text-decoration: none;">Shangri-La Hotels and Resorts</a></b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
-                data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
-                Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Go Island Hopping.jpg" alt="Go Island Hopping">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
-                data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
-                data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
-                data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Barangay Yapak, Boracay Island, Malay, Aklan 5608</small>
+      </p>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
-                data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="博拉acay站1"
-                data-lang-jp="ボラカイ島ステーション1" data-lang-ru="Станция 1, Борокай" data-lang-it="Stazione 1, Boracay"
-                data-lang-pt="Estação 1, Boracay" data-lang-ar="المحطة 1، بوراكاي">Station 1, Boracay</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Banana Boat.jpg" alt="Ride the Banana Boat">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
-                data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat" data-lang-zh="乘坐香蕉船"
-                data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
-                data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
-                data-lang-ar="ركوب القارب الموزي">Ride the Banana Boat</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="White Beach, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Playa Blanca, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Plage Blanche, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Weißer Strand, Boracay, Malay, 5608 Aklan" data-lang-zh="白沙滩，博拉acay，马来，5608阿克兰"
-                data-lang-jp="ホワイトビーチ、ボラカイ、マレー、5608アクラン" data-lang-ru="Белый пляж, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Spiaggia Bianca, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Praia Branca, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="الشاطئ الأبيض، بوراكاي، مالاي، 5608 أكلان">
-                White Beach, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay"
-                data-lang-fr="Tyrolienne à Boracay" data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索"
-                data-lang-jp="ボラカイジップライン" data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay"
-                data-lang-pt="Tirolina Boracay" data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
-                data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
-                data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
-                data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
-                data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
-                data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
-                data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
-                data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
-                data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
-                Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Go Island Hopping.jpg" alt="Go Island Hopping">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Go Island Hopping" data-lang-es="Ir de Isla en Isla"
-                data-lang-fr="Faire de l'Île à l'Île" data-lang-de="Insel-Hopping machen" data-lang-zh="去岛屿跳跃"
-                data-lang-jp="アイランドホッピングをする" data-lang-ru="Ходить на острова" data-lang-it="Fai Island Hopping"
-                data-lang-pt="Ir de Ilha em Ilha" data-lang-ar="اذهب في رحلة بين الجزر">Go Island Hopping</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 1, Boracay" data-lang-es="Estación 1, Boracay"
-                data-lang-fr="Station 1, Boracay" data-lang-de="Station 1, Boracay" data-lang-zh="博拉acay站1"
-                data-lang-jp="ボラカイ島ステーション1" data-lang-ru="Станция 1, Борокай" data-lang-it="Stazione 1, Boracay"
-                data-lang-pt="Estação 1, Boracay" data-lang-ar="المحطة 1، بوراكاي">Station 1, Boracay</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Banana Boat.jpg" alt="Ride the Banana Boat">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Ride the Banana Boat" data-lang-es="Montar el Banana Boat"
-                data-lang-fr="Montez le Banana Boat" data-lang-de="Fahren Sie mit dem Banana Boat" data-lang-zh="乘坐香蕉船"
-                data-lang-jp="バナナボートに乗る" data-lang-ru="Прокатитесь на банановой лодке"
-                data-lang-it="Fai un giro sul Banana Boat" data-lang-pt="Andar no Banana Boat"
-                data-lang-ar="ركوب القارب الموزي">Ride the Banana Boat</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="White Beach, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Playa Blanca, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Plage Blanche, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Weißer Strand, Boracay, Malay, 5608 Aklan" data-lang-zh="白沙滩，博拉acay，马来，5608阿克兰"
-                data-lang-jp="ホワイトビーチ、ボラカイ、マレー、5608アクラン" data-lang-ru="Белый пляж, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Spiaggia Bianca, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Praia Branca, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="الشاطئ الأبيض، بوراكاي، مالاي، 5608 أكلان">
-                White Beach, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Zipline Boracay.jpg" alt="Zipline in Boracay">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Zipline Boracay" data-lang-es="Tirolina Boracay"
-                data-lang-fr="Tyrolienne à Boracay" data-lang-de="Zipline Boracay" data-lang-zh="博拉acay滑索"
-                data-lang-jp="ボラカイジップライン" data-lang-ru="Зиплайн на Борокае" data-lang-it="Zipline Boracay"
-                data-lang-pt="Tirolina Boracay" data-lang-ar="زيبلاين بوراكاي">Zipline Boracay</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Kite Surf on Bulabog Beach.jpg" alt="Kite Surf on Bulabog Beach">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Kite Surf on Bulabog Beach" data-lang-es="Kite Surf en Playa Bulabog"
-                data-lang-fr="Kite Surf sur la plage de Bulabog" data-lang-de="Kitesurfen am Bulabog Beach"
-                data-lang-zh="布拉博格海滩的风筝冲浪" data-lang-jp="ブルボグビーチでのカイトサーフィン" data-lang-ru="Кайтсерфинг на пляже Булобог"
-                data-lang-it="Kite Surf a Bulabog Beach" data-lang-pt="Kite Surf na Praia de Bulabog"
-                data-lang-ar="ركوب الأمواج بالطائرات الورقية على شاطئ بولابوج">Kite Surf on Bulabog Beach</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Station 3 Beach front, Boracay Island 5608"
-                data-lang-es="Frente a la playa de la estación 3, Isla Boracay 5608"
-                data-lang-fr="Front de mer Station 3, Île Boracay 5608"
-                data-lang-de="Strandstation 3, Boracay-Insel 5608" data-lang-zh="博拉acay岛站3海滩前5608"
-                data-lang-jp="ボラカイ島ステーション3のビーチフロント5608" data-lang-ru="Береговая линия станции 3, остров Борокай 5608"
-                data-lang-it="Fronte spiaggia Stazione 3, Isola Boracay 5608"
-                data-lang-pt="Frente para a praia da Estação 3, Ilha Boracay 5608"
-                data-lang-ar="واجهة الشاطئ لمحطة 3، جزيرة بوراكاي 5608">Station 3 Beach front, Boracay Island
-                5608</small>
-            </p>
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/Ride the Zorb.jpg" alt="Ride the Zorb">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1" data-lang-en="Ride the Zorb" data-lang-es="Montar el Zorb" data-lang-fr="Montez le Zorb"
-                data-lang-de="Fahren Sie mit dem Zorb" data-lang-zh="乘坐Zorb" data-lang-jp="ゾーブに乗る"
-                data-lang-ru="Покатайтесь на Зорбе" data-lang-it="Fai un giro sul Zorb" data-lang-pt="Andar no Zorb"
-                data-lang-ar="ركوب الزورب">Ride the Zorb</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small data-lang-en="Beach front Dmall of Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-es="Frente a la playa Dmall de Boracay Estación 2, Boracay, Malay, 5608 Aklan"
-                data-lang-fr="Front de mer Dmall de Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-de="Strandstation Dmall von Boracay Station 2, Boracay, Malay, 5608 Aklan"
-                data-lang-zh="博拉acay站2的Dmall海滩前5608 Aklan" data-lang-jp="ボラカイ島マレー5608のDMallビーチフロントステーション2"
-                data-lang-ru="Береговая линия Dmall Борокая, станция 2, Борокай, Малай, 5608 Аклан"
-                data-lang-it="Fronte spiaggia Dmall di Boracay Stazione 2, Boracay, Malay, 5608 Aklan"
-                data-lang-pt="Frente para a praia Dmall de Boracay Estação 2, Boracay, Malay, 5608 Aklan"
-                data-lang-ar="واجهة الشاطئ لـ Dmall من بوراكاي محطة 2، بوراكاي، مالاي، 5608 أكلان">Beach front Dmall of
-                Boracay Station 2, Boracay, Malay, 5608 Aklan</small>
-            </p>
-          </div>
-        </div>
-
-      </section>
-    </main>
+    </div>
+    <div class="button7">
 
 
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/mandala.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+      
+        <b class="sh1"> <i class="bx bx-home-smile icon" style="color: blue;"></i><a href="../include/boracayhotel.php" style=" text-decoration: none;">Mandala Spa and Resort Villas</a></b><br>
+        <i class="bx bx-map icon" style="color: blue ;"></i>
+        <small> Station 3, Barangay Manoc-Manoc, Boracay Island</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/fairways.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+      
+        <b class="sh1"> <i class="bx bx-home-smile icon" style="color: blue;"></i><a href="../include/boracayhotel.php" style=" text-decoration: none;">Fairways & Bluewater Boracay</a></b><br>
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Station 1, Balabag and Yapak, Balabag, 5608 Boracay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/henann.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        
+        <b class="sh1"> <i class="bx bx-home-smile icon" style="color: blue;"></i><a href="../include/boracayhotel.php" style=" text-decoration: none;">Henann Crystal Sands Resort</a></b><br>
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Station 1 (In between boat station 1 and D'mall) Boracay Island.</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/astoria.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">Astoria Current</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Sitio Mangayad, Brgy. Manoc Manoc, Station 3, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/mandarin.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">Mandarin Bay Resort & Spa</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Beachfront, Station 2, Boracay, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/movenpick.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">Mövenpick Resort & Spa Boracay</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Punta Bunga Cove, Barangay Yapak, Boracay Island, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/hue.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">Hue Hotels and Resorts Boracay</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Station 2, Hue Hotels and Resorts Boracay </small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/belmont.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">Belmont Hotel Boracay</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Newcoast Drive, Boracay Newcoast, Barangay Yapak, Boracay Island, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/lind1.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1">The Lind Boracay</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Station 1, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/savoy.jpg">
+    </picture>
+    <div class="detail">
+      <p>
+        <b>Savoy Hotel Boracay Newcoast</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Newcoast Drive Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+
+    </div>
+  </div>
+  <div class="product">
+    <picture>
+      <img src="../places/boracay/lacarmela.png">
+    </picture>
+    <div class="detail">
+      <p>
+        <b class="sh1"> La Carmela de Boracay Resort Hotel</b><br>
+
+        <i class="bx bx-map icon" style="color: blue;"></i>
+        <small>Station 2, Balabag, Boracay Island, Malay</small>
+      </p>
+
+    </div>
+    <div class="button7">
+
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+
+
+
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+  // Language Switcher Function
+  function switchLanguage(lang) {
+    document.querySelectorAll(`[data-lang-${lang}]`).forEach(element => {
+      element.textContent = element.getAttribute(`data-lang-${lang}`);
+    });
+  }
+
+  // Initialize Language Selection Event Listeners
+  function setupLanguageSwitcher() {
+    document.querySelectorAll('.language-option').forEach(button => {
+      button.addEventListener('click', function () {
+        const selectedLang = this.getAttribute('data-lang');
+        switchLanguage(selectedLang);
+      });
+    });
+  }
+
+  // Modal Popup Functionality for Images
+  function enableImageModal(imageSelector) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img class="modal-image" src="" alt="Enlarged Image">
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const modalImage = modal.querySelector('.modal-image');
+    const closeButton = modal.querySelector('.close-button');
+
+    document.querySelectorAll(imageSelector).forEach(image => {
+      image.addEventListener('click', function () {
+        modalImage.src = this.src;
+        modal.style.display = 'block';
+      });
+    });
+
+    closeButton.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+
+  // Initialize Features
+  setupLanguageSwitcher();
+  enableImageModal('.clickable-image');
+});
+
+   </script>
+
+
+
+  
 
 
 
@@ -1129,7 +1097,8 @@ if (isset($_SESSION['id'])) {
             <p>
               <b class="sh1" data-lang-en="Café del Sol" data-lang-es="Café del Sol" data-lang-fr="Café del Sol"
                 data-lang-de="Café del Sol" data-lang-zh="太阳咖啡馆" data-lang-jp="カフェデソル" data-lang-ru="Кафе дель Соль"
-                data-lang-it="Café del Sol" data-lang-pt="Café del Sol" data-lang-ar="مقهى ديل سول">Café del Sol</b><br>
+                data-lang-it="Café del Sol" data-lang-pt="Café del Sol" data-lang-ar="مقهى ديل سول"><a href="../include/boracayresto.php">Cafe Del Sol</a></b><br>
+
 
               <i class="bx bx-map icon" style="color: blue;"></i>
               <small data-lang-en="Beachfront D'Mall of Boracay, Station 2, Malay, 5608 Aklan"
@@ -1396,236 +1365,495 @@ if (isset($_SESSION['id'])) {
     </main>
 
 
-    <main>
 
+
+    <main>
       <header>
-        <h1><i class="bx bx-home icon" style="color: red;"></i>Top Hottest Accomodations</h1>
+        <h1 data-lang-en="Boracay Water Activities" data-lang-es="Paquete de Tour en Boracay"
+          data-lang-fr="Forfait Tour à Boracay" data-lang-de="Boracay Tour-Paket" data-lang-zh="博拉acay旅游套餐"
+          data-lang-jp="ボラカイツアーパッケージ" data-lang-ru="Турпакет на Борокай" data-lang-it="Pacchetto Tour di Boracay"
+          data-lang-pt="Pacote de Tour em Boracay" data-lang-ar="حزمة جولة بوراكاي"><i class="bx bx-run icon"
+            style="color: red;"></i>Boracay Water Activities</h1>
         <p>
-          <span class="span4">&#139;</span>
-          <span class="span4">&#155;</span>
+          <span class="span2">&#139;</span>
+          <span class="span2">&#155;</span>
         </p>
       </header>
-
       <p class="p2">Discover the Paradise: Explore the Philippines with us!!</p>
       <section class="section6">
         <div class="product">
           <picture>
-            <img src="../places/boracay/shangrila.jpg">
+          <img src="../img/a1.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1"><a href="../include/boracayhotel.php">Shangri-La Hotels and Resorts</a></b><br>
+            <b class="sh1" data-lang-en="Catamaran sailing" 
+       data-lang-es="Navegación en Catamarán" 
+       data-lang-fr="Navigation en Catamaran" 
+       data-lang-de="Katamaran Segeln" 
+       data-lang-zh="双体船航行" 
+       data-lang-jp="カタマランセーリング" 
+       data-lang-ru="Плавание на катамаране" 
+       data-lang-it="Vela in Catamarano" 
+       data-lang-pt="Navegação de Catamarã" 
+       data-lang-ar="الإبحار في الكاتاماران">Catamaran sailing
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Barangay Yapak, Boracay Island, Malay, Aklan 5608</small>
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+          
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/mandala.jpg">
+          <img src="../img/a2.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Mandala Spa and Resort Villas</b><br>
+            <b class="sh1" data-lang-en="Banana and fly-fish rides" 
+       data-lang-es="Paseos en Banana y Fly-Fish" 
+       data-lang-fr="Balades en Banana et Fly-Fish" 
+       data-lang-de="Bananen- und Fly-Fish-Fahrten" 
+       data-lang-zh="香蕉船和飞鱼项目" 
+       data-lang-jp="バナナボートとフライフィッシュライド" 
+       data-lang-ru="Прокат на банане и флайфиш" 
+       data-lang-it="Giri in Banana e Fly-Fish" 
+       data-lang-pt="Passeios de Banana e Fly-Fish" 
+       data-lang-ar="ركوب الموز وركوب الطائر">Banana and fly-fish rides
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue ;"></i>
-              <small> Station 3, Barangay Manoc-Manoc, Boracay Island</small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/fairways.jpg">
+          <img src="../img/a3.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Fairways & Bluewater Boracay</b><br>
+            <b class="sh1" data-lang-en="Jet skiing" 
+       data-lang-es="Paseo en Motonieve" 
+       data-lang-fr="Jet Ski" 
+       data-lang-de="Jetski fahren" 
+       data-lang-zh="摩托艇" 
+       data-lang-jp="ジェットスキー" 
+       data-lang-ru="Джет-ски" 
+       data-lang-it="Moto d'acqua" 
+       data-lang-pt="Jet ski" 
+       data-lang-ar="التزلج على الجيت سكي">Jet skiing
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Station 1, Balabag and Yapak, Balabag, 5608 Boracay</small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/henann.jpg">
+          <img src="../img/a4.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Henann Crystal Sands Resort</b><br>
+            <b class="sh1" data-lang-en="Kayaking" 
+       data-lang-es="Kayak" 
+       data-lang-fr="Kayak" 
+       data-lang-de="Kajakfahren" 
+       data-lang-zh="皮划艇" 
+       data-lang-jp="カヤック" 
+       data-lang-ru="Каякинг" 
+       data-lang-it="Kayak" 
+       data-lang-pt="Canoagem" 
+       data-lang-ar="التجديف بالكاياك">Kayaking
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Station 1 (In between boat station 1 and D'mall) Boracay Island.</small>
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
+           
 
+          </div>
+        </div>
+       
+        <div class="product">
+          <picture>
+          <img src="../img/a1.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+            <b class="sh1" data-lang-en="Catamaran sailing" 
+       data-lang-es="Navegación en Catamarán" 
+       data-lang-fr="Navigation en Catamaran" 
+       data-lang-de="Katamaran Segeln" 
+       data-lang-zh="双体船航行" 
+       data-lang-jp="カタマランセーリング" 
+       data-lang-ru="Плавание на катамаране" 
+       data-lang-it="Vela in Catamarano" 
+       data-lang-pt="Navegação de Catamarã" 
+       data-lang-ar="الإبحار في الكاتاماران">Catamaran sailing
+</b><br>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
+            </p>
+
+          </div>
+          <div class="button7">
+          
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/astoria.jpg">
+          <img src="../img/a2.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Astoria Current</b><br>
+            <b class="sh1" data-lang-en="Banana and fly-fish rides" 
+       data-lang-es="Paseos en Banana y Fly-Fish" 
+       data-lang-fr="Balades en Banana et Fly-Fish" 
+       data-lang-de="Bananen- und Fly-Fish-Fahrten" 
+       data-lang-zh="香蕉船和飞鱼项目" 
+       data-lang-jp="バナナボートとフライフィッシュライド" 
+       data-lang-ru="Прокат на банане и флайфиш" 
+       data-lang-it="Giri in Banana e Fly-Fish" 
+       data-lang-pt="Passeios de Banana e Fly-Fish" 
+       data-lang-ar="ركوب الموز وركوب الطائر">Banana and fly-fish rides
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Sitio Mangayad, Brgy. Manoc Manoc, Station 3, Malay</small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/mandarin.jpg">
+          <img src="../img/a3.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Mandarin Bay Resort & Spa</b><br>
+            <b class="sh1" data-lang-en="Jet skiing" 
+       data-lang-es="Paseo en Motonieve" 
+       data-lang-fr="Jet Ski" 
+       data-lang-de="Jetski fahren" 
+       data-lang-zh="摩托艇" 
+       data-lang-jp="ジェットスキー" 
+       data-lang-ru="Джет-ски" 
+       data-lang-it="Moto d'acqua" 
+       data-lang-pt="Jet ski" 
+       data-lang-ar="التزلج على الجيت سكي">Jet skiing
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Beachfront, Station 2, Boracay, Malay</small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/movenpick.jpg">
+          <img src="../img/a4.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Mövenpick Resort & Spa Boracay</b><br>
+            <b class="sh1" data-lang-en="Kayaking" 
+       data-lang-es="Kayak" 
+       data-lang-fr="Kayak" 
+       data-lang-de="Kajakfahren" 
+       data-lang-zh="皮划艇" 
+       data-lang-jp="カヤック" 
+       data-lang-ru="Каякинг" 
+       data-lang-it="Kayak" 
+       data-lang-pt="Canoagem" 
+       data-lang-ar="التجديف بالكاياك">Kayaking
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Punta Bunga Cove, Barangay Yapak, Boracay Island, Malay</small>
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
+           
 
+          </div>
+        </div>
+
+        <div class="product">
+          <picture>
+          <img src="../img/a1.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
+          </picture>
+          <div class="detail">
+            <p>
+            <b class="sh1" data-lang-en="Catamaran sailing" 
+       data-lang-es="Navegación en Catamarán" 
+       data-lang-fr="Navigation en Catamaran" 
+       data-lang-de="Katamaran Segeln" 
+       data-lang-zh="双体船航行" 
+       data-lang-jp="カタマランセーリング" 
+       data-lang-ru="Плавание на катамаране" 
+       data-lang-it="Vela in Catamarano" 
+       data-lang-pt="Navegação de Catamarã" 
+       data-lang-ar="الإبحار في الكاتاماران">Catamaran sailing
+</b><br>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
+            </p>
+
+          </div>
+          <div class="button7">
+          
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/hue.jpg">
+          <img src="../img/a2.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Hue Hotels and Resorts Boracay</b><br>
+            <b class="sh1" data-lang-en="Banana and fly-fish rides" 
+       data-lang-es="Paseos en Banana y Fly-Fish" 
+       data-lang-fr="Balades en Banana et Fly-Fish" 
+       data-lang-de="Bananen- und Fly-Fish-Fahrten" 
+       data-lang-zh="香蕉船和飞鱼项目" 
+       data-lang-jp="バナナボートとフライフィッシュライド" 
+       data-lang-ru="Прокат на банане и флайфиш" 
+       data-lang-it="Giri in Banana e Fly-Fish" 
+       data-lang-pt="Passeios de Banana e Fly-Fish" 
+       data-lang-ar="ركوب الموز وركوب الطائر">Banana and fly-fish rides
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Station 2, Hue Hotels and Resorts Boracay </small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/belmont.jpg">
+          <img src="../img/a3.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">Belmont Hotel Boracay</b><br>
+            <b class="sh1" data-lang-en="Jet skiing" 
+       data-lang-es="Paseo en Motonieve" 
+       data-lang-fr="Jet Ski" 
+       data-lang-de="Jetski fahren" 
+       data-lang-zh="摩托艇" 
+       data-lang-jp="ジェットスキー" 
+       data-lang-ru="Джет-ски" 
+       data-lang-it="Moto d'acqua" 
+       data-lang-pt="Jet ski" 
+       data-lang-ar="التزلج على الجيت سكي">Jet skiing
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Newcoast Drive, Boracay Newcoast, Barangay Yapak, Boracay Island, Malay</small>
+
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
+           
 
           </div>
         </div>
         <div class="product">
           <picture>
-            <img src="../places/boracay/lind1.jpg">
+          <img src="../img/a4.jpg" alt="Nalka Seafood Restaurant"  class="clickable-image">
           </picture>
           <div class="detail">
             <p>
-              <b class="sh1">The Lind Boracay</b><br>
+            <b class="sh1" data-lang-en="Kayaking" 
+       data-lang-es="Kayak" 
+       data-lang-fr="Kayak" 
+       data-lang-de="Kajakfahren" 
+       data-lang-zh="皮划艇" 
+       data-lang-jp="カヤック" 
+       data-lang-ru="Каякинг" 
+       data-lang-it="Kayak" 
+       data-lang-pt="Canoagem" 
+       data-lang-ar="التجديف بالكاياك">Kayaking
+</b><br>
 
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Station 1, Malay</small>
+<i class="bx bx-map icon" style="color: red;"></i>
+                <small data-lang-en="Shangrila Hotel, Boracay" 
+       data-lang-es="Hotel Shangrila, Boracay" 
+       data-lang-fr="Hôtel Shangrila, Boracay" 
+       data-lang-de="Shangrila Hotel, Boracay" 
+       data-lang-zh="香格里拉酒店，博拉凯" 
+       data-lang-jp="シャングリラホテル、ボラカイ" 
+       data-lang-ru="Отель Шангрила, Боракай" 
+       data-lang-it="Hotel Shangrila, Boracay" 
+       data-lang-pt="Hotel Shangrila, Boracay" 
+       data-lang-ar="فندق شانغريلا، بوراكاي">Shangrila Hotel, Boracay
+</small>
             </p>
 
           </div>
           <div class="button7">
-
-
-          </div>
-        </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/savoy.jpg">
-          </picture>
-          <div class="detail">
-            <p>
-              <b>Savoy Hotel Boracay Newcoast</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Newcoast Drive Malay</small>
-            </p>
-
-          </div>
-          <div class="button7">
-
+           
 
           </div>
         </div>
-        <div class="product">
-          <picture>
-            <img src="../places/boracay/lacarmela.png">
-          </picture>
-          <div class="detail">
-            <p>
-              <b class="sh1"> La Carmela de Boracay Resort Hotel</b><br>
-
-              <i class="bx bx-map icon" style="color: blue;"></i>
-              <small>Station 2, Balabag, Boracay Island, Malay</small>
-            </p>
-
-          </div>
-          <div class="button7">
-
-          </div>
-        </div>
+        
       </section>
     </main>
 
 
+
+
+
+  
 
     <main>
       <div class="marvs">

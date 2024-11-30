@@ -239,12 +239,12 @@ $notifications = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </script>
 
   <div class="profile">
-    <span id="name-span"><?php echo htmlspecialchars($first_name); ?></span>
+    <span id="name-span"><?php echo htmlspecialchars($full_name); ?></span>
     <div class="dropdown">
       <img src="<?php echo $profile_image; ?>" alt="Profile Picture" class="user">
       <div class="dropdown-content">
         <a href="profile.php">Profile</a>
-        <a href="logout.php">Logout</a>
+        <a href="../include/logout.php">Logout</a>
       </div>
     </div>
   </div>

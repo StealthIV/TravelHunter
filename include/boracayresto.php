@@ -84,7 +84,7 @@ if (isset($_SESSION['id'])) {
       <div class="main1">
         <h4 data-lang-en="Boracay" data-lang-es="Boracay" data-lang-fr="Boracay" data-lang-de="Boracay"
           data-lang-zh="长滩岛" data-lang-jp="ボラカイ" data-lang-ru="Боракай" data-lang-it="Boracay" data-lang-pt="Boracay"
-          data-lang-ar="بوراكاي">Boracay</h4>
+          data-lang-ar="بوراكاي">Cafe Del Sol</h4>
 
         <p data-lang-en="It's more fun in Boracay Philippines!!"
           data-lang-es="¡Es más divertido en Boracay, Filipinas!!"

@@ -116,12 +116,12 @@ nav.open ~ .overlay {
 .profile {
   display: flex;
   position: fixed;
-  margin-left: 1200px;
+  margin-left: 1140px;
   align-items: center;
 }
 
 .profile span {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-right: 10px;
 }
 
@@ -160,6 +160,7 @@ nav.open ~ .overlay {
 .profile:hover .dropdown-content {
   display: block;
 }
+
 
 .language {
   margin-left: 15px;
